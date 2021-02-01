@@ -7,7 +7,7 @@
 		<div>
 			<ul>	
 				<li>method</li>
-				<li id='head'>virian</li>
+				<li id='head'>Virian</li>
 				<li>donate</li>
 			</ul>
 			<span>making cultural states explicit</span>
