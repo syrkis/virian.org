@@ -6,9 +6,9 @@
 	<div>
 		<div>
 			<ul>	
-				<li>method</li>
+				<li>assist</li>
 				<li id='head'>Virian</li>
-				<li>donate</li>
+				<li><a href='https://paper.virian.org/' target='_blank'>method</a></li>
 			</ul>
 			<span>making cultural states explicit</span>
 		</div>
