@@ -23,6 +23,7 @@ a, a:visited, a:focus, a:active, a:link{
 ul {
         padding: 0px;
         margin-top: 0;
+        width: 100%;
 }
 
 li { 
@@ -47,6 +48,12 @@ footer {
         line-height: 2em;
 }
 
+@media only screen and (max-width: 600px) {
+      body {
+              margin: 0;
+                }
+}
+
 /*THEIR SHIT */
 html, body {
 	width: 100%;
@@ -54,6 +61,7 @@ html, body {
 
 body {
         height: 100%;
+        width: 100%;
         font-family:  'Crimson Text', Serif;
         font-size: 1.1em;
         background-color: black;

@@ -51,8 +51,8 @@
         top: -10%;
         margin-left: auto; 
         margin-right: auto; 
-        width: 25%;
-        min-width: 333px;
+        width: 420px;
+        max-width: 100%;
         offset: -40px;
         border-radius: 50px;
         z-index: -11;
@@ -65,13 +65,22 @@
         background-color: black;
         background: radial-gradient(ellipse at top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 70%,rgba(0,0,0,1) 100%);
 }
+
+    @media only screen and (max-width: 600px) {
+        #title {
+            font-size: 1.2em;
+        }
+        li {
+                font-size: 1em;
+        }
+    }
 </style>
 
 <header>
     <ul id='nav' class='container'>
-        <li>contribute</li>
+        <li>assist</li>
         <li id='title'>Virian</li>
-        <li>procedures</li>
+        <li>method</li>
     </ul>
     <span id='tagline'>
         making cultural states explicit
