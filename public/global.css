@@ -49,12 +49,11 @@ footer {
 
 /*THEIR SHIT */
 html, body {
-	position: relative;
 	width: 100%;
-	height: 100%;
 }
 
 body {
+        height: 100%;
         font-family:  'Crimson Text', Serif;
         font-size: 1.1em;
         background-color: black;
