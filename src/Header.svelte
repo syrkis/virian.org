@@ -18,6 +18,9 @@
                 enable: true,
                 speed: 0.4,
             },
+            number: {
+                value: 69,
+            },
         },
     };
 
@@ -51,29 +54,36 @@
         width: 25%;
         min-width: 333px;
         offset: -40px;
+        border-radius: 50px;
+        z-index: -11;
     }
-    tsparticles {
-        background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 40%,rgba(0,0,0,1) 100%);
-    }
+    .fader {
+        top: 10vh;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: black;
+        background: radial-gradient(ellipse at top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 70%,rgba(0,0,0,1) 100%);
+}
 </style>
 
 <header>
+    <ul id='nav' class='container'>
+        <li>contribute</li>
+        <li id='title'>Virian</li>
+        <li>procedures</li>
+    </ul>
+    <span id='tagline'>
+        making cultural states explicit
+    </span>
+
     <div class='wrapper'>
-        <div class='fader'>
-            <Particles height='5px'
+    <div class='fader'></div>
+            <Particles 
                 id='tsparticles'
                 options="{particlesConfig}"
                 on:particlesLoaded="{onParticlesLoaded}"
             />
-            </div>
         </div>
-            <ul id='nav' class='container'>
-                <li>contribute</li>
-                <li id='title'>Virian</li>
-                <li>procedures</li>
-            </ul>
-            <span id='tagline'>
-                making cultural states explicit
-            </span>
-    </header>
+</header>
 
