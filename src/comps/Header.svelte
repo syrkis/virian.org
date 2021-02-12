@@ -34,7 +34,7 @@
 
 <style>
     #title {
-        padding: 1% 12%;
+        padding: 0 12%;
         text-transform: uppercase;
         font-size: 2.4em;
         letter-spacing: 0.15em;

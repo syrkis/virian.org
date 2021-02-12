@@ -1,13 +1,13 @@
 <script lang="ts">
-        import Header from './Header.svelte';
-        import Footer from './Footer.svelte';
-        import Visual from './Visual.svelte';
+        import Header from './comps/Header.svelte';
+        import Footer from './comps/Footer.svelte';
+        import Pentagon from './comps/Pentagon.svelte';
 	export let name: string;
 </script>
 
 <main>
         <Header />
-            Virian Time Series Visualization
+        <Pentagon />
         <Footer />
 </main>
 
