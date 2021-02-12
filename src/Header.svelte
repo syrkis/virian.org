@@ -69,18 +69,19 @@
     @media only screen and (max-width: 600px) {
         #title {
             font-size: 1.2em;
+            padding: 0 6%;
         }
         li {
-                font-size: 1em;
+                font-size: 0.8em;
         }
-    }
+}
 </style>
 
 <header>
     <ul id='nav' class='container'>
-        <li>assist</li>
+        <li>contribute</li>
         <li id='title'>Virian</li>
-        <li>method</li>
+        <li>procedures</li>
     </ul>
     <span id='tagline'>
         making cultural states explicit
