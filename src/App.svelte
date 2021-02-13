@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
         import Header from './comps/Header.svelte';
         import Footer from './comps/Footer.svelte';
         import Pentagon from './comps/Pentagon.svelte';
-        export let name;
+        export let name: string;
 </script>
 
 <main>
