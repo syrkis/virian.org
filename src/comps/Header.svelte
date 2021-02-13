@@ -66,7 +66,16 @@
         background: radial-gradient(ellipse at top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 70%,rgba(0,0,0,1) 100%);
 }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (min-width: 375px) and (max-width: 600px) {
+        #title {
+            font-size: 1.2em;
+            padding: 0 6%;
+        }
+        li {
+                font-size: 1.1em !important;
+        }
+    }
+    @media only screen and (max-width: 374px) and (min-width: 0px) {
         #title {
             font-size: 1.2em;
             padding: 0 6%;
