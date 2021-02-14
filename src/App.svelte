@@ -1,13 +1,13 @@
 <script lang="ts">
         import Header from './comps/Header.svelte';
         import Footer from './comps/Footer.svelte';
-        import Pentagon from './comps/Pentagon.svelte';
+        import Grapher from './comps/Grapher.svelte';
         export let name: string;
 </script>
 
 <main>
         <Header />
-        <Pentagon />
+        <Grapher />
         <Footer />
 </main>
 
