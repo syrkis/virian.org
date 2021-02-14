@@ -16,7 +16,7 @@
             },
             move: {
                 enable: true,
-                speed: 0.4,
+                speed: 0.2,
             },
             number: {
                 value: 69,
