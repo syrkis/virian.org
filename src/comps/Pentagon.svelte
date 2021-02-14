@@ -32,7 +32,10 @@
 
 <style>
         svg * {
-                transition: transform 0.4s;
+            -webkit-transition: -webkit-transform 0.4s ease-out;
+            -moz-transition: transform 0.4s ease-out;
+            -o-transition: transform 0.4s ease-out;
+            transition: transform 0.4s ease-out;
         }
 </style>
 
