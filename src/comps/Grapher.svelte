@@ -14,7 +14,7 @@
 {#await data}
     <p>Loading...</p>
 {:then ocean}
-    <h2>CULTURAL EVOLUTION CHART</h2>
+    <h2>CULTURAL EXPLORER</h2>
     <Pentagon data={ocean}/>
 {/await}
 
