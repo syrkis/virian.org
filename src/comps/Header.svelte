@@ -24,12 +24,11 @@
         },
     };
 
-      let onParticlesLoaded = (event) => {
-              const particlesContainer = event.detail.particles;
-
-                  // you can use particlesContainer to call all the Container class
-                      // (from the core library) methods like play, pause, refresh, start, stop
-                        };
+    let onParticlesLoaded = (event) => {
+        const particlesContainer = event.detail.particles;
+        // you can use particlesContainer to call all the Container class
+        // (from the core library) methods like play, pause, refresh, start, stop
+    };
 </script>
 
 <style>
@@ -87,22 +86,22 @@
 </style>
 
 <header>
-    <ul id='nav' class='container'>
-        <li>contribute</li>
-        <li id='title'>Virian</li>
-        <li>procedures</li>
-    </ul>
-    <span id='tagline'>
-        making cultural states explicit
-    </span>
+        <ul id='nav' class='container'>
+            <li><a href='/contribute'>contribute</a></li>
+            <li id='title'><a href='/'>Virian</a></li>
+            <li><a href='procedures'>procedures</a></li>
+        </ul>
+        <span id='tagline'>
+            making cultural states explicit
+        </span>
 
-    <div class='wrapper'>
-    <div class='fader'></div>
-            <Particles 
-                id='tsparticles'
-                options="{particlesConfig}"
-                on:particlesLoaded="{onParticlesLoaded}"
-            />
+        <div class='wrapper'>
+            <div class='fader'></div>
+                    <Particles 
+                        id='tsparticles'
+                        options="{particlesConfig}"
+                        on:particlesLoaded="{onParticlesLoaded}"
+                    />
         </div>
 </header>
 

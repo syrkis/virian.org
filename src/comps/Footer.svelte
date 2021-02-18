@@ -3,19 +3,19 @@
     <span><a href='mailto:contact@virian.org'>contact@virian.org</a></span>
     <ul>
         <li>
-            <a href='https://github.com/virianorg' target='_blank' class='fab fa-github'></a>
+            <a href='https://github.com/virianorg' target='_blank' class='fab fa-github'/>
         </li>
         <li>
-            <a href='https://twitter.com/virianorg' target='_blank' class='fab fa-twitter'></a>
+            <a href='https://twitter.com/virianorg' target='_blank' class='fab fa-twitter'/>
         </li>
         <li>
-            <a href="https://www.youtube.com/channel/UCjhko_G0E9BT7-ustIvsEoA" target="_blank" class="fab fa-youtube"></a>
+            <a href="https://www.youtube.com/channel/UCjhko_G0E9BT7-ustIvsEoA" target="_blank" class="fab fa-youtube"/>
             </li>
         <li>
-            <a href='https://instagram.com/virianorg' target='_blank' class='fab fa-instagram'></a>
+            <a href='https://instagram.com/virianorg' target='_blank' class='fab fa-instagram'/>
         </li>
         <li>
-            <a href="https://twitch.tv/noahsyrkis" target="_blank" class="fab fa-twitch"></a>
+            <a href="https://twitch.tv/noahsyrkis" target="_blank" class="fab fa-twitch"/>
         </li>
     </ul>
 </footer>

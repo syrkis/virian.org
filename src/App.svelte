@@ -1,13 +1,16 @@
 <script lang="ts">
+
+        import { Router } from 'svelte-router-spa';
+        import { routes } from './routes.ts';
+        
         import Header from './comps/Header.svelte';
         import Footer from './comps/Footer.svelte';
-        import Grapher from './comps/Grapher.svelte';
-        export let name: string;
+
 </script>
 
 <main>
         <Header />
-        <Grapher />
+        <Router { routes } />
         <Footer />
 </main>
 

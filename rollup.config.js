@@ -59,8 +59,10 @@ export default {
 			browser: true,
 			dedupe: ['svelte']
 		}),
-		commonjs(),
-		typescript({
+		commonjs({
+                    requireReturnsDefault: 'auto'
+                }),
+                typescript({
 			sourceMap: !production,
 			inlineSources: !production
 		}),
