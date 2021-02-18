@@ -1,1 +1,7 @@
-<h2></h2>
+<script lang='ts'>
+    import Grapher from '../comps/Grapher.svelte'; 
+</script>
+
+<main>
+    <Grapher />
+</main>

@@ -1,34 +1,37 @@
 <script lang='ts'>
     import { scaleLinear, scaleOrdinal } from 'd3-scale';
     import { extent } from 'd3-array';
-    import type { IrisEntry } from './types';    
+    import type { OceanEntry } from './types';    
 
-    export let data: IrisEntry[];
-    export let xDimension: string;
-    export let yDimension: string;
+    export let data: OceanEntry[];
+    
+    const width = 400;
+    const height = 400;
 
-
-    const width = 600;
-    const height = 600;
-    const buffer = 10;
-    const colors = ['red', 'green', 'blue'];
-    const axisSpace = 50;
-
-    $: xExtent = extent(data, (d) => d[xDimension]);
-    $: yExtent = extent(data, (d) => d[yDimension]);
-
-    let species = Array.from(new Set(data.map((d) => d.species)));
-
-    $: xScale = scaleLinear()
-        .domain(xExtent)
-        .range([buffer + axisSpace, width - buffer - axisSpace]);
-    $: yScale = scaleLinear()
-        .domain(yExtent)
-        .range([height - buffer -axisSpace, buffer + axisSpace]);
-
-    let colorScale = scaleOrdinal().domain(species).range(colors);
-
+    $: oExtent = extent(data.o)
+    $: cExtent = extent(data.c)
+    $: eExtent = extent(data.e)
+    $: aExtent = extent(data.a)
+    $: nExtent = extent(data.n)
+    
+    $: time = 0;
+     
+    const entries = Object.values(data)
+    const dims: array = ['o', 'c', 'e', 'a', 'n']
 </script>
+
+<svg {height} {width} fill='white'>
+    <g transform='translate(50 50)'>
+    {#each entries as dim, i}
+        <g transform={`translate(${i * 70} 0)`}> 
+            <text>{dims[i]}</text>
+            <text>{dim[time]}</text>
+        </g>
+    {/each}
+    </g>
+</svg>
+<br/>
+<input bind:value={time} type='range' min='0' max={data.e.length - 1} />
 
 <style>
         svg * {
@@ -38,34 +41,3 @@
             transition: transform 0.4s ease-out;
         }
 </style>
-
-    <svg {height} {width}>
-        {#each data as item}
-            <circle r='3'
-                    transform={`translate(${xScale(item[xDimension])} ${yScale(item[yDimension])})`}
-                    fill={colorScale(item.species)} />
-        {/each}
-
-        {#each xScale.ticks(5) as tick}
-            <g transform={`translate(${xScale(tick)} ${height - 20})`}>
-                <line y1='10' y2='5' stroke='white' />
-                <text fill='red' y='20' text-anchor='middle'>{tick}</text>
-            </g>
-        {/each}
-
-        {#each yScale.ticks(5) as tick}
-            <g transform={`translate(0 ${yScale(tick)})`}>
-                <line x1='5' x2='10' stroke='white' />
-                <text fill='red' y='20' text-anchor='middle'>{tick}</text>
-            </g>
-        {/each}
-
-        <g transform={`translate(${width - 100} ${height - 100})`}>
-            {#each species as species, i}
-                <g transform={`translate(0 ${i * 20})`}>
-                    <rect height="10" width="10" fill={colorScale(species)}/>
-                    <text fill='red' x='20' dominant-baseline='middle' y='5'>{species}</text>
-                </g>
-            {/each}
-        </g>
-    </svg>

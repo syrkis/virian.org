@@ -1,7 +1,7 @@
-export interface IrisEntry {
-    petalLength: number;
-    petalWidth: number;
-    sepalLength: number;
-    sepalWidth: number;
-    species: string;
+export interface OceanEntry {
+    o: number;
+    c: number;
+    e: number;
+    a: number;
+    n: number;
 }
