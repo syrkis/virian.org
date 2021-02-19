@@ -65,22 +65,22 @@
         background: radial-gradient(ellipse at top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 70%,rgba(0,0,0,1) 100%);
 }
 
-    @media only screen and (min-width: 375px) and (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
         #title {
-            font-size: 1.2em;
+            font-size: 1.5em !important;
             padding: 0 6%;
         }
         li {
-                font-size: 1.1em !important;
+                font-size: 1em !important;
         }
     }
-    @media only screen and (max-width: 374px) and (min-width: 0px) {
+    @media only screen and (max-width: 374px) {
         #title {
-            font-size: 1.2em;
+            font-size: 2.5em;
             padding: 0 6%;
         }
         li {
-                font-size: 0.8em;
+                font-size: 0.7em !important;
         }
 }
 </style>
