@@ -9,13 +9,13 @@
             <a href='https://twitter.com/virianorg' target='_blank' class='fab fa-twitter'/>
         </li>
         <li>
-            <a href="https://www.youtube.com/channel/UCjhko_G0E9BT7-ustIvsEoA" target="_blank" class="fab fa-youtube"/>
+            <a href="https://virian.org" target="_blank" class="fab fa-medium"/>
             </li>
         <li>
             <a href='https://instagram.com/virianorg' target='_blank' class='fab fa-instagram'/>
         </li>
         <li>
-            <a href="https://twitch.tv/noahsyrkis" target="_blank" class="fab fa-twitch"/>
+            <a href="https://virian.org" target="_blank" class="fab fa-paypal"/>
         </li>
     </ul>
 </footer>
