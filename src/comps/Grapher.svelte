@@ -20,4 +20,3 @@
     <Spheres data={ocean} value={value}/>
     <Slider bind:value={value} />
 {/await}
-
