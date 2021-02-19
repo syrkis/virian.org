@@ -1,6 +1,6 @@
 <script lang='ts'>
     import type { OceanEntry } from './types';    
-    import Pentagon from './Pentagon.svelte';
+    import Spheres from './Spheres.svelte';
     import Slider from './Slider.svelte';
 
     async function loadData() {
@@ -17,7 +17,7 @@
     <p>Loading...</p>
 {:then ocean}
     <h2>CULTURAL EXPLORER</h2>
-    <Pentagon data={ocean} value={value}/>
+    <Spheres data={ocean} value={value}/>
     <Slider bind:value={value} />
 {/await}
 

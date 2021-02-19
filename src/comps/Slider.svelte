@@ -2,15 +2,20 @@
     export let value: number = 0;
 </script>
 
-<dev>
+<br/>
+<dev class='wrapper'>
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
 </dev>
 
 <style>
+    .wrapper {
+            width: 100%;
+    }
     input[type=range] {
       -webkit-appearance: none;
       margin: auto;
       width: 80%;
+      max-width: 300px;
       border: 0;
     }
     input[type=range]:focus {

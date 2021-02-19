@@ -6,8 +6,8 @@
     export let data: OceanEntry[];
     export let value: number;
 
-    const width = 800;
-    const height = 500;
+    const width = 300;
+    const height = 300;
 
     $: oExtent = extent(data.o)
     $: cExtent = extent(data.c)
@@ -24,8 +24,8 @@
 <svg {height} {width} fill='white'>
     <g transform='translate(50 50)'>
     {#each entries as dim, i}
-        <g transform={`translate(${i * 70} 0)`}> 
-            <circle cx='100' cy='100' r={(dim[value] + 0.5) * 10} fill='white' />'
+        <g transform={`translate(${i * width/5 - 0.4 * width} 0)`}> 
+            <circle dominant-baseline="middle" cx='100' cy='0' r={(dim[value] + 0.5) * 10} fill='white' />'
         </g>
     {/each}
     </g>
