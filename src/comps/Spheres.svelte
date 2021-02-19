@@ -7,7 +7,7 @@
     export let value: number;
 
     const width = 300;
-    const height = 300;
+    const height = 200;
 
     $: oExtent = extent(data.o)
     $: cExtent = extent(data.c)
