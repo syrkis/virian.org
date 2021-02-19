@@ -21,11 +21,11 @@
     console.log(entries)
 </script>
 
-<svg {height} {width} fill='white'>
+<svg {height} {width} >
     <g transform='translate(50 50)'>
     {#each entries as dim, i}
         <g transform={`translate(${i * width/5 - 0.4 * width} 0)`}> 
-            <circle dominant-baseline="middle" cx='100' cy='0' r={(dim[value] + 0.5) * 10} fill='white' />'
+            <circle dominant-baseline="middle" cx='100' cy='0' r={(dim[value] + 0.5) * 10} fill='#ddd' />'
         </g>
     {/each}
     </g>
