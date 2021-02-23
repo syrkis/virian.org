@@ -1,5 +1,6 @@
 {
-  "name": "The Virian Project",
+  "name": "Virian",
+  "author": "Noah Syrkis",
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
