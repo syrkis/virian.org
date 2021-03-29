@@ -3,7 +3,7 @@
 </script>
 
 <svg height={length} width={length}>
-    <polygon fill='red' points={`
+    <polygon fill='grey' points={`
         ${0},${0.5 * Math.sqrt(3) * length * 0.5}
         ${0.25*length},${0}
         ${0.75*length},${0}
