@@ -1,6 +1,6 @@
 <script lang='ts'>
     async function getDescriptors(): Promize<Descriptors[]> {
-        const res = await fetch('http://localhost:5001/descriptors');
+        const res = await fetch('https://api.virian.org/descriptors');
         const descriptors = await res.json();
     
         console.log('the descriptors', descriptors);
