@@ -28,6 +28,7 @@
                 <div class='target'>
                     <input type='text' id='target' class='target' placeholder='Adjective'>
                     <button class='fas fa-arrow-alt-circle-right'></button>
+                    <hr>
                 </div>
             </div>
         </form>
@@ -59,7 +60,7 @@
         border: none;
         background: transparent;
         color: #ccc;
-        width: 140px;
+        width: 150px;
         border-radius: 0;
     }
 
@@ -74,17 +75,15 @@
     }
 
     hr {
-        width: 160px;   
+        width: 184px;   
         border: none;
-        top: -40px;
+        top: -15px;
+        position: relative;
         border-bottom: solid 2px #ccc;
     }
 
     .target {
-        border-bottom: solid 2px #ccc;
-        outline-top:solid red 4px;
-        outline-offset:  4px;
-        width: 190px;
+        width: 200px;
         margin: auto;
     }
 
