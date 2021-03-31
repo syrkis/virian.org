@@ -1,8 +1,20 @@
 {
-    "manifest_version": 2,
-    "name": "Virian",
-    "version": "1.0",
-    "icons": {
-        "96": "public/favicon.png"
-    }
+	"background_color": "#ffffff",
+	"theme_color": "#333333",
+	"name": "The Virian Project",
+	"short_name": "virian",
+	"display": "minimal-ui",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "logo_192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "logo_512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
 }
