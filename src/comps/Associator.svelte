@@ -60,7 +60,7 @@
         border: none;
         background: transparent;
         color: #ccc;
-        width: 150px;
+        width: 170px;
         border-radius: 0;
     }
 
@@ -75,15 +75,15 @@
     }
 
     hr {
-        width: 184px;   
+        width: 200px;   
         border: none;
-        top: -15px;
+        top: -20px;
         position: relative;
         border-bottom: solid 2px #ccc;
     }
 
     .target {
-        width: 200px;
+        width: 242px;
         margin: auto;
     }
 
