@@ -17,7 +17,7 @@
 
 <section>
     {#await allDescriptorsPromise then descriptors}
-        <form>
+        <form autocomplete="off">
             <div class='associator'>
                 places that are
                 <br>
