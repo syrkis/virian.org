@@ -20,7 +20,7 @@
         <form>
             <div>
                 <span class='associator'>
-                    Cultures that are <span id='source'>{descriptors[Math.floor(Math.random() * descriptors.length)].word}</span> tend to also be
+                    Places that are <span id='source'>{descriptors[Math.floor(Math.random() * descriptors.length)].word}</span> tend to also be <input type='text' id='target'><input type='submit' value='submit'>
                 </span>
             </div>
         </form>
@@ -29,19 +29,18 @@
 
 <style>
 
-    #source {
+    #source, #target {
         font-family: 'Ubuntu Mono';
         text-transform: uppercase; 
         padding: 2px 5px;
         font-size: 1.2em;
         letter-spacing: 0.12em;
-        vertical-align: middle;
+        margin: auto;
     }
 
     .associator {
-        font-size: 0.7em;
         text-transform: uppercase;
-        padding: 2px 5px;
-        border: white solid 2px;
+        vertical-align: middle;
+        border: #ccc solid 2px;
     }
 </style>

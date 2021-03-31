@@ -17,7 +17,7 @@
 {#await data}
     <p>Loading...</p>
 {:then ocean}
-    <h2>CULTURAL EXPLORER</h2>
+    <h2>EXPLORER</h2>
     <!-- <Spheres data={ocean} value={value}/>-->
     <!--<Slider bind:value={value} />-->
     <Hexagon />
