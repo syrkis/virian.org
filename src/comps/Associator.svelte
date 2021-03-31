@@ -27,7 +27,7 @@
                 <br>
                 <div class='target'>
                     <input type='text' id='target' class='target' placeholder='Adjective'>
-                    <button class='fas fa-arrow-alt-circle-right'></button>
+                    <a><button class='fas fa-arrow-alt-circle-right'></button></a>
                     <hr>
                 </div>
             </div>
@@ -78,6 +78,8 @@
     button:active {
         background: transparent;
     }
+    
+
 
     hr {
         width: 200px;   
@@ -90,6 +92,16 @@
     .target {
         width: 242px;
         margin: auto;
+    }
+
+    button, button:visited, button:focus, button:active, button:link{
+            color: inherit;
+            transition: opacity 0.5s ease;
+    }
+    button:hover {
+            text-decoration: none;
+            opacity: 0.6;
+            transition: opacity 0.5s ease;
     }
 
 </style>
