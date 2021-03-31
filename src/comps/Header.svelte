@@ -40,6 +40,7 @@
     }
     #tagline {
         padding-bottom: 100px;
+        letter-spacing: 0.06em;
         font-size: 1.12em;
     }   
 
@@ -92,7 +93,7 @@
             <li><a href='procedures'>procedures</a></li>
         </ul>
         <span id='tagline'>
-            making cultural states explicit
+            cultural sustainability research
         </span>
 
         <div class='wrapper'>
