@@ -1,5 +1,5 @@
 <script lang='ts'>
-    async function getDescriptors(): Promize<Descriptors[]> {
+    async function getDescriptors(): Promise<Descriptors[]> {
         const res = await fetch('https://api.virian.org/descriptors');
         const descriptors = await res.json();
     
