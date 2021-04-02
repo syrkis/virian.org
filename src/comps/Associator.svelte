@@ -1,38 +1,66 @@
 <script lang='ts'>
-    async function getDescriptors(): Promise<Descriptors[]> {
-        const res = await fetch('https://api.virian.org/descriptors');
-        const descriptors = await res.json();
-    
-        console.log('the descriptors', descriptors);
 
-        if (res.ok) {
-            return descriptors;
-        } else {
-            throw new Error(descriptors);
+    import axios from 'axios';
+    import { onMount } from 'svelte';
+
+    let descriptors: Descriptors;
+    let source: string;
+    let target: string
+
+    async function getDescriptors(): Promise<Descriptors[]> {
+        try {
+            const res = await axios.get('https://api.virian.org/descriptors');
+            return res.data;
+        } catch (error) {
+            console.error('the descriptors', descriptors);
         }
     }
 
-    $: allDescriptorsPromise = getDescriptors();
+    async function postAssociator(source: string, target: string): Promise {
+        try {
+            const res = await axios.post('https://api.virian.org/associators', {
+                source: source,
+                target: target
+            })
+        } catch (error) {
+            console.error('error')
+        } 
+    }
+
+    function getSource(descriptors) {
+        source = descriptors[Math.floor(Math.random() * descriptors.length)]
+        return source
+    }
+
+    onMount(async () => {
+        descriptors = await getDescriptors();
+        source = getSource(descriptors);
+        console.log(source.word);
+    });
+
 </script>
 
 <section>
-    {#await allDescriptorsPromise then descriptors}
+    {#if source}
         <form autocomplete="off">
             <div class='associator'>
                 places that are
                 <br>
-                <span id='source'>{descriptors[Math.floor(Math.random() * descriptors.length)].word}</span>
+                <span id='source'>{source.word}</span>
                 <br>
                 tend to also be:
                 <br>
                 <div class='target'>
                     <input type='text' id='target' class='target' placeholder='Adjective'>
-                    <a><button class='fas fa-arrow-alt-circle-right'></button></a>
+                    <button class='fas fa-arrow-alt-circle-right'></button>
                     <hr>
                 </div>
             </div>
         </form>
-    {/await}
+    {:else}
+        <br/><br/>
+        <span>Loading...</span>
+    {/if}
 </section>
 
 <style>
