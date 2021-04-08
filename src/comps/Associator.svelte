@@ -5,7 +5,7 @@
 
     let descriptors: Descriptors;
     let source: string;
-    let target: string
+    $: target = 'null';
 
     async function getDescriptors(): Promise<Descriptors[]> {
         try {
@@ -34,33 +34,40 @@
 
     onMount(async () => {
         descriptors = await getDescriptors();
-        source = getSource(descriptors);
-        console.log(source.word);
+        source = getSource(descriptors).word;
+        target = 'NULL';
     });
 
+     function submit() {
+        target = (<HTMLInputElement>document.getElementById("target")).value;
+        console.log(target);
+     }
+    
 </script>
 
 <section>
-    {#if source}
+                    <button on:click={submit}>
+                        fuck
+                    </button>
         <form autocomplete="off">
             <div class='associator'>
                 places that are
                 <br>
-                <span id='source'>{source.word}</span>
+        <span id='source'>
+    {#await source then word}
+            {word}
+    {/await}
+        </span>
                 <br>
                 tend to also be:
                 <br>
                 <div class='target'>
                     <input type='text' id='target' class='target' placeholder='Adjective'>
-                    <button class='fas fa-arrow-alt-circle-right'></button>
+                    <button on:click={submit} class='fas fa-arrow-alt-circle-right'></button>
                     <hr>
                 </div>
             </div>
         </form>
-    {:else}
-        <br/><br/>
-        <span>Loading...</span>
-    {/if}
 </section>
 
 <style>
