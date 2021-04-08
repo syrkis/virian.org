@@ -5,7 +5,7 @@
 <section>
     <form autocomplete='off'>
     <p>
-    Another way to help is by ranking weeks in society, as you experience them, on the dimenions from the process above. This will allow us to find correlates between global web behavior and these dimensions. To help tell us your
+    Another way to assist is by ranking dates in society—as you experience them—on the dimenions derived from the process above. This allows us to find correlates between these and global web behavior. To join tell us your
         <input type='text' placeholder='name' id='name'>
     and
         <input type='text' placeholder='e-mail address' id='email'>
@@ -42,6 +42,6 @@
         width: 120px;
     }
     #email {
-        width: 220px; 
+        width: 200px; 
     }
 </style>
