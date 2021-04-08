@@ -46,9 +46,6 @@
 </script>
 
 <section>
-                    <button on:click={submit}>
-                        fuck
-                    </button>
         <form autocomplete="off">
             <div class='associator'>
                 places that are
