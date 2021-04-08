@@ -1,52 +1,84 @@
 /* MY SHIT */
+button, button:visited, button:focus, button:active, button:link{
+    color: inherit;
+    transition: opacity 0.5s ease;
+}
+button:hover {
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: #ccc;
+}
+
+button:active {
+    background: transparent;
+}
+
+input[type=text] {
+    border: none;
+    background: transparent;
+    color: #ccc;
+    border-radius: 0;
+}
+
+*:focus {
+    outline: none;
+}
 
 h2 {
-        letter-spacing: 0.1em;
-        font-size: 1.4em;
+    letter-spacing: 0.1em;
+    font-size: 1.4em;
 }
 
 p {
-        text-align: justify;
-        text-align-last: center;
-        width: 95%;
-        max-width: 600px;
-        margin: auto;
+    text-align: justify;
+    text-align-last: center;
+    width: 95%;
+    max-width: 600px;
+    line-height: 1.7em;
+    margin: auto;
+    font-size: 1.1em;
 }
 
 a {
-        color: inherit;
-        text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 a, a:visited, a:focus, a:active, a:link{
-        color: inherit;
-        transition: opacity 0.5s ease;
+    color: inherit;
+    transition: opacity 0.5s ease;
 }
-                                a:hover {
-        text-decoration: none;
-        opacity: 0.6;
-        transition: opacity 0.5s ease;
+                            a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
 }
 
 .fab, .fas {
-        text-decoration: none;
-        padding: 0px 8px;
-        font-size: 0.7em;
+    text-decoration: none;
+    padding: 0px 8px;
+    font-size: 0.7em;
 }
 
 ul {
-        padding: 0px;
-        margin-top: 0;
-        width: 100%;
+    padding: 0px;
+    margin-top: 0;
+    width: 100%;
 }
 
 li { 
-        letter-spacing: 0.065em;
-        font-size: 1.25em;
-        display: inline-block;
-        width: auto;
-        vertical-align: middle;
-        list-style: outside none none;
+    letter-spacing: 0.065em;
+    font-size: 1.25em;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    list-style: outside none none;
 }
 
 header, footer {

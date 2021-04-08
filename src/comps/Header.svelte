@@ -88,9 +88,9 @@
 
 <header>
         <ul id='nav' class='container'>
-            <li><a href='/contribute'>contribute</a></li>
+            <li><a href='/assist'>assist</a></li>
             <li id='title'><a href='/'>Virian</a></li>
-            <li><a href='procedures'>procedures</a></li>
+            <li><a href='/adjust'>adjust</a></li>
         </ul>
         <span id='tagline'>
             cultural sustainability research

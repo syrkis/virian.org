@@ -88,13 +88,13 @@
         border: none;
         background: transparent;
         color: #ccc;
-        width: 170px;
         border-radius: 0;
     }
 
     *:focus {
             outline: none;
     }
+
     button {
         background: transparent;
         border: none;
@@ -103,12 +103,7 @@
         height: 1.1em;
     }
 
-    button:active {
-        background: transparent;
-    }
     
-
-
     hr {
         width: 200px;   
         border: none;
@@ -121,13 +116,18 @@
         width: 242px;
         margin: auto;
     }
+    #target {
+        width: 170px;
+    }
 
     button, button:visited, button:focus, button:active, button:link{
             color: inherit;
+            background: transparent;
             transition: opacity 0.5s ease;
     }
     button:hover {
             text-decoration: none;
+            cursor: pointer;
             opacity: 0.6;
             transition: opacity 0.5s ease;
     }

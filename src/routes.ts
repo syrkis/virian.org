@@ -1,11 +1,11 @@
-import Contribute from './routes/Contribute.svelte';
+import Assist from './routes/Assist.svelte';
 import Home from './routes/Home.svelte';
-import Procedures from './routes/Procedures.svelte';
+import Adjust from './routes/Adjust.svelte';
 
 const routes: array<object> = [
-    {name: 'contribute', component: Contribute},
+    {name: 'assist', component: Assist},
     {name: '/', component: Home},
-    {name: 'procedures', component: Procedures}
+    {name: 'adjust', component: Adjust}
 ]
 
 export { routes }
