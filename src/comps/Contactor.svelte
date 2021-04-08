@@ -9,7 +9,7 @@
         <input type='text' placeholder='name' id='name'>
     and
         <input type='text' placeholder='e-mail address' id='email'>
-        <button class='fas fa-arrow-alt-circle-right'></button>
+        <button class='fas fa-arrow-alt-circle-right' type='button'></button>
 
     </p>
     </form>

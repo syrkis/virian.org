@@ -5,7 +5,7 @@
 
     let descriptors: Descriptors;
     let source: string;
-    $: target = 'null';
+    let target: string;
 
     async function getDescriptors(): Promise<Descriptors[]> {
         try {
@@ -40,9 +40,16 @@
 
      function submit() {
         target = (<HTMLInputElement>document.getElementById("target")).value;
-        console.log(target);
+         if (target == "") {
+            console.log('null')
+         } else {
+            try {
+                const res = axios.post('https://api.virian.org/associators', {source: source, target: target});
+            } catch(error) {
+                console.error("didn't work");
+            }
+         }
      }
-    
 </script>
 
 <section>
@@ -60,7 +67,7 @@
                 <br>
                 <div class='target'>
                     <input type='text' id='target' class='target' placeholder='Adjective'>
-                    <button on:click={submit} class='fas fa-arrow-alt-circle-right'></button>
+                    <button type='button' on:click={submit} class='fas fa-arrow-alt-circle-right'></button>
                     <hr>
                 </div>
             </div>
