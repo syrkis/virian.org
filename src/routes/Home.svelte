@@ -9,5 +9,7 @@
     <br/>
     <br/>
     <br/>
-    <Grapher />
+    <h2>EXPLORER</h2>
+    <span>coming soon</span>
+    <!--    <Grapher />-->
 </main>
