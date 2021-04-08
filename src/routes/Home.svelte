@@ -4,7 +4,7 @@
 
 <main>
     <p>
-        Virian is a non-profit attempt at making the behaviour our cultural focus—as gagued through global web activity—explicit enough so as to be includable in autonumous  media curation systems. The web, increasingly, is the nervous system of our world, and we need it to reflect, not our vices, but our values.
+    The Virian Project is an attempt at making the moving of our cultural attention—seen in global web activity—explicit enough to be includable in <code>AI</code> media curation processes. The web, increasingly, is a shared nervous system, and we need it to guide our attention in a way that aligns with our values.
     </p>
     <br/>
     <br/>

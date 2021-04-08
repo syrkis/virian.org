@@ -38,13 +38,15 @@
         target = 'NULL';
     });
 
-     function submit() {
-        target = (<HTMLInputElement>document.getElementById("target")).value;
+     async function submit() {
+        target = (<HTMLInputElement>document.getElementById("target")).value.toLowerCase();
          if (target == "") {
             console.log('null')
          } else {
             try {
-                const res = axios.post('https://api.virian.org/associators', {source: source, target: target});
+                const res = await axios.post('https://api.virian.org/associators', {source: source, target: target});
+                console.log('success');
+                return res;
             } catch(error) {
                 console.error("didn't work");
             }
@@ -55,10 +57,12 @@
 <section>
         <form autocomplete="off">
             <div class='associator'>
-                places that are
+                Places that are
                 <br>
         <span id='source'>
-    {#await source then word}
+    {#await source}
+            "LOADING"
+    {:then word}
             {word}
     {/await}
         </span>
