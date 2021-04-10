@@ -78,7 +78,7 @@
     {/await}
         </span>
                 <br>
-                tend to also be:
+                are sometimes also:
                 <br>
                 <div class='target'>
                     <input type='text' id='target' class='target' placeholder='type a word' >
