@@ -44,18 +44,28 @@
             console.log('null')
          } else {
             try {
-                const res = await axios.post('https://api.virian.org/associators', {source: source, target: target});
-                console.log('success');
+                const res = await axios.post('https://api.virian.org/associators', {source: source, target: target});  
+                postSubmit()
                 return res;
             } catch(error) {
                 console.error("didn't work");
             }
          }
      }
+    
+    function postSubmit() {
+        let line = document.getElementById('line');
+        line.style.border = 'none';
+        let buttonElem = document.getElementById('button1')
+        buttonElem.style.display = 'none';
+        let targetText = document.getElementById('target')
+        targetText.style.textAlign = 'center';
+        targetText.readOnly = true;
+    }
 
 </script>
 
-<section>
+<main>
     <form autocomplete="off" on:submit|preventDefault={submit} >
             <div class='associator'>
                 Places that are
@@ -72,15 +82,14 @@
                 <br>
                 <div class='target'>
                     <input type='text' id='target' class='target' placeholder='type a word' >
-                    <button type='button'  on:click={submit} class='fas fa-angle-right'></button>
-                    <hr>
+                    <button type='button'  on:click={submit} id='button1' class='fas fa-angle-right'></button>
+                    <hr id='line'>
                 </div>
-            </div>
+            </div> 
         </form>
-</section>
+</main>
 
 <style>
-
     #source, #target {
         font-family: 'Arial';
         text-transform: bold;
@@ -121,11 +130,13 @@
         margin: 0;
     }
 
+    #line { transition: borderBottom 2s; }
     
     hr {
         width: 190px;   
         border: none;
         top: -20px;
+        line-height: 1em;
         position: relative;
         border-bottom: solid 2px #ccc;
     }
