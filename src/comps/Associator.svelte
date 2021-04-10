@@ -4,7 +4,7 @@
     import { onMount } from 'svelte';
 
     let descriptors: Descriptors;
-    let source: string;
+    let source: string = ' ';
     let target: string;
 
     async function getDescriptors(): Promise<Descriptors[]> {
@@ -61,7 +61,7 @@
                 <br>
         <span id='source'>
     {#await source}
-            "LOADING"
+        <p>FUCK</p>
     {:then word}
             {word}
     {/await}

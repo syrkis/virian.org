@@ -1,4 +1,6 @@
 <script lang='ts'>
+    import Data from '../comps/Data.svelte';
+    import Plug from '../comps/Plug.svelte';
 
 </script>
 <main>
@@ -12,6 +14,9 @@
         <li><code>data</code></li>
         <li><code>plug</code></li>
     </ul>
+    <br/>
+    <Data />
+    <Plug />
 </main>
 <style>
     li {
