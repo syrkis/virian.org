@@ -1,5 +1,21 @@
 <script lang='ts'>
 
 </script>
-<!--<p>If you're organization serves a lot of media, and you're currently currating exclusively to maximize user engagement, this page is for you. You need to account for the cultural effect of a given pieace of media, and we provide you the data stream that allows you to do this. As the web increasingly plays the role of the nervous system of modern civilization, it becomes increasingly important to adjust its emergent curation policy so as to produce outputs (cultural trends) that better align it with the sum of human will. Unlike organic nervous systems, this digital one will have to evolve without the guiding hand of natural selection. <b><i>The Virian Project</i></b> is an attempt at this. Based on continuous analysis and exploration of data generted by <code><a href='/assist'>assist/</a></code> and our various web scarpers, we will be launching an <code>API</code> in late 2021, with the asspiration of contributing to the curative proceess of your data services.
-</p>-->
+<main>
+    <p>
+    We need to adjust the heuristics by which digital media is curated, so as to have the movement of cultural attention be better aligned with our collective values. To that end we are developing <code>data</code> for organizations and a curration assistant—<code>plug</code>—for people, both launching in 2021. Learn more about:
+    </p>
+    <br/>
+    <br/>
+    <br/>
+    <ul>
+        <li><code>data</code></li>
+        <li><code>plug</code></li>
+    </ul>
+</main>
+<style>
+    li {
+        padding: 0 60px;
+    }
+</style>
+
