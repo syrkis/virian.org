@@ -69,19 +69,19 @@
     @media only screen and (max-width: 600px) {
         #title {
             font-size: 1.5em !important;
-            padding: 0 6%;
+            padding: 0 12%;
         }
         li {
-                font-size: 1em !important;
+                font-size: 1.2em !important;
         }
     }
     @media only screen and (max-width: 374px) {
         #title {
             font-size: 2.5em;
-            padding: 0 6%;
+            padding: 0 9%;
         }
         li {
-                font-size: 0.7em !important;
+                font-size: 1.2em !important;
         }
 }
 </style>

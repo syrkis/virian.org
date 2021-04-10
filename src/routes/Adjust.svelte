@@ -72,8 +72,8 @@
     {/if}
 </main>
 <style>
-    #data { padding: 0 70px 0 0; }  
-    #plug { padding: 0 0 0 70px; }
+    #data { padding: 0 60px 0 0; }  
+    #plug { padding: 0 0 0 60px; }
 
     button, button:active {
             background: transparent;
