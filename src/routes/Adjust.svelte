@@ -2,6 +2,20 @@
     import Data from '../comps/Data.svelte';
     import Plug from '../comps/Plug.svelte';
 
+    $: showData = true;
+    $: showPlug = false;
+    
+    function toggleData() {
+        if (!showData) {
+            $: showData = true;
+        }  
+    }
+
+    function togglePlug() {
+        if (!showPlug) {
+            $: showData = false;
+        }
+    }
 </script>
 <main>
     <p>
@@ -11,16 +25,25 @@
     <br/>
     <br/>
     <ul>
-        <li><code>data</code></li>
-        <li><code>plug</code></li>
+        <li><code><button on:click={toggleData}>data</button></code></li>
+        <li><code><button on:click={togglePlug}>plug</button></code></li>
     </ul>
     <br/>
-    <Data />
-    <Plug />
+    {#if showData}
+        <Data />
+    {:else}
+        <Plug />
+    {/if}
 </main>
 <style>
     li {
         padding: 0 60px;
+    }
+    button, button:active {
+            background: transparent;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
     }
 </style>
 
