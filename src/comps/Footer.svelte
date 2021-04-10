@@ -19,3 +19,9 @@
         </li>
     </ul>
 </footer>
+
+<style>
+        footer {
+            padding-bottom: 0;
+        }
+</style>
