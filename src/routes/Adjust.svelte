@@ -25,8 +25,8 @@
     <br/>
     <br/>
     <ul>
-        <li><code><button on:click={toggleData}>data</button></code></li>
-        <li><code><button on:click={togglePlug}>plug</button></code></li>
+        <li id='data'><code><button on:click={toggleData}>data</button></code></li>
+        <li id='plug'><code><button on:click={togglePlug}>plug</button></code></li>
     </ul>
     <br/>
     {#if showData}
@@ -36,9 +36,9 @@
     {/if}
 </main>
 <style>
-    li {
-        padding: 0 60px;
-    }
+    #data { padding: 0 60px 0 0; }
+    #plug { padding: 0 0 0 60px; }
+
     button, button:active {
             background: transparent;
             border: none;
