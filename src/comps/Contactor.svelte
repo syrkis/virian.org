@@ -5,11 +5,11 @@
 <section>
     <form autocomplete='off'>
     <p>
-    Another way to assist is by ranking dates in society—as you experience them—on the dimenions derived from the process above. This allows us to find correlates between these and global web behavior. To join tell us your
-        <input type='text' placeholder='name' id='name'>
+    Another way to assist is by ranking dates in society—as you experience them—on the dimenions derived from the process above. This allows us to find correlates between these and global web behavior. To join tell us
+        <input type='text' placeholder='your name' id='name'>
     and
         <input type='text' placeholder='e-mail address' id='email'>
-        <button class='fas fa-arrow-alt-circle-right' type='button'></button>
+        <button class='fas fa-angle-right' type='button'></button>
 
     </p>
     </form>
@@ -20,11 +20,15 @@
         background: transparent;
         border: none;
         color: #ccc;
+        font-size: 1em;
+        margin: 0;
+        vertical-align: middle;
     }
 
     button, button:visited, button:focus, button:active, button:link{
         color: inherit;
         background: transparent;
+        line-height: inherit;
         transition: opacity 0.5s ease;
     }
     button:hover {
@@ -42,6 +46,7 @@
         width: 120px;
     }
     #email {
-        width: 200px; 
+        padding-right: 0;
+        width: 160px; 
     }
 </style>

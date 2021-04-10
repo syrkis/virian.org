@@ -70,8 +70,8 @@
                 tend to also be:
                 <br>
                 <div class='target'>
-                    <input type='text' id='target' class='target' placeholder='Adjective'>
-                    <button type='button' on:click={submit} class='fas fa-arrow-alt-circle-right'></button>
+                    <input type='text' id='target' class='target' placeholder='write word'>
+                    <button type='button' on:click={submit} class='fas fa-angle-right'></button>
                     <hr>
                 </div>
             </div>
@@ -120,7 +120,7 @@
 
     
     hr {
-        width: 200px;   
+        width: 190px;   
         border: none;
         top: -20px;
         position: relative;
@@ -128,11 +128,11 @@
     }
 
     .target {
-        width: 242px;
+        width: 245px;
         margin: auto;
     }
     #target {
-        width: 170px;
+        width: 173px;
     }
 
     button, button:visited, button:focus, button:active, button:link{
