@@ -4,7 +4,7 @@
 
 <main>
     <p>
-    Based on continual analysis of data gathered from <code><a href='assist/'>assist/</a></code> as well as our various web scrapers, we will be providing curation guidance through an <code>API</code> launching late 2021. If your organization would benifit from this, please get in touch with us at data@virian.org now.
+    The first iteation of <code>plug</code> will be a browser extension released late summer 2021. Initially it will evaluate the contents of your web activity on the cultural dimensions uncovered through <code><a href='assist'>assist/</a></code>. Exploring this evaluation should be viewed as a meditation of sorts. All analysis is done on device.
     </p>
 </main>
 
