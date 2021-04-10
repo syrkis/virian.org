@@ -2,18 +2,25 @@
     import Data from '../comps/Data.svelte';
     import Plug from '../comps/Plug.svelte';
 
-    $: showData = true;
-    $: showPlug = false;
-    
+    $: showData = null;
+
     function toggleData() {
         if (!showData) {
             $: showData = true;
+            let dataCss = document.getElementById('data1')
+            let plugCss = document.getElementById('plug1')
+            dataCss.style.borderBottom = '2px solid #ccc'; 
+            plugCss.style.borderBottom = 'none';
         }  
     }
 
     function togglePlug() {
-        if (!showPlug) {
+        if (showData) {
             $: showData = false;
+            let dataCss = document.getElementById('data1')
+            let plugCss = document.getElementById('plug1')
+            plugCss.style.borderBottom = '2px solid #ccc'; 
+            dataCss.style.borderBottom = 'none';
         }
     }
 </script>
@@ -25,8 +32,8 @@
     <br/>
     <br/>
     <ul>
-        <li id='data'><code><button on:click={toggleData}>data</button></code></li>
-        <li id='plug'><code><button on:click={togglePlug}>plug</button></code></li>
+        <li id='data'><code><button on:click={toggleData}><span id='data1'>data</span></button></code></li>
+        <li id='plug'><code><button on:click={togglePlug}><span id='plug1'>plug</span></button></code></li>
     </ul>
     <br/>
     {#if showData}
@@ -36,13 +43,15 @@
     {/if}
 </main>
 <style>
-    #data { padding: 0 60px 0 0; }
-    #plug { padding: 0 0 0 60px; }
+    #data { padding: 0 70px 0 0; }  
+
+    #plug { padding: 0 0 0 70px; }
 
     button, button:active {
             background: transparent;
             border: none;
             color: #ccc;
+            width: 80px;
             cursor: pointer;
     }
 </style>
