@@ -52,10 +52,11 @@
             }
          }
      }
+
 </script>
 
 <section>
-        <form autocomplete="off">
+    <form autocomplete="off" on:submit|preventDefault={submit} >
             <div class='associator'>
                 Places that are
                 <br>
@@ -70,8 +71,8 @@
                 tend to also be:
                 <br>
                 <div class='target'>
-                    <input type='text' id='target' class='target' placeholder='write word'>
-                    <button type='button' on:click={submit} class='fas fa-angle-right'></button>
+                    <input type='text' id='target' class='target' placeholder='type a word' >
+                    <button type='button'  on:click={submit} class='fas fa-angle-right'></button>
                     <hr>
                 </div>
             </div>
@@ -85,7 +86,7 @@
         text-transform: bold;
         text-transform: uppercase; 
         padding: 2px 5px;
-        font-size: 1.2em;
+        font-size: 1.15em;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         margin: auto;
@@ -115,7 +116,9 @@
         border: none;
         color: #ccc;
         font-size: 1.1em;
+        width: 20px;
         height: 1.1em;
+        margin: 0;
     }
 
     
@@ -132,7 +135,7 @@
         margin: auto;
     }
     #target {
-        width: 173px;
+        width: 176px;
     }
 
     button, button:visited, button:focus, button:active, button:link{
