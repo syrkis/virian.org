@@ -38,35 +38,60 @@
         target = 'NULL';
     });
 
+    $: submitting = true;
+
      async function submit() {
-        target = (<HTMLInputElement>document.getElementById("target")).value.toLowerCase();
-         if (target == "") {
-            console.log('null')
+        if (submitting) {  
+            target = (<HTMLInputElement>document.getElementById("target")).value.toLowerCase();
+             if (target == "") {
+                console.log('null')
+             } else {
+                try {
+                    const res = await axios.post('https://api.virian.org/associators', {source: source, target: target});  
+                    postSubmit()
+                    submitting = false;
+                    return res;
+                } catch(error) {
+                    console.error("didn't work");
+                }
+             }
          } else {
-            try {
-                const res = await axios.post('https://api.virian.org/associators', {source: source, target: target});  
-                postSubmit()
-                return res;
-            } catch(error) {
-                console.error("didn't work");
-            }
+            $: submitting = true;
+            console.log('prep for another submission')
+            prepSubmit();
          }
      }
     
     function postSubmit() {
         let line = document.getElementById('line');
-        line.style.border = 'none';
+        line.style.borderColor = 'black'
         let buttonElem = document.getElementById('button1')
-        buttonElem.style.display = 'none';
+        buttonElem.classList.add('fa-redo')
+        buttonElem.classList.remove('fa-angle-right')
+        buttonElem.style.fontSize = '0.7em'
+        buttonElem.style.transform = 'translateX(85px) translateY(7px)'
         let targetText = document.getElementById('target')
-        targetText.style.textAlign = 'center';
         targetText.readOnly = true;
+    }
+
+    function prepSubmit() {
+        source = getSource(descriptors).word;
+        let line = document.getElementById('line');
+        let buttonElem = document.getElementById('button1') 
+        line.style.borderColor = '#ccc';
+        document.getElementById('myForm').reset();
+        buttonElem.classList.add('fa-angle-right')
+        buttonElem.classList.remove('fa-redo');
+        buttonElem.style.fontSize = '1.1em'
+        buttonElem.style.transform = 'translateX(85px) translateY(3.5px)'
+        let targetText = document.getElementById('target')
+        targetText.readOnly = false;
     }
 
 </script>
 
 <main>
-    <form autocomplete="off" on:submit|preventDefault={submit} >
+    <form autocomplete="off" id='myForm' on:submit|preventDefault={submit} >
             <div class='associator'>
                 Places that are
                 <br>
@@ -82,8 +107,10 @@
                 <br>
                 <div class='target'>
                     <input type='text' id='target' class='target' placeholder='type a word' >
+
                     <button type='button'  on:click={submit} id='button1' class='fas fa-angle-right'></button>
                     <hr id='line'>
+                    <br/>
                 </div>
             </div> 
         </form>
@@ -109,6 +136,16 @@
         letter-spacing: 0.07em;
     }
     
+
+    input {
+            text-align: center;
+            margin: auto;
+            right: 50%;
+            position: absolute;
+            transform: translateX(50%);
+            display: inline-block;
+    }
+
     input[type=text] {
         border: none;
         background: transparent;
@@ -121,22 +158,22 @@
     }
 
     button {
-        background: transparent;
         border: none;
+        transform: translateY(3.5px) translateX(85px);
+        position: absolute;
         color: #ccc;
         font-size: 1.1em;
         width: 20px;
-        height: 1.1em;
         margin: 0;
     }
 
     #line { transition: borderBottom 2s; }
     
     hr {
-        width: 190px;   
+        width: 163px;   
         border: none;
-        top: -20px;
         line-height: 1em;
+        bottom: -20px;
         position: relative;
         border-bottom: solid 2px #ccc;
     }
@@ -144,6 +181,7 @@
     .target {
         width: 245px;
         margin: auto;
+        padding-top: 1em;
     }
     #target {
         width: 176px;
