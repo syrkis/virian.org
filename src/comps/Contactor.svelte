@@ -1,15 +1,46 @@
 <script lang='ts'>
+    import axios from 'axios';
+
+    let isSubmitted = false;
+    let name = '';
+    let mail = '';
+
+    async function submit() {
+
+        if (!mail || !name) {
+            return
+        }
+        try {
+            const res = await axios.post('https://api.virian.org/assistors', { name, mail });
+            console.log(name, mail)
+            
+        } catch (erro) {
+            console.error('ERROR MF')
+        }
+        isSubmitted = true;
+    }
 
 </script>
 
 <section>
-    <form autocomplete='off'>
+    <form autocomplete="off" name='myForm2' on:submit|preventDefault={submit} >
     <p>
-    Another way to assist is by ranking dates in society—as you experience them—on the dimenions derived from the process above. This allows us to find correlates between these and global web behavior. To join tell us
-        <input type='text' placeholder='your name' id='name'>
+    Another way to assist is by ranking times in your culture—as you experience them—on the dimenions derived from the process above. This allows us to find correlates between these and global web behavior. 
+    {#if !isSubmitted}
+        To join tell us
+
+    <input type='text' name='name' bind:value={name} placeholder='your name' class='human' id='name'>
     and
-        <input type='text' placeholder='e-mail address' id='email'>
-        <button class='fas fa-angle-right' type='button'></button>
+    <input type='text' name='mail' bind:value={mail} placeholder='e-mail address' id='mail' class='human'>
+        <button type='submit' id='button1' class='fas fa-angle-right'></button>
+    {:else}    
+        We've added <em>{name}</em> and <em>{mail}</em> to our database.
+        <br/>
+        <br/>
+        Thanks for joining.
+        <br/>
+        We'll be in touch soon.
+    {/if}
 
     </p>
     </form>
@@ -45,7 +76,7 @@
     #name {
         width: 120px;
     }
-    #email {
+    #mail {
         padding-right: 0;
         width: 160px; 
     }
