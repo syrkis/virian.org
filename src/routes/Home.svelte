@@ -9,7 +9,6 @@
     <br/>
     <br/>
     <br/>
-    <h2>EXPLORER</h2>
+    <Grapher />
     <span>coming soon</span>
-    <!--    <Grapher />-->
 </main>

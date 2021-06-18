@@ -34,12 +34,11 @@
     <input type='text' name='mail' bind:value={mail} placeholder='e-mail address' id='mail' class='human'>
         <button type='submit' id='button1' class='fas fa-angle-right'></button>
     {:else}    
+        <br/>
+        <br/>
         We've added <em>{name}</em> and <em>{mail}</em> to our database.
         <br/>
-        <br/>
-        Thanks for joining.
-        <br/>
-        We'll be in touch soon.
+        We'll be in touch soon. Thanks for joining.
     {/if}
 
     </p>

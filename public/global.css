@@ -1,4 +1,8 @@
 /* MY SHIT */
+body::selection {
+      --highlight-color:"#ggg";
+        background: "#ggg";
+}
 button, button:visited, button:focus, button:active, button:link{
     color: inherit;
     transition: opacity 0.5s ease;

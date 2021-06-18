@@ -16,6 +16,7 @@
                 enable: true,
                 color: "#ddd",
                 distance: 30,
+                width: 2,
             },
             move: {
                 enable: true,
