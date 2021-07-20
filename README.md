@@ -7,6 +7,5 @@ The purpose of the Virian website is three fold:
 3. To allo organizations to sign up for integrating the Virian Protocol.
 
 ## TODO
-- Complete post button for data gathering mechanism.
 - d3js viz on home page.
-- Write nice /adjust page with vertical list and call to action.
+

@@ -3,9 +3,11 @@
 </script>
 
 <br/>
-<dev class='wrapper'>
+<div class='wrapper'>
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
-</dev>
+    <br/>
+    <span>Week 14 — 2021</span>
+</div>
 
 <style>
     .wrapper {
@@ -24,11 +26,11 @@
     /* Special styling for WebKit/Blink */
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
-      height: 36px;
+      height: 20px;
       width: 10px;
       background: #ddd;
       cursor: pointer;
-      margin-top: -17.5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
     }
     
     input[type=range]::-webkit-slider-runnable-track {

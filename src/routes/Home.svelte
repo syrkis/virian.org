@@ -8,7 +8,5 @@
     </p>
     <br/>
     <br/>
-    <br/>
     <Grapher />
-    <span>coming soon</span>
 </main>
