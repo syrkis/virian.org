@@ -1,6 +1,6 @@
 <footer>
     <span>for any inquiries write</span><br/>
-    <span><a href='mailto:contact@virian.org'>contact@virian.org</a></span>
+    <span><a href='mailto:virian@syrkis.com'>virian@syrkis.com</a></span>
     <ul>
         <li>
             <a href='https://github.com/virianorg' target='_blank' class='fab fa-github'/>

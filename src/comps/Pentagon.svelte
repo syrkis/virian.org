@@ -36,5 +36,5 @@
 </svg>
 
 <style>
-    
+    path { transition: d .3s ease; }    
 </style>
