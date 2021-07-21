@@ -25,7 +25,7 @@
 <section>
     <form autocomplete="off" name='myForm2' on:submit|preventDefault={submit} >
     <p>
-    Another way to assist is by ranking times in your culture—as you experience them—on the dimenions derived from the process above. This allows us to find correlates between these and global web behavior. 
+    Another way to assist is by ranking weeks in your culture on the dimenions derived from the process above. This allows us to further uncover relationships between cultural states and global web activity.
     {#if !isSubmitted}
         To join tell us
 

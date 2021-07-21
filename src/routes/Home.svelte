@@ -4,7 +4,7 @@
 
 <main>
     <p>
-    The Virian Project is an attempt at making the movment of our cultural attention—as gauged through web activity—explicit enough to be includable in <code>AI</code> media curation processes. The web, increasingly, is our shared nervous system. We need it to guide our attention in a way that aligns with our values.
+    The <i>Virian Project</i> is about making the movments of our collective attention explicit enough to be feature in <code>AI</code>-based content curation. The web, increasingly, is our shared nervous system. We need it to guide our attention in a way that aligns with our values.
     </p>
     <br/>
     <br/>

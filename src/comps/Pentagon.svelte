@@ -25,7 +25,7 @@
             
               <path d="M 0 0 l {size / 2.8} 0" fill="none" stroke-width='1.5' stroke-dasharray="5" />
 
-              <path d="M 0 0 l {entry[value] * 200} 0" fill="none" stroke-width='10'/>
+              <path d="M 0 0 l {entry[value] * (size / 3)} 0" fill="none" stroke-width='10'/>
               <text dominant-baseline='middle' text-anchor='middle' transform={`translate(${size / 2.3}, 0) rotate(${((-73) * (i - 1)) - 17})`} >
                 {dims[i]}
                 
