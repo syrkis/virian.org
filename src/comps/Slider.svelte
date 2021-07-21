@@ -1,12 +1,17 @@
 <script lang='ts'>
-    export let value: number = 0;
     
-      
+    import moment from 'moment';
+    
+    export let value: number = 0;
+
+    $: date1 = moment().subtract(value, 'weeks');
+    $: date2 = moment().subtract(value + 1, 'weeks');
+     
 </script>
 
 <br/>
 <div class='wrapper'>
-    <span>{value}</span>
+    <span>{date1.format('LL')} to {date2.format('LL')}</span>
     <br/>
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
 </div>
