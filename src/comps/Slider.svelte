@@ -13,6 +13,7 @@
 <div class='wrapper'>
     <span>week of {dateRange}</span>
     <br/>
+    <br/>
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
 </div>
 
@@ -33,8 +34,9 @@
     /* Special styling for WebKit/Blink */
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
-      height: 20px;
-      width: 10px;
+      transform: rotate(45deg);
+      height: 21px;
+      width: 21px;
       background: #ddd;
       cursor: pointer;
       margin-top: -9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */

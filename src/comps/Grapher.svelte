@@ -18,6 +18,6 @@
 {:then ocean}
     <h2>pentaglyph</h2>
     <Pentaglyph data={ocean} {value} />
-    <Slider bind:value={value}
+    <Slider bind:value={value} />
     <br/>
 {/await}
