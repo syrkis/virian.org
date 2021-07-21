@@ -4,9 +4,9 @@
 
 <br/>
 <div class='wrapper'>
-    <input bind:value={value} type='range' min='1' max='98' class='slider' />
+    <span>{value}</span>
     <br/>
-    <span>Week 14 — 2021</span>
+    <input bind:value={value} type='range' min='1' max='98' class='slider' />
 </div>
 
 <style>
