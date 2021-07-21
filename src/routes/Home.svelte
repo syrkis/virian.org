@@ -4,7 +4,7 @@
 
 <main>
     <p>
-    The <i>Virian Project</i> is about making the movments of our collective attention explicit enough to be feature in <code>AI</code>-based content curation. The web, increasingly, is our shared nervous system. We need it to guide our attention in a way that aligns with our values.
+    The <i>Virian Project</i> is an attempt at making the movment of our collective attention explicit enough to be feature in <code>AI</code>-based content curation systems. The web, increasingly, is our shared nervous system—we need it to guide our attention in a way that aligns with our values.
     </p>
     <br/>
     <br/>
