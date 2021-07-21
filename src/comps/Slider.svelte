@@ -4,14 +4,14 @@
     
     export let value: number = 0;
 
-    $: date1 = moment().subtract(value, 'weeks');
     $: date2 = moment().subtract(value + 1, 'weeks');
+    $: dateRange = (moment().subtract(value, 'weeks').startOf('week').format('LL')).toString();
 
 </script>
 
 <br/>
 <div class='wrapper'>
-    <span>{date2.format('LL')} to {date1.format('LL')}</span>
+    <span>week of {dateRange}</span>
     <br/>
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
 </div>
