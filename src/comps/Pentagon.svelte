@@ -6,7 +6,7 @@
     export let value: number;
     const entries = Object.values(data)
 
-    let size: number = Math.min(window.innerWidth * 0.9, window.innerHeight * 0.9, 600);
+    let size: number = Math.min(window.innerWidth * 0.9, window.innerHeight * 0.9);
     let height: number = size;
     let width: number = size;
     let word_pad: string = '10px';

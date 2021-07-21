@@ -6,12 +6,12 @@
 
     $: date1 = moment().subtract(value, 'weeks');
     $: date2 = moment().subtract(value + 1, 'weeks');
-     
+
 </script>
 
 <br/>
 <div class='wrapper'>
-    <span>{date1.format('LL')} to {date2.format('LL')}</span>
+    <span>{date2.format('LL')} to {date1.format('LL')}</span>
     <br/>
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
 </div>
