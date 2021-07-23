@@ -5,7 +5,7 @@
 <main>
     <div>
     <p id='lorem'>
-    The <i>Virian Project</i> is an attempt at making the movments of our collective attention explicit enough to be a data feature in <code>AI</code>-based media curation systems. The web, increasingly, is our shared nervous system—we need it to guide our attention in a way that aligns with our values.
+    The <i>Virian Project</i> is an attempt at making the movements of our collective attention explicit enough to be a data feature in <code>AI</code>-based media curation systems. The web, increasingly, is our shared nervous system—we need it to guide our attention in a way that aligns with our values.
     </p>
 </div>
     <br/>
