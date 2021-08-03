@@ -25,7 +25,7 @@
 </script>
 <main>
     <p>
-You can use the <i>Virian Project</i> as both an individual and an institution. For individuals, we are making a browser plugin for on-device media analysis (i.e. making your media diet more explicit to you). For institutions, we're making an <code>API</code> to augment your content feature space with cultural effect metrics.
+You can use the <i>Virian Project</i> as both an individual and an institution. For individuals, we are making a browser plugin for on-device media analysis (i.e. making your media diet more explicit to you). For institutions, we're making an <code>API</code> to augment your content with cultural effect metrics.
     <p>
     <br/>
     —
@@ -34,7 +34,7 @@ You can use the <i>Virian Project</i> as both an individual and an institution. 
     <form autocomplate='off' name='name' on:submit|preventDefault={submit} >
 {#if !isSubmitted}
     <p>
-        To join the waitlist and be invited asap tell us
+        To join our wait list as an individual or an institution tell us
     </p>
 <input type='text' name='contact' bind:value={name} placeholder='your name' class='name' id='name' autocorrect='off'/> and 
     <input type='text' name='mail' bind:value={mail} placeholder='e-mail' class='mail' id='mail' autocapitalize='none' autocorrect='off'/>
