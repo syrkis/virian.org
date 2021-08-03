@@ -29,16 +29,14 @@
     {#if !isSubmitted}
         To join tell us
 
-    <input type='text' name='name' bind:value={name} placeholder='your name' class='human' id='name'>
+    <input type='text' name='name' bind:value={name} placeholder='your name' class='human' id='name' autocorrect='off'>
     and
-    <input type='text' name='mail' bind:value={mail} placeholder='e-mail address' id='mail' class='human'>
+    <input type='text' name='mail' bind:value={mail} placeholder='e-mail address' id='mail' class='human' autocapitalize='none' autocorrect='off'>
         <button type='submit' id='button1' class='fas fa-angle-right'></button>
     {:else}    
         <br/>
         <br/>
-        We've added <em>{name}</em> and <em>{mail}</em> to our database.
-        <br/>
-        We'll be in touch soon. Thanks for joining.
+        Thanks. We'll be in touch.
     {/if}
 
     </p>

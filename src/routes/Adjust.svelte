@@ -1,55 +1,27 @@
 <script lang='ts'>
     import Data from '../comps/Data.svelte';
     import Link from '../comps/Link.svelte';
+    import axios from 'axios';
+    
+    
+    let isSubmitted = false;  
+    let name = '';
+    let mail = '';
 
-    $: showSection = null;
-    $: showData = false;
-    $: showPlug = false;
-
-    function toggleData() {
-        if (!showSection) {
-            $: showSection = true;
-            let dataCss = document.getElementById('data1')
-            dataCss.style.fontStyle = 'oblique'; 
-            $: showData = true;
-        } else if (!showData) {
-            $: showData = true;
-            $: showPlug = false;
-            let dataCss = document.getElementById('data1')
-            let linkCss = document.getElementById('link1')
-            dataCss.style.fontStyle = 'oblique'; 
-            linkCss.style.fontStyle = 'normal';
-        } else {
-            $: showSection = false;
-            let dataCss = document.getElementById('data1')
-            dataCss.style.fontStyle = 'normal';  
-            $: showPlug = false;
-            $: showData = false;
+    async function submit() {
+        
+        if (!mail || !name) {
+            return
         }
+        try {
+            const res = await axios.post('https://api.virian.org/assistors', {name, mail });
+        } catch (erro) {
+            console.error('ERROR MF');
+        }
+        isSubmitted = true;
     }
+   
 
-    function togglePlug() {
-        if (!showSection) {
-            $: showSection = true;
-            let linkCss = document.getElementById('link1')
-            linkCss.style.fontStyle = 'oblique'; 
-            $: showPlug = true;
-        }
-        else if (!showPlug) {
-            $: showPlug = true;
-            $: showData = false;
-            let dataCss = document.getElementById('data1')
-            let linkCss = document.getElementById('link1')
-            linkCss.style.fontStyle = 'oblique'; 
-            dataCss.style.fontStyle = 'normal';
-        } else { 
-            $: showSection = false;
-            let linkCss = document.getElementById('link1')
-            linkCss.style.fontStyle = 'normal';  
-            $: showPlug = false;
-            $: showData = false;
-        }
-    }
 </script>
 <main>
     <p>
@@ -59,11 +31,18 @@ You can use the <i>Virian Project</i> as both an individual and an institution. 
     —
     <br/>
     <br/>
+    <form autocomplate='off' name='name' on:submit|preventDefault={submit} >
+{#if !isSubmitted}
     <p>
-        To join the waitlist and be invited asap tell us <input type='text' name='contact' placeholder='your name' class='name' id='name'/> and 
+        To join the waitlist and be invited asap tell us
     </p>
-    <input type='text' name='contact' placeholder='e-mail' class='mail' id='mail'/>
-    <button type='button' id='submitter' class='fas fa-angle-right'></button>
+<input type='text' name='contact' bind:value={name} placeholder='your name' class='name' id='name' autocorrect='off'/> and 
+    <input type='text' name='mail' bind:value={mail} placeholder='e-mail' class='mail' id='mail' autocapitalize='none' autocorrect='off'/>
+    <button type='submit' id='submitter' class='fas fa-angle-right'></button>
+{:else}
+    Thanks for signing up. We'll be in touch soon.
+{/if}
+    </form>
 </main>
 <style>
 
