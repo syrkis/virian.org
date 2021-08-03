@@ -37,6 +37,6 @@
 
 <style>
     path {
-        transition: all 0.3s ease-in-out;
+        transition: d .2s ease-in-out;
     }    
 </style>

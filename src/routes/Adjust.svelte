@@ -53,14 +53,14 @@
 </script>
 <main>
     <p>
-    We need to adjust the heuristics by which digital media is curated, so as to have the movement of cultural attention be better aligned with our collective values. To that end we are developing <em>data</em> for organizations and a curration assistant, <em>link</em>, for people, both launching in 2021. Learn more about:
-    </p>
+You can use the <i>Virian Project</i> as both an individual and an institution. For individuals, we are making a browser plugin for on-device media analysis (i.e. making your media diet more explicit to you). For institutions, we're making an <code>API</code> that augments content feature space with cultural effect metrics.
+    <p>
     <br/>
     <br/>
     <br/>
     <ul>
-        <li id='data'><button on:click={toggleData}><span id='data1'>data</span></button></li>
-        <li id='link'><button on:click={togglePlug}><span id='link1'>link</span></button></li>
+        <li id='data'><button on:click={toggleData}><span id='data1'>individual</span></button></li>
+        <li id='link'><button on:click={togglePlug}><span id='link1'>institution</span></button></li>
     </ul>
     <br/>
     {#if showSection}
