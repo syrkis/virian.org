@@ -25,9 +25,9 @@
 <section>
     <form autocomplete="off" name='myForm2' on:submit|preventDefault={submit} >
     <p>
-    Another way to assist is by ranking weeks in your culture on the dimenions derived from the process above. This allows us to further uncover relationships between cultural states and global web activity.
+    Another way to assist is by ranking weeks in your culture on the dimensions derived from the process above. This allows us to further uncover relationships between cultural states and global web activity.
     {#if !isSubmitted}
-        To join tell us
+        To join, tell us
 
     <input type='text' name='name' bind:value={name} placeholder='your name' class='human' id='name' autocorrect='off'>
     and

@@ -93,7 +93,7 @@
 <main>
     <form autocomplete="off" id='myForm' on:submit|preventDefault={submit} >
             <div class='associator'>
-                Places that are
+                places that are
                 <br>
         <span id='source'>
     {#await source}
