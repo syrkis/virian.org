@@ -53,7 +53,7 @@
 </script>
 <main>
     <p>
-You can use the <i>Virian Project</i> as both an individual and an institution. For individuals, we are making a browser plugin for on-device media analysis (i.e. making your media diet more explicit to you). For institutions, we're making an <code>API</code> that augments content feature space with cultural effect metrics.
+You can use the <i>Virian Project</i> as both an individual and an institution. For individuals, we are making a browser plugin for on-device media analysis (i.e. making your media diet more explicit to you). For institutions, we're making an <code>API</code> to augment your content feature space with cultural effect metrics.
     <p>
     <br/>
     <br/>
