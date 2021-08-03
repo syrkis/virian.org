@@ -36,7 +36,7 @@
     {:else}    
         <br/>
         <br/>
-        Thanks. We'll be in touch.
+Thanks for signing up. We'll be in touch soon. 
     {/if}
 
     </p>
