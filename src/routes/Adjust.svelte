@@ -56,32 +56,29 @@
 You can use the <i>Virian Project</i> as both an individual and an institution. For individuals, we are making a browser plugin for on-device media analysis (i.e. making your media diet more explicit to you). For institutions, we're making an <code>API</code> to augment your content feature space with cultural effect metrics.
     <p>
     <br/>
+    —
     <br/>
     <br/>
-    <ul>
-        <li id='data'><button on:click={toggleData}><span id='data1'>individual</span></button></li>
-        <li id='link'><button on:click={togglePlug}><span id='link1'>institution</span></button></li>
-    </ul>
-    <br/>
-    {#if showSection}
-        {#if showData}
-            <Data />
-        {:else}
-            <Link />
-        {/if}
-    {/if}
+    <p>
+        To join the waitlist and be invited asap tell us <input type='text' name='contact' placeholder='your name' class='name' id='name'/> and 
+    </p>
+    <input type='text' name='contact' placeholder='e-mail' class='mail' id='mail'/>
+    <button type='button' id='submitter' class='fas fa-angle-right'></button>
 </main>
 <style>
-    #data { padding: 0 60px 0 0; }
-    #link { padding: 0 0 0 60px; }
 
-    button, button:active {
-            background: transparent;
-            border: none;
-            color: #ccc;
-            width: 80px;
-            cursor: pointer;
-            letter-spacing: 0.1em;
+    .name { width: 150px; }
+    .mail { width: 200px; }
+    input[type=text] {
+        text-align: center; 
+        max-width: 95%;
+    }
+
+    button {
+        font-size: 1.2em;
+        background: black; 
+        color: #ccc;
+        border: none;
     }
 </style>
 
