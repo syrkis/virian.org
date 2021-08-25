@@ -11,7 +11,7 @@
 
 <br/>
 <div class='wrapper'>
-    <span>week of {dateRange}</span>
+    <span>Week of {dateRange}</span>
     <br/>
     <br/>
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
