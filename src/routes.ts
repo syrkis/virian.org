@@ -1,11 +1,11 @@
 import Assist from './routes/Assist.svelte';
 import Home from './routes/Home.svelte';
-import Adjust from './routes/Adjust.svelte';
+import Adapt from './routes/Adapt.svelte';
 
 const routes = [
     {name: 'assist', component: Assist},
     {name: '/', component: Home},
-    {name: 'adjust', component: Adjust}
+    {name: 'adapt', component: Adapt}
 ]
 
 export { routes }

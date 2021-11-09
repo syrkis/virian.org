@@ -34,29 +34,13 @@
         // (from the core library) methods like play, pause, refresh, start, stop
     };
 
-    function toggleDarkMode()  {
-            if (darkMode) {
-                document.qureySelector('html').style.filter = "invert(100%)"; 
-                    debugger
-                darkMode = false;
-            } else {
-                document.qureySelector('html').style.filter = "invert(0)";  
-                darkMode = true;
-            }
-    }
-    
-
-    $: isHome = window.location.pathname == '/'
-    $: {
-            console.log(isHome)
-        }
 </script>
 
 <header>
         <ul id='nav' class='container'>
             <li><a href='/assist'>assist</a></li>
             <li id='title'><a href='/'>Virian</a></li>
-            <li><a href='/adjust'>adjust</a></li>
+            <li><a href='/adapt'>adapt</a></li>
         </ul>
         <span id='tagline'>
             cultural sustainability research
