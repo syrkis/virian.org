@@ -16,10 +16,8 @@
 {#await data}
     <p>Loading...</p>
 {:then ocean}
-    <h2>pentaglyph</h2>
-    <p>( Months mapped onto <i><b><a href="https://en.wikipedia.org/wiki/Moral_foundations_theory">Haidth Space</a></b></i> )</p>
-    <Pentaglyph data={ocean} {value} />
     <Slider bind:value={value} />
+    <Pentaglyph data={ocean} {value} />
     <br/>
 {/await}
 

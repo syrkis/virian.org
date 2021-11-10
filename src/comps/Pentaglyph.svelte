@@ -13,7 +13,7 @@
 
     import type { OceanEntry } from './types';
     
-    const dims: array = 'fairness loyalty authority sanctity care'.split(' ');
+    const dims: array = 'fairness loyalty authority sanctity care/harm'.split(' ');
     console.log(entries)
      
 </script>

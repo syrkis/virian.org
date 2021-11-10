@@ -1,4 +1,10 @@
 /* MY SHIT */
+html {
+    /*filter: invert(100);*/
+}
+.text {
+    padding-bottom: 42px;
+}
 body::selection {
       --highlight-color:"#ggg";
         background: "#ggg";
@@ -115,10 +121,10 @@ body {
         font-family:  'Crimson Text', Serif;
         font-size: 1.1em;
         background-color: black;
-	color: #ccc;
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
+        color: #ccc;
+        margin: 0;
+        padding: 8px;
+        box-sizing: border-box;
 }
 
 label {

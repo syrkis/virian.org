@@ -4,16 +4,15 @@
     
     export let value: number = 0;
 
-    $: date2 = moment().subtract(value + 1, 'weeks');
-    $: dateRange = (moment().subtract(value, 'weeks').startOf('week').format('LL')).toString();
+    $: date2 = moment().subtract(value + 1, 'months');
+    $: dateRange = (moment().subtract(value, 'month').startOf('month').format('MMM YYYY')).toString().toUpperCase();
 
 </script>
 
 <br/>
 <div class='wrapper'>
-    <span>Week of {dateRange}</span>
-    <br/>
-    <br/>
+    <p> <code>{dateRange}</code> in <i><b><a href="https://en.wikipedia.org/wiki/Moral_foundations_theory#The_foundations" target="_blank" >MFT Space</a></b></i> </p>
+    
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
 </div>
 
