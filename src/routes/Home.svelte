@@ -8,4 +8,9 @@
         </p>
     </div>
     <Grapher />
+    <div class='text'>
+        <p>
+            *Haidt Space refers to a five-dimensional coordinate system whose axes represent ways in which cultures differ morally. The dimensions were uncovered by statistical analysis of morally charged questionaries.
+        </p>
+    </div>
 </div>

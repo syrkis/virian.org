@@ -1,8 +1,7 @@
 <main>
     <div class="text">
         <p>
-
-            We are all part of our new, shared nervous system, the web.
+            With our aim of providing content curators with data on how to adapt their curation systems to account for cultural effect—and have that better align with people's will—in mind, we are now releasing monthly cultural state reports.
         <p>
     </div>
     <div>
