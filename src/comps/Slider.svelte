@@ -12,7 +12,7 @@
 <br/>
 <div class='wrapper'>
     <div id='slide-header'>
-        <p><code>The West, {dateRange}, <i><b><a href="https://en.wikipedia.org/wiki/Moral_foundations_theory#The_foundations" target="_blank" >Haidt Space</a></b></i>*</code></p>
+        <p><code>The West, {dateRange}, <i><b><a href="https://moralfoundations.org/" target="_blank" >Haidt Space</a></b></i>*</code></p>
     </div>
     
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
