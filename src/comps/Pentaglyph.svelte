@@ -38,5 +38,6 @@
 <style>
     path {
         transition: d .2s ease-in-out;
+        -webkit-transition: d .2s ease-in-out;
     }    
 </style>
