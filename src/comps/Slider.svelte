@@ -16,9 +16,13 @@
     </div>
     
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
+    <div id='disclaim'>
+        <i>data below is artificial (live data Jan '22)</i>
+    </div>
 </div>
 
 <style>
+    #disclaim { padding-top: 20px; }
     #slide-header {
         padding: 20px;
     }
