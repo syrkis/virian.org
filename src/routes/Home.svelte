@@ -4,7 +4,7 @@
 <div>
     <div class='text'>
         <p>
-            Virian is an ongoing attempt at quantifying the effect of media on our collective attention. The web, increasingly, is our nervous system—we need it to guide our attention in a way that aligns with our values.
+            Virian is an ongoing attempt at measuring the effect of media on our collective attention. The web, increasingly, is our nervous system—we need it to guide our attention in a way that aligns with our values.
         </p>
     </div>
     <Grapher />
