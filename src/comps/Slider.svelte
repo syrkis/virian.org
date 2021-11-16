@@ -17,7 +17,7 @@
     
     <input bind:value={value} type='range' min='1' max='98' class='slider' />
     <div id='disclaim'>
-        <i>data below is artificial (live data Jan '22)</i>
+        <i>data below is artificial—live data comes Jan 2022.</i>
     </div>
 </div>
 
