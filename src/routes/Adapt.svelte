@@ -5,13 +5,13 @@
         <p>
     </div>
     <div id='subscribe'>
-        <p>subscribe to</p>
-            <a href="https://virian.substack.com" target="_blank">
+        <a href="https://virian.substack.com" target="_blank">
+            <p>subscribe to</p>
             <div>
                 <h2>
                     the virian report
                 </h2>
-                <img src="/favicon.png" />
+                <img src="/favicon.png" alt='virian logo' />
             </div>
         </a>
     </div>
