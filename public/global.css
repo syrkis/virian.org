@@ -115,6 +115,10 @@ html, body {
 	width: 100%;
 }
 
+h1 {
+    font-family: Serif !important;
+}
+
 body {
         height: 100%;
         width: 100%;

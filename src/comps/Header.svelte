@@ -38,9 +38,9 @@
 
 <header>
         <ul id='nav' class='container'>
-            <li><a href='/assist'>assist</a></li>
+            <li><a href='/input'>input</a></li>
             <li id='title'><a href='/'>Virian</a></li>
-            <li><a href='/adapt'>adapt</a></li>
+            <li><a href='/output'>output</a></li>
         </ul>
         <span id='tagline'>
             cultural sustainability research

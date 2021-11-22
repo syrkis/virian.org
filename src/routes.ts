@@ -1,11 +1,11 @@
-import Assist from './routes/Assist.svelte';
+import Input from './routes/Input.svelte';
 import Home from './routes/Home.svelte';
-import Adapt from './routes/Adapt.svelte';
+import Output from './routes/Output.svelte';
 
 const routes = [
-    {name: 'assist', component: Assist},
+    {name: 'input', component: Input},
     {name: '/', component: Home},
-    {name: 'adapt', component: Adapt}
+    {name: 'output', component: Output}
 ]
 
 export { routes }
