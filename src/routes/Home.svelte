@@ -10,7 +10,7 @@
     <Grapher />
     <div class='text'>
         <p>
-            *<a href="https://moralfoundations.org/"><i><b>Haidt Space</b></i></a> refers to a five-dimensional coordinate system whose axes represent ways in which cultures differ morally. The dimensions were uncovered by statistical analysis of morally charged questionaries.
+            *<a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values"><i><b>Schwartz Space</b></i></a> refers to a five-dimensional coordinate system whose axes represent ways in which cultures differ. The dimensions were uncovered by statistical analysis of morally charged questionaries.
         </p>
     </div>
 </div>
