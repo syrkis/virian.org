@@ -10,24 +10,29 @@
 
 
 <footer>
-    <span>for any inquiries write</span><br/>
-    <span><a href='mailto:virian@syrkis.com'>virian@syrkis.com</a></span>
-    <ul>
-        {#each links as link}
-        <li>
-            <a href="https://{link[1]}" target="_blank" class="fab fa-{link[0]}"/>
-        </li>
+    for any inquiries, write
+    <br/>
+    <a href="mailto:virian@syrkis.com">virian@syrkis.com</a><br/>
+    {#each links as link}
+            <a href="https://{link[1]}" target="_blank" class="fab fa-{link[0]}"></a>
     {/each}
-    </ul>
 </footer>
 
 <style>
-        hr {
-            width: 140px;
-            border: #ccc .5px solid !important;
-        }
-        footer {
-            letter-spacing: 0.04em;
-            padding-bottom: 0;
-        }
+    /* footer in bottom of screen or page */
+    footer {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        padding-top: 3em;
+    }
+    .fab {
+        padding: 0 10px;
+        font-size: 0.9em;
+    }
 </style>
