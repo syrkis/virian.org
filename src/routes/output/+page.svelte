@@ -4,7 +4,8 @@
 <main>
     <div class="text">
         <p>
-            Subscribe to the Virian Report for quarterly global overviews over the change in human values of the cultures on earth.
+            Subscribe to the <i><a href="https://virian.substack.com">Virian Report</a></i> for quarterly
+            quantitative global cultural analyses, and general updates about the Virian Proect.
         </p>
     </div>
 </main>

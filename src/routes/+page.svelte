@@ -9,7 +9,7 @@
 <div>
     <div class="text">
         <p>
-            The web increasingly is our cultural nervous system. We need it to guide our attention in a way that aligns with our values.
+            The web increasingly is our cultural nervous system. We need it to guide our attention so that it aligns with our values.
         </p>
     </div>
     <div class="pentaglyphs">

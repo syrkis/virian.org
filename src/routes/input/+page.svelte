@@ -4,7 +4,8 @@
 <main>
     <div class="text">
         <p>
-            To support Virian you can subscribe to our quarterly report, make a donation, or vote on the cultural alignment graph below.
+            For now, to support Virian, subscribe to our <i><a href="https://virian.substack.com">quarterly report</a></i>,
+            or spread the word. We will let you know soon when there's more to do.
         </p>
     </div>
 </main>
