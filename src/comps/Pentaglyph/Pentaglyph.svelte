@@ -10,14 +10,14 @@
     {#await data}
         <div class="loading">Loading...</div>
     {:then data}
-        <svg width="90%" height="90%">
-            <g transform="translate(50, 50)">
+        <svg width="70vh" height="70vh">
+            <g style="transform: translate(50%, 50%)">
                 {#each Object.keys(data.data.fr[8]) as dim, i}
-                    <g transform="translate({i * 100}, 0)">
-                        <rect width="100" height="100" fill="white" stroke="black" />
-                        <text x="50" y="50" text-anchor="middle" alignment-baseline="middle" font-size="20">{data.data.fr[8][dim]}</text>
-                    <text x="0" y="{i*20}" fill="whiote">{dim}</text>
-                    <circle cx="{data.data.fr[8][dim]}" cy="{i*20}" r="5" fill="red" />
+                    <g transform="rotate({15 - i * 360 / Object.keys(data.data.fr[8]).length})">
+                        <text class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
+                            {dim}
+                        </text>
+                        <circle r="10" fill="white" transform="translate(40, 40)"></circle>
                     </g>
                 {/each}
             </g>
@@ -26,3 +26,22 @@
         <div class="error">{error.message}</div>
     {/await}
 </div>
+
+<style>
+    .dim {
+        transform: translate(50%);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .loading {
+        font-size: 2em;
+    }
+    .error {
+        color: red;
+    }
+</style>
