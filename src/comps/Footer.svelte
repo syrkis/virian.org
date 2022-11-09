@@ -29,7 +29,7 @@
         color: #fff;
         text-align: center;
         line-height: 50px;
-        padding-top: 3em;
+        padding: 3em 0;
     }
     .fab {
         padding: 0 10px;

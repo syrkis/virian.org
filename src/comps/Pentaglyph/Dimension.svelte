@@ -6,7 +6,9 @@
     {#await data}
         <div>loading...</div>
     {:then dim}
-        <div>{dim[0]} {dim[1].var} {dim[1].avg}</div>
+        <svg>
+            <circle cx=20 cy=10 r=10 fill="red"/>
+        </svg>
     {:catch error}
         <div>{error.message}</div>
     {/await}
