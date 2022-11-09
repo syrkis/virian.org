@@ -9,5 +9,4 @@
             The web increasingly is our shared nervous system—we need it to guide our attention in a way that aligns with our values.
         </p>
     </div>
-    <Pentaglyph {data} />
 </div>
