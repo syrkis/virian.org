@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <main>
     <div class="text">
         <p>
