@@ -21,7 +21,7 @@
     :global(.text) {
         margin: auto;
         width: 95%;
-        max-width: 630px;
+        max-width: 530px;
         padding-bottom: 4em;
     }
 
