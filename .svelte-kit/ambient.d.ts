@@ -26,7 +26,6 @@
  * ```
  */
 declare module '$env/static/private' {
-	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
 	export const PYENV_ROOT: string;
@@ -36,13 +35,10 @@ declare module '$env/static/private' {
 	export const npm_config_metrics_registry: string;
 	export const TMPDIR: string;
 	export const npm_config_global_prefix: string;
-	export const TERM_PROGRAM_VERSION: string;
 	export const COLOR: string;
-	export const TERM_SESSION_ID: string;
 	export const npm_config_noproxy: string;
 	export const npm_config_local_prefix: string;
 	export const USER: string;
-	export const LS_COLORS: string;
 	export const COMMAND_MODE: string;
 	export const npm_config_globalconfig: string;
 	export const SSH_AUTH_SOCK: string;
@@ -60,28 +56,22 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_event: string;
 	export const EDITOR: string;
 	export const npm_package_name: string;
-	export const ITERM_PROFILE: string;
 	export const XPC_FLAGS: string;
 	export const npm_config_node_gyp: string;
 	export const npm_package_version: string;
 	export const XPC_SERVICE_NAME: string;
+	export const SHLVL: string;
 	export const HOME: string;
 	export const PYENV_SHELL: string;
-	export const COLORFGBG: string;
-	export const SHLVL: string;
-	export const LC_TERMINAL_VERSION: string;
 	export const OMF_PATH: string;
-	export const ITERM_SESSION_ID: string;
 	export const npm_config_cache: string;
 	export const LOGNAME: string;
 	export const npm_lifecycle_script: string;
 	export const LC_CTYPE: string;
 	export const npm_config_user_agent: string;
-	export const LC_TERMINAL: string;
 	export const SECURITYSESSIONID: string;
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
-	export const COLORTERM: string;
 	export const _: string;
 }
 
@@ -112,7 +102,6 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
-		TERM_PROGRAM: string;
 		NODE: string;
 		INIT_CWD: string;
 		PYENV_ROOT: string;
@@ -122,13 +111,10 @@ declare module '$env/dynamic/private' {
 		npm_config_metrics_registry: string;
 		TMPDIR: string;
 		npm_config_global_prefix: string;
-		TERM_PROGRAM_VERSION: string;
 		COLOR: string;
-		TERM_SESSION_ID: string;
 		npm_config_noproxy: string;
 		npm_config_local_prefix: string;
 		USER: string;
-		LS_COLORS: string;
 		COMMAND_MODE: string;
 		npm_config_globalconfig: string;
 		SSH_AUTH_SOCK: string;
@@ -146,28 +132,22 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_event: string;
 		EDITOR: string;
 		npm_package_name: string;
-		ITERM_PROFILE: string;
 		XPC_FLAGS: string;
 		npm_config_node_gyp: string;
 		npm_package_version: string;
 		XPC_SERVICE_NAME: string;
+		SHLVL: string;
 		HOME: string;
 		PYENV_SHELL: string;
-		COLORFGBG: string;
-		SHLVL: string;
-		LC_TERMINAL_VERSION: string;
 		OMF_PATH: string;
-		ITERM_SESSION_ID: string;
 		npm_config_cache: string;
 		LOGNAME: string;
 		npm_lifecycle_script: string;
 		LC_CTYPE: string;
 		npm_config_user_agent: string;
-		LC_TERMINAL: string;
 		SECURITYSESSIONID: string;
 		npm_node_execpath: string;
 		npm_config_prefix: string;
-		COLORTERM: string;
 		_: string;
 		[key: string]: string | undefined;
 	}

@@ -1,21 +1,18 @@
 <script>
-
+    import Dimension from './Dimension.svelte';
     export let data;
     $: round = 8;
-
 </script>
 
 <div class="container">
     {#await data}
-        <div>loading...</div>
+        <div class="loading">Loading...</div>
     {:then data}
-        {#each Object.keys(data.fr[round]) as dimension}
-            {dimension}
-            {data.fr[round][dimension].avg}
-            {data.fr[round][dimension].var}
-            <br/>
+        {#each Object.keys(data.data.fr[round]) as dim}
+            <Dimension data={[dim, data.data.fr[round][dim]]} />
         {/each}
     {:catch error}
-        <div>{error}</div>
+        <div class="error">{error.message}</div>
     {/await}
+
 </div>
