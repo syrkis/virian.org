@@ -1,15 +1,8 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-
-    export let data;
-
-    let size;
 
     import Pentaglyph from "../comps/Pentaglyph/Pentaglyph.svelte";
 
-    onMount(async () => {
-        let size = new Math.min(window.innerWidth, window.innerHeight) * 0.8;
-    });
+    export let data;
 
 </script>
 
@@ -20,10 +13,6 @@
         </p>
     </div>
     <div class="pentaglyphs">
-        {#await size}
-            <div class="loading">Loading...</div>
-        {:then size}
-            {size}
-        {/await}
+        <Pentaglyph data={data} />
     </div>
 </div>
