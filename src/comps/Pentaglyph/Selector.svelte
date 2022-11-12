@@ -4,6 +4,6 @@
 
 <div>
     <!-- input slider -->
-    <input bind:value={round} type='range' min='0' max='9' class='slider' />
+    <input bind:value={value} type='range' min='0' max='9' class='slider' />
 
 </div>
