@@ -13,12 +13,23 @@
             <svg width="100%" height="100%">
                 <g style="transform: translate(50%, 50%)">
                     {#each Object.keys(data.data.fr[8]) as dim, i}
-                        <g transform="rotate({i * 360 / 5 + 18}) translate(300)">
-                            <text transform="rotate({-((- i * 360) / 5 + 18)}) translate(-10)"
-                                  class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
-                                {dim.toLowerCase()}
-                            </text>
-                            <path d="M 0 0 L -40 0" transform="translate({i * 60})" stroke="white" stroke-width="10" fill="none" />
+                        <g transform="rotate({ 36 - i * 72})">
+                            <g transform="translate(0, -100)">
+                                {#if i === 2 | i === 3 | i === 4}
+                                    <text transform="rotate(180) translate(0, 150)"
+                                          class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
+                                        {dim.toLowerCase()}
+                                    </text>
+                                {:else}
+                                    <text transform="rotate(0) translate(0, -150)"
+                                          class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
+                                        {dim.toLowerCase()}
+                                    </text>
+                                {/if}
+                                <path d="M 0 100 L 0 -100" stroke="white" stroke-width="10" fill="none" />
+                                <path d="M -1 -100 L 60 -80" stroke="white" stroke-width="10" fill="none" />
+                                <path d="M 1 -100 L -60 -80" stroke="white" stroke-width="10" fill="none" />
+                            </g>
                         </g>
                     {/each}
                 </g>
@@ -38,7 +49,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 50vw;
+        min-height: 600px;
+        max-height: 1000px;
     }
 
     .loading {

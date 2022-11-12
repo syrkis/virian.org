@@ -8,7 +8,7 @@
         {#each dimensions as dimension, i}
             <div class='grid-item'>
                 <div>
-                    <span style="letter-spacing: 0.2em">{dimension.toUpperCase()}</span>
+                    <span style="letter-spacing: 0.2em">{dimension.toLowerCase()}</span>
                 </div>
             </div>
         {/each}
