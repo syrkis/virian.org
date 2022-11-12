@@ -3,11 +3,12 @@
 
     export let data;
 
-    let value = 8;
+    let round = 0;
+    $: year = 2002 + round * 2;
 </script>
 
 <div>
-    <Selector bind:value={value} />
+    <Selector bind:value={round} />
     {#await data}
         <div class="loading">Loading...</div>
     {:then data}
@@ -49,7 +50,6 @@
 
     svg {
         overflow: visible;
-        position: absolute;
         width: 100%;
         height: 100%;
     }

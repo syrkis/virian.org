@@ -1,9 +1,16 @@
 <script>
-    export let value = 8;
+    export let round = 0;
+    $: year = 2002 + 2 * round
 </script>
 
 <div>
     <!-- input slider -->
-    <input bind:value={value} type='range' min='0' max='9' class='slider' />
-
+    <p>Cultural values in <code>Europe, {year}</code></p>
+    <input bind:value={round} type='range' min=0 max=9 class='slider' />
 </div>
+
+<style>
+    input {
+        z-index: 10;
+    }
+</style>
