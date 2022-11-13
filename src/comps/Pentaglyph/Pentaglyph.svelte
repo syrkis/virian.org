@@ -1,9 +1,10 @@
 <script lang="ts">
     import Selector from './Selector.svelte';
+    import Dimension from "./Dimension.svelte";
 
     export let data;
 
-    let round = 0;
+    let round: number;
     $: year = 2002 + round * 2;
 </script>
 
@@ -15,7 +16,7 @@
         <div class="container">
         <svg>
             <g style="transform: translate(50%, 50%)">
-                {#each Object.keys(data.data.fr[8]) as dim, i}
+                {#each Object.keys(data.data.fr[9]) as dim, i}
                     <g transform="rotate({ 36 - i * 72}) translate(0, -85)">
                         {#if i === 2 | i === 3 | i === 4}
                             <text transform="rotate(180) translate(0, 150)"
@@ -28,10 +29,10 @@
                                 {dim.toLowerCase()}
                             </text>
                         {/if}
-                        <path d="M 0 100 L 0 -100" stroke="white" stroke-width="10" fill="none" />
-                        <path d="M 0 100 L 0 -140" stroke="white" stroke-width="3" stroke-dasharray="5,5"/>
-                        <path d="M -1 -100 L 60 -80" stroke="white" stroke-width="10" fill="none" />
-                        <path d="M 1 -100 L -60 -80" stroke="white" stroke-width="10" fill="none" />
+                        <path d="M 0 100 L 0 {-100 * data.data.fr[9][dim]['avg']}" stroke="white" stroke-width="10" fill="none" />
+                        <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
+                        <path d="M -1 -100 L {60 * data.data.fr[9][dim].var} -80" stroke="white" stroke-width="10" fill="none" />
+                        <path d="M 1 -100 L {-60 * data.data.fr[9][dim].var} -80" stroke="white" stroke-width="10" fill="none" />
                     </g>
                 {/each}
             </g>
