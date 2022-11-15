@@ -4,36 +4,37 @@
 
     export let data;
 
-    let round: number;
-    $: year = 2002 + round * 2;
+    export let value: number = 8;
+    $: year = 2000 + value * 2;
 </script>
 
 <div>
-    <Selector bind:value={round} />
+    <Selector bind:value={value} />
     {#await data}
         <div class="loading">Loading...</div>
     {:then data}
+        {console.log(data.data[2])}
         <div class="container">
         <svg>
             <g style="transform: translate(50%, 50%)">
-                {#each Object.keys(data.data.fr[9]) as dim, i}
+                {#each Object.keys(data.data[1]) as dim, i}
                     <g transform="rotate({ 36 - i * 72}) translate(0, -85)">
-                        {#if i === 2 | i === 3 | i === 4}
-                            <text transform="rotate(180) translate(0, 150)"
+                        {#if i > 3 && i < 9}
+                            <text transform="rotate(180) translate(0, 200)"
                                   class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
                                 {dim.toLowerCase()}
                             </text>
                         {:else}
-                            <text transform="rotate(0) translate(0, -150)"
+                            <text transform="rotate(0) translate(0, -200)"
                                   class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
                                 {dim.toLowerCase()}
                             </text>
                         {/if}
-                        <path d="M 0 100 L 0 {-100 * data.data.fr[9][dim]['avg']}" stroke="white" stroke-width="10" fill="none" />
-                        <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
-                        <path d="M -1 -100 L {60 * data.data.fr[9][dim].var} -80" stroke="white" stroke-width="10" fill="none" />
-                        <path d="M 1 -100 L {-60 * data.data.fr[9][dim].var} -80" stroke="white" stroke-width="10" fill="none" />
-                    </g>
+                        <path d="M 0 110 L 0 {-150 * data.data[value][dim][0]}" stroke="white" stroke-width="10" fill="none" />
+                        <path d="M 0 110 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
+                        <path d="M -1 -100 L {60 * data.data[value][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
+                        <path d="M 1 -100 L {-60 * data.data[value][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
+                    </g>c
                 {/each}
             </g>
         </svg>
@@ -62,6 +63,11 @@
         height: 50vw;
         min-height: 600px;
         max-height: 1000px;
+    }
+
+    path {
+        transition: d .2s ease-in-out;
+        -webkit-transition: d .2s ease-in-out;
     }
 
     .loading {

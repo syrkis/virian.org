@@ -1,12 +1,12 @@
 <script>
-    export let round = 8;
-    $: year = 2002 + 2 * round
+    export let value;
+    $: year = 2000 + 2 * value
 </script>
 
 <div>
     <!-- input slider -->
-    <p><i>Schwartz Space, Europe, {year}</i></p>
-    <input bind:value={round} type='range' min=0 max=9 class='slider' />
+    <p><i>Schwartz Space*, Europe, {year}</i></p>
+    <input bind:value={value} type='range' min=1 max=10 class='slider' />
 </div>
 
 <style>
