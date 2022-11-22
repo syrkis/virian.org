@@ -1,10 +1,10 @@
 <script>
     let links = [
-        ["twitter", "twitter.com/virianproject"],
+        ["paypal", "www.paypal.com/donate/?hosted_button_id=5PDJ84Y4TG4Q4"],
         ["instagram", "instagram.com/virianproject"],
-        ["github", "github.com/virianproject"],
         ["youtube", "youtube.com/virianproject"],
-        ["paypal", "www.paypal.com/donate/?hosted_button_id=5PDJ84Y4TG4Q4"]
+        ["github", "github.com/virianproject"],
+        ["twitter", "twitter.com/virianproject"],
     ];
 </script>
 
