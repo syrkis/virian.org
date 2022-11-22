@@ -1,8 +1,8 @@
 <main>
     <div class="text">
         <p>
-            Subscribe to the<i><a href="https://virian.substack.com">Virian Report</a></i>for quarterly
-            quantitative cultural analyses, and general updates about the Virian Project.
+            We publish a quarterly quantitative cultural analysis <i><a href="https://virian.substack.com">report</a></i>,
+            and provide machine learning consulting services.
         </p>
     </div>
 </main>
