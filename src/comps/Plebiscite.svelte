@@ -46,8 +46,5 @@
         margin: auto;
         padding: 5vh 0;
     }
-    input {
-        transform: rotate(-90deg) translateX(3em);
-    }
 
 </style>
