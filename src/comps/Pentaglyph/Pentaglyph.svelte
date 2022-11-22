@@ -1,10 +1,17 @@
 <script lang="ts">
     import Selector from './Selector.svelte';
+    import { onMount } from 'svelte';
+    import VanillaTilt from "vanilla-tilt";
 
     let dimensions = ['Conformity', 'Universalism', 'Hedonism', 'Power', 'Achievement'];
     export let data;
     export let value: number = 8;
     $: year = 2000 + value * 2;
+
+    onMount(async () => {
+        const element = document.querySelector(".selector");
+        VanillaTilt.init(element, { max: 3, scale:1.01, speed: 6000, "full-page-listening": true, reverse: true });
+    });
 
 </script>
 
@@ -12,7 +19,7 @@
     {#await data}
         <div class="loading">Loading...</div>
     {:then data}
-        <div class="container">
+        <div class="container selector data-tilt data-tilt-full-page-listening">
             <svg>
                 <g style="transform: translate(50%, 50%)">
                     <g id="pentaglyph">
