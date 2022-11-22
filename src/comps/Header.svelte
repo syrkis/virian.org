@@ -34,7 +34,7 @@
         vertical-align: middle;
     }
 
-    .header { padding: 25px  0 100px 0; }
+    .header { padding: 25px  0 3rem 0; }
 
     #logo { font-size: 2em; padding: 0 3vw}
 

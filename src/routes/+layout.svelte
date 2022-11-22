@@ -22,7 +22,7 @@
         margin: auto;
         width: 95%;
         max-width: 530px;
-        padding-bottom: 4em;
+        padding-bottom: 3rem;
     }
 
     :global(a) {
