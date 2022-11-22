@@ -14,7 +14,7 @@
     <br/>
     <a href="mailto:virian@syrkis.com">virian@syrkis.com</a><br/>
     {#each links as link}
-            <a href="https://{link[1]}" target="_blank" class="fab fa-{link[0]}"></a>
+            <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="fab fa-{link[0]}"> </a>
     {/each}
 </footer>
 

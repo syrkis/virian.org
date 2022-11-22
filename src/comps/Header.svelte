@@ -3,7 +3,7 @@
 </script>
 
 <div class="header">
-    <Particles id="particles"/>
+    <Particles/>
     <nav>
         <ul>
             <li><a class="menu-item" href="/input">input&nbsp</a></li>
@@ -26,14 +26,6 @@
         display: inline-block;
         width: auto;
         list-style: outside none none;
-    }
-
-    #particles {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 5%;
     }
 
     .menu-item {
