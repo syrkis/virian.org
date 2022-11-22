@@ -2,6 +2,8 @@
     import Selector from './Selector.svelte';
     import Dimension from "./Dimension.svelte";
 
+    let dimensions = ['Benevolence', 'Power', 'Hedonism', 'Aesthetics', 'Mysticism', 'Logos'];
+
     export let data;
 
     export let value: number = 8;

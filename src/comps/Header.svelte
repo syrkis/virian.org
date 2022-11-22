@@ -46,4 +46,9 @@
 
     #logo { font-size: 2em; padding: 0 3vw}
 
+    @media (max-width: 600px) {
+        .header { padding: 25px  0 50px 0; }
+        #logo { font-size: 1.5em; padding: 0 3vw}
+    }
+
 </style>
