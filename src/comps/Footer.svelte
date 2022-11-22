@@ -4,7 +4,7 @@
         ["instagram", "instagram.com/virianproject"],
         ["github", "github.com/virianproject"],
         ["youtube", "youtube.com/virianproject"],
-        ["paypal", "paypal.com/virianproject"]
+        ["paypal", "www.paypal.com/donate/?hosted_button_id=5PDJ84Y4TG4Q4"]
     ];
 </script>
 

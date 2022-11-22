@@ -5,9 +5,9 @@
 <main>
     <div class="text">
         <p>
-            For now, to support Virian subscribe to our<i><a href="https://virian.substack.com">report</a></i>,
-            or vote on the dimensions in which culture ought to be steering now.
+            For now, you can support the Virian Project by subscribing to our <i><a href="https://virian.substack.com">quarterly report</a></i> or
+            by making a <i><a href="https://www.paypal.com/donate/?hosted_button_id=5PDJ84Y4TG4Q4">donation</a></i>.
         </p>
     </div>
-    <Plebiscite />
+    <!--<Plebiscite />-->
 </main>
