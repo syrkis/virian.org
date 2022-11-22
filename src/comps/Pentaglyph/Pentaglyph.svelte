@@ -10,8 +10,14 @@
 
     onMount(async () => {
         const element = document.querySelector(".selector");
-        VanillaTilt.init(element, { max: 3, scale:1.01, speed: 6000, "full-page-listening": true, reverse: true });
+        VanillaTilt.init(element, { max: 3, scale:1.02, speed: 6000, "full-page-listening": true, reverse: true,
+        gyroscope: true, gyroscopeMinAngleX: -45, gyroscopeMaxAngleX: 45, gyroscopeMinAngleY: -45, gyroscopeMaxAngleY: 45 });
+        var mq = window.matchMedia("(max-width: 1025px)");
+        if (mq.matches) {
+            element.vanillaTilt.destroy();
+        }
     });
+
 
 </script>
 
@@ -36,10 +42,12 @@
                                         {dim.toLowerCase()}
                                     </text>
                                 {/if}
-                                <path d="M 0 100 L 0 {-150* data.data[value][dim][0] ** 5}vh" stroke="white" stroke-width="10" fill="none" />
-                                <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
-                                <path d="M -1 -100 L {60 * data.data[value][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
-                                <path d="M 1 -100 L {-60 * data.data[value][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
+                                <g class="lines">
+                                    <path transform="translateZ(20px)" d="M 0 100 L 0 {-150* data.data[value][dim][0] ** 5}vh" stroke="white" stroke-width="10" fill="none" />
+                                    <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
+                                    <path transform="translateZ(20px)" d="M -1 -100 L {60 * data.data[value][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
+                                    <path transform="translateZ(20px)" d="M 1 -100 L {-60 * data.data[value][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
+                                </g>
                             </g>
                         {/each}
                     </g>
@@ -53,6 +61,10 @@
 </div>
 
 <style>
+
+    .lines {
+        transform: translateZ(1000px);
+    }
 
     .dim {
         letter-spacing: 0.1em;
