@@ -9,7 +9,6 @@
 </script>
 
 <div>
-    <Selector bind:value={value} />
     {#await data}
         <div class="loading">Loading...</div>
     {:then data}
@@ -43,6 +42,7 @@
     {:catch error}
         <div class="error">{error.message}</div>
     {/await}
+    <Selector bind:value={value} />
 </div>
 
 <style>
