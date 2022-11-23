@@ -12,6 +12,18 @@
     $: year = 2000 + timeID * 2;
     $: region = data[regionID];
 
+    function stopTilt() {
+        let tilt = document.getElementById('tilt');
+        tilt.classList.remove('tilt');
+        tilt.classList.add('no-tilt');
+    }
+
+    function startTilt() {
+        let tilt = document.getElementById('tilt');
+        tilt.classList.remove('no-tilt');
+        tilt.classList.add('tilt');
+    }
+
     onMount(async () => {
         const element: any = document.querySelector(".selector");
         VanillaTilt.init(element, { max: 4, scale:1.03, speed: 6000, "full-page-listening": true, reverse: true,
@@ -26,10 +38,12 @@
 </script>
 
 <div>
+
+<section on:mousedown={stopTilt()} on:mouseup={startTilt()}>
     {#await data}
         <div class="loading">Loading...</div>
     {:then data}
-        <div class="container selector data-tilt data-tilt-full-page-listening">
+        <div id='tilt' class="container selector data-tilt data-tilt-full-page-listening">
             <svg>
                 <g style="transform: translate(50%, 50%)">
                     <g id="pentaglyph">
@@ -73,6 +87,7 @@
                     href="https://www.europeansocialsurvey.org/" target="_blank"><i>ESS</i></a> survey.
         </p>
     </div>
+</section>
 </div>
 
 <style>

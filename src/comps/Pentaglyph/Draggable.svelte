@@ -42,8 +42,8 @@
         position: relative;
         border: solid 2px white;
         cursor: move;
-        width: 28px;
-        height: 28px;
+        width: 20px;
+        height: 20px;
         border-radius: 100%;
     }
 </style>
