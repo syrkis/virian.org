@@ -20,9 +20,9 @@
         if (moving) {
             left += e.movementX;
             top += e.movementY;
-            if (e.movementX > 0) {
+            if (e.movementX < 0) {
                 timeID = Math.max(regionID - 1, 1);
-            } else if (e.movementX < 0) {
+            } else if (e.movementX > 0) {
                 timeID = Math.min(regionID + 1, 10);
             } if (e.movementY > 0) {
                 regionID = Math.max(timeID - 1, 1);
@@ -43,18 +43,33 @@
         position: relative;
         border: solid 2px white;
         cursor: move;
-        width: 20px;
-        height: 20px;
+        width: 13px;
+        height: 13px;
         border-radius: 100%;
     }
 
     #orb {
-        transition: all 0.3s ease-out;
+        transition: all 0.3s ease-in-out;
+        animation: orb 1s infinite ease-in-out;
+    }
+    #orb:active {
+        scale: 1.5;
+        transition: scale 0.3s ease-out;
+        animation: none;
+    }
 
+    @keyframes orb {
+        0% {
+            transform: scale(0.95);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(0.95);
+        }
     }
-    #orb:hover {
-        scale: 1.2;
-    }
+
 </style>
 
 <svelte:window on:mouseup={stop} on:mousemove={move}  />
