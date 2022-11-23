@@ -1,18 +1,22 @@
 <script lang="ts">
     import Selector from './Selector.svelte';
+    import Draggable from './Draggable.svelte';
+
     import { onMount } from 'svelte';
     import VanillaTilt from "vanilla-tilt";
 
     let dimensions = ['Conformity', 'Universalism', 'Hedonism', 'Power', 'Achievement'];
     export let data;
-    export let value: number = 8;
-    $: year = 2000 + value * 2;
+    export let regionID: number = 1;
+    export let timeID: number = 1;
+    $: year = 2000 + timeID * 2;
+    $: region = data[regionID];
 
     onMount(async () => {
         const element: any = document.querySelector(".selector");
         VanillaTilt.init(element, { max: 4, scale:1.03, speed: 6000, "full-page-listening": true, reverse: true,
         gyroscope: true, gyroscopeMinAngleX: -45, gyroscopeMaxAngleX: 45, gyroscopeMinAngleY: -45, gyroscopeMaxAngleY: 45 });
-        var mq = window.matchMedia("(pointer:coarse)");
+        let mq = window.matchMedia("(pointer:coarse)");
         if (mq.matches) {
             element.vanillaTilt.destroy();
         }
@@ -43,10 +47,10 @@
                                     </text>
                                 {/if}
                                 <g class="lines">
-                                    <path transform="translateZ(20px)" d="M 0 100 L 0 {-150* data.data[value][dim][0] ** 5}vh" stroke="white" stroke-width="10" fill="none" />
+                                    <path transform="translateZ(20px)" d="M 0 100 L 0 {-150* data.data[timeID][dim][0] ** 5}vh" stroke="white" stroke-width="10" fill="none" />
                                     <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
-                                    <path transform="translateZ(20px)" d="M -1 -100 L {60 * data.data[value][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
-                                    <path transform="translateZ(20px)" d="M 1 -100 L {-60 * data.data[value][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
+                                    <path transform="translateZ(20px)" d="M -1 -100 L {60 * data.data[timeID][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
+                                    <path transform="translateZ(20px)" d="M 1 -100 L {-60 * data.data[timeID][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
                                 </g>
                             </g>
                         {/each}
@@ -57,7 +61,18 @@
     {:catch error}
         <div class="error">{error.message}</div>
     {/await}
-    <Selector bind:value={value} />
+    <p><i>Europe, {year}, Pentaglyph*</i></p>
+    <Draggable bind:regionID={regionID} bind:timeID={timeID} />
+    <div class="text">
+        <p>
+            *The Pentaglyph shows a region's mean and variance on a subset of the
+            <a
+                    href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" target="_blank"><i>Schwartz values</i></a>
+            as derived from the
+            <a
+                    href="https://www.europeansocialsurvey.org/" target="_blank"><i>ESS</i></a> survey.
+        </p>
+    </div>
 </div>
 
 <style>
