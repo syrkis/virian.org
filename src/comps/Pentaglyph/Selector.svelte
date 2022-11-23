@@ -1,6 +1,9 @@
 <script>
     export let regionID = 1;
     export let timeID = 1;
+    let regionIDBuff = 0;
+    let timeIDBuff = 0;
+    let bufferSize = 7;
 
     let left = 0;
     let top = 0;
@@ -21,13 +24,25 @@
             left += e.movementX;
             top += e.movementY;
             if (e.movementX < 0) {
-                timeID = Math.max(regionID - 1, 1);
+                timeIDBuff -= 1
             } else if (e.movementX > 0) {
-                timeID = Math.min(regionID + 1, 10);
+                timeIDBuff += 1;
             } if (e.movementY > 0) {
-                regionID = Math.max(timeID - 1, 1);
+                regionIDBuff -= 1;
             } else if (e.movementY < 0) {
-                regionID = Math.min(timeID + 1, 10);
+                regionIDBuff += 1;
+            } if (timeIDBuff > bufferSize) {
+                timeID = Math.min(timeID + 1, 10);
+                timeIDBuff = 0;
+            } else if (timeIDBuff < -bufferSize) {
+                timeID = Math.max(timeID - 1, 1);
+                timeIDBuff = 0;
+            } if (regionIDBuff > bufferSize) {
+                regionID = Math.min(regionID + 1, 10);
+                regionIDBuff = 0;
+            } else if (regionIDBuff < -bufferSize) {
+                regionID = Math.max(regionID - 1, 1);
+                regionIDBuff = 0;
             }
         }
     }
