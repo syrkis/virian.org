@@ -9,8 +9,8 @@
     $: year = 2000 + value * 2;
 
     onMount(async () => {
-        const element = document.querySelector(".selector");
-        VanillaTilt.init(element, { max: 3, scale:1.02, speed: 6000, "full-page-listening": true, reverse: true,
+        const element: any = document.querySelector(".selector");
+        VanillaTilt.init(element, { max: 4, scale:1.03, speed: 6000, "full-page-listening": true, reverse: true,
         gyroscope: true, gyroscopeMinAngleX: -45, gyroscopeMaxAngleX: 45, gyroscopeMinAngleY: -45, gyroscopeMaxAngleY: 45 });
         var mq = window.matchMedia("(pointer:coarse)");
         if (mq.matches) {
@@ -98,9 +98,6 @@
         color: red;
     }
 
-    /* if phone
-
-     */
     @media (max-width: 600px) {
         #pentaglyph {
             transform: scale(0.7);
