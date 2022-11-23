@@ -1,8 +1,8 @@
 <script>
     let links = [
-        ["paypal", "www.paypal.com/donate/?hosted_button_id=5PDJ84Y4TG4Q4"],
         ["instagram", "instagram.com/virianproject"],
         ["youtube", "youtube.com/virianproject"],
+        ["stripe", "donate.stripe.com/cN217dcjYg7AgpOaES"],
         ["github", "github.com/virianproject"],
         ["twitter", "twitter.com/virianproject"],
     ];
