@@ -11,21 +11,14 @@
     $: year = 2000 + timeID * 2;
     $: region = data[regionID];
 
-    let tiltConfig = {
-        max: 4,
-        speed: 6000,
-        'full-page-listening': true,
-        reverse: true,
-    };
+    let tiltConfig = { max: 4, scale: 1.04, speed: 6000,  'full-page-listening': true,  reverse: true, };
 
     function stopTilt() {
-        console.log('stopTilt');
         const element: any = document.querySelector(".selector");
         element.vanillaTilt.destroy();
     }
 
     function startTilt() {
-        console.log('startTilt');
         const element: any = document.querySelector(".selector");
         VanillaTilt.init(element, tiltConfig);
     }
@@ -79,11 +72,11 @@
     {:catch error}
         <div class="error">{error.message}</div>
     {/await}
-    <p><i>Europe, {year}, Pentaglyph*</i></p>
+    <p><i>Europe, {year}</i></p>
     <Selector bind:regionID={regionID} bind:timeID={timeID} />
     <div class="text">
         <p>
-            *The Pentaglyph shows a region's mean and variance on a subset of the
+            The plot shows the given region's mean and variance on a subset of the
             <a
                     href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank"><i>Schwartz values</i></a>
             as derived from the

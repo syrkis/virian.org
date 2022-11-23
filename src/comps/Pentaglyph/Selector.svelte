@@ -62,19 +62,25 @@
         0% {
             transform: scale(0.95);
         }
-        50% {
+        18% {
             transform: scale(1.05);
         }
-        100% {
+        25% {
+            transform: scale(0.95);
+        }
+        40% {
+            transform: scale(1.05);
+        }
+        50% {
             transform: scale(0.95);
         }
     }
 
 </style>
 
-<svelte:window on:mouseup={stop} on:mousemove={move} on:touchstart={move} on:touchend={stop} />
+<svelte:window on:mouseup={stop} on:mousemove={move} ontouchstart={move} ontouchend={stop} />
 
-<section id='orb' on:mousedown={start} style="left: {left - 1}px; top: {top - 1}px;" class="draggable">
+<section id='orb' on:mousedown={start} on:touchstart={start} style="left: {left}px; top: {top}px;" class="draggable">
     <slot></slot>
 </section>
 
