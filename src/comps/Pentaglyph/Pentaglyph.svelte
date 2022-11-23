@@ -1,6 +1,5 @@
 <script lang="ts">
     import Selector from './Selector.svelte';
-    import Draggable from './Draggable.svelte';
 
     import { onMount } from 'svelte';
     import VanillaTilt from "vanilla-tilt";
@@ -12,22 +11,28 @@
     $: year = 2000 + timeID * 2;
     $: region = data[regionID];
 
+    let tiltConfig = {
+        max: 4,
+        speed: 6000,
+        'full-page-listening': true,
+        reverse: true,
+    };
+
     function stopTilt() {
-        let tilt = document.getElementById('tilt');
-        tilt.classList.remove('tilt');
-        tilt.classList.add('no-tilt');
+        console.log('stopTilt');
+        const element: any = document.querySelector(".selector");
+        element.vanillaTilt.destroy();
     }
 
     function startTilt() {
-        let tilt = document.getElementById('tilt');
-        tilt.classList.remove('no-tilt');
-        tilt.classList.add('tilt');
+        console.log('startTilt');
+        const element: any = document.querySelector(".selector");
+        VanillaTilt.init(element, tiltConfig);
     }
 
     onMount(async () => {
         const element: any = document.querySelector(".selector");
-        VanillaTilt.init(element, { max: 4, scale:1.03, speed: 6000, "full-page-listening": true, reverse: true,
-        gyroscope: true, gyroscopeMinAngleX: -45, gyroscopeMaxAngleX: 45, gyroscopeMinAngleY: -45, gyroscopeMaxAngleY: 45 });
+        VanillaTilt.init(element, tiltConfig);
         let mq = window.matchMedia("(pointer:coarse)");
         if (mq.matches) {
             element.vanillaTilt.destroy();
@@ -37,9 +42,8 @@
 
 </script>
 
-<div>
 
-<section on:mousedown={stopTilt()} on:mouseup={startTilt()}>
+<div on:mousedown={stopTilt} on:mouseup={startTilt}>
     {#await data}
         <div class="loading">Loading...</div>
     {:then data}
@@ -61,10 +65,10 @@
                                     </text>
                                 {/if}
                                 <g class="lines">
-                                    <path transform="translateZ(20px)" d="M 0 100 L 0 {-150* data.data[timeID][dim][0] ** 5}vh" stroke="white" stroke-width="10" fill="none" />
+                                    <path d="M 0 100 L 0 {-150* data.data[timeID][dim][0] ** 5}" stroke="white" stroke-width="10" fill="none" />
                                     <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
-                                    <path transform="translateZ(20px)" d="M -1 -100 L {60 * data.data[timeID][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
-                                    <path transform="translateZ(20px)" d="M 1 -100 L {-60 * data.data[timeID][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
+                                    <path d="M -1 -100 L {60 * data.data[timeID][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
+                                    <path d="M 1 -100 L {-60 * data.data[timeID][dim][1]} -120" stroke="white" stroke-width="10" fill="none" />
                                 </g>
                             </g>
                         {/each}
@@ -76,18 +80,17 @@
         <div class="error">{error.message}</div>
     {/await}
     <p><i>Europe, {year}, Pentaglyph*</i></p>
-    <Draggable bind:regionID={regionID} bind:timeID={timeID} />
+    <Selector bind:regionID={regionID} bind:timeID={timeID} />
     <div class="text">
         <p>
             *The Pentaglyph shows a region's mean and variance on a subset of the
             <a
-                    href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" target="_blank"><i>Schwartz values</i></a>
+                    href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank"><i>Schwartz values</i></a>
             as derived from the
             <a
-                    href="https://www.europeansocialsurvey.org/" target="_blank"><i>ESS</i></a> survey.
+                    href="https://www.europeansocialsurvey.org/" rel="noreferrer" target="_blank"><i>ESS</i></a> survey.
         </p>
     </div>
-</section>
 </div>
 
 <style>

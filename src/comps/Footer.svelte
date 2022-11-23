@@ -8,15 +8,16 @@
     ];
 </script>
 
-
-<footer>
-    for any inquiries, write
-    <br/>
-    <a href="mailto:virian@syrkis.com">virian@syrkis.com</a><br/>
-    {#each links as link}
-            <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="fab fa-{link[0]}"> </a>
-    {/each}
-</footer>
+<div>
+    <footer>
+        for any inquiries, write
+        <br/>
+        <a href="mailto:virian@syrkis.com">virian@syrkis.com</a><br/>
+        {#each links as link}
+                <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="fab fa-{link[0]}"> </a>
+        {/each}
+    </footer>
+</div>
 
 <style>
     /* footer in bottom of screen or page */
@@ -29,7 +30,8 @@
         color: #fff;
         text-align: center;
         line-height: 50px;
-        padding: 3rem 0 6rem 0;
+        padding: 3rem 0 3rem 0;
+        margin-bottom: 6rem;
     }
     .fab {
         padding: 0 10px;
