@@ -26,18 +26,23 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const MANPATH: string;
+	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
 	export const PYENV_ROOT: string;
-	export const TERM: string;
 	export const SHELL: string;
+	export const TERM: string;
 	export const OMF_CONFIG: string;
 	export const npm_config_metrics_registry: string;
+	export const HOMEBREW_REPOSITORY: string;
 	export const TMPDIR: string;
 	export const npm_config_global_prefix: string;
+	export const TERM_PROGRAM_VERSION: string;
 	export const MallocSpaceEfficient: string;
 	export const MallocNanoZone: string;
 	export const COLOR: string;
+	export const TERM_SESSION_ID: string;
 	export const npm_config_noproxy: string;
 	export const npm_config_local_prefix: string;
 	export const EXTENSION_KIT_EXTENSION_TYPE: string;
@@ -47,6 +52,8 @@ declare module '$env/static/private' {
 	export const SSH_AUTH_SOCK: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
+	export const VIRTUAL_ENV: string;
+	export const TMUX: string;
 	export const PATH: string;
 	export const npm_package_json: string;
 	export const npm_config_engine_strict: string;
@@ -58,20 +65,30 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_event: string;
 	export const EDITOR: string;
 	export const npm_package_name: string;
+	export const ITERM_PROFILE: string;
 	export const XPC_FLAGS: string;
+	export const TMUX_PANE: string;
 	export const npm_config_node_gyp: string;
 	export const npm_package_version: string;
 	export const XPC_SERVICE_NAME: string;
-	export const SHLVL: string;
 	export const HOME: string;
+	export const SHLVL: string;
+	export const COLORFGBG: string;
+	export const LC_TERMINAL_VERSION: string;
 	export const OMF_PATH: string;
+	export const HOMEBREW_PREFIX: string;
+	export const ITERM_SESSION_ID: string;
 	export const npm_config_cache: string;
 	export const LOGNAME: string;
 	export const npm_lifecycle_script: string;
 	export const LC_CTYPE: string;
 	export const npm_config_user_agent: string;
+	export const INFOPATH: string;
+	export const HOMEBREW_CELLAR: string;
+	export const LC_TERMINAL: string;
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
+	export const COLORTERM: string;
 	export const _: string;
 }
 
@@ -102,18 +119,23 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		MANPATH: string;
+		TERM_PROGRAM: string;
 		NODE: string;
 		INIT_CWD: string;
 		PYENV_ROOT: string;
-		TERM: string;
 		SHELL: string;
+		TERM: string;
 		OMF_CONFIG: string;
 		npm_config_metrics_registry: string;
+		HOMEBREW_REPOSITORY: string;
 		TMPDIR: string;
 		npm_config_global_prefix: string;
+		TERM_PROGRAM_VERSION: string;
 		MallocSpaceEfficient: string;
 		MallocNanoZone: string;
 		COLOR: string;
+		TERM_SESSION_ID: string;
 		npm_config_noproxy: string;
 		npm_config_local_prefix: string;
 		EXTENSION_KIT_EXTENSION_TYPE: string;
@@ -123,6 +145,8 @@ declare module '$env/dynamic/private' {
 		SSH_AUTH_SOCK: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
+		VIRTUAL_ENV: string;
+		TMUX: string;
 		PATH: string;
 		npm_package_json: string;
 		npm_config_engine_strict: string;
@@ -134,20 +158,30 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_event: string;
 		EDITOR: string;
 		npm_package_name: string;
+		ITERM_PROFILE: string;
 		XPC_FLAGS: string;
+		TMUX_PANE: string;
 		npm_config_node_gyp: string;
 		npm_package_version: string;
 		XPC_SERVICE_NAME: string;
-		SHLVL: string;
 		HOME: string;
+		SHLVL: string;
+		COLORFGBG: string;
+		LC_TERMINAL_VERSION: string;
 		OMF_PATH: string;
+		HOMEBREW_PREFIX: string;
+		ITERM_SESSION_ID: string;
 		npm_config_cache: string;
 		LOGNAME: string;
 		npm_lifecycle_script: string;
 		LC_CTYPE: string;
 		npm_config_user_agent: string;
+		INFOPATH: string;
+		HOMEBREW_CELLAR: string;
+		LC_TERMINAL: string;
 		npm_node_execpath: string;
 		npm_config_prefix: string;
+		COLORTERM: string;
 		_: string;
 		[key: string]: string | undefined;
 	}

@@ -12,7 +12,7 @@
         const element = document.querySelector(".selector");
         VanillaTilt.init(element, { max: 3, scale:1.02, speed: 6000, "full-page-listening": true, reverse: true,
         gyroscope: true, gyroscopeMinAngleX: -45, gyroscopeMaxAngleX: 45, gyroscopeMinAngleY: -45, gyroscopeMaxAngleY: 45 });
-        var mq = window.matchMedia("(max-width: 1025px)");
+        var mq = window.matchMedia("(pointer:coarse)");
         if (mq.matches) {
             element.vanillaTilt.destroy();
         }
