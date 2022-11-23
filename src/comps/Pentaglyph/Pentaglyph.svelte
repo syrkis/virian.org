@@ -72,7 +72,17 @@
     {:catch error}
         <div class="error">{error.message}</div>
     {/await}
-    <p><i>Europe, {year}</i></p>
+    <div id="title" style="display:grid;">
+        <p>
+            <span class="titlePart" style="text-align: right">
+                Europe {regionID}
+            </span>
+            |
+            <span class="titlePart" style="text-align: left;">
+                {year}
+            </span>
+        </p>
+    </div>
     <Selector bind:regionID={regionID} bind:timeID={timeID} />
     <div class="text">
         <p>
@@ -87,6 +97,12 @@
 </div>
 
 <style>
+
+    .titlePart {
+        width: 100px;
+        margin:auto;
+        display: inline-grid;
+    }
 
     .lines {
         transform: translateZ(1000px);
@@ -112,8 +128,8 @@
     }
 
     path {
-        transition: d .3s ease-in-out;
-        -webkit-transition: d .3s ease-in-out;
+        transition: d .2s ease-in-out;
+        -webkit-transition: d .2s ease-in-out;
     }
 
     .loading {

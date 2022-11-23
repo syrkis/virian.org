@@ -3,7 +3,7 @@
     export let timeID = 1;
     let regionIDBuff = 0;
     let timeIDBuff = 0;
-    let bufferSize = 7;
+    let bufferSize = 10;
 
     let left = 0;
     let top = 0;
@@ -65,7 +65,7 @@
 
     #orb {
         transition: all 0.3s ease-in-out;
-        animation: orb 1s infinite ease-in-out;
+        animation: orb 1.5s infinite ease-in-out;
     }
     #orb:active {
         scale: 1.5;
@@ -74,31 +74,17 @@
     }
 
     @keyframes orb {
-        0% {
-            transform: scale(0.95);
-        }
-        18% {
-            transform: scale(1.05);
-        }
-        25% {
-            transform: scale(0.95);
-        }
-        40% {
-            transform: scale(1.05);
-        }
-        50% {
-            transform: scale(0.95);
-        }
+        0%  { transform: scale(0.95); }
+        18% { transform: scale(1.05); }
+        25% { transform: scale(0.95); }
+        40% { transform: scale(1.02); }
+        50% { transform: scale(0.95); }
     }
 
 </style>
 
-<svelte:window on:mouseup={stop} on:mousemove={move} ontouchstart={move} ontouchend={stop} />
+<svelte:window on:mouseup={stop} on:mousemove={move} on:touchstart={move} on:touchend={stop} />
 
 <section id='orb' on:mousedown={start} on:touchstart={start} style="left: {left}px; top: {top}px;" class="draggable">
     <slot></slot>
 </section>
-
-
-
-
