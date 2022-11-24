@@ -9,12 +9,10 @@
 <div>
     <div class="text">
         <p>
-            The plot shows the given region's mean and variance on a subset of the
-            <a
-                    href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank"><i>Schwartz values</i></a>
-            (data is derived from the
-            <a
-                    href="https://www.europeansocialsurvey.org/" rel="noreferrer" target="_blank"><i>ESS</i></a>).
+            The given region placed in a subspace of the
+            <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
+                <i>Schwartz values</i></a>.
+            Length encodes mean, and spread encodes variance.
         </p>
     </div>
     <div class="pentaglyphs">
