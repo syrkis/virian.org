@@ -142,29 +142,17 @@
         -webkit-transition: d .2s ease-in-out;
     }
 
-    .loading {
-        font-size: 2em;
-    }
-
-    .error {
-        color: red;
-    }
+    .error { color: red; }
 
     @media (max-width: 600px) {
-        #pentaglyph {
-            transform: scale(0.7);
-        }
+        #pentaglyph { transform: scale(0.7); }
     }
 
     @media (min-width: 850px) {
-        #pentaglyph {
-            transform: scale(1.1);
-        }
+        #pentaglyph { transform: scale(1.1); }
     }
 
     @media (min-width: 1550px) {
-        #pentaglyph {
-            transform: scale(1.4);
-        }
+        #pentaglyph { transform: scale(1.4); }
     }
 </style>
