@@ -65,12 +65,11 @@
                         {#each dimensions as dim, i}
                             <g transform="rotate({ 36 - i * 72}) translate(0, -85)">
                                 <g class="lines">
-                                    {console.log(data)}
-                                    <!--
-                                    <path d="M 0 100 L 0 {-150 * data[regions[regionID]][timeID][dim]['avg']}" stroke="white" stroke-width="10" fill="none" />
+                                    <path d="M 0 100 L 0 {-150 * data.data[regions[regionID]][timeID][dim]['avg']}" stroke="white" stroke-width="10" fill="none" />
                                     <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
-                                    <path d="M -1 -100 L {60 * data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
-                                    <path d="M 1 -100 L {-60 * data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
+                                    <path d="M -1 -100 L {60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
+                                    <path d="M 1 -100 L {-60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
+                                    <!--
                                     -->
                                 </g>
                                 {#if i >= 2 && i <= 4}
