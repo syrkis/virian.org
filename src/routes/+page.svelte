@@ -12,9 +12,9 @@
             The plot shows the given region's mean and variance on a subset of the
             <a
                     href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank"><i>Schwartz values</i></a>
-            as derived from the
+            (data is derived from the
             <a
-                    href="https://www.europeansocialsurvey.org/" rel="noreferrer" target="_blank"><i>ESS</i></a> survey.
+                    href="https://www.europeansocialsurvey.org/" rel="noreferrer" target="_blank"><i>ESS</i></a>).
         </p>
     </div>
     <div class="pentaglyphs">
