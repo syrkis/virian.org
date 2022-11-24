@@ -28,17 +28,17 @@
             } else if (e.movementX > 0) {
                 timeIDBuff += 1;
             } if (e.movementY > 0) {
-                regionIDBuff -= 1;
-            } else if (e.movementY < 0) {
                 regionIDBuff += 1;
+            } else if (e.movementY < 0) {
+                regionIDBuff -= 1;
             } if (timeIDBuff > bufferSize) {
-                timeID = Math.min(timeID + 1, 10);
+                timeID = Math.min(timeID + 1, 9);
                 timeIDBuff = 0;
             } else if (timeIDBuff < -bufferSize) {
                 timeID = Math.max(timeID - 1, 1);
                 timeIDBuff = 0;
             } if (regionIDBuff > bufferSize) {
-                regionID = Math.min(regionID + 1, 10);
+                regionID = Math.min(regionID + 1, 12);
                 regionIDBuff = 0;
             } else if (regionIDBuff < -bufferSize) {
                 regionID = Math.max(regionID - 1, 1);
@@ -58,8 +58,8 @@
         position: relative;
         border: solid 2px white;
         cursor: move;
-        width: 13px;
-        height: 13px;
+        width: 18px;
+        height: 18px;
         border-radius: 100%;
     }
 

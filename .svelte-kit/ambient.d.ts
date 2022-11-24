@@ -31,8 +31,8 @@ declare module '$env/static/private' {
 	export const NODE: string;
 	export const INIT_CWD: string;
 	export const PYENV_ROOT: string;
-	export const TERM: string;
 	export const SHELL: string;
+	export const TERM: string;
 	export const OMF_CONFIG: string;
 	export const npm_config_metrics_registry: string;
 	export const HOMEBREW_REPOSITORY: string;
@@ -53,6 +53,7 @@ declare module '$env/static/private' {
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
 	export const VIRTUAL_ENV: string;
+	export const TMUX: string;
 	export const PATH: string;
 	export const npm_package_json: string;
 	export const npm_config_engine_strict: string;
@@ -66,6 +67,7 @@ declare module '$env/static/private' {
 	export const npm_package_name: string;
 	export const ITERM_PROFILE: string;
 	export const XPC_FLAGS: string;
+	export const TMUX_PANE: string;
 	export const npm_config_node_gyp: string;
 	export const npm_package_version: string;
 	export const XPC_SERVICE_NAME: string;
@@ -73,8 +75,8 @@ declare module '$env/static/private' {
 	export const SHLVL: string;
 	export const COLORFGBG: string;
 	export const LC_TERMINAL_VERSION: string;
-	export const HOMEBREW_PREFIX: string;
 	export const OMF_PATH: string;
+	export const HOMEBREW_PREFIX: string;
 	export const ITERM_SESSION_ID: string;
 	export const npm_config_cache: string;
 	export const LOGNAME: string;
@@ -122,8 +124,8 @@ declare module '$env/dynamic/private' {
 		NODE: string;
 		INIT_CWD: string;
 		PYENV_ROOT: string;
-		TERM: string;
 		SHELL: string;
+		TERM: string;
 		OMF_CONFIG: string;
 		npm_config_metrics_registry: string;
 		HOMEBREW_REPOSITORY: string;
@@ -144,6 +146,7 @@ declare module '$env/dynamic/private' {
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
 		VIRTUAL_ENV: string;
+		TMUX: string;
 		PATH: string;
 		npm_package_json: string;
 		npm_config_engine_strict: string;
@@ -157,6 +160,7 @@ declare module '$env/dynamic/private' {
 		npm_package_name: string;
 		ITERM_PROFILE: string;
 		XPC_FLAGS: string;
+		TMUX_PANE: string;
 		npm_config_node_gyp: string;
 		npm_package_version: string;
 		XPC_SERVICE_NAME: string;
@@ -164,8 +168,8 @@ declare module '$env/dynamic/private' {
 		SHLVL: string;
 		COLORFGBG: string;
 		LC_TERMINAL_VERSION: string;
-		HOMEBREW_PREFIX: string;
 		OMF_PATH: string;
+		HOMEBREW_PREFIX: string;
 		ITERM_SESSION_ID: string;
 		npm_config_cache: string;
 		LOGNAME: string;

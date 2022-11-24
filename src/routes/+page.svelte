@@ -13,6 +13,8 @@
         </p>
     </div>
     <div class="pentaglyphs">
-        <Pentaglyph data={data} />
+        {#await data then data}
+            <Pentaglyph data={data} />
+        {/await}
     </div>
 </div>
