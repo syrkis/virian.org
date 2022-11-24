@@ -11,8 +11,8 @@
         <p>
             The given region placed in a subspace of the
             <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
-                <i>Schwartz values</i></a>.
-            Length encodes mean, and spread encodes variance.
+                <i>Schwartz values</i></a>
+            (length encodes mean, and spread encodes variance):
         </p>
     </div>
     <div class="pentaglyphs">
