@@ -9,7 +9,7 @@
 <div>
     <div class="text">
         <p>
-            The given region placed in a subspace of the
+            The given region placed in a subspace of cultural
             <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
                 <i>Schwartz values</i></a>
             (length encodes mean, and spread encodes variance):

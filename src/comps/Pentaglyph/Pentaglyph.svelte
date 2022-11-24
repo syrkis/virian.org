@@ -53,8 +53,13 @@
 
 <div on:mousedown={stopTilt} on:mouseup={startTilt}>
     <div id="title" style="display:grid;">
-        <p><i>{regionCodeToCountry[region]}<br/>
-            {year}</i></p>
+        <p>
+            <i>
+                <span class='titleItem' >{regionCodeToCountry[region]} </span>
+                |
+                <span class='titleItem' >{year} </span>
+            </i>
+        </p>
     </div>
     <Selector bind:regionID={regionID} bind:timeID={timeID} />
     {#await data then data}
@@ -100,6 +105,16 @@
 </div>
 
 <style>
+
+    #title {
+        display: grid;
+    }
+
+    .titleItem {
+        width: 150px;
+        display: inline-grid;
+        text-align: center;
+    }
 
     .lines {
         transform: translateZ(1000px);
