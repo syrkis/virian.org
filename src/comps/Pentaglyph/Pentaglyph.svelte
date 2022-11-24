@@ -55,9 +55,8 @@
     <div id="title" style="display:grid;">
         <p>
             <i>
-                <span class='titleItem' >{regionCodeToCountry[region]} </span>
-                |
-                <span class='titleItem' >{year} </span>
+                <span class='titleItem' style="text-align: left">{regionCodeToCountry[region]} </span>
+                <span class='titleItem' style="text-align: right">{year} </span>
             </i>
         </p>
     </div>
@@ -113,7 +112,6 @@
     .titleItem {
         width: 150px;
         display: inline-grid;
-        text-align: center;
     }
 
     .lines {

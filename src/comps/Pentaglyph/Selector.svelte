@@ -85,6 +85,6 @@
 
 <svelte:window on:mouseup={stop} on:mousemove={move} on:touchstart={move} on:touchend={stop} />
 
-<section id='orb' on:mousedown={start} on:touchstart={start} style="left: {left}px; top: {top}px;" class="draggable">
+<section id='orb' on:mousedown={start} on:touchstart={start} style="left: {left}px; top: {top - 48}px;" class="draggable">
     <slot></slot>
 </section>
