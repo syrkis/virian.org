@@ -10,7 +10,7 @@
 
 <div>
     <footer>
-        for any inquiries, write
+        for all enquiries, write
         <br/>
         <a href="mailto:virian@syrkis.com">virian@syrkis.com</a><br/>
         {#each links as link}
