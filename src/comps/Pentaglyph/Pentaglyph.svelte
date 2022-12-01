@@ -99,9 +99,7 @@
         <p>
             *<a href="https://ess-search.nsd.no/"><i>European Social Survey</i></a> based subspace of
             <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
-                <i>Schwartz values</i></a>
-            <br>
-            (length encodes mean, and spread encodes variance):
+                <i>Schwartz values</i></a>. Length encodes mean, and spread encodes variance.
         </p>
     </div>
 </div>
