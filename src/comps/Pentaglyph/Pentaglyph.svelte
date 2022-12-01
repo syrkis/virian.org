@@ -98,7 +98,10 @@
     {/await}
     <div class="text">
         <p>
-            Increasingly, the web is our cultural nervous system. We need it to guide our attention so that it aligns with our values.
+            The given region placed in a subspace of cultural
+            <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
+                <i>Schwartz values</i></a>
+            (length encodes mean, and spread encodes variance):
         </p>
     </div>
 </div>
