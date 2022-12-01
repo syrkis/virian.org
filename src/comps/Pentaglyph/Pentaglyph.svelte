@@ -22,12 +22,12 @@
         'SE': 'Sweden'
     };
     export let data;
-    export let regionID: number = 1;
-    export let timeID: number = 1;
+    export let regionID: number = 5;
+    export let timeID: number = 5;
     $: year = 2000 + timeID * 2;
     $: region = regions[regionID];
 
-    let tiltConfig = { max: 4, scale: 1.04, speed: 6000,  'full-page-listening': true,  reverse: true, };
+    let tiltConfig = { max: 4, scale: 1.07, speed: 6000,  'full-page-listening': true,  reverse: true, };
 
     function stopTilt() {
         const element: any = document.querySelector(".selector");
@@ -55,8 +55,8 @@
     <div id="title" style="display:grid;">
         <p>
             <i>
-                <span class='titleItem' style="text-align: left">{regionCodeToCountry[region]} </span>
-                <span class='titleItem' style="text-align: right">{year} </span>
+                {regionCodeToCountry[region]}
+                {year}*
             </i>
         </p>
     </div>
@@ -73,8 +73,6 @@
                                     <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
                                     <path d="M -1 -100 L {60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
                                     <path d="M 1 -100 L {-60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
-                                    <!--
-                                    -->
                                 </g>
                                 {#if i >= 2 && i <= 4}
                                     <text transform="rotate(180) translate(0, 170)"
@@ -98,7 +96,7 @@
     {/await}
     <div class="text">
         <p>
-            The given region placed in a subspace of cultural
+            * Given time and place in a subspace of cultural
             <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
                 <i>Schwartz values</i></a>
             (length encodes mean, and spread encodes variance):

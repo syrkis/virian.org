@@ -1,6 +1,6 @@
 <script>
-    export let regionID = 1;
-    export let timeID = 1;
+    export let regionID = 5;
+    export let timeID = 5;
     let regionIDBuff = 0;
     let timeIDBuff = 0;
     let bufferSize = 10;
@@ -61,6 +61,7 @@
         width: 18px;
         height: 18px;
         border-radius: 100%;
+        background: black;
     }
 
     #orb {
@@ -74,17 +75,17 @@
     }
 
     @keyframes orb {
-        0%  { transform: scale(0.95); }
-        18% { transform: scale(1.05); }
-        25% { transform: scale(0.95); }
-        40% { transform: scale(1.02); }
-        50% { transform: scale(0.95); }
+        0%  { transform: scale(1.25); }
+        18% { transform: scale(1.75); }
+        25% { transform: scale(1.25); }
+        40% { transform: scale(1.32); }
+        50% { transform: scale(1.25); }
     }
 
 </style>
 
 <svelte:window on:mouseup={stop} on:mousemove={move} on:touchstart={move} on:touchend={stop} />
 
-<section id='orb' on:mousedown={start} on:touchstart={start} style="left: {left}px; top: {top - 48}px;" class="draggable">
+<section id='orb' on:mousedown={start} on:touchstart={start} style="left: {left}px; top: {top + 311}px;" class="draggable">
     <slot></slot>
 </section>
