@@ -1,10 +1,10 @@
 <script>
     let links = [
-        ["instagram", "instagram.com/virianproject"],
-        ["youtube", "youtube.com/virianproject"],
-        ["stripe", "donate.stripe.com/cN217dcjYg7AgpOaES"],
-        ["github", "github.com/virianproject"],
-        ["twitter", "twitter.com/virianproject"],
+        ["fas fa-rss-square", "virian.substack.com"],
+        ["fab fa-github", "github.com/syrkis/virian.org"],
+        ["fab fa-stripe", "donate.stripe.com/cN217dcjYg7AgpOaES"],
+        ["far fa-circle", "syrkis.com/"],
+        ["fab fa-discord", "discord.gg/4JmKDazE84"],
     ];
 </script>
 
@@ -14,7 +14,7 @@
         <br/>
         <a href="mailto:virian@syrkis.com">virian@syrkis.com</a><br/>
         {#each links as link}
-                <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="fab fa-{link[0]}"> </a>
+                <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="{link[0]}"> </a>
         {/each}
     </footer>
 </div>
@@ -33,7 +33,7 @@
         padding: 3rem 0 3rem 0;
         margin-bottom: 6rem;
     }
-    .fab {
+    .fab, .far, .fas{
         padding: 0 10px;
         font-size: 0.9em;
     }
