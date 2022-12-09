@@ -64,7 +64,7 @@
     <Selector bind:regionID={regionID} bind:timeID={timeID} />
     {#await data then data}
         <div id='tilt' class="container selector data-tilt data-tilt-full-page-listening">
-            <svg>
+            <svg viewBox="0 0 550 550">
                 <g style="transform: translate(50%, 50%)">
                     <g id="pentaglyph">
                         {#each dimensions as dim, i}
@@ -147,14 +147,11 @@
     .error { color: red; }
 
     @media (max-width: 600px) {
-        #pentaglyph { transform: scale(0.7); }
     }
 
     @media (min-width: 850px) {
-        #pentaglyph { transform: scale(1.1); }
     }
 
     @media (min-width: 1550px) {
-        #pentaglyph { transform: scale(1.4); }
     }
 </style>

@@ -11,7 +11,7 @@
             <li><a class="menu-item" href="/output">output</a></li>
         </ul>
     </nav>
-    <span>cultural sustainability center</span>
+    <span>cultural sustainability research</span>
 </div>
 
 <style>

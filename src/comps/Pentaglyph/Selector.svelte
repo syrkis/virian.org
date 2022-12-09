@@ -47,7 +47,26 @@
         }
     }
 
-    //$: console.log(moving)
+    import { browser } from '$app/environment';
+
+    let innerWidth = 0; // you can also set your default width
+
+    const updateWindowSize = () =>{
+        innerWidth = window.innerWidth;
+    }
+    if (browser){
+        updateWindowSize() // to set the initial window size
+        window.onresize = updateWindowSize; // run when ever the window size change
+    }
+
+    function calculateOffset(x) {
+        if (x < 1200) {
+            return 311
+        } else {
+            return 311 + (x - 1200) / 4
+        }
+    }
+
 </script>
 
 <style>
@@ -86,7 +105,7 @@
 
 <svelte:window on:mouseup={stop} on:mousemove={move} on:touchstart={move} on:touchend={stop} />
 
-<section id='orb' on:mousedown={start} on:touchstart={start} style="left: {left}px; top: {top + 311}px;" class="draggable">
+<section id='orb' on:mousedown={start} on:touchstart={start} style="left: {left}px; top: {top + calculateOffset(innerWidth)}px;" class="draggable">
     <slot></slot>
 </section>
 
