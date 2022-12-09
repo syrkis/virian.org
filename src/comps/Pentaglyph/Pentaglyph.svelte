@@ -22,7 +22,7 @@
         'SE': 'Sweden'
     };
     export let data;
-    export let regionID: number = 5;
+    export let regionID: number = 7;
     export let timeID: number = 5;
     $: year = 2000 + timeID * 2;
     $: region = regions[regionID];
@@ -35,8 +35,11 @@
     }
 
     function startTilt() {
-        const element: any = document.querySelector(".selector");
-        VanillaTilt.init(element, tiltConfig);
+        let mq = window.matchMedia("(pointer:coarse)");
+        if (! mq.matches) {
+            const element: any = document.querySelector(".selector");
+            VanillaTilt.init(element, tiltConfig);
+        }
     }
 
     onMount(async () => {
@@ -53,12 +56,10 @@
 
 <div on:mousedown={stopTilt} on:mouseup={startTilt}>
     <div id="title" style="display:grid;">
-        <p>
-            <i>
+        <p style="font-style: italic;">
                 The state of culture in
                 {regionCodeToCountry[region]}
                 {year}*
-            </i>
         </p>
     </div>
     <Selector bind:regionID={regionID} bind:timeID={timeID} />
@@ -107,15 +108,6 @@
 
 <style>
 
-    #title {
-        display: grid;
-    }
-
-    .titleItem {
-        width: 150px;
-        display: inline-grid;
-    }
-
     .lines {
         transform: translateZ(1000px);
     }
@@ -146,12 +138,4 @@
 
     .error { color: red; }
 
-    @media (max-width: 600px) {
-    }
-
-    @media (min-width: 850px) {
-    }
-
-    @media (min-width: 1550px) {
-    }
 </style>

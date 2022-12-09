@@ -1,5 +1,5 @@
 <script>
-    export let regionID = 5;
+    export let regionID = 6;
     export let timeID = 5;
     let regionIDBuff = 0;
     let timeIDBuff = 0;
@@ -20,16 +20,31 @@
     }
 
     function move(e) {
+        // delta X touch
+        // Determine if the user is moving the mouse or touching the screen
+        let deltaX;
+        let deltaY;
+        // if touch screen
+        if (e.touches) {
+            deltaX = e.touches[0].clientX - e.touches[0].target.offsetLeft;
+            deltaY = e.touches[0].clientY - e.touches[0].target.offsetTop;
+        } else {
+            deltaX = e.movementX;
+            deltaY = e.movementY;
+        }
+
+
+
         if (moving) {
-            left += e.movementX;
-            top += e.movementY;
-            if (e.movementX < 0) {
+            left += deltaX;
+            top += deltaY;
+            if (deltaX < 0) {
                 timeIDBuff -= 1
-            } else if (e.movementX > 0) {
+            } else if (deltaX > 0) {
                 timeIDBuff += 1;
-            } if (e.movementY > 0) {
+            } if (deltaY > 0) {
                 regionIDBuff += 1;
-            } else if (e.movementY < 0) {
+            } else if (deltaY < 0) {
                 regionIDBuff -= 1;
             } if (timeIDBuff > bufferSize) {
                 timeID = Math.min(timeID + 1, 9);
