@@ -3,7 +3,7 @@
     export let timeID = 5;
     let regionIDBuff = 0;
     let timeIDBuff = 0;
-    let bufferSize = 10;
+    let bufferSize = 15;
 
     let left = 0;
     let top = 0;
@@ -26,16 +26,18 @@
         let deltaY;
         // if touch screen
         if (e.touches) {
-            deltaX = e.touches[0].clientX - e.touches[0].target.offsetLeft;
-            deltaY = e.touches[0].clientY - e.touches[0].target.offsetTop;
+            e.preventDefault();
+            deltaX = e.touches[0].screenX
+            deltaY = e.touches[0].screenY
         } else {
             deltaX = e.movementX;
             deltaY = e.movementY;
         }
 
+        console.log(e.changedTouches)
 
 
-        if (moving) {
+        if (moving && ! e.touches) {
             left += deltaX;
             top += deltaY;
             if (deltaX < 0) {
