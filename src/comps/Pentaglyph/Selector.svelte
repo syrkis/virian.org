@@ -1,54 +1,73 @@
 <script>
+    import {onMount} from "svelte";
+
     export let regionID = 6;
     export let timeID = 5;
     let regionIDBuff = 0;
     let timeIDBuff = 0;
-    let bufferSize = 15;
+    let bufferSize = 10;
 
     let left = 0;
     let top = 0;
     let moving = false;
+    let animate = false;
+    let previousTouch = null;
 
-    function start() {
+    function start(e) {
+        e.preventDefault();
+        animate = false;
+        previousTouch = null;
         moving = true;
     }
 
     function stop() {
+        animate = false;
+        previousTouch = null;
         moving = false;
         left = 0;
         top = 0;
     }
 
     function move(e) {
+        // prevent scrolling
+        e.preventDefault();
         // delta X touch
         // Determine if the user is moving the mouse or touching the screen
-        let deltaX;
-        let deltaY;
-        // if touch screen
-        if (e.touches) {
-            e.preventDefault();
-            deltaX = e.touches[0].screenX
-            deltaY = e.touches[0].screenY
+        let deltaX = 0;
+        let deltaY = 0;
+        let touch;
+
+        if (e.touches && previousTouch !== null) {
+            touch = e.touches[0];
+            deltaX = touch.screenX - previousTouch.screenX;
+            deltaY = touch.screenY - previousTouch.screenY;
+            previousTouch = touch;
+        } else if (e.touches) {
+            previousTouch = e.touches[0];
         } else {
             deltaX = e.movementX;
             deltaY = e.movementY;
         }
 
-        console.log(e.changedTouches)
-
-
-        if (moving && ! e.touches) {
-            left += deltaX;
+        // Determine weather to move the orb
+        animate = (moving && previousTouch !== null) || (moving && !e.touches);
+        if (animate) {
             top += deltaY;
-            if (deltaX < 0) {
-                timeIDBuff -= 1
-            } else if (deltaX > 0) {
-                timeIDBuff += 1;
-            } if (deltaY > 0) {
-                regionIDBuff += 1;
-            } else if (deltaY < 0) {
-                regionIDBuff -= 1;
-            } if (timeIDBuff > bufferSize) {
+            left += deltaX;
+            if (deltaX ** 2 > deltaY ** 2) {
+                if (deltaX < 0) {
+                    timeIDBuff -= 1
+                } else if (deltaX > 0) {
+                    timeIDBuff += 1;
+                }
+            } else {
+                if (deltaY > 0) {
+                    regionIDBuff += 1;
+                } else if (deltaY < 0) {
+                    regionIDBuff -= 1;
+                }
+            }
+            if (timeIDBuff > bufferSize) {
                 timeID = Math.min(timeID + 1, 9);
                 timeIDBuff = 0;
             } else if (timeIDBuff < -bufferSize) {
@@ -120,7 +139,7 @@
 
 </style>
 
-<svelte:window on:mouseup={stop} on:mousemove={move} on:touchstart={move} on:touchend={stop} />
+<svelte:window on:mouseup={stop} on:mousemove={move} on:touchend={stop} on:touchmove={move} />
 
 <section id='orb' on:mousedown={start} on:touchstart={start} style="left: {left}px; top: {top + calculateOffset(innerWidth)}px;" class="draggable">
     <slot></slot>
