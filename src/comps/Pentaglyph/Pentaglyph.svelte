@@ -148,10 +148,7 @@
         .text {
             translate: 0 -200px;
             top: -50%;
-        }
-        :global(footer) {
-            translate: 0 -200px;
-            bottom: 50%;
+            margin-bottom: -200px;
         }
     }
 

@@ -8,7 +8,7 @@
     ];
 </script>
 
-<div>
+<div class="footer">
     <footer>
         for all enquiries, write
         <br/>
