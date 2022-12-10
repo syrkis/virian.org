@@ -137,6 +137,12 @@
         50% { transform: scale(1.25); }
     }
 
+    @media (max-width: 450px) {
+        #orb {
+            translate: 0 -130px;
+        }
+    }
+
 </style>
 
 <svelte:window on:mouseup={stop} on:mousemove={move} on:touchend={stop} on:touchmove={move} />

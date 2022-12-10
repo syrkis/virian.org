@@ -62,40 +62,42 @@
                 {year}*
         </p>
     </div>
+    <div id="pentaglyph">
     <Selector bind:regionID={regionID} bind:timeID={timeID} />
-    {#await data then data}
-        <div id='tilt' class="container selector data-tilt data-tilt-full-page-listening">
-            <svg viewBox="0 0 550 550">
-                <g style="transform: translate(50%, 50%)">
-                    <g id="pentaglyph">
-                        {#each dimensions as dim, i}
-                            <g transform="rotate({ 36 - i * 72}) translate(0, -85)">
-                                <g class="lines">
-                                    <path d="M 0 100 L 0 {-150 * data.data[regions[regionID]][timeID][dim]['avg']}" stroke="white" stroke-width="10" fill="none" />
-                                    <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
-                                    <path d="M -1 -100 L {60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
-                                    <path d="M 1 -100 L {-60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
+        {#await data then data}
+            <div id='tilt' class="container selector data-tilt data-tilt-full-page-listening">
+                <svg viewBox="0 0 550 550">
+                    <g style="transform: translate(50%, 50%)">
+                        <g id="pentaglyph">
+                            {#each dimensions as dim, i}
+                                <g transform="rotate({ 36 - i * 72}) translate(0, -85)">
+                                    <g class="lines">
+                                        <path d="M 0 100 L 0 {-150 * data.data[regions[regionID]][timeID][dim]['avg']}" stroke="white" stroke-width="10" fill="none" />
+                                        <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
+                                        <path d="M -1 -100 L {60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
+                                        <path d="M 1 -100 L {-60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
+                                    </g>
+                                    {#if i >= 2 && i <= 4}
+                                        <text transform="rotate(180) translate(0, 170)"
+                                              class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
+                                            {dim.toLowerCase()}
+                                        </text>
+                                    {:else}
+                                        <text transform="rotate(0) translate(0, -170)"
+                                              class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
+                                            {dim.toLowerCase()}
+                                        </text>
+                                    {/if}
                                 </g>
-                                {#if i >= 2 && i <= 4}
-                                    <text transform="rotate(180) translate(0, 170)"
-                                          class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
-                                        {dim.toLowerCase()}
-                                    </text>
-                                {:else}
-                                    <text transform="rotate(0) translate(0, -170)"
-                                          class='dim' fill="white" text-anchor="middle" dominant-baseline="middle">
-                                        {dim.toLowerCase()}
-                                    </text>
-                                {/if}
-                            </g>
-                        {/each}
+                            {/each}
+                        </g>
                     </g>
-                </g>
-            </svg>
-        </div>
-    {:catch error}
-        <div class="error">{error.message}</div>
-    {/await}
+                </svg>
+            </div>
+        {:catch error}
+            <div class="error">{error.message}</div>
+        {/await}
+    </div>
     <div class="text">
         <p>
             *<a href="https://ess-search.nsd.no/"><i>European Social Survey</i></a> based subspace of
@@ -119,7 +121,7 @@
     svg {
         overflow: visible;
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 
     .container {
@@ -137,5 +139,20 @@
     }
 
     .error { color: red; }
+
+    @media (max-width: 450px) {
+        svg {
+            translate: 0 -130px;
+        }
+
+        .text {
+            translate: 0 -200px;
+            top: -50%;
+        }
+        :global(footer) {
+            translate: 0 -200px;
+            bottom: 50%;
+        }
+    }
 
 </style>
