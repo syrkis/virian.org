@@ -146,9 +146,9 @@
         }
 
         .text {
-            translate: 0 -200px;
+            translate: 0 -220px;
             top: -50%;
-            margin-bottom: -200px;
+            margin-bottom: -220px;
         }
     }
 
