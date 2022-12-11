@@ -91,7 +91,7 @@
                                         <line x1="0" y1="100" x2="0" y2="100" stroke="red" stroke-width="20">
                                             <animate id="anim"
                                                      attributeName="y1"
-                                                     to="0"
+                                                     to="{-150 * data.data[regions[regionID]][timeID][dim]['avg']}"
                                                      dur="1s"
                                                      fill="freeze"/>
                                         </line>
