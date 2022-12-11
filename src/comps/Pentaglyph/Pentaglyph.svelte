@@ -113,7 +113,7 @@
                                                      dur="0.15s"
                                                      fill="freeze" />
                                         </line>
-                                        <line id='anim' x1="-3" y1="-100" x2="-100" y2="-120" stroke="white" stroke-width="10">
+                                        <line id='anim' x1="-2" y1="-100" x2="-100" y2="-120" stroke="white" stroke-width="10">
                                             <animate class="varRight"
                                                      attributeName="x2"
                                                      from="{60 * data.data[regions[6]][5][dim]['var']}"
@@ -121,7 +121,7 @@
                                                      dur="0.15s"
                                                      fill="freeze" />
                                         </line>
-                                        <line id='anim' x1="-3" y1="-100" x2="100" y2="-120" stroke="white" stroke-width="10">
+                                        <line id='anim' x1="2" y1="-100" x2="100" y2="-120" stroke="white" stroke-width="10">
                                             <animate class="varLeft"
                                                      attributeName="x2"
                                                      from="{-60 * data.data[regions[6]][5][dim]['var']}"
