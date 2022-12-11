@@ -3,6 +3,7 @@
 
     import { onMount } from 'svelte';
     import VanillaTilt from "vanilla-tilt";
+    import {each} from "svelte/internal";
 
     let dimensions = ['Conformity', 'Tradition', 'Hedonism', 'Power', 'Achievement']
     let regions = ['BE', 'CH', 'CZ', 'DE', 'EE', 'ES', 'GB', 'IE', 'NL', 'NO', 'PL', 'PT', 'SE'];
@@ -25,15 +26,20 @@
     export let regionID: number = 6;
     export let timeID: number = 5;
     let awaitedDocument = null;
-    $: year = 2000 + timeID * 2 && updateLines();
-    $: region = regions[regionID] && updateLines();
+    $: year = 2000 + timeID * 2;
+    $: region = regions[regionID];
+    $: year, updateLines()
+    $: region, updateLines()
+
 
     function updateLines() {
         if (awaitedDocument !== null) {
-            let lines = awaitedDocument.querySelectorAll('.line');
-            lines.forEach((line, i) => {
-                console.log(7)
-                line.style.strokeDashoffset = (1 - data[region][timeID][i]) * 100 + '%';
+            let means = awaitedDocument.getElementsByClassName('mean');
+            each(means, (mean, i) => {
+                let currentTo = mean.getAttribute("to");
+                mean.setAttribute("from", currentTo);
+                mean.setAttribute("to", -150 * data.data[regions[regionID]][timeID][dimensions[i]]['avg']);
+                mean.beginElement();
             });
         }
     }
@@ -88,12 +94,13 @@
                                         <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
                                         <path d="M -1 -100 L {60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
                                         <path d="M 1 -100 L {-60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
-                                        <line x1="0" y1="100" x2="0" y2="100" stroke="red" stroke-width="20">
-                                            <animate id="anim"
+                                        <line id='anim' x1="0" y1="100" x2="0" y2="100" stroke="red" stroke-width="20">
+                                            <animate class="mean"
                                                      attributeName="y1"
+                                                     from="100"
                                                      to="{-150 * data.data[regions[regionID]][timeID][dim]['avg']}"
                                                      dur="1s"
-                                                     fill="freeze"/>
+                                                     fill="freeze" />
                                         </line>
                                     </g>
                                     {#if i >= 2 && i <= 4}
