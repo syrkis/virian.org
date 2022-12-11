@@ -153,7 +153,7 @@
     </div>
     <div class="text">
         <p>
-            *<a href="https://ess-search.nsd.no/"><i>European Social Survey</i></a> based
+            *<a href="https://ess-search.nsd.no/"><i>European Social Survey</i></a> derived
             <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
                 <i>Schwartz values</i></a>. Length/spread encodes mean/variance
             (drag orb to explore region/time).
