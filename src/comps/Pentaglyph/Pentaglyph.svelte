@@ -41,6 +41,20 @@
                 mean.setAttribute("to", -150 * data.data[regions[regionID]][timeID][dimensions[i]]['avg']);
                 mean.beginElement();
             });
+            let varRights = awaitedDocument.getElementsByClassName('varRight');
+            each(varRights, (varRight, i) => {
+                let currentTo = varRight.getAttribute("to");
+                varRight.setAttribute("from", currentTo);
+                varRight.setAttribute("to", 60 * data.data[regions[regionID]][timeID][dimensions[i]]['var'] - 120);
+                varRight.beginElement();
+            });
+            let varLefts = awaitedDocument.getElementsByClassName('varLeft');
+            each(varLefts, (varRight, i) => {
+                let currentTo = varRight.getAttribute("to");
+                varRight.setAttribute("from", currentTo);
+                varRight.setAttribute("to", - (60 * data.data[regions[regionID]][timeID][dimensions[i]]['var'] - 120));
+                varRight.beginElement();
+            });
         }
     }
 
@@ -90,16 +104,32 @@
                             {#each dimensions as dim, i}
                                 <g transform="rotate({ 36 - i * 72}) translate(0, -85)">
                                     <g class="lines">
-                                        <path d="M 0 100 L 0 {-150 * data.data[regions[regionID]][timeID][dim]['avg']}" stroke="white" stroke-width="10" fill="none" />
+                                        <!-- <path d="M 0 100 L 0 {-150 * data.data[regions[regionID]][timeID][dim]['avg']}" stroke="white" stroke-width="10" fill="none" />-->
                                         <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
-                                        <path d="M -1 -100 L {60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
-                                        <path d="M 1 -100 L {-60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
-                                        <line id='anim' x1="0" y1="100" x2="0" y2="100" stroke="red" stroke-width="20">
+                                        <!-- <path d="M -1 -100 L {60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" /> -->
+                                        <!-- <path d="M 1 -100 L {-60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" /> -->
+                                        <line id='anim' x1="0" y1="100" x2="0" y2="100" stroke="white" stroke-width="10">
                                             <animate class="mean"
                                                      attributeName="y1"
                                                      from="100"
                                                      to="{-150 * data.data[regions[regionID]][timeID][dim]['avg']}"
-                                                     dur="1s"
+                                                     dur="0.15s"
+                                                     fill="freeze" />
+                                        </line>
+                                        <line id='anim' x1="1" y1="-100" x2="-100" y2="-120" stroke="white" stroke-width="10">
+                                            <animate class="varRight"
+                                                     attributeName="x2"
+                                                     from="100"
+                                                     to="{60 * data.data[regions[regionID]][timeID][dim]['var']}"
+                                                     dur="0.15s"
+                                                     fill="freeze" />
+                                        </line>
+                                        <line id='anim' x1="1" y1="-100" x2="100" y2="-120" stroke="white" stroke-width="10">
+                                            <animate class="varLeft"
+                                                     attributeName="x2"
+                                                     from="100"
+                                                     to="{- 60 * data.data[regions[regionID]][timeID][dim]['var']}"
+                                                     dur="0.15s"
                                                      fill="freeze" />
                                         </line>
                                     </g>
