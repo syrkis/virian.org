@@ -22,10 +22,21 @@
         'SE': 'Sweden'
     };
     export let data;
-    export let regionID: number = 7;
+    export let regionID: number = 6;
     export let timeID: number = 5;
-    $: year = 2000 + timeID * 2;
-    $: region = regions[regionID];
+    let awaitedDocument = null;
+    $: year = 2000 + timeID * 2 && updateLines();
+    $: region = regions[regionID] && updateLines();
+
+    function updateLines() {
+        if (awaitedDocument !== null) {
+            let lines = awaitedDocument.querySelectorAll('.line');
+            lines.forEach((line, i) => {
+                console.log(7)
+                line.style.strokeDashoffset = (1 - data[region][timeID][i]) * 100 + '%';
+            });
+        }
+    }
 
     let tiltConfig = { max: 4, scale: 1.07, speed: 6000,  'full-page-listening': true,  reverse: true, };
 
@@ -43,6 +54,7 @@
     }
 
     onMount(async () => {
+        awaitedDocument = document
         const element: any = document.querySelector(".selector");
         VanillaTilt.init(element, tiltConfig);
         let mq = window.matchMedia("(pointer:coarse)");
@@ -76,6 +88,13 @@
                                         <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
                                         <path d="M -1 -100 L {60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
                                         <path d="M 1 -100 L {-60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" />
+                                        <line x1="0" y1="100" x2="0" y2="100" stroke="red" stroke-width="20">
+                                            <animate id="anim"
+                                                     attributeName="y1"
+                                                     to="0"
+                                                     dur="1s"
+                                                     fill="freeze"/>
+                                        </line>
                                     </g>
                                     {#if i >= 2 && i <= 4}
                                         <text transform="rotate(180) translate(0, 170)"
@@ -109,10 +128,6 @@
 </div>
 
 <style>
-
-    .lines {
-        transform: translateZ(1000px);
-    }
 
     .dim {
         letter-spacing: 0.1em;

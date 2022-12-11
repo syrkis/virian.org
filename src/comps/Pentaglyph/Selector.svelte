@@ -122,24 +122,28 @@
     #orb {
         transition: all 0.3s ease-in-out;
         animation: orb 1.5s infinite ease-in-out;
+        position: relative;
+        transform: translateZ(10px);
     }
     #orb:active {
         scale: 1.5;
         transition: scale 0.3s ease-out;
         animation: none;
+        transform: translateZ(100000px);
     }
 
     @keyframes orb {
-        0%  { transform: scale(1.25); }
-        18% { transform: scale(1.75); }
-        25% { transform: scale(1.25); }
-        40% { transform: scale(1.32); }
-        50% { transform: scale(1.25); }
+        0%  { transform: scale(1.25) translateZ(2px); }
+        18% { transform: scale(1.75) translateZ(2px); }
+        25% { transform: scale(1.25) translateZ(2px); }
+        40% { transform: scale(1.32) translateZ(2px); }
+        50% { transform: scale(1.25) translateZ(2px); }
     }
 
     @media (max-width: 450px) {
         #orb {
             translate: 0 -130px;
+            z-index: 1000;
         }
     }
 
