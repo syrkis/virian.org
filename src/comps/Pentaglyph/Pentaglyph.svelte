@@ -155,8 +155,8 @@
         <p>
             <a href="https://ess-search.nsd.no/"><i>*European Social Survey</i></a> based
             <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
-                <i>Schwartz values.</i></a>Length and spread encodes mean and variance
-            (drag to explore time/place).
+                <i>Schwartz values.</i></a>Length and spread encodes mean and variance.
+            Drag to explore time/place.
         </p>
     </div>
 </div>
