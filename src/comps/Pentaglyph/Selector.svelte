@@ -129,7 +129,7 @@
         scale: 1.5;
         transition: none !important;
         animation: none;
-        transform: translateZ(100000px);
+        transform: translateZ(10px);
     }
 
     @keyframes orb {
