@@ -127,7 +127,7 @@
     }
     #orb:active {
         scale: 1.5;
-        transition: scale 0.3s ease-out;
+        transition: none !important;
         animation: none;
         transform: translateZ(100000px);
     }

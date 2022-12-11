@@ -104,14 +104,11 @@
                             {#each dimensions as dim, i}
                                 <g transform="rotate({ 36 - i * 72}) translate(0, -85)">
                                     <g class="lines">
-                                        <!-- <path d="M 0 100 L 0 {-150 * data.data[regions[regionID]][timeID][dim]['avg']}" stroke="white" stroke-width="10" fill="none" />-->
                                         <path d="M 0 100 L 0 -140" stroke="white" stroke-width="2" stroke-dasharray="5,5"/>
-                                        <!-- <path d="M -1 -100 L {60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" /> -->
-                                        <!-- <path d="M 1 -100 L {-60 * data.data[regions[regionID]][timeID][dim]['var']} -120" stroke="white" stroke-width="10" fill="none" /> -->
                                         <line id='anim' x1="0" y1="100" x2="0" y2="100" stroke="white" stroke-width="10">
                                             <animate class="mean"
                                                      attributeName="y1"
-                                                     from="100"
+                                                     from="{-150 * data.data[regions[6]][5][dim]['avg']}"
                                                      to="{-150 * data.data[regions[regionID]][timeID][dim]['avg']}"
                                                      dur="0.15s"
                                                      fill="freeze" />
@@ -119,7 +116,7 @@
                                         <line id='anim' x1="1" y1="-100" x2="-100" y2="-120" stroke="white" stroke-width="10">
                                             <animate class="varRight"
                                                      attributeName="x2"
-                                                     from="100"
+                                                     from="{60 * data.data[regions[6]][5][dim]['var']}"
                                                      to="{60 * data.data[regions[regionID]][timeID][dim]['var']}"
                                                      dur="0.15s"
                                                      fill="freeze" />
@@ -127,7 +124,7 @@
                                         <line id='anim' x1="1" y1="-100" x2="100" y2="-120" stroke="white" stroke-width="10">
                                             <animate class="varLeft"
                                                      attributeName="x2"
-                                                     from="100"
+                                                     from="{-60 * data.data[regions[6]][5][dim]['var']}"
                                                      to="{- 60 * data.data[regions[regionID]][timeID][dim]['var']}"
                                                      dur="0.15s"
                                                      fill="freeze" />
