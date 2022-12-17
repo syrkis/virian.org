@@ -113,7 +113,7 @@
                                                      dur="0.15s"
                                                      fill="freeze" />
                                         </line>
-                                        <line id='anim' x1="1" y1="-100" x2="-100" y2="-120" stroke="white" stroke-width="10">
+                                        <line id='anim' x1="-2" y1="-100" x2="-100" y2="-120" stroke="white" stroke-width="10">
                                             <animate class="varRight"
                                                      attributeName="x2"
                                                      from="{60 * data.data[regions[6]][5][dim]['var']}"
@@ -121,7 +121,7 @@
                                                      dur="0.15s"
                                                      fill="freeze" />
                                         </line>
-                                        <line id='anim' x1="1" y1="-100" x2="100" y2="-120" stroke="white" stroke-width="10">
+                                        <line id='anim' x1="2" y1="-100" x2="100" y2="-120" stroke="white" stroke-width="10">
                                             <animate class="varLeft"
                                                      attributeName="x2"
                                                      from="{-60 * data.data[regions[6]][5][dim]['var']}"
@@ -153,10 +153,10 @@
     </div>
     <div class="text">
         <p>
-            *<a href="https://ess-search.nsd.no/"><i>European Social Survey</i></a> based subspace of
+            <a href="https://ess-search.nsd.no/"><i>*European Social Survey</i></a> based
             <a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
-                <i>Schwartz values</i></a>. Length/spread encodes mean/variance
-            (drag orb to explore).
+                <i>Schwartz values.</i></a>Length and spread encodes mean and variance.
+            Drag to explore time/place.
         </p>
     </div>
 </div>
