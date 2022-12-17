@@ -58,7 +58,7 @@
         }
     }
 
-    let tiltConfig = { max: 4, scale: 1.07, speed: 6000,  'full-page-listening': true,  reverse: true, };
+    let tiltConfig = { max: 6, scale: 1.07, speed: 6000,  'full-page-listening': true,  reverse: true, };
 
     function stopTilt() {
         const element: any = document.querySelector(".selector");
