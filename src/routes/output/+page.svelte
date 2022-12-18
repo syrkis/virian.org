@@ -6,3 +6,8 @@
         </p>
     </div>
 </main>
+
+<svelte:head>
+    <title>Virian | Onput</title>
+    <meta name="description" content="How the Virian Project generates output.">
+</svelte:head>

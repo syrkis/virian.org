@@ -13,3 +13,8 @@
     </div>
     <!--<Plebiscite />-->
 </main>
+
+<svelte:head>
+    <title>Virian | Input</title>
+    <meta name="description" content="How to provide input to the Virian Project.">
+</svelte:head>
