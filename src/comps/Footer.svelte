@@ -12,7 +12,7 @@
     <footer>
         for all enquiries, write
         <br/>
-        <a href="mailto:virian@syrkis.com">virian@syrkis.com</a><br/>
+        <a href="mailto:contact@virian.org">contact@virian.org</a><br/>
         {#each links as link}
                 <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="{link[0]}"> </a>
         {/each}
