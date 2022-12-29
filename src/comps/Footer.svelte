@@ -33,7 +33,7 @@
         padding: 3rem 0 3rem 0;
         margin-bottom: 6rem;
     }
-    .fab, .far, .fas{
+    .fab, .far, .fas {
         padding: 0 10px;
         font-size: 0.9em;
     }
