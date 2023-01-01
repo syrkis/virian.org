@@ -4,8 +4,14 @@
 </script>
 
 <Header />
-<slot />
+	<slot />
 <Footer />
+
+<svelte:head>
+    <meta property="og:image" content="https://syrkis.ams3.cdn.digitaloceanspaces.com/noah/virian/virian.png" />
+    <meta property="og:title" content="The Virian Project" />
+    <meta property="og:url" content="https://virian.org" />
+</svelte:head>
 
 <style>
     :global(body) {
