@@ -14,7 +14,7 @@
         'DE': 'Germany',
         'EE': 'Estonia',
         'ES': 'Spain',
-        'GB': 'United Kingdom',
+        'GB': 'the UK',
         'IE': 'Ireland',
         'NL': 'Netherlands',
         'NO': 'Norway',
