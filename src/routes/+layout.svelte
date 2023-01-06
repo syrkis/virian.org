@@ -20,7 +20,7 @@
         background-color: black;
         color: white;
         text-align: center;
-        font-family: Baskerville, serif;
+        font-family: 'Crimson Text', serif;
         line-height: 2em;
     }
 
@@ -39,6 +39,7 @@
 
     :global(h1) {
         font-weight: normal;
+		font-family: 'Crimson Text', serif;
         letter-spacing: 0.1em;
     }
 

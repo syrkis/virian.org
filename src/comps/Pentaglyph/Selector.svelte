@@ -69,9 +69,9 @@
             }
             if (timeIDBuff > bufferSize) {
                 timeID = Math.min(timeID + 1, 9);
-                timeIDBuff = 0;
+                timeIDBuff = 1;
             } else if (timeIDBuff < -bufferSize) {
-                timeID = Math.max(timeID - 1, 0);
+                timeID = Math.max(timeID - 1, 1);
                 timeIDBuff = 0;
             } if (regionIDBuff > bufferSize) {
                 regionID = Math.min(regionID + 1, 12);
