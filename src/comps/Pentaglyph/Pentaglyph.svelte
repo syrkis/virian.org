@@ -6,21 +6,35 @@
     import {each} from "svelte/internal";
 
     let dimensions = ['Conformity', 'Tradition', 'Hedonism', 'Power', 'Achievement']
-    let regions = ['BE', 'CH', 'CZ', 'DE', 'EE', 'ES', 'GB', 'IE', 'NL', 'NO', 'PL', 'PT', 'SE'];
+    let regions = [
+    'BE',
+    'CZ',
+    'DE',
+    'EE',
+    'IE',
+    'NL',
+    'NO',
+    'PL',
+    'PT',
+    'ES',
+    'SE',
+    'CH',
+    'GB',
+    ];
     let regionCodeToCountry = {
         'BE': 'Belgium',
-        'CH': 'Switzerland',
         'CZ': 'Czech Republic',
         'DE': 'Germany',
         'EE': 'Estonia',
-        'ES': 'Spain',
-        'GB': 'the UK',
         'IE': 'Ireland',
         'NL': 'Netherlands',
         'NO': 'Norway',
         'PL': 'Poland',
         'PT': 'Portugal',
-        'SE': 'Sweden'
+        'ES': 'Spain',
+        'SE': 'Sweden',
+        'CH': 'Switzerland',
+        'GB': 'the UK',
     };
     export let data;
     export let regionID: number = 6;

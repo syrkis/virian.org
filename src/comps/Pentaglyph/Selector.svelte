@@ -71,13 +71,13 @@
                 timeID = Math.min(timeID + 1, 9);
                 timeIDBuff = 0;
             } else if (timeIDBuff < -bufferSize) {
-                timeID = Math.max(timeID - 1, 1);
+                timeID = Math.max(timeID - 1, 0);
                 timeIDBuff = 0;
             } if (regionIDBuff > bufferSize) {
                 regionID = Math.min(regionID + 1, 12);
                 regionIDBuff = 0;
             } else if (regionIDBuff < -bufferSize) {
-                regionID = Math.max(regionID - 1, 1);
+                regionID = Math.max(regionID - 1, 0);
                 regionIDBuff = 0;
             }
         }
