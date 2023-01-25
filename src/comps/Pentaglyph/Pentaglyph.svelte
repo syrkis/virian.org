@@ -101,15 +101,15 @@
 
 
 <div on:mousedown={stopTilt} on:mouseup={startTilt}>
-    <div id="title" style="display:grid;">
-        <p style="font-style: italic;">
-                The state of culture in
-                {regionCodeToCountry[region]}
-                {year}*
-        </p>
-    </div>
     <div id="pentaglyph">
-    <Selector bind:regionID={regionID} bind:timeID={timeID} />
+        <div id="title" style="display:grid;">
+            <p style="font-style: italic;">
+                    The state of culture in
+                    {regionCodeToCountry[region]}
+                    {year}*
+            </p>
+        </div>
+        <Selector bind:regionID={regionID} bind:timeID={timeID} />
         {#await data then data}
             <div id='tilt' class="container selector data-tilt data-tilt-full-page-listening">
                 <svg viewBox="0 0 550 550">
