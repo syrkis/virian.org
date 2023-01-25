@@ -8,6 +8,6 @@
 </main>
 
 <svelte:head>
-    <title>Virian | Onput</title>
+    <title>Virian | Output</title>
     <meta name="description" content="How the Virian Project generates output.">
 </svelte:head>

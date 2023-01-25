@@ -19,3 +19,8 @@
         {/await}
     </div>
 </div>
+
+<svelte:head>
+    <title>Virian</title>
+    <meta name="description" content="The Virian Project is an ongoing attempt at aligning the effect that media has on our culture with our collective values.">
+</svelte:head>
