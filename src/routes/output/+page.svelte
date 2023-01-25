@@ -2,7 +2,7 @@
     <div class="text">
         <p>
             We publish a quantitative cultural analysis <i><a href="https://virian.substack.com">report</a></i>,
-            and provide advanced machine learning consulting services.
+            and provide advanced machine learning <i><a href="mailto:desk@virian.org?subject=Machine learning consulting">consulting services</a></i>.
         </p>
     </div>
 </main>
