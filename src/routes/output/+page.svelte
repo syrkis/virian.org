@@ -6,8 +6,8 @@
 			<i><a href="mailto:desk@virian.org?subject=Machine learning inquiry">
 				machine learning</a></i> and
 			<i><a href="mailto:desk@virian.org?subject=Network analysis inquiry">
-				poltical network analysis</a></i>
-			consulting.
+				network analysis</a></i>
+			consulting services.
 
         </p>
     </div>
