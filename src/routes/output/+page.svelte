@@ -7,7 +7,7 @@
 				machine learning</a></i> and
 			<i><a href="mailto:desk@virian.org?subject=Machine learning consulting">
 				poltical network analysis</a></i>
-			advice and services.
+			consulting services.
 
         </p>
     </div>
