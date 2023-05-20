@@ -9,8 +9,8 @@
 <div>
     <div class="text">
         <p>
-            Increasingly, the web is our collective nervous system.
-            We need it to evolve our culture in alignment with our values.
+            Increasingly, the web is humanity's collective nervous system.
+            We need it to evolve our cultures in alignment with our values.
         </p>
     </div>
     <div class="pentaglyphs">

@@ -6,12 +6,11 @@
     <Particles/>
     <nav>
         <ul>
-            <li><a class="menu-item" href="/input">input&nbsp</a></li>
+            <li><a class="menu-item" href="/text">text</a></li>
             <li><a class="menu-item" href="/" id="logo">VIRIAN</a></li>
-            <li><a class="menu-item" href="/output">output</a></li>
+            <li><a class="menu-item" href="/code">code</a></li>
         </ul>
     </nav>
-    <span>cultural sustainability center</span>
 </div>
 
 <style>
