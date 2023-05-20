@@ -2,7 +2,7 @@
     <div class="text">
         <p>
             We specialize in applying advanced machine learning to complex domains.
-            Check out some of our open source work below.
+            Check out some of our work below.
         </p>
     </div>
 </main>
