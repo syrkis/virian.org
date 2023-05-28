@@ -17,14 +17,14 @@
     </div>
     <div>
         {#each data.body as item}
-        <div class='post'>
-          <Text {item} />
-        </div>
+            <div class='post'>
+            <Text {item} />
+            </div>  
       {/each}
     </div>
 </main>
 
 <svelte:head>
-    <title>Virian | Input</title>
+    <title>Virian | Text</title>
     <meta name="description" content="How to provide input to the Virian Project.">
 </svelte:head>

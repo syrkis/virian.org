@@ -18,6 +18,8 @@ export const load: PageServerLoad = async () => {
         title: post.attributes.title,
         body: post.body,
         date: post.attributes.date,
+        subtitle: post.attributes.subtitle,
+        description: post.attributes.description,
       };
     })
 

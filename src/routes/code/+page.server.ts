@@ -20,7 +20,7 @@ export const load: PageServerLoad = async () => {
         subtitle: post.attributes.subtitle,
         description: post.attributes.description,
         date: post.attributes.date,
-        github: post.attributes.github,
+        github: post.attributes.github, 
       };
     })
 
