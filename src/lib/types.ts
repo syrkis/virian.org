@@ -3,6 +3,8 @@ export interface Text {
     date: string;
     body: string;
     slug: string;
+    description: string;
+    subtitle: string;
 }
 
 export interface Code {
@@ -10,4 +12,7 @@ export interface Code {
     date: string;
     body: string;
     slug: string;
+    description: string;
+    subtitle: string;
+    github: string;
 }⏎

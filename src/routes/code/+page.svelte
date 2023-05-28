@@ -13,16 +13,19 @@
             Check out some of our work below.
         </p>
     </div>
-    <div class="grid">
+    <div class="posts">
         {#each data.body as item}
-      <div class='post'>
-        <Code {item} />
-      </div>
-    {/each}
+            <div class='post'>
+                <Code {item} />
+            </div>
+        {/each}
     </div>  
 </main>
 
 <svelte:head>
-    <title>Virian | Output</title>
+    <title>Virian | Code</title>
     <meta name="description" content="How the Virian Project generates output.">
 </svelte:head>
+
+<style>
+</style>

@@ -6,9 +6,9 @@
 
 <div class="post">
     <a href="/code/{item.slug}">
-        <h1>{item.title}</h1>
-        <h2>{item.date}</h2>
-        <p>{item.body}</p>
+        <h2>{item.title}</h2>
+        <p>{item.subtitle}</p>
+        <p>{item.description}</p>
     </a>
 </div>
 
