@@ -16,11 +16,14 @@ collections:
     slug: "{{slug}}"
     fields:
       - { name: "title", label: "Title", widget: "string" }
+      - { name: "author", label: "Author", widget: "string" }
       - { name: "subtitle", label: "Subtitle", widget: "string" }
       - { name: "description", label: "Description", widget: "string" }      
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "image", label: "Image", widget: "image" }
+      - { name: "link", label: "Link", widget: "string" }
+      - { name: "icon", label: "Icon", widget: "string" }
 
   - name: "code"  # collection for data science projects
     label: "Code"
@@ -35,3 +38,5 @@ collections:
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "image", label: "Image", widget: "image" }
       - { name: "github", label: "Github", widget: "string" }
+      - { name: "link", label: "Link", widget: "string" }
+      - { name: "icon", label: "Icon", widget: "string" }

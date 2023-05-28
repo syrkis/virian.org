@@ -5,6 +5,9 @@ export interface Text {
     slug: string;
     description: string;
     subtitle: string;
+    author: string;
+    icon: string;
+    link: string;
 }
 
 export interface Code {
@@ -15,4 +18,6 @@ export interface Code {
     description: string;
     subtitle: string;
     github: string;
+    icon: string;
+    link: string;
 }

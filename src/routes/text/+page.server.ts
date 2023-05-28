@@ -20,6 +20,9 @@ export const load: PageServerLoad = async () => {
         date: post.attributes.date,
         subtitle: post.attributes.subtitle,
         description: post.attributes.description,
+        author: post.attributes.author,
+        icon: post.attributes.icon,
+        link: post.attributes.link,
       };
     })
 

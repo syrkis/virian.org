@@ -21,6 +21,8 @@ export const load: PageServerLoad = async () => {
         description: post.attributes.description,
         date: post.attributes.date,
         github: post.attributes.github, 
+        icon: post.attributes.icon,
+        link: post.attributes.link,
       };
     })
 
