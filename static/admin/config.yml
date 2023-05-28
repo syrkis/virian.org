@@ -17,8 +17,8 @@ collections:
     fields:
       - { name: "slug", label: "Slug", widget: "string" }
       - { name: "title", label: "Title", widget: "string" }
-      - { name: "description", label: "Description", widget: "string" }      
       - { name: "subtitle", label: "Subtitle", widget: "string" }
+      - { name: "description", label: "Description", widget: "string" }      
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "image", label: "Image", widget: "image" }
@@ -31,8 +31,9 @@ collections:
     fields:
       - { name: "slug", label: "Slug", widget: "string" }
       - { name: "title", label: "Title", widget: "string" }
-      - { name: "description", label: "Description", widget: "string" }
       - { name: "subtitle", label: "Subtitle", widget: "string" }
+      - { name: "description", label: "Description", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "image", label: "Image", widget: "image" }
+      - { name: "github", label: "Github", widget: "string" }
