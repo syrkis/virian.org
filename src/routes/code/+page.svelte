@@ -28,4 +28,8 @@
 </svelte:head>
 
 <style>
+    .post {
+        margin: auto;
+        width: 900px;
+    }
 </style>

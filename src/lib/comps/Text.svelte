@@ -1,19 +1,31 @@
 <script lang="ts">
     import type { Text } from '$lib/types';
     export let item: Text; 
+
+    /* format data. Month and day number*/
+    let date = new Date(item.date);
+    item.date = date.toDateString();
+    item.date = item.date.slice(4, 10) + ', ' + item.date.slice(11, 15);
+
 </script>
 
 
 <div class="post">
     <a href="/text/{item.slug}">
         <h2>{item.title}</h2>
-        <p>{item.date}</p>
+        <p>{item.date}, <i> by</i>: {item.author}</p>
     </a>
 </div>
 
 <style>
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
     .post {
-        margin: 2rem 0;
+        width: 600px;
+        margin: auto;
     }
 
     .post a {
