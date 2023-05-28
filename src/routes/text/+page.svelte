@@ -1,5 +1,7 @@
-<script>
-    import Plebiscite from "../../comps/Plebiscite.svelte";
+<script lang="ts">
+    import Text from '$lib/comps/Text.svelte';
+    import type { PageData } from './$types';
+    export let data: PageData;
 </script>
 
 <main>
@@ -12,6 +14,13 @@
             demystifying the technology and its applications,
             for a general audience.
         </p>
+    </div>
+    <div>
+        {#each data.body as item}
+        <div class='post'>
+          <Text {item} />
+        </div>
+      {/each}
     </div>
 </main>
 

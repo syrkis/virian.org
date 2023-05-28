@@ -1,6 +1,5 @@
 ---
-slug: placeholder
-title: The Numerical Representation of Meaning
+title: Place holder blah blah
 subtitle: The Numerical Representation of Meaning
 description: Computers, increasingly, make and assist decision that
   traditionally where exclusively of a human domain. Language especially is an

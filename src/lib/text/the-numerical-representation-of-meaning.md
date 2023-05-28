@@ -1,5 +1,4 @@
 ---
-slug: meaning
 title: The Numerical Representation of Meaning
 subtitle: The Numerical Representation of Meaning
 description: Computers, increasingly, make and assist decision that

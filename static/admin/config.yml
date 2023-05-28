@@ -15,7 +15,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "slug", label: "Slug", widget: "string" }
       - { name: "title", label: "Title", widget: "string" }
       - { name: "subtitle", label: "Subtitle", widget: "string" }
       - { name: "description", label: "Description", widget: "string" }      
@@ -29,7 +28,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "slug", label: "Slug", widget: "string" }
       - { name: "title", label: "Title", widget: "string" }
       - { name: "subtitle", label: "Subtitle", widget: "string" }
       - { name: "description", label: "Description", widget: "string" }

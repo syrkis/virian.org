@@ -1,5 +1,4 @@
 ---
-slug: arkhitekt
 title: Arkhitekt
 subtitle: Deep classification of architecture styles.
 description: Deep classification of architecture styles.

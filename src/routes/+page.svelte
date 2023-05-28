@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import Pentaglyph from "../comps/Pentaglyph/Pentaglyph.svelte";
+    import Pentaglyph from "$lib/comps/Pentaglyph/Pentaglyph.svelte";
 
     export let data;
 

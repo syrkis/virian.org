@@ -1,5 +1,4 @@
 ---
-slug: neuroscope
 title: Neuroscope
 subtitle: Deep Image Reconstruction From Brain Activity
 description: Decoding brain activity is perhaps the most daunting data scientific challenge.

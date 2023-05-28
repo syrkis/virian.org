@@ -1,3 +1,11 @@
+<script lang="ts">
+    import Code from '$lib/comps/Code.svelte';
+    import type { PageData } from './$types';
+
+    export let data: PageData;
+</script>
+
+
  <main>
     <div class="text">
         <p>
@@ -5,6 +13,13 @@
             Check out some of our work below.
         </p>
     </div>
+    <div class="grid">
+        {#each data.body as item}
+      <div class='post'>
+        <Code {item} />
+      </div>
+    {/each}
+    </div>  
 </main>
 
 <svelte:head>
