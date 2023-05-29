@@ -13,23 +13,6 @@
 <div class="post">
     <a href="/text/{item.slug}">
         <h2>{item.title}</h2>
-        <p>{item.date}, <i> by</i>: {item.author}</p>
+        <i>{item.author}, {item.date}</i>
     </a>
 </div>
-
-<style>
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    .post {
-        width: 600px;
-        margin: auto;
-    }
-
-    .post a {
-        text-decoration: none;
-        color: inherit;
-    }
-</style>

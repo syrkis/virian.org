@@ -43,4 +43,19 @@
         letter-spacing: 0.1em;
     }
 
+    :global(.post) {
+        margin: auto;
+        width: 95%;
+        max-width: 900px;
+    }
+
+    :global(.post a) {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    :global(h2) {
+        font-size: 1.3rem;
+    }
+
 </style>

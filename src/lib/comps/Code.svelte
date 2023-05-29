@@ -6,19 +6,22 @@
 
 <div class="post">
     <a href="/code/{item.slug}">
-        <h2>{item.title}</h2>
-        <p>{item.subtitle}</p>
-        <p>{item.description}</p>
+        <div>
+            <img src={item.icon} alt={item.title} />
+        </div>
+        <div>
+            <h2>{item.title}: {item.subtitle}</h2>
+            <p>{item.description}</p>
+        </div>
     </a>
 </div>
 
 <style>
     .post {
-        margin: 2rem 0;
-    }
-
-    .post a {
-        text-decoration: none;
-        color: inherit;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        margin: 1rem;
+        padding: 1rem;
+        text-align: left;
     }
 </style>

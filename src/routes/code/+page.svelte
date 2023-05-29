@@ -26,10 +26,3 @@
     <title>Virian | Code</title>
     <meta name="description" content="How the Virian Project generates output.">
 </svelte:head>
-
-<style>
-    .post {
-        margin: auto;
-        width: 900px;
-    }
-</style>
