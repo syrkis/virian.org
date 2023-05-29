@@ -49,12 +49,13 @@
         max-width: 900px;
     }
 
-    :global(.post a) {
-        text-decoration: none;
-        color: inherit;
+    :global(h2) {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+        letter-spacing: 0.1em;
     }
 
-    :global(h2) {
+    :global(h3) {
         font-size: 1.3rem;
         margin-bottom: 0;
     }
@@ -63,7 +64,6 @@
         width: 100%;
         margin: 0 auto;
         border: 0.5px solid white;
-
     }
 
     :global(.posts) {

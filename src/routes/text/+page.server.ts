@@ -21,7 +21,7 @@ export const load: PageServerLoad = async () => {
         subtitle: post.attributes.subtitle,
         description: post.attributes.description,
         author: post.attributes.author,
-        icon: post.attributes.icon,
+        illustration: post.attributes.icon,
         link: post.attributes.link,
       };
     })

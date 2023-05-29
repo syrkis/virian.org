@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Code from '$lib/comps/Code.svelte';
+    import Tile from '$lib/comps/Tile.svelte';
     import type { PageData } from './$types';
 
     export let data: PageData;
@@ -15,15 +15,18 @@
             to explore how we can help you.
         </p>
     </div>
+    <div style='padding-top: 40px;'>
+        <h2>PROJECTS</h2>
+    </div>
     <div class="posts">
-        {#each data.body as item, i}
+        {#each data.body as item}
             <div class='post'>
-                <Code {item} {i} />
+                <Tile {item} />
             </div>
         {/each}
-        {#each data.body as item, i}
+        {#each data.body as item}
             <div class='post'>
-                <Code {item} {i} />
+                <Tile {item} />
             </div>
         {/each}
     </div>  

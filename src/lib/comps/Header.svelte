@@ -35,10 +35,10 @@
 
     .header { padding: 25px  0 3rem 0; }
 
-    #logo { font-size: 2em; padding: 0 3vw}
+    #logo { font-size: 2em; padding: 0 6vw}
 
     @media (max-width: 600px) {
-        .header { padding: 25px  0 50px 0; }
+        .header { padding: 25px  0 70px 0; }
         #logo { font-size: 1.5em; padding: 0 3vw}
     }
 

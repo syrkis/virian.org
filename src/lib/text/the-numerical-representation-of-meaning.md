@@ -6,6 +6,6 @@ description: Computers are ultimately binary. Everything boils down to a 1 and a
 date: 2023-05-28T21:56:15.576Z
 image: /images/screenshot-2023-05-27-at-21.56.55.png
 link: none
-icon: none
+icon: /images/IMG_1170.jpeg
 ---
 Computers are ultimately binary. Everything boils down to a 1 and a 0.

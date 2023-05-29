@@ -21,3 +21,12 @@ export interface Code {
     icon: string;
     link: string;
 }
+
+export interface Tile {
+    slug: string;
+    title: string;
+    date: string;
+    link: string;
+    illustration: string;
+    description: string;
+}
