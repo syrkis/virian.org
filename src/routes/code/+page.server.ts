@@ -15,14 +15,12 @@ export const load: PageServerLoad = async () => {
       );
       return {
         slug: post.attributes.title.replace(/\s+/g, '-').toLowerCase(),
-        title: post.attributes.subtitle,
+        title: post.attributes.title,
         author: post.attributes.author,
         body: post.body,
-        subtitle: post.attributes.subtitle,
         description: post.attributes.description,
         date: post.attributes.date,
-        github: post.attributes.github, 
-        illustration: post.attributes.icon,
+        illustration: post.attributes.illustration,
         link: post.attributes.link,
         type: 'code'
       };

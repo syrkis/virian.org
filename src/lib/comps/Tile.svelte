@@ -20,13 +20,22 @@
         });
     });
 
+
+    /* set href to item.link if it exists else to /code/item.slug */
+    let href = '/code/' + item.slug;
+    let target = '_self';
+    if (item.link) {
+        href = item.link;
+        target = '_blank';
+    }
+
 </script>
 
 
 
-<a href="/code/{item.slug}">
+<a href={href} target={target}>
     <div class="post">
-        <div class='image' style="background-image: url('{item.illustration}');"></div>
+        <div class='image' style='background-image: url({item.illustration});'></div>
         <div class='title'>
             <span class='subtitle'><h3>{item.title}</h3></span>
             {#if item.type === 'code'}
@@ -45,7 +54,6 @@
 <style>
 
     .image {
-        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 100px;
