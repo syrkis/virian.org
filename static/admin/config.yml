@@ -8,7 +8,21 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-
+  - name: "text"  # collection for writing
+    label: "Text"
+    folder: "src/lib/text"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "author", label: "Author", widget: "string", required: false }
+      - { name: "subtitle", label: "Subtitle", widget: "string", required: false }
+      - { name: "description", label: "Description", widget: "string" }      
+      - { name: "date", label: "Date", widget: "datetime", required: false }
+      - { name: "body", label: "Body", widget: "markdown", required: false }
+      - { name: "image", label: "Image", widget: "image", required: false}
+      - { name: "icon", label: "Image", widget: "string", required: false }
+      - { name: "link", label: "Link", widget: "image", required: false }
   - name: "code"  # collection for data science projects
     label: "Code"
     folder: "src/lib/code"
@@ -25,19 +39,3 @@ collections:
       - { name: "icon", label: "Image", widget: "image", required: false }
       - { name: "github", label: "Github", widget: "string", required: false }
       - { name: "link", label: "Link", widget: "string", required: false }
-
-  - name: "text"  # collection for writing
-    label: "Text"
-    folder: "src/lib/text"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "author", label: "Author", widget: "string", required: false }
-      - { name: "subtitle", label: "Subtitle", widget: "string", required: false }
-      - { name: "description", label: "Description", widget: "string" }      
-      - { name: "date", label: "Date", widget: "datetime", required: false }
-      - { name: "body", label: "Body", widget: "markdown", required: false }
-      - { name: "image", label: "Image", widget: "image", required: false}
-      - { name: "icon", label: "Image", widget: "string", required: false }
-      - { name: "link", label: "Link", widget: "image", required: false }
