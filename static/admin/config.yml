@@ -21,9 +21,9 @@ collections:
       - { name: "description", label: "Description", widget: "string" }      
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
-      - { name: "image", label: "Image", widget: "image" }
-      - { name: "link", label: "Link", widget: "string" }
+      - { name: "image", label: "Image", widget: "image", required: false}
       - { name: "icon", label: "Icon", widget: "string" }
+      - { name: "link", label: "Link", widget: "image", required: false }
 
   - name: "code"  # collection for data science projects
     label: "Code"
@@ -36,7 +36,7 @@ collections:
       - { name: "description", label: "Description", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
-      - { name: "image", label: "Image", widget: "image" }
-      - { name: "github", label: "Github", widget: "string" }
-      - { name: "link", label: "Link", widget: "string" }
-      - { name: "icon", label: "Icon", widget: "string" }
+      - { name: "image", label: "Image", widget: "image", required: false}
+      - { name: "icon", label: "Icon", widget: "image" }
+      - { name: "github", label: "Github", widget: "string", required: false }
+      - { name: "link", label: "Link", widget: "string", required: false }
