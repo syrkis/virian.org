@@ -15,10 +15,10 @@
             for a general audience.
         </p>
     </div>
-    <div>
+    <div class='posts'>
         {#each data.body as item}
             <div class='post'>
-            <Text {item} />
+                <Text {item} />
             </div>  
       {/each}
     </div>

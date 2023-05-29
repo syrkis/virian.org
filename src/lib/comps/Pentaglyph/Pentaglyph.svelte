@@ -106,7 +106,7 @@
             <p style="font-style: italic;">
                     The state of culture in
                     {regionCodeToCountry[region]}
-                    {year}*
+                    {year}
             </p>
         </div>
         <Selector bind:regionID={regionID} bind:timeID={timeID} />
@@ -167,7 +167,7 @@
     </div>
     <div class="text">
         <p>
-            <a href="https://ess-search.nsd.no/"><i>*European Social Survey</i></a> based<a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
+            <a href="https://ess-search.nsd.no/"><i>European Social Survey</i></a> based<a href="https://en.wikipedia.org/wiki/Theory_of_Basic_Human_Values" rel="noreferrer" target="_blank">
                 <i>Schwartz values.</i></a>Length and spread encodes mean and variance.
             Drag center to explore.
         </p>

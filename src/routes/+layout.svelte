@@ -17,7 +17,7 @@
     :global(body) {
         letter-spacing: 0.02em;
         font-size: 1.2em;
-        background-color: black;
+        background-color: #030303;
         color: white;
         text-align: center;
         font-family: 'Crimson Text', serif;
@@ -57,6 +57,17 @@
     :global(h2) {
         font-size: 1.3rem;
         margin-bottom: 0;
+    }
+
+    :global(hr) {
+        width: 100%;
+        margin: 0 auto;
+        border: 0.5px solid white;
+
+    }
+
+    :global(.posts) {
+        padding: 2rem 0;
     }
 
 </style>

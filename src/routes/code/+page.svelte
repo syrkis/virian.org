@@ -9,14 +9,21 @@
  <main>
     <div class="text">
         <p>
-            We specialize in applying advanced machine learning to complex domains.
-            Check out some of our work below.
+            We apply advanced machine learning to complex domains.
+            Write us at
+            <a href='mailto:desk@virian.org'>desk@virian.org</a>
+            to explore how we can help you.
         </p>
     </div>
     <div class="posts">
-        {#each data.body as item}
+        {#each data.body as item, i}
             <div class='post'>
-                <Code {item} />
+                <Code {item} {i} />
+            </div>
+        {/each}
+        {#each data.body as item, i}
+            <div class='post'>
+                <Code {item} {i} />
             </div>
         {/each}
     </div>  
@@ -26,3 +33,10 @@
     <title>Virian | Code</title>
     <meta name="description" content="How the Virian Project generates output.">
 </svelte:head>
+
+<style>
+    a {
+        font-style: italic;
+        font-weight: bold;
+    }
+</style>

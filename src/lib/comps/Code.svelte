@@ -4,16 +4,17 @@
     import type { Code } from '$lib/types';
     import VanillaTilt from "vanilla-tilt";
     export let item: Code; 
+    export let i: number;
 
-    /* format data. Month and day number*/
+    /* format data. month and year only */
     let date = new Date(item.date);
     item.date = date.toDateString();
-    item.date = item.date.slice(4, 10) + ', ' + item.date.slice(11, 15);
+    item.date = item.date.slice(4, 7) + ' ' + item.date.slice(11, 15);
 
     /* add tilt effect to post */
     onMount(() => {
-        VanillaTilt.init(document.querySelectorAll(".icon"), {
-            max: 10,
+        VanillaTilt.init(document.querySelectorAll(".post"), {
+            max: 1,
             speed: 7000,
             reverse: true,
             scale: 1.04
@@ -26,35 +27,29 @@
 
 <a href="/code/{item.slug}">
     <div class="post">
-        <div class='icon'>
-            <img src={item.icon} alt={item.title} />
+        <div class='title'>
+            <span class='subtitle'><h2>{item.subtitle}</h2></span>
+            <span class='date'><h2><i>{item.date}</i></h2></span>
         </div>
-        <div class='text'>
-            <h2>{item.title}: {item.subtitle}</h2>
-            <p>{item.description} {item.description}</p>
-            <i>{item.author}, {item.date}</i>
-        </div>
+        <p>{item.description}</p>
     </div>
 </a>
 
 <style>
-    .post {
+
+    .title {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 3fr 1fr;
     }
 
-    .post img {
+    .post {
+        text-align: justify;
         width: 100%;
-        height: auto;
-
+        max-width: 600px;
     }
 
-    /* center .text vertically within post*/ 
-    .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: left;
+    .date {
+        text-align: right;
     }
 
 </style>
