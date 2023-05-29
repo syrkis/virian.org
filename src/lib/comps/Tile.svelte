@@ -58,7 +58,7 @@
 
     .title {
         display: grid;
-        grid-template-columns: 9fr 5fr;
+        grid-template-columns: 18fr 9fr;
     }
 
     .post {
