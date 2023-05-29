@@ -23,10 +23,12 @@ export interface Code {
 }
 
 export interface Tile {
+    author: string;
     slug: string;
     title: string;
     date: string;
     link: string;
     illustration: string;
     description: string;
+    type: string;
 }

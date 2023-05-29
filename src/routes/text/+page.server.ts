@@ -23,6 +23,7 @@ export const load: PageServerLoad = async () => {
         author: post.attributes.author,
         illustration: post.attributes.icon,
         link: post.attributes.link,
+        type: 'text'
       };
     })
 

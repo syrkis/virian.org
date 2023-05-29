@@ -8,7 +8,7 @@
     /* format data. month and year only */
     let date = new Date(item.date);
     item.date = date.toDateString();
-    item.date = item.date.slice(4, 11) + ', ' + item.date.slice(11, 15);
+    item.date = item.date.slice(4, 10) + ', ' + item.date.slice(11, 15);
 
     /* add tilt effect to post */
     onMount(() => {
@@ -29,7 +29,12 @@
         <div class='image' style="background-image: url('{item.illustration}');"></div>
         <div class='title'>
             <span class='subtitle'><h3>{item.title}</h3></span>
+            {#if item.type === 'code'}
             <span class='date'><h3><i>{item.date}</i></h3></span>
+            {/if}
+            {#if item.type === 'text'}
+            <span class='date'><h3><i>{item.author}, {item.date}</i></h3></span>
+            {/if}
         </div>
         <div class='description'>
             <p>{item.description}</p>
@@ -53,13 +58,13 @@
 
     .title {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 9fr 5fr;
     }
 
     .post {
         text-align: justify;
         width: 100%;
-        max-width: 600px;
+        max-width: 700px;
         padding: 40px 0px 40px 0px;
     }
 

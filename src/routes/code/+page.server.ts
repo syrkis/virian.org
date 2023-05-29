@@ -14,7 +14,7 @@ export const load: PageServerLoad = async () => {
         fs.readFileSync(path.join(postsDir, file), "utf-8")
       );
       return {
-        slug: file.replace(".md", ""),
+        slug: post.attributes.title.replace(/\s+/g, '-').toLowerCase(),
         title: post.attributes.subtitle,
         author: post.attributes.author,
         body: post.body,
@@ -24,6 +24,7 @@ export const load: PageServerLoad = async () => {
         github: post.attributes.github, 
         illustration: post.attributes.icon,
         link: post.attributes.link,
+        type: 'code'
       };
     })
 
