@@ -16,6 +16,7 @@ export const load: PageServerLoad = async () => {
       return {
         slug: file.replace(".md", ""),
         title: post.attributes.title,
+        author: post.attributes.author,
         body: post.body,
         subtitle: post.attributes.subtitle,
         description: post.attributes.description,
