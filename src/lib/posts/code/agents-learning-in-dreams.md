@@ -7,8 +7,8 @@ date: 2023-05-29T13:23:03.334Z
 illustration: /images/IMG_1170.jpeg
 link: https://github.com/syrkis/simulacra
 ---
-\# Numerical Representations of Meaning
 
+## Chapter One | The Virian Project
 Computers, increasingly, make and assist decision that traditionally where exclusively of a human domain. Language especially is an arena in which this is happening. From the system that determines what media text among many to show you to maximise engagement, to the real time sentiment analysis upon which much of automated trading rests—it all rests on a computational comprehension of language. Language, however, is an extremely human concept. We convey meaning—whatever that might be—through it. So how do we represent meaning numerically? The answer to this question is at the foundation of the Virian Project. This text will, be
 
 ## A Number
