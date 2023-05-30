@@ -42,7 +42,7 @@
             <span class='date'><h3><i>{item.date}</i></h3></span>
             {/if}
             {#if item.type === 'text'}
-            <span class='date'><h3><i>{item.author}, {item.date}</i></h3></span>
+                <span class='date'><h3><i>{item.author}, {item.date}</i></h3></span>
             {/if}
         </div>
         <div class='description'>
@@ -69,15 +69,31 @@
         grid-template-columns: 10fr 6fr;
     }
 
+    .date {
+        text-align: right;
+    }
+
+
+    @media (max-width: 600px) {
+        h3 {
+            font-size: 1.1em;
+        }
+
+        .title {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .date {
+            text-align: left;
+        }
+    }
+
     .post {
         text-align: justify;
         width: 100%;
         max-width: 700px;
         padding: 40px 0px 40px 0px;
-    }
-
-    .date {
-        text-align: right;
     }
 
 </style>

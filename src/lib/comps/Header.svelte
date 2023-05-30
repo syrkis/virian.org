@@ -39,7 +39,7 @@
 
     @media (max-width: 600px) {
         .header { padding: 25px  0 70px 0; }
-        #logo { font-size: 1.5em; padding: 0 3vw}
+        #logo { font-size: 1.5em; padding: 0 55px; }
     }
 
 </style>

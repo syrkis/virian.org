@@ -102,12 +102,12 @@
 
 <div on:mousedown={stopTilt} on:mouseup={startTilt}>
     <div id="pentaglyph">
-        <div id="title" style="display:grid;">
-            <p style="font-style: italic;">
-                    The state of culture in
-                    {regionCodeToCountry[region]}
+        <div id="title" style="display:grid; text-transform: uppercase; padding-top: 40px;">
+            <h2>
+                    culture OF
+                    {regionCodeToCountry[region]} IN
                     {year}
-            </p>
+            </h2>
         </div>
         <Selector bind:regionID={regionID} bind:timeID={timeID} />
         {#await data then data}
