@@ -22,18 +22,13 @@
 
 
     /* set href to item.link if it exists else to /code/item.slug */
-    let href = '/code/' + item.slug;
-    let target = '_self';
-    if (item.link) {
-        href = item.link;
-        target = '_blank';
-    }
+    let href = '/' + item.type + '/' + item.slug;
 
 </script>
 
 
 
-<a href={href} target={target}>
+<a href={href}>
     <div class="post">
         <div class='image' style='background-image: url({item.illustration});'></div>
         <div class='title'>

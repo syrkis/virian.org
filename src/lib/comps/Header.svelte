@@ -15,6 +15,11 @@
 
 <style>
 
+    .hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
     ul {
         padding: 0;
         margin-top: 0;

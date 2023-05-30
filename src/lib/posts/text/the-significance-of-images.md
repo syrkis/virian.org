@@ -6,6 +6,5 @@ description: The project is an ongoing exploration of architecture from a data
   numbers—what is a building?
 date: 2023-05-29T13:50:44.015Z
 illustration: /images/IMG_1172.jpeg
-link: https://github.com/syrkis/arkhitekt
 ---
 \# Deep Image Reconstruction From Brain Activity

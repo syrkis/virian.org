@@ -1,12 +1,10 @@
 <script lang="ts">
-
 	import type { PageData } from './$types';
+	import Post from '$lib/comps/Post.svelte';
 
 	export let data: PageData;
 </script>
 
-<div class="container">
-	<a href="/text">back</a>
-	<h1>{data.title}</h1>
-	<p>{data.body}</p>
+<div>
+	<Post title={data.title} author={data.author} body={data.body} type={data.type} />
 </div>

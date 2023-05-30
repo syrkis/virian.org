@@ -104,7 +104,7 @@
     <div id="pentaglyph">
         <div id="title" style="display:grid; text-transform: uppercase; padding-top: 40px;">
             <h2>
-                    culture OF
+                    culture OF<br/>
                     {regionCodeToCountry[region]} IN
                     {year}
             </h2>

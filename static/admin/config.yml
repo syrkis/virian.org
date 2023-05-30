@@ -11,7 +11,7 @@ collections:
 
   - name: "text"  # collection for writing
     label: "Text"
-    folder: "src/lib/text"
+    folder: "src/lib/posts/text"
     create: true
     slug: "{{slug}}"
     fields:
@@ -26,7 +26,7 @@ collections:
 
   - name: "code"  # collection for data science projects
     label: "Code"
-    folder: "src/lib/code"
+    folder: "src/lib/posts/code"
     create: true
     slug: "{{slug}}"
     fields:

@@ -52,7 +52,7 @@
     :global(h2) {
         font-size: 1.3rem;
         margin-bottom: 0;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.13em;
     }
 
     :global(h3) {
@@ -69,5 +69,11 @@
     :global(.posts) {
         padding: 2rem 0;
     }
+
+    
+	:global(.author) {
+		font-size: 0.8em;
+		letter-spacing: 0.1em;
+	}
 
 </style>

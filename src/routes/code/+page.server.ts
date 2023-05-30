@@ -4,7 +4,7 @@ import fm from "front-matter";
 import path from "path";
 import type { Tile } from "$lib/types";
 
-const postsDir = path.join(process.cwd(), "src", "lib", "code");
+const postsDir = path.join(process.cwd(), "src", "lib", "posts", "code");
 
 export const load: PageServerLoad = async () => {
   const posts = fs
