@@ -9,7 +9,7 @@
  <main>
     <div class="text">
         <p>
-            We apply advanced machine learning to complex domains.
+            We apply artificial intelligence to complex domains.
             Write us at
             <a href='mailto:desk@virian.org'>desk@virian.org</a>
             to explore how we can help you.
@@ -19,11 +19,6 @@
         <h2>PROJECTS</h2>
     </div>
     <div class="posts">
-        {#each data.body as item}
-            <div class='post'>
-                <Tile {item} />
-            </div>
-        {/each}
         {#each data.body as item}
             <div class='post'>
                 <Tile {item} />

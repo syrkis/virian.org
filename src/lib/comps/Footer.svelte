@@ -1,9 +1,9 @@
 <script>
     let links = [
-        ["fas fa-rss-square", "virian.substack.com"],
+        ["fab fa-linkedin", "linkedin.com/company/virian"],
         ["fab fa-github", "github.com/syrkis/virian.org"],
-        ["fab fa-stripe", "donate.stripe.com/cN217dcjYg7AgpOaES"],
-        ["far fa-circle", "syrkis.com/"],
+        ["fab fa-youtube", "www.youtube.com/@virianproject"],
+        ["fab fa-twitter", "twitter.com/virianproject"],
         ["fab fa-discord", "discord.gg/4JmKDazE84"],
     ];
 </script>

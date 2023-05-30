@@ -66,7 +66,7 @@
 
     .title {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 10fr 6fr;
     }
 
     .post {

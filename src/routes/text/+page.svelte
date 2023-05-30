@@ -10,9 +10,8 @@
            <!--
            TODO - write intro to text output page (below will be a collection of our writing) 
             -->
-            Our writing focuses on artificial intelligence,
-            demystifying the technology and its applications,
-            for a general audience.
+            Our writing focuses on technology and its cultural impact.
+            Though skeptically inclined, we attempt a positivist vision.
         </p>
     </div>
     <div style='padding-top: 40px;'>
