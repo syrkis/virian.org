@@ -50,8 +50,10 @@
 
     .image {
         background-position: center;
+        background-size: cover;
         background-repeat: no-repeat;
         height: 100px;
+        border-radius: 10px;
     }
 
     .description {

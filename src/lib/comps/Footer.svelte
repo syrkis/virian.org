@@ -15,7 +15,7 @@
         <a href="mailto:desk@virian.org">desk@virian.org</a><br/>
         {#each links as link}
                 <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="{link[0]}"> </a>
-        {/each}
+        {/each}<br/>
     </footer>
 </div>
 

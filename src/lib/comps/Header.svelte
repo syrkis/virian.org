@@ -2,16 +2,18 @@
     import Particles from './Particles.svelte'
 </script>
 
-<div class="header">
-    <Particles/>
-    <nav>
-        <ul>
-            <li><a class="menu-item" href="/code">code</a></li>
-            <li><a class="menu-item" href="/" id="logo">VIRIAN</a></li>
-            <li><a class="menu-item" href="/text">text</a></li>
-        </ul>
-    </nav>
-</div>
+<header>
+    <div class="header">
+        <Particles/>
+        <nav>
+            <ul>
+                <li><a class="menu-item" href="/code">code</a></li>
+                <li><a class="menu-item" href="/" id="logo">VIRIAN</a></li>
+                <li><a class="menu-item" href="/text">text</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
 <style>
 
