@@ -5,14 +5,13 @@ export interface Post {
     body: string;
     slug: string;
     description: string;
-    subtitle: string;
     author: string;
     illustration: string;
     type: string;
     category: string;
 }
 
-interface Author {
+export interface Author {
     name: string;
     email: string;
     institution: string;

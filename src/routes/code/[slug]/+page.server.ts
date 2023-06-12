@@ -2,18 +2,19 @@ import type { PageServerLoad } from './$types';
 import fs from 'fs';
 import fm from 'front-matter';
 import path from 'path';
-import type { Code } from '$lib/types';
+import type { Post } from '$lib/types';
 
-const postsDir = path.join(process.cwd(), 'src', 'lib', "posts", 'code');
+const postsDir = path.join(process.cwd(), 'src', 'lib', "posts");
 
 export const load: PageServerLoad = async ({ params }) => {
-  const post = fm<Code>(fs.readFileSync(path.join(postsDir, `${params.slug}.md`), 'utf-8'));
+  const post = fm<Post>(fs.readFileSync(path.join(postsDir, `${params.slug}.md`), 'utf-8'));
 
   console.log(`[info] processing markdown ${params.slug}.md`);
 
   return {
     title: post.attributes.title,
     body: post.body,
-    type: 'code',
+    date: post.attributes.date, 
+    authors: post.attributes.authors,
   };
 };

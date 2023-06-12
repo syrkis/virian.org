@@ -1,6 +1,9 @@
 ---
+authors:
+  - name: Đorđe Grbić 
+    email: noah@virian.org
+    institution: The Virian Project
 title: Recommended Reading
-author: Noah Syrkis
 description: This is a list of books, articles, and other media that we have found
   particularly interesting and influential. It is constantly being updated.
   There is a brief description of each item, and a link to where it can be found.

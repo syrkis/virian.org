@@ -1,22 +1,22 @@
 <script lang="ts">
     import SvelteMarkdown from 'svelte-markdown';
+    import type { Author } from "$lib/types";
     export let title: string;
-    export let authors: string;
+    export let authors: Author[];
     export let body: string;
-    export let type: string;
+    export let date: string;
+
+        /* format data. month and year only */
+    let dateStr = new Date(date);
+    let dateStr2 = dateStr.toDateString();
+    dateStr2 = dateStr2.slice(4, 10) + ', ' + dateStr2.slice(11, 15);
+
 </script>
 
 <div class="container">
     <div class='title'>
         <h1>{title}</h1>
-    </div>
-    <div class='author'>
-        <span>Noah Syrkis</span><br/>
-        <span>The Virian Project</span><br/>
-        <span>noah@virian.org</span><br/>
-        {#if type === 'text'}
-            <span class='author'><i>by:</i> {authors[0].name}</span>
-        {/if}
+        {dateStr2}
     </div>
     <div class='writing'>
         <SvelteMarkdown source={body} />
@@ -34,7 +34,5 @@
 
 	h1 { line-height: 4.5rem; }
 
-    .author { padding: 50px 0; }
-
-	.writing { text-align: justify; }
+	.writing { text-align: justify; padding-top: 100px; }
 </style>

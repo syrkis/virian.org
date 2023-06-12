@@ -2,22 +2,19 @@ import type { PageServerLoad } from './$types';
 import fs from 'fs';
 import fm from 'front-matter';
 import path from 'path';
-import type { Tile } from '$lib/types';
+import type { Post } from '$lib/types';
 
-const postsDir = path.join(process.cwd(), 'src', 'lib', "posts", 'text');
+const postsDir = path.join(process.cwd(), 'src', 'lib', "posts");
 
 export const load: PageServerLoad = async ({ params }) => {
-  const post = fm<Tile>(fs.readFileSync(path.join(postsDir, `${params.slug}.md`), 'utf-8'));
+  const post = fm<Post>(fs.readFileSync(path.join(postsDir, `${params.slug}.md`), 'utf-8'));
 
   console.log(`[info] processing markdown ${params.slug}.md`);
 
   return {
     title: post.attributes.title,
-    author: post.attributes.author,
-    date: post.attributes.date,
-    slug: params.slug,
-    illustration: post.attributes.illustration,
     body: post.body,
-    type: 'text',
+    date: post.attributes.date, 
+    authors: post.attributes.authors,
   };
 };

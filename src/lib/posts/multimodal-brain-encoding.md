@@ -5,14 +5,14 @@ authors:
     institution: The Virian Project
   - name: Sophia De Spiegeleire
     email: noah@virian.org
-    institution: The University of Copenhagen
+    institution: Copenhagen University
 title: Multimodal Brain Encoding
 description: Utilising convolutional graph neural networks to reconstruct images
   from brain activity, this project spans neuroscience, geometric deep learning,
   and network analysis.
   Brain decoding holds immense promise for alleviation of neurological
   disorders.
-date: 2023-05-29T13:50:44.015Z
+date: 2023-06-29T13:50:44.015Z
 illustration: /images/img_1170.jpeg
 category: code
 ---

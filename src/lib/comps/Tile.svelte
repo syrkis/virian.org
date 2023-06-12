@@ -1,9 +1,9 @@
 <script lang="ts">
 
     import { onMount } from "svelte";
-    import type { Tile } from '$lib/types';
+    import type { Post } from '$lib/types';
     import VanillaTilt from "vanilla-tilt";
-    export let item: Tile; 
+    export let item: Post; 
 
     /* format data. month and year only */
     let date = new Date(item.date);
@@ -33,7 +33,9 @@
         <div class='image' style='background-image: url({item.illustration});'></div>
         <div class='title'>
             <span class='subtitle'><h3>{item.title}</h3></span>
-            <span class='date'><h3><i>{item.date}</i></h3></span>
+            <span class='date'><h3>
+            {item.authors[0].name},
+            <i>{item.date}</i></h3></span>
         </div>
         <div class='description'>
             <p>{item.description}</p>

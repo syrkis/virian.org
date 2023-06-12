@@ -1,6 +1,9 @@
 ---
+authors:
+  - name: Đorđe Grbić 
+    email: noah@virian.org
+    institution: The Virian Project
 title: On Artificial Life
-author: Đorđe Grbić 
 description: The project is an ongoing exploration of architecture from a data
   scientific perspective. A sentence if a string of letters, an image a grid of
   numbers—what is a building?
