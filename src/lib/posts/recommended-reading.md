@@ -1,6 +1,6 @@
 ---
 authors:
-  - name: Đorđe Grbić 
+  - name: Noah Syrkis
     email: noah@virian.org
     institution: The Virian Project
 title: Recommended Reading

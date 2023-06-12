@@ -3,9 +3,6 @@ authors:
   - name: Noah Syrkis
     email: noah@virian.org
     institution: The Virian Project
-  - name: Sophia De Spiegeleire
-    email: noah@virian.org
-    institution: Copenhagen University
 title: Neural Explorations of Architecture
 description: An ongoing exploration of architecture from a data
   scientific perspective. A sentence is a string of letters, an image a grid of

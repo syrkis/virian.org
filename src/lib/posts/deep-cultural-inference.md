@@ -3,9 +3,6 @@ authors:
   - name: Noah Syrkis
     email: noah@virian.org
     institution: The Virian Project
-  - name: Sophia De Spiegeleire
-    email: noah@virian.org
-    institution: Copenhagen University
 title: Deep Cultural Inference
 description: Infering the change in culture over time from a corpus of text
   is a difficult task. This project is an ongoing attempt to do so using deep learning.
