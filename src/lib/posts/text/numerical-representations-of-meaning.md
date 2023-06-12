@@ -1,11 +1,17 @@
 ---
-title: Numerical Representations of Meaning
+authors:
+  - name: Noah Syrkis
+    email: noah@virian.org
+    institution: The Virian Project
 author: Noah Syrkis
+title: Numerical Representations of Meaning
 description: The project is an ongoing exploration of architecture from a data
   scientific perspective. A sentence if a string of letters, an image a grid of
   numbers—what is a building?
 date: 2023-05-29T13:50:44.015Z
 illustration: /images/img_1170.jpeg
+link: none
+category: text
 ---
 \# Numerical Representations of Meaning
 
