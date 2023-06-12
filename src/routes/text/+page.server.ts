@@ -2,29 +2,29 @@ import type { PageServerLoad } from "./$types";
 import fs from "fs";
 import fm from "front-matter";
 import path from "path";
-import type { Tile } from "$lib/types";
+import type { Post } from "$lib/types";
 
-const postsDir = path.join(process.cwd(), "src", "lib", "posts", "text");
+const postsDir = path.join(process.cwd(), "src", "lib", "posts");
 
 export const load: PageServerLoad = async () => {
   const posts = fs
     .readdirSync(postsDir)
     .map((file) => {
-      const post = fm<Tile>(
+      const post = fm<Post>(
         fs.readFileSync(path.join(postsDir, file), "utf-8")
       );
       return {
-        slug: file.replace(".md", ""),
+        slug: post.attributes.title.replace(/\s+/g, '-').toLowerCase(),
         title: post.attributes.title,
+        author: post.attributes.authors,
         body: post.body,
-        date: post.attributes.date,
         description: post.attributes.description,
-        author: post.attributes.author,
+        date: post.attributes.date,
         illustration: post.attributes.illustration,
-        link: post.attributes.link,
-        type: 'text'
+        type: post.attributes.category
       };
-    })
+    }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .filter((post) => post.type === "text");
 
   return {
     body: posts,

@@ -6,5 +6,6 @@ description: The project is an ongoing exploration of architecture from a data
   numbers—what is a building?
 date: 2023-05-29T13:50:44.015Z
 illustration: /images/img_1174.jpeg
+category: text
 ---
 \# Deep Image Reconstruction From Brain Activity

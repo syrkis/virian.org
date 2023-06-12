@@ -1,4 +1,5 @@
-export interface Text {
+export interface Post {
+    authors: Author[];
     title: string;
     date: string;
     body: string;
@@ -6,29 +7,13 @@ export interface Text {
     description: string;
     subtitle: string;
     author: string;
-    icon: string;
-    link: string;
-}
-
-export interface Code {
-    title: string;
-    date: string;
-    body: string;
-    slug: string;
-    description: string;
-    subtitle: string;
-    github: string;
-    icon: string;
-    link: string;
-}
-
-export interface Tile {
-    author: string;
-    slug: string;
-    title: string;
-    date: string;
-    link: string;
     illustration: string;
-    description: string;
     type: string;
+    category: string;
+}
+
+interface Author {
+    name: string;
+    email: string;
+    institution: string;
 }

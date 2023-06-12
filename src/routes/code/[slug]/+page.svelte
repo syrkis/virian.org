@@ -7,5 +7,5 @@
 </script>
 
 <div class="container">
-	<Post title={data.title} body={data.body} type={data.type} author={'dummy'} />
+	<Post title={data.title} body={data.body} type={data.type} authors={data.authors} />
 </div>

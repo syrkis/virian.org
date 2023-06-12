@@ -9,29 +9,9 @@ public_folder: /images
 
 collections:
 
-  - name: "text"  # collection for writing
-    label: "Text"
-    folder: "src/lib/posts/text"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "authors", label: "Authors", widget: "list", fields: 
-        [
-          { name: "name", label: "Name", widget: "string" },
-          { name: "email", label: "Email", widget: "string" },
-          { name: "institution", label: "Institution", widget: "string" }
-        ]}
-      - { name: "description", label: "Description", widget: "string" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Body", widget: "markdown" }
-      - { name: "illustration", label: "Illustration", widget: "image" }
-      - { name: "keywords", label: "Keywords", widget: "list" }
-      - { name: "category", label: "Category", widget: "string" }
-
-  - name: "code"  # collection for writing
-    label: "Code"
-    folder: "src/lib/posts/code"
+  - name: "posts"  # collection for writing
+    label: "Posts"
+    folder: "src/lib/posts"
     create: true
     slug: "{{slug}}"
     fields:

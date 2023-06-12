@@ -6,5 +6,6 @@ description: This is a list of books, articles, and other media that we have fou
   There is a brief description of each item, and a link to where it can be found.
 date: 2023-05-29T13:50:44.015Z
 illustration: /images/img_1172.jpeg
+category: text
 ---
 \# Deep Image Reconstruction From Brain Activity

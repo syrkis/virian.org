@@ -5,6 +5,6 @@ description: An ongoing exploration of architecture from a data
   numbers—but, what is a building?
 date: 2023-05-29T13:50:44.015Z
 illustration: /images/img_1176.jpeg
-link: https://github.com/syrkis/arkhitekt
+category: code
 ---
 \# Deep Image Reconstruction From Brain Activity

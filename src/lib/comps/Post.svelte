@@ -1,7 +1,7 @@
 <script lang="ts">
     import SvelteMarkdown from 'svelte-markdown';
     export let title: string;
-    export let author: string;
+    export let authors: string;
     export let body: string;
     export let type: string;
 </script>
@@ -15,7 +15,7 @@
         <span>The Virian Project</span><br/>
         <span>noah@virian.org</span><br/>
         {#if type === 'text'}
-            <span class='author'><i>by:</i> {author}</span>
+            <span class='author'><i>by:</i> {authors[0].name}</span>
         {/if}
     </div>
     <div class='writing'>

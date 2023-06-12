@@ -1,14 +1,14 @@
 ---
-title: Multimodal Brain Encoding
-description: Utilising convolutional graph neural networks to reconstruct images
-  from brain activity, this project spans neuroscience, geometric deep learning,
-  and network analysis.
-  Brain decoding holds immense promise for alleviation of neurological
-  disorders.
-date: 2023-06-11T13:23:03.334Z
-illustration: /images/img_1170.jpeg
-link: https://github.com/syrkis/neuroscope
+title: Deep Cultural Inference
+description: Infering the change in culture over time from a corpus of text
+  is a difficult task. This project is an ongoing attempt to do so using deep learning.
+  Creating a high quality mapping between content and culture is a prerequisite
+  for the regulation and improvement of social media platforms.
+date: 2023-05-29T13:23:03.334Z
+illustration: /images/img_1171.jpeg
+category: code
 ---
+
 Understanding how the brain encodes visual information is a key challenge in neuroscience. In this project, we attempt to address this challenge by constructing a multimodal encoding model based on the Algonauts Project 2023 dataset. In addition to the dataset's image modality, we incorporate a semantic feature vector that describes object categories contained in the image shown to the subject during the functional Magnetic Resonance Imaging (fMRI) data collection. We combine various linear modules to construct two models: one predicting the fMRI data from both the associated image and the image's associated semantic feature vector; the other predicting both the fMRI data and the semantic vector from the image alone. Bayesian hyperparameter optimization suggests that the latter approach could potentially enhance model performance during inference without increasing the number of parameters. The model's performance was evaluated using a 5-fold cross-validation strategy and the median Pearson correlation coefficient as the metric. The code for this project is accessible at github.com/syrkis/neuroscope, and training logs are available at wandb.ai/syrkis/neuroscope.
 
 ## Introduction
@@ -33,3 +33,7 @@ The power of deep learning models in the field of neuroscience is attributed to 
 
 
 Despite the richness of information available in fMRI data, remarkably few studies have exploited deep learning encoding models to predict associated brain responses. One study, by Güçlü and van Gerven (2015), utilized a DNN trained to predict object categories of over a million natural images and then used it to predict fMRI BOLD responses to complex naturalistic stimuli. The study identified a gradient of increasing complexity in the ventral visual pathway and found that the receptive fields in this region are attuned to object categorization (güçlü2015). In another study, Zhang et al (2019), constructed a new visual encoding model that was based on a unique combination of techniques: it employed transfer learning to use a pre-trained Deep Neural Network (AlexNet) and used a non-linear mapping to translate visual features into brain activity. The researchers found that their model yielded significant predictions for over 20% of the voxels in the early visual area and resulted in the outperformance of conventional linear mapping models, offering a new approach to leverage pre-trained visual features in brain activity prediction (@zhang2019). Notably, these DNNbased models can even outperform traditional hand-engineered models ((guclu2015), (kell2018), (@zhang2019)), signifying a substantial leap forward in uncovering the complexity of visual information processing.
+
+#### Multi modality in visual perception and deep learning 
+
+Most current models rely on single-modal input data, typically the visual stimuli themselves. Yet, the evermore revealed complexity of visual perception indicates a need for a shift towards multimodal deep learning models to encode brain activity.  

@@ -33,12 +33,7 @@
         <div class='image' style='background-image: url({item.illustration});'></div>
         <div class='title'>
             <span class='subtitle'><h3>{item.title}</h3></span>
-            {#if item.type === 'code'}
             <span class='date'><h3><i>{item.date}</i></h3></span>
-            {/if}
-            {#if item.type === 'text'}
-                <span class='date'><h3><i>{item.author}, {item.date}</i></h3></span>
-            {/if}
         </div>
         <div class='description'>
             <p>{item.description}</p>
