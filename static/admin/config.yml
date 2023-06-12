@@ -26,7 +26,6 @@ collections:
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "illustration", label: "Illustration", widget: "image" }
-      - { name: "link", label: "Link", widget: "string" }
       - { name: "keywords", label: "Keywords", widget: "list" }
       - { name: "category", label: "Category", widget: "string" }
 
@@ -47,6 +46,5 @@ collections:
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "illustration", label: "Illustration", widget: "image" }
-      - { name: "link", label: "Link", widget: "string" }
       - { name: "keywords", label: "Keywords", widget: "list" }
       - { name: "category", label: "Category", widget: "string" }
