@@ -8,7 +8,12 @@
 
 <div class="container">
     <div class='title'>
-        <h2>{title}</h2>
+        <h1>{title}</h1>
+    </div>
+    <div class='author'>
+        <span>Noah Syrkis</span><br/>
+        <span>The Virian Project</span><br/>
+        <span>noah@virian.org</span><br/>
         {#if type === 'text'}
             <span class='author'><i>by:</i> {author}</span>
         {/if}
@@ -24,12 +29,12 @@
         width: 95%;
         max-width: 700px;
         margin: auto;
+        padding-top: 10vh;
     }
 
-	h2 { font-size: 1.5rem; }
+	h1 { line-height: 4.5rem; }
 
-	.title { padding: 50px 0; }
+    .author { padding: 50px 0; }
 
 	.writing { text-align: justify; }
-
 </style>

@@ -50,7 +50,7 @@
 
     .image {
         background-position: center;
-        background-size: cover;
+        background-size: 110%;
         background-repeat: no-repeat;
         height: 100px;
         border-radius: 10px;

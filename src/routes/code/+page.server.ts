@@ -24,7 +24,7 @@ export const load: PageServerLoad = async () => {
         link: post.attributes.link,
         type: 'code'
       };
-    })
+    }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return {
     body: posts,
