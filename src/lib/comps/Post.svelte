@@ -29,7 +29,7 @@
         width: 95%;
         max-width: 700px;
         margin: auto;
-        padding-top: 10vh;
+        padding: 200px 0;
     }
 
 	h1 { line-height: 4.5rem; }
