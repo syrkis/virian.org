@@ -9,7 +9,7 @@ description: Infering the change in culture over time from a corpus of text
   Creating a high quality mapping between content and culture is a prerequisite
   for the regulation and improvement of social media platforms.
 date: 2023-05-29T13:23:03.334Z
-illustration: /images/img_1171.jpeg
+illustration: /images/12.jpg
 category: code
 ---
 
