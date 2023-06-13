@@ -52,12 +52,14 @@
     :global(h2) {
         font-size: 1.3rem;
         margin-bottom: 0;
-        letter-spacing: 0.13em;
+        letter-spacing: 0.1em;
+        padding-top: 3rem;
     }
 
     :global(h3) {
         font-size: 1.3rem;
         margin-bottom: 0;
+        letter-spacing: 0.1em;
     }
 
     :global(hr) {

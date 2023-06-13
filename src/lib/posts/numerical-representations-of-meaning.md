@@ -4,14 +4,12 @@ authors:
     email: noah@virian.org
     institution: The Virian Project
 title: Numerical Representations of Meaning
-description: The project is an ongoing exploration of architecture from a data
-  scientific perspective. A sentence if a string of letters, an image a grid of
-  numbers—what is a building?
-date: 2023-05-29T13:50:44.015Z
+description: Computers are, as almost every school student knows in this scientific age, binary.
+  They represent data as ones and zeros, trues and false, and they represent everything as data.
+date: 2022-05-29T13:50:44.015Z
 illustration: /images/14.jpg
 category: text
 ---
-\# Numerical Representations of Meaning
 
 Computers, increasingly, make and assist decision that traditionally where exclusively of a human domain. Language especially is an arena in which this is happening. From the system that determines what media text among many to show you to maximise engagement, to the real time sentiment analysis upon which much of automated trading rests—it all rests on a computational comprehension of language. Language, however, is an extremely human concept. We convey meaning—whatever that might be—through it. So how do we represent meaning numerically? The answer to this question is at the foundation of the Virian Project. This text will, be
 
