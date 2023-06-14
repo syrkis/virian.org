@@ -1,8 +1,5 @@
 ---
-authors:
-  - name: Noah Syrkis
-    email: noah@virian.org
-    institution: The Virian Project
+author: Noah Syrkis
 title: Neural Explorations of Architecture
 description: An ongoing exploration of architecture from a data
   scientific perspective. A sentence is a string of letters, an image a grid of

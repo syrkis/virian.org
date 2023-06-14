@@ -2,6 +2,15 @@
     import Tile from '$lib/comps/Tile.svelte';
     import type { PageData } from './$types';
     export let data: PageData;
+    let exLibris = {
+        author: 'Virian',
+        title: 'Ex Libris — The Virian Bookstore',
+        description: 'Our bookstore, Ex Libris, carries a small selection of books that have influenced our thinking. We hope you find them as interesting as we do.',
+        illustration: '/images/13.jpg',
+        date: '2021-10-01',
+        slug: '/libris',
+        type: 'text'
+    };
 </script>
 
 <main>
@@ -17,6 +26,7 @@
     <div style='padding-top: 40px;'>
         <h2>WRITINGS</h2>
     <div class='posts'>
+        <Tile item={exLibris} />
         {#each data.body as item}
             <div class='post'>
                 <Tile {item} />

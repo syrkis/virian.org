@@ -16,7 +16,7 @@ export const load: PageServerLoad = async () => {
       return {
         slug: post.attributes.title.replace(/\s+/g, '-').toLowerCase(),
         title: post.attributes.title,
-        authors: post.attributes.authors,
+        author: post.attributes.author,
         body: post.body,
         description: post.attributes.description,
         date: post.attributes.date,

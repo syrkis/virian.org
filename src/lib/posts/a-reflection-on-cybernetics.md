@@ -1,8 +1,5 @@
 ---
-authors:
-  - name: Đorđe Grbić 
-    email: djole@itu.dk
-    institution: IT University of Copenhagen
+author: Đorđe Grbić 
 title: A Reflection on Cybernetics
 description: Cybernetics is often thought of as a grim military or industrial science of control.
   But, as Andrew Pickering reveals in his book The Cybernetic Brain, and Đorđe Grbić explores in this text, it is much more than that.

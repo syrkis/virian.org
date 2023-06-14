@@ -1,8 +1,5 @@
 ---
-authors:
-  - name: Noah Syrkis
-    email: noah@virian.org
-    institution: The Virian Project
+author: Noah Syrkis
 title: Recurrent Authorship Change Detection
 description: Siamese and recurrent neural networks are used here, to detect changes in authorship in consecutives paragraphs of text, akin to finding fingerprints in prose. Authorship change detection is used in forensics, cybersecurity, literary research, and more.
 date: 2023-05-29T13:50:44.015Z

@@ -1,8 +1,5 @@
 ---
-authors:
-  - name: Alfredo Sirkis
-    email: none
-    institution: Brazilian Climate Center
+author: Alfredo Sirkis
 title: Pricing Carbon Removal
 description: The project is an ongoing exploration of architecture from a data
   scientific perspective. A sentence if a string of letters, an image a grid of

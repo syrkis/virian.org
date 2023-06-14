@@ -1,7 +1,6 @@
 <script lang="ts">
-    import type { Author } from "$lib/types";
     export let title: string;
-    export let authors: Author[];
+    export let author: string
     export let body: string;
     export let date: string;
 
@@ -19,7 +18,7 @@
 <div class="container">
     <div class='title'>
         <h1>{title}</h1>
-        {authors[0].name}, <i>{dateStr2}</i>
+        {author}, <i>{dateStr2}</i>
     </div>
     <div class='writing'>
         <Markdown {md} />

@@ -17,7 +17,7 @@
     :global(body) {
         letter-spacing: 0.02em;
         font-size: 1.2em;
-        background-color: #030303;
+        background-color: #000000;
         color: white;
         text-align: center;
         font-family: 'Crimson Text', serif;

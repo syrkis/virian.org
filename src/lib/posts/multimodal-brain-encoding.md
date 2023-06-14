@@ -1,11 +1,5 @@
 ---
-authors:
-  - name: Noah Syrkis
-    email: noah@virian.org
-    institution: The Virian Project
-  - name: Sophia De Spiegeleire
-    email: noah@virian.org
-    institution: Copenhagen University
+author: Noah Syrkis
 title: Multimodal Brain Encoding
 description: Utilising convolutional graph neural networks to reconstruct images
   from brain activity, this project spans neuroscience, geometric deep learning,

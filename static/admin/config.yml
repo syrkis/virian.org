@@ -16,15 +16,25 @@ collections:
     slug: "{{slug}}"
     fields:
       - { name: "title", label: "Title", widget: "string" }
-      - { name: "authors", label: "Authors", widget: "list", fields: 
-        [
-          { name: "name", label: "Name", widget: "string" },
-          { name: "email", label: "Email", widget: "string" },
-          { name: "institution", label: "Institution", widget: "string" }
-        ]}
+      - { name: "author", label: "Author", widget: "string" }
       - { name: "description", label: "Description", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "illustration", label: "Illustration", widget: "image" }
+      - { name: "keywords", label: "Keywords", widget: "list" }
+      - { name: "category", label: "Category", widget: "string" }
+
+  - name: "libris"
+    label: "Libris"
+    folder: "src/lib/libris"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "author", label: "Author", widget: "string" }
+      - { name: "description", label: "Description", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "illustration", label: "Illustration", widget: "image" }
+      - { name: "link", label: "Link", widget: "string" }
       - { name: "keywords", label: "Keywords", widget: "list" }
       - { name: "category", label: "Category", widget: "string" }

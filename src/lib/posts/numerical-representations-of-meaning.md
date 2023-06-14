@@ -1,8 +1,5 @@
 ---
-authors:
-  - name: Noah Syrkis
-    email: noah@virian.org
-    institution: The Virian Project
+author: Noah Syrkis
 title: Numerical Representations of Meaning
 description: Computers are, as almost every school student knows in this scientific age, binary.
   They represent data as ones and zeros, trues and false, and they represent everything as data.

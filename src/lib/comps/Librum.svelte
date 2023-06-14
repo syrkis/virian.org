@@ -1,9 +1,9 @@
 <script lang="ts">
 
     import { onMount } from "svelte";
-    import type { Post } from '$lib/types';
+    import type { Librum } from '$lib/types';
     import VanillaTilt from "vanilla-tilt";
-    export let item: Post; 
+    export let item: Librum; 
 
     /* format data. month and year only */
     let date = new Date(item.date);
@@ -22,10 +22,7 @@
 
 
     /* set href to item.link if it exists else to /code/item.slug */
-    let href = '/' + item.type + '/' + item.slug;
-    if (item.slug == '/libris') {
-        href = '/libris'
-    }
+    let href = item.link;
 
 </script>
 
@@ -33,27 +30,58 @@
 
 <a href={href}>
     <div class="post">
-        <div class='image' style='background-image: url({item.illustration});'></div>
-        <div class='title'>
-            <span class='subtitle'><h3>{item.title}</h3></span>
-            <span class='date'><h3>
-            {item.author},
-            <i>{item.date}</i></h3></span>
+        <div class='right pane'>
+            <div class='image' style='background-image: url({item.illustration});'></div>
         </div>
-        <div class='description'>
-            <p>{item.description}</p>
+        <div class='left pane'>
+            <div class='title'>
+                <span class='subtitle'><h3>{item.title}</h3></span>
+            </div>
+            <div class='date'>
+                <i>{item.author}</i>
+            </div>
+            <div class='description'>
+                <p>{item.body}</p>
+            </div>
+            <div>
+                <i>¢ fif dallars</i>
+            </div>
         </div>
     </div>
 </a>
 
 <style>
 
+    .pane {
+        padding: 20px;
+        vertical-align: middle;
+    }
+
     .image {
+        /* center div vertically */
+        width: 100%;
         background-position: center;
         background-size: 110%;
-        background-repeat: no-repeat;
-        height: 100px;
         border-radius: 10px;
+        height: 220px;
+    }
+
+    .right {
+        display: grid;
+        align-items: center;
+    }
+
+
+    .post {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #000000;
+        color: white;
+        text-align: left;
+        margin-bottom: 20px;
     }
 
     .description {
@@ -63,11 +91,10 @@
 
     .title {
         display: grid;
-        grid-template-columns: 10fr 6fr;
     }
 
     .date {
-        text-align: right;
+        text-align: left;
     }
 
 
@@ -90,7 +117,6 @@
         text-align: justify;
         width: 100%;
         max-width: 700px;
-        padding: 40px 0px 40px 0px;
     }
 
 </style>
