@@ -24,11 +24,26 @@
     /* set href to item.link if it exists else to /code/item.slug */
     let href = item.link;
 
+    function getPriceFromWebsite(link: string) {
+        let price = 0;
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", link, false);
+        xhr.send();
+        let html = xhr.responseText;
+        let parser = new DOMParser();
+        let doc = parser.parseFromString(html, "text/html");
+        let priceElement = doc.querySelector(".price");
+        if (priceElement) {
+            price = parseFloat(priceElement.textContent.replace("$", ""));
+        }
+        return price;
+    }
+
 </script>
 
 
 
-<a href={href}>
+<a href={href} target="_blank">
     <div class="post">
         <div class='right pane'>
             <div class='image' style='background-image: url({item.illustration});'></div>
