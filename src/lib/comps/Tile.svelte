@@ -36,9 +36,9 @@
         <div class='image' style='background-image: url({item.illustration});'></div>
         <div class='title'>
             <span class='subtitle'><h3>{item.title}</h3></span>
-            <span class='date'><h3>
-            {item.author},
-            <i>{item.date}</i></h3></span>
+            {#if href != '/libris'}
+            <span class='date'><h3>{item.author}, <i>{item.date}</i></h3></span>
+            {/if}
         </div>
         <div class='description'>
             <p>{item.description}</p>
@@ -63,7 +63,7 @@
 
     .title {
         display: grid;
-        grid-template-columns: 10fr 6fr;
+        grid-template-columns: 10fr 7fr;
     }
 
     .date {
