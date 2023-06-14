@@ -5,10 +5,10 @@
     let exLibris = {
         author: 'Virian',
         title: 'Ex Libris — The Virian Bookstore',
-        description: 'Our bookstore, Ex Libris, carries a small selection of books that have influenced our thinking. We hope you find them as interesting as we do.',
+        description: 'Our bookstore, Ex Libris, carries a small selection of books that have influenced our thinking. We hope you find them as interesting as we do. Currently only shipping to the US.',
         illustration: '/images/13.jpg',
         date: '2021-10-01',
-        slug: '/libris',
+        slug: '/ex-libris',
         type: 'text'
     };
 </script>

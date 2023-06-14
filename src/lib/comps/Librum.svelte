@@ -68,17 +68,17 @@
 <style>
 
     .pane {
-        padding: 20px;
         vertical-align: middle;
+        padding: 10px;
     }
 
     .image {
         /* center div vertically */
-        width: 100%;
         background-position: center;
         background-size: 110%;
         border-radius: 10px;
         height: 220px;
+        width: 90%;
     }
 
     .right {
@@ -90,7 +90,6 @@
     .post {
         display: grid;
         grid-template-columns: 1fr 3fr;
-        grid-gap: 20px;
         padding: 20px;
         border-radius: 10px;
         background-color: #000000;
@@ -118,7 +117,7 @@
             font-size: 1.1em;
         }
 
-        .title {
+        .post {
             display: grid;
             grid-template-columns: 1fr;
         }

@@ -23,8 +23,8 @@
 
     /* set href to item.link if it exists else to /code/item.slug */
     let href = '/' + item.type + '/' + item.slug;
-    if (item.slug == '/libris') {
-        href = '/libris'
+    if (item.slug == '/ex-libris') {
+        href = '/ex-libris'
     }
 
 </script>
@@ -36,7 +36,7 @@
         <div class='image' style='background-image: url({item.illustration});'></div>
         <div class='title'>
             <span class='subtitle'><h3>{item.title}</h3></span>
-            {#if href != '/libris'}
+            {#if href != '/ex-libris'}
             <span class='date'><h3>{item.author}, <i>{item.date}</i></h3></span>
             {/if}
         </div>
