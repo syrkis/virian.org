@@ -9,12 +9,12 @@
     <h1>
         Ex Libris
     </h1>
-    <span>
-        <p>
+    <div class='text'>
+        <span>
             Ex Libris carries a small selection of books that have influenced our thinking.
-            Currently, we are only able to ship to the United States.
-        </p>    
-    </span>
+            Currently, we just ship to the US.
+        </span>
+    </div>
 
     <div class="items">
         {#each data.body as item}

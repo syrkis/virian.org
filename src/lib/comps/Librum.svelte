@@ -68,9 +68,7 @@
         border-radius: 10px;
         height: 220px;
         width: 90%;
-        /* invert, black and whtie two tones */
-        filter: invert(100%) grayscale(100%) contrast(2);
-        /* increase contrast */
+        filter: invert(100%) grayscale(100%) contrast(1.5);
 
     }
 
@@ -83,12 +81,7 @@
     .post {
         display: grid;
         grid-template-columns: 1fr 3fr;
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #000000;
-        color: white;
-        text-align: left;
-        margin-bottom: 20px;
+        padding: 75px 0px;
     }
 
     .description {
@@ -107,7 +100,7 @@
 
     @media (max-width: 600px) {
         h3 {
-            font-size: 1.1em;
+            font-size: 1em;
         }
 
         .post {
@@ -117,6 +110,11 @@
 
         .date {
             text-align: left;
+        }
+        .image {
+            height: 200px;
+            width: 95%;
+            margin: auto;
         }
     }
 
