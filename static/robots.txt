@@ -2,5 +2,7 @@ User-agent: *
 Sitemap: https://virian.org/sitemap.xml
 Allow: /
 Allow: /sitemap.xml
-Allow: /input
-Allow: /output
+Allow: /code
+Allow: /text
+Allow: /ex-libris
+Disallow: /admin
