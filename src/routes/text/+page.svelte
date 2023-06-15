@@ -39,12 +39,3 @@
     <title>Virian | Text</title>
     <meta name="description" content="How to provide input to the Virian Project.">
 </svelte:head>
-
-<style>
-    .divider {
-        width: 200px;
-        margin: auto;
-        text-align: center;
-        padding-bottom: 80px;
-    }
-</style>

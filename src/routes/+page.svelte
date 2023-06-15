@@ -9,10 +9,12 @@
 <div>
     <div class="text">
         <p>
-            Increasingly, the web is humanity's nervous system.
-            We need it to evolve our cultures in alignment with our values.
+            Virian is an ongoing attempt at better aligning the effect of technology with the collective values of our culture.
         </p>
     </div>
+    <!--<div class='divider'>
+        <hr/>
+    </div> -->
     <div class="pentaglyphs">
         {#await data then data}
             <Pentaglyph data={data} />
@@ -22,5 +24,5 @@
 
 <svelte:head>
     <title>Virian</title>
-    <meta name="description" content="The Virian Project is an ongoing attempt at aligning the effect that media has on our culture with our collective values.">
+    <meta name="description" content="The Virian Project is an ongoing attempt at better aligning the effect of technology with the collective values of our culture.">
 </svelte:head>

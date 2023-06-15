@@ -59,7 +59,7 @@
     :global(h3) {
         font-size: 1.3rem;
         margin-bottom: 0;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.05em;
     }
 
     :global(hr) {
@@ -77,5 +77,12 @@
 		font-size: 0.8em;
 		letter-spacing: 0.1em;
 	}
+
+    :global(.divider) {
+        width: 200px;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 80px;
+    }
 
 </style>
