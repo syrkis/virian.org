@@ -8,9 +8,9 @@
 
 <div>
     <div class="text">
-        <p>
-            Virian is an ongoing attempt at better aligning the effect of technology with the collective values of our culture.
-        </p>
+            <span>
+            <h1>Virian </h1>is an ongoing attempt at better aligning the effect of technology with the collective values of our culture.
+            </span>
     </div>
     <!--<div class='divider'>
         <hr/>
@@ -26,3 +26,11 @@
     <title>The Virian Project</title>
     <meta name="description" content="The Virian Project is an ongoing attempt at better aligning the effect of technology with the collective values of our culture.">
 </svelte:head>
+
+<style>
+    h1 {
+        display: inline;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+</style>

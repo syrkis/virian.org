@@ -8,4 +8,4 @@ date: 2018-05-29T13:50:44.015Z
 illustration: /images/11.jpg
 category: text
 ---
-\# Deep Image Reconstruction From Brain Activity
+##  Deep Image Reconstruction From Brain Activity

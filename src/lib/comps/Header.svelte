@@ -8,7 +8,7 @@
         <nav>
             <ul>
                 <li><a class="menu-item" href="/code">code</a></li>
-                <li><a class="menu-item" href="/" id="logo"><h1>VIRIAN</h1></a></li>
+                <li><a class="menu-item" href="/" id="logo">VIRIAN</a></li>
                 <li><a class="menu-item" href="/text">text</a></li>
             </ul>
         </nav>

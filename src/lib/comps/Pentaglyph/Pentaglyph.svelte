@@ -166,10 +166,10 @@
         {/await}
     </div>
     <div class="text">
-        <p>
+        <span>
             Increasingly, the web is humanity's nervous system.
             We need it to evolve our cultures in alignment with our values.
-        </p>
+        </span>
     </div>
 </div>
 

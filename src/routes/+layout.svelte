@@ -29,6 +29,7 @@
         width: 95%;
         max-width: 530px;
         padding-bottom: 0rem;
+        padding-top: 3rem;
     }
 
     :global(a) {

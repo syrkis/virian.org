@@ -8,12 +8,12 @@
 
  <main>
     <div class="text">
-        <p>
+        <span>
             We apply artificial intelligence to complex domains.
             Write us at
             <a href='mailto:desk@virian.org'>desk@virian.org</a>
             to explore how we can help you.
-        </p>
+        </span>
     </div>
     <div style='padding-top: 40px;'>
         <h2>PROJECTS</h2>

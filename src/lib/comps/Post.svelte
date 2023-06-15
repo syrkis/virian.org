@@ -39,7 +39,10 @@
         padding: 200px 0;
     }
 
-	h1 { line-height: 4.5rem; }
+	h1 {
+        line-height: 4.5rem;
+    }
+
 
 	.writing { text-align: justify; padding-top: 100px; }
 </style>

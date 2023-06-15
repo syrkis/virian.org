@@ -19,10 +19,10 @@
             <hr/>
         </div>
     <div class="text">
-        <p>
+        <span>
             Our writing focuses on technology and its cultural impact.
             Though skeptically inclined, we attempt a positive vision.
-        </p>
+        </span>
     </div>
     <div style='padding-top: 40px;'>
         <h2>WRITINGS</h2>
