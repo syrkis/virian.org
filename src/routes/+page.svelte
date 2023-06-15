@@ -23,6 +23,6 @@
 </div>
 
 <svelte:head>
-    <title>Virian</title>
+    <title>The Virian Project</title>
     <meta name="description" content="The Virian Project is an ongoing attempt at better aligning the effect of technology with the collective values of our culture.">
 </svelte:head>
