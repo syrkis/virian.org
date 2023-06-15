@@ -10,7 +10,10 @@
         Ex Libris
     </h1>
     <span>
-        Virian's library of books, articles, and other resources. Click to buy.
+        <p>
+            Ex Libris carries a small selection of books that have influenced our thinking.
+            Currently, we are only able to ship to the United States.
+        </p>    
     </span>
 
     <div class="items">
