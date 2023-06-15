@@ -11,6 +11,6 @@
 </div>
 
 <svelte:head>
-	<title>Virian | {data.title}</title>
+	<title>The Virian Project | {data.title}</title>
 	<meta name="description" content={data.description} />
 </svelte:head>

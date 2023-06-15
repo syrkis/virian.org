@@ -26,7 +26,7 @@
 </div>
 
 <svelte:head>
-    <title>Virian | Ex Libris</title>
+    <title>The Virian Project | Ex Libris</title>
     <meta name="description" content="Ex Libris carries a small selection of books that have influenced our thinking. The sellection covers a range of topics, from technology to philosophy to art.">
 </svelte:head>
 

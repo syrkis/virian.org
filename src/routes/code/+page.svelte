@@ -28,7 +28,7 @@
 </main>
 
 <svelte:head>
-    <title>Virian | Code</title>
+    <title>The Virian Project | Code</title>
     <meta name="description" content="We apply artificial intelligence to complex domains." />
 </svelte:head>
 
