@@ -15,6 +15,6 @@ export const load: PageServerLoad = async ({ params }) => {
     title: post.attributes.title,
     body: post.body,
     date: post.attributes.date, 
-    authors: post.attributes.authors,
+    author: post.attributes.author,
   };
 };

@@ -18,7 +18,11 @@
 <div class="container">
     <div class='title'>
         <h1>{title}</h1>
-        {author}, <i>{dateStr2}</i>
+        {#if author === 'Noah Syrkis'}
+            <a href='https://syrkis.com'>{author}, <i>{dateStr2}</i></a>
+        {:else}
+            {author}, <i>{dateStr2}</i>
+        {/if}
     </div>
     <div class='writing'>
         <Markdown {md} />
