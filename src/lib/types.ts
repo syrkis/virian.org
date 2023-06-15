@@ -18,4 +18,5 @@ export interface Librum {
     illustration: string;
     category: string;
     link: string;
+    price: string;
 }

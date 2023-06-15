@@ -1,5 +1,5 @@
 <script lang="ts">
-
+    import XMLHttpRequest from 'xhr2';
     import { onMount } from "svelte";
     import type { Librum } from '$lib/types';
     import VanillaTilt from "vanilla-tilt";
@@ -23,21 +23,9 @@
 
     /* set href to item.link if it exists else to /code/item.slug */
     let href = item.link;
-
-    function getPriceFromWebsite(link: string) {
-        let price = 0;
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", link, false);
-        xhr.send();
-        let html = xhr.responseText;
-        let parser = new DOMParser();
-        let doc = parser.parseFromString(html, "text/html");
-        let priceElement = doc.querySelector(".price");
-        if (priceElement) {
-            price = parseFloat(priceElement.textContent.replace("$", ""));
-        }
-        return price;
-    }
+    
+    /* ensure price has two decimal places */
+    let price = parseFloat(item.price).toFixed(2);
 
 </script>
 
@@ -59,7 +47,7 @@
                 <p>{item.body}</p>
             </div>
             <div>
-                <i>¢ fif dallars</i>
+                <i>Price: $ {price}</i>
             </div>
         </div>
     </div>

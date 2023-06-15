@@ -31,6 +31,7 @@
 		"svelte-exmarkdown": "^2.0.0",
 		"svelte-particles": "^2.5.3",
 		"tsparticles": "^2.5.3",
-		"vanilla-tilt": "^1.7.3"
+		"vanilla-tilt": "^1.7.3",
+		"xhr2": "^0.2.1"
 	}
 }

@@ -22,6 +22,7 @@ export const load: PageServerLoad = async () => {
         illustration: post.attributes.illustration,
         link: post.attributes.link,
         type: post.attributes.category,
+        price: post.attributes.price,
       };
     }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 

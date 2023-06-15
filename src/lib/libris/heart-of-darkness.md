@@ -5,6 +5,7 @@ date: 2023-05-29T13:50:44.015Z
 illustration: /images/17.jpg
 category: libris
 link: https://bookshop.org/a/94641/9780141441672
+price: 11.00
 ---
 Conrad's "Heart of Darkness" is a chilling critique of the horrors of colonialism, more akin to a fever dream than a work of fiction.
 Through the hazy, hallucinatory journey of Marlow into the depths of the Belgian Congo, Conrad paints a deeply unsettling portrait.
