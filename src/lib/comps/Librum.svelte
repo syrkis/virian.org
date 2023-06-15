@@ -1,5 +1,4 @@
 <script lang="ts">
-    import XMLHttpRequest from 'xhr2';
     import { onMount } from "svelte";
     import type { Librum } from '$lib/types';
     import VanillaTilt from "vanilla-tilt";
@@ -26,6 +25,8 @@
     
     /* ensure price has two decimal places */
     let price = parseFloat(item.price).toFixed(2);
+    let imageId = item.link.split('/')[5];
+    let imageBase = 'https://images-us.bookshop.org/ingram/'
 
 </script>
 
@@ -34,7 +35,7 @@
 <a href={href} target="_blank">
     <div class="post">
         <div class='right pane'>
-            <div class='image' style='background-image: url({item.illustration});'></div>
+            <div class='image' style='background-image: url({imageBase}{imageId}.jpg)'></div>
         </div>
         <div class='left pane'>
             <div class='title'>
@@ -63,10 +64,14 @@
     .image {
         /* center div vertically */
         background-position: center;
-        background-size: 110%;
+        background-size: cover;
         border-radius: 10px;
         height: 220px;
         width: 90%;
+        /* invert, black and whtie two tones */
+        filter: invert(100%) grayscale(100%) contrast(2);
+        /* increase contrast */
+
     }
 
     .right {
