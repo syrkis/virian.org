@@ -9,3 +9,8 @@
 <div class="container">
 	<Post title={data.title} body={data.body} date={data.date} author={data.author} />
 </div>
+
+<svelte:head>
+	<title>Virian | {data.title}</title>
+	<meta name="description" content={data.description} />
+</svelte:head>

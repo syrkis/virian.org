@@ -37,5 +37,5 @@
 
 <svelte:head>
     <title>Virian | Text</title>
-    <meta name="description" content="How to provide input to the Virian Project.">
+    <meta name="description" content="Our writing focuses on technology and its cultural impact. Though skeptically inclined, we attempt a positive vision.">
 </svelte:head>
