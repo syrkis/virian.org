@@ -8,7 +8,7 @@
         <nav>
             <ul>
                 <li><a class="menu-item" href="/code">code</a></li>
-                <li><a class="menu-item" href="/" id="logo">VIRIAN</a></li>
+                <li><a class="menu-item" href="/" id="logo"><h1>VIRIAN</h1></a></li>
                 <li><a class="menu-item" href="/text">text</a></li>
             </ul>
         </nav>
@@ -16,6 +16,14 @@
 </header>
 
 <style>
+
+    h1 {
+        display: inline-block;
+        font-size: 1em;
+        font-weight: normal;
+        letter-spacing: 0.1em;
+        margin: 0;
+    }
 
     .hidden {
         opacity: 0;
