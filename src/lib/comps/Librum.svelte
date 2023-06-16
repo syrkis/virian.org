@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import type { Librum } from '$lib/types';
     import VanillaTilt from "vanilla-tilt";
+    import Markdown from 'svelte-exmarkdown';
     export let item: Librum; 
 
     /* format data. month and year only */
@@ -27,6 +28,7 @@
     let price = parseFloat(item.price).toFixed(2);
     let imageId = item.link.split('/')[5];
     let imageBase = 'https://images-us.bookshop.org/ingram/'
+    let md = item.body;
 
 </script>
 
@@ -45,7 +47,7 @@
                 <i>{item.author}</i>
             </div>
             <div class='description'>
-                <p>{item.body}</p>
+                <Markdown {md} />
             </div>
             <div>
                 <i>Price: $ {price}</i>

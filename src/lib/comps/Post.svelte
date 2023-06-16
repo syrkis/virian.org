@@ -1,14 +1,14 @@
 <script lang="ts">
+    import Markdown from 'svelte-exmarkdown';
+
     export let title: string;
     export let author: string
     export let body: string;
     export let date: string;
-
     /* format data. month and year only */
     let dateStr = new Date(date);
     let dateStr2 = dateStr.toDateString();
     dateStr2 = dateStr2.slice(4, 10) + ', ' + dateStr2.slice(11, 15);
-    import Markdown from 'svelte-exmarkdown';
     //use body for markdown
     let md = body;
 

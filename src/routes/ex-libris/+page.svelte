@@ -12,7 +12,7 @@
     <div class='text'>
         <span>
             Ex Libris carries a small selection of books that have influenced our thinking.
-            Currently, we just ship to the US.
+            For now, we only shup in the US.
         </span>
     </div>
 

@@ -17,19 +17,6 @@
 
 <style>
 
-    h1 {
-        display: inline-block;
-        font-size: 1em;
-        font-weight: normal;
-        letter-spacing: 0.1em;
-        margin: 0;
-    }
-
-    .hidden {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
-
     ul {
         padding: 0;
         margin-top: 0;
