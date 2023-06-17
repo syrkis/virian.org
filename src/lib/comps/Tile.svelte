@@ -38,7 +38,7 @@
         <div class='image' style='background-image: url({item.illustration});'></div>
         <div class='title'>
             <span class='subtitle'><h3>{item.title}</h3></span>
-            {#if href != '/ex-libris'}
+            {#if href != '/ex-libris' && href != '/services'}
             <span class='date'><h3>{item.author}, <i>{item.date}</i></h3></span>
             {/if}
         </div>
