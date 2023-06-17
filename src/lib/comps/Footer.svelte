@@ -16,23 +16,50 @@
         {#each links as link}
                 <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="{link[0]}"> </a>
         {/each}<br/>
+        <div class="divider">
+            <hr/>
+        </div>
+        <ul>
+            <li>
+                <a href="/donate">/donate</a>
+            </li>
+            <li>
+                <a href="/vision">/vision</a>
+            </li>
+        </ul>
     </footer>
 </div>
 
 <style>
     /* footer in bottom of screen or page */
+    .divider {
+        padding: 15px 0;
+    }
     footer {
+        padding-top: 200px;
         position: relative;
         left: 0;
+        line-height: 3rem;
         width: 100%;
-        height: 50px;
         text-align: center;
-        line-height: 50px;
-        padding: 3rem 0 3rem 0;
-        margin-bottom: 6rem;
     }
     .fab, .far, .fas {
         padding: 0 10px;
+        padding-top: -10px;
         font-size: 0.9em;
+    }
+    
+    ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    li {
+        display: inline-block;
+        width: auto;
+        list-style: outside none none;
+        padding: 0px 10px 0 10px;
     }
 </style>
