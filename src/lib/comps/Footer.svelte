@@ -36,7 +36,7 @@
         padding: 15px 0;
     }
     footer {
-        padding-top: 200px;
+        padding-top: 150px;
         position: relative;
         left: 0;
         line-height: 3rem;
