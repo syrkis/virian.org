@@ -22,7 +22,7 @@
     </div>
     <div class="text">
         <span>
-            Our portfolio shows how we've leveraged AI to generate insights in fields like neuroscience, epidemiology, NLP, and more.
+            Our portfolio shows how we've leveraged AI to generate insights in neuroscience, epidemiology, NLP, and more.
         </span>
     </div>
     <div style='padding-top: 40px;'>
