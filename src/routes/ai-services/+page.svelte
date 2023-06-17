@@ -17,6 +17,8 @@ Navigating the AI landscape can be challenging. We provide strategic guidance to
 
 <h2>Custom AI Solution Development</h2>
 Every organization has unique challenges and goals. We design and implement tailored AI solutions that address specific needs and drive innovation.
+We have expertise in Deep Learning, Machine Learning, and Natural Language Processing, Network Analysis, Cloud Computing, and more.
+The tools we use include Python, PyTorch, JAX, Scikit-Learn, NLTK, Julia, OpenAI, HuggingFace, WandB, Docker, Azure, AWS, and GCP.
 
 <h2>Strategic AI Implementation</h2>
 AI is more than just technology—it's a strategic asset. We help organizations integrate AI into their operations in a way that is strategic, sustainable, and value-creating.
