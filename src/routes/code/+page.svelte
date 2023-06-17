@@ -1,22 +1,32 @@
 <script lang="ts">
     import Tile from '$lib/comps/Tile.svelte';
     import type { PageData } from './$types';
-
     export let data: PageData;
+    let services = {
+        author: 'Virian',
+        title: 'AI Services – Virian Analytics (E.U. only)',
+        description: 'Virian Analytics provides AI consulting and development services. We help organizations understand and effectively use their data. Get in touch to discuss how we can assist you.',
+        illustration: '/images/12.jpg',
+        date: '2021-10-01',
+        slug: '/services',
+        type: 'text'
+    };
+
 </script>
 
 
  <main>
+    <Tile item={services} />
+    <div class='divider'>
+        <hr/>
+    </div>
     <div class="text">
         <span>
-            We apply artificial intelligence to complex domains.
-            Write us at
-            <a href='mailto:desk@virian.org'>desk@virian.org</a>
-            to explore how we can help you.
+            Our portfolio shows how we've leveraged AI to generate insights in fields like neuroscience, epidemiology, NLP, and more.
         </span>
     </div>
     <div style='padding-top: 40px;'>
-        <h2>PROJECTS</h2>
+        <h2>PORTFOLIO</h2>
     </div>
     <div class="posts">
         {#each data.body as item}

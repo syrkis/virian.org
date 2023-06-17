@@ -4,8 +4,8 @@
     export let data: PageData;
     let exLibris = {
         author: 'Virian',
-        title: 'Ex Libris — The Virian Bookstore',
-        description: 'Ex Libris carries a small selection of books that have influenced our thinking. The collection covers a range of topics, from technology to philosophy to art.',
+        title: 'Ex Libris – The Virian Bookstore (U.S. only)',
+        description: 'Ex Libris features a curated selection of influential books that have shaped our perspective on culture and technology.',
         illustration: '/images/13.jpg',
         date: '2021-10-01',
         slug: '/ex-libris',
@@ -14,10 +14,10 @@
 </script>
 
 <main>
-        <Tile item={exLibris} />
-        <div class='divider'>
-            <hr/>
-        </div>
+    <Tile item={exLibris} />
+    <div class='divider'>
+        <hr/>
+    </div>
     <div class="text">
         <span>
             Our writing focuses on technology and its cultural impact.

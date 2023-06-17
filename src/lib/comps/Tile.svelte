@@ -25,6 +25,8 @@
     let href = '/' + item.type + '/' + item.slug;
     if (item.slug == '/ex-libris') {
         href = '/ex-libris'
+    } else if (item.slug == '/services') {
+        href = '/services'
     }
 
 </script>
@@ -70,11 +72,13 @@
         text-align: right;
     }
 
+    h3 {
+        font-size: 1em;
+        letter-spacing: 0.02em;
+    }
+
 
     @media (max-width: 600px) {
-        h3 {
-            font-size: 1.1em;
-        }
 
         .title {
             display: grid;

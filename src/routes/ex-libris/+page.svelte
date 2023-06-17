@@ -11,8 +11,7 @@
     </h1>
     <div class='text'>
         <span>
-            Ex Libris carries a small selection of books that have influenced our thinking.
-            For now, we only shup in the US.
+            Ex Libris features a curated selection of influential books that have shaped our perspective on culture and technology.
         </span>
     </div>
 
