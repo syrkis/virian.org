@@ -20,8 +20,8 @@ Every organization has unique challenges and goals. We design and implement tail
 
 <h2>Strategic AI Implementation</h2>
 AI is more than just technology—it's a strategic asset. We help organizations integrate AI into their operations in a way that is strategic, sustainable, and value-creating.
-
-Want to learn more about how we can help you leverage AI? Get in touch with us at <a href='mailto:desk@virian.org'>desk@virian.org</a>. We look forward to exploring the possibilities with you.
+<br><br>
+Want to learn more about how we can help you leverage AI? Get in touch with us at <a href='mailto:desk@virian.org'>desk@virian.org.</a> We look forward to exploring the possibilities with you.
     </div>
 
 </div>
