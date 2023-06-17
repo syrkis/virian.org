@@ -25,8 +25,8 @@
     let href = '/' + item.type + '/' + item.slug;
     if (item.slug == '/ex-libris') {
         href = '/ex-libris'
-    } else if (item.slug == '/services') {
-        href = '/services'
+    } else if (item.slug == '/ai-services') {
+        href = '/ai-services'
     }
 
 </script>
@@ -38,7 +38,7 @@
         <div class='image' style='background-image: url({item.illustration});'></div>
         <div class='title'>
             <span class='subtitle'><h3>{item.title}</h3></span>
-            {#if href != '/ex-libris' && href != '/services'}
+            {#if href != '/ex-libris' && href != '/ai-services'}
             <span class='date'><h3>{item.author}, <i>{item.date}</i></h3></span>
             {/if}
         </div>

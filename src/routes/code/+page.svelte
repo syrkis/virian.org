@@ -8,7 +8,7 @@
         description: 'Virian Analytics provides AI consulting and development services. We help organizations understand and effectively use their data. Get in touch to discuss how we can assist you.',
         illustration: '/images/12.jpg',
         date: '2021-10-01',
-        slug: '/services',
+        slug: '/ai-services',
         type: 'text'
     };
 
