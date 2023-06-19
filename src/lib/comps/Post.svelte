@@ -1,19 +1,38 @@
 <script lang="ts">
-    import Markdown from 'svelte-exmarkdown';
+    import MarkdownIt from 'markdown-it';
+    import markdownItMathjax from 'markdown-it-mathjax';
+    import footnote from 'markdown-it-footnote'
+
+
+    import { onMount, afterUpdate } from 'svelte';
+
+    onMount(() => {
+    if (window.MathJax) {
+        window.MathJax.typesetPromise();
+    }
+    });
+
+    afterUpdate(() => {
+    if (window.MathJax) {
+        window.MathJax.typesetPromise();
+    }
+    });
+
+    let md = new MarkdownIt();
+    md.use(footnote);
+    md.use(markdownItMathjax());
 
     export let title: string;
-    export let author: string
+    export let author: string;
     export let body: string;
     export let date: string;
-    /* format data. month and year only */
     let dateStr = new Date(date);
     let dateStr2 = dateStr.toDateString();
     dateStr2 = dateStr2.slice(4, 10) + ', ' + dateStr2.slice(11, 15);
-    //use body for markdown
-    let md = body;
-
+    let result = md.render(body);
 
 </script>
+
 
 <div class="container">
     <div class='title'>
@@ -25,8 +44,7 @@
         {/if}
     </div>
     <div class='writing'>
-        <Markdown {md} />
-
+        <div>{@html result}</div>
     </div>
 </div>
 
@@ -45,4 +63,8 @@
 
 
 	.writing { text-align: justify; padding-top: 100px; }
+
+    :global(.screenshot) {
+        filter: grayscale(100%) contrast(200%) invert(1);
+    }
 </style>

@@ -1,8 +1,5 @@
 <script lang="ts">
     import type { PageData } from './$types';
-    import Librum  from '$lib/comps/Librum.svelte';
-    export let data: PageData;
-    console.log(data);
 </script>
 
 <div class="container">
@@ -25,7 +22,6 @@ AI is more than just technology—it's a strategic asset. We help organizations 
 <br><br>
 Want to learn more about how we can help you leverage AI? Get in touch with us at <a href='mailto:desk@virian.org'>desk@virian.org.</a> We look forward to exploring the possibilities with you.
     </div>
-
 </div>
 
 <svelte:head>

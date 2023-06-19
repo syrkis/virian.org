@@ -14,6 +14,9 @@
 </svelte:head>
 
 <style>
+    :global(img) {
+        max-width: 100%;
+    }
     :global(body) {
         letter-spacing: 0.02em;
         font-size: 1.2em;

@@ -1,4 +1,4 @@
-export interface Post {
+export interface Opus {
     author: string;
     title: string;
     date: string;

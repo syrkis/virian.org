@@ -6,7 +6,7 @@
         author: 'Virian',
         title: 'AI Services – Virian Analytics (E.U. only)',
         description: 'Virian provides AI consulting and development services. We help organizations understand and effectively use their data. Get in touch to explore how we can assist you.',
-        illustration: '/images/12.jpg',
+        illustration: '/images/14.jpg',
         date: '2021-10-01',
         slug: '/ai-services',
         type: 'text'
@@ -35,6 +35,7 @@
             </div>
         {/each}
     </div>  
+
 </main>
 
 <svelte:head>

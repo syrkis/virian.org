@@ -2,12 +2,12 @@ import type { PageServerLoad } from './$types';
 import fs from 'fs';
 import fm from 'front-matter';
 import path from 'path';
-import type { Post } from '$lib/types';
+import type { Opus } from '$lib/types';
 
-const postsDir = path.join(process.cwd(), 'src', 'lib', "posts");
+const postsDir = path.join(process.cwd(), 'src', 'lib', "opus");
 
 export const load: PageServerLoad = async ({ params }) => {
-  const post = fm<Post>(fs.readFileSync(path.join(postsDir, `${params.slug}.md`), 'utf-8'));
+  const post = fm<Opus>(fs.readFileSync(path.join(postsDir, `${params.slug}.md`), 'utf-8'));
 
   console.log(`[info] processing markdown ${params.slug}.md`);
 

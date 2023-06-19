@@ -9,9 +9,9 @@ public_folder: /images
 
 collections:
 
-  - name: "posts"  # collection for writing
-    label: "Posts"
-    folder: "src/lib/posts"
+  - name: "opus"  # collection for writing
+    label: "Opus"
+    folder: "src/lib/opus"
     create: true
     slug: "{{slug}}"
     fields:
