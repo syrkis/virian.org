@@ -10,6 +10,7 @@ category: code
 I^[this is some bullshit] the era of Morse code $a + b = c$, experienced operators were identifiable by the rhythms and patterns of their telegraphy. The idiosyncrasies of a writer, too, seep through their prose, leaving an indelible mark of identity.
 
 @ha2018
+@adar2014
 
 An author's prose is their symphony—their choice of words, narrative pacing, and sentence construction make up the distinctive notes. The melodies of meaning and harmonies of style coalesce into a complex composition, unique and telling. Each piece of writing, thus, emerges as an integral part of an elaborate linguistic concert, where notes of ideas, words, and voice resonate together.
 
