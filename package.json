@@ -33,6 +33,7 @@
 		"markdown-it-bibliography": "^0.1.0",
 		"markdown-it-footnote": "^3.0.3",
 		"markdown-it-mathjax": "^2.0.0",
+		"svelte-exmarkdown": "^2.0.0",
 		"svelte-particles": "^2.5.3",
 		"tsparticles": "^2.5.3",
 		"vanilla-tilt": "^1.7.3"
