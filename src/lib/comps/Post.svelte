@@ -13,7 +13,7 @@
     $: result = md.render(body);
 
     onMount(async () => {
-        const response = await fetch('/src/lib/references.bib');
+        const response = await fetch('/references.bib');
         if (response.ok) {
             const bibtex = await response.text();
             const cite = new Cite(bibtex);
