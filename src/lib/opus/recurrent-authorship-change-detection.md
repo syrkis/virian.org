@@ -7,19 +7,26 @@ illustration: /images/1.jpg
 category: code
 ---
 
-I^[this is some bullshit] the era of Morse code $a + b = c$, experienced operators were identifiable by the rhythms and patterns of their telegraphy. The idiosyncrasies of a writer, too, seep through their prose, leaving an indelible mark of identity.
+This project explores a fascinating NLP challenge: detecting shifts in authorship within the scope of a paragraph. Such a tool could be employed in a multitude of contexts, such as revealing ghostwriting and plagiarism, contributing to digital forensics, and more.
 
-@ha2018
-@adar2014
+## Project Overview
 
-An author's prose is their symphony—their choice of words, narrative pacing, and sentence construction make up the distinctive notes. The melodies of meaning and harmonies of style coalesce into a complex composition, unique and telling. Each piece of writing, thus, emerges as an integral part of an elaborate linguistic concert, where notes of ideas, words, and voice resonate together.
+We investigate this task using two neural network architectures: a baseline Siamese Multi-Layer Perceptron (MLP) model and a more sophisticated Gated Recurrent Unit (GRU) model. The MLP model examines paragraph pairs for stylistic changes that might signal a shift in authorship. The GRU model, however, analyses sequences of paragraphs, providing a broader stylistic context for each author's writing.
 
-To discern the subtle signatures echoing within this symphony, we turn to the maestros of pattern recognition: machine learning and its powerful neural networks. Like perceptive musicologists, these networks traverse the melody lines, detecting subtle changes in style—each indicative of a different composer.
+## Data and Task
 
-Our orchestral guides in this endeavor, the Siamese Multi-Layer Perceptron (MLP) and the Gated Recurrent Unit (GRU), are akin to discerning listeners attuned to every note and rhythm. The MLP picks out individual motifs, identifying variations that hint at a change in authorship. The GRU, with a broader ear, listens for shifts in the overarching melodic structure, distinguishing where one composer's contribution ends and another begins.
+Our project utilises Reddit comment threads as data, representing each paragraph either semantically, syntactically, or a combination of both. The semantic features derive from pre-trained Sentence-BERT embeddings by @reimers2019, whereas the syntactic features are manually constructed, focusing on linguistic and stylistic attributes.
 
-As the models attune themselves to these individual compositions, we refine and calibrate them. This process of 'hyperparameter optimization' is much like fine-tuning an instrument to strike the perfect note. With careful adjustment, our models learn to recognize the subtleties of each author's 'literary melody'.
+## Methodology and Model Architecture
 
-Identifying an author from their prose, much like recognizing a composer from their music, requires a keen ear for both the individual elements and the way they blend together. The notes of an author's voice, the melody of their style, and the rhythm of their thinking, together form a symphony. By learning to recognize these unique signatures within the symphony of language, we not only unmask the author but also gain a deeper understanding of the rich, multifaceted nature of written expression.
+We developed our approach around the baseline Siamese MLP and the advanced GRU model. Each model comes in three versions—semantic, syntactic, and concatenated—creating 18 distinct models in total. A random hyperparameter search was conducted to optimise each model's performance. We adopted the F1 score as our evaluation metric, a balance of precision and recall, to provide an aggregate measure of our model performance.
 
-## References
+## Results and Discussion
+
+The GRU model outperformed the Siamese model when considering the full context of a document, achieving an impressive test F1 score of 0.6807. This superior performance suggests that analysing entire sequences of paragraphs can lead to more accurate predictions. However, the Siamese model still served as a robust baseline, showing strength in its performance.
+
+## Conclusion and Future Directions
+
+Our study underlines the importance of considering sequential information in tasks involving contextual dependencies. It particularly highlights the potential of recurrent architectures in dealing with problems related to style change or authorship attribution. While we achieved promising results, future exploration could delve into alternative sentence or paragraph embeddings and explore more advanced architectures.
+
+If your organization deals with large amounts of text data and is interested in authorship detection, our solution might be a game-changer for you. We look forward to offering our expertise and potentially customizing our solution to fit your specific needs. For a more detailed exploration of our methodology, results, and future research directions, we invite you to read our original paper.

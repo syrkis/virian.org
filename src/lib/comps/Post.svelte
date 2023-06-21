@@ -76,6 +76,8 @@
     </div>
     <div class='writing'>
         <div>{@html result}</div>
+        <br>
+        <hr>
         <h2>References</h2>
         <div>{@html bibliography}</div>
     </div>

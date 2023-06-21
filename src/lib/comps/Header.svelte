@@ -4,7 +4,6 @@
 
 <header>
     <div class="header">
-        <Particles/>
         <nav>
             <ul>
                 <li><a class="menu-item" href="/code">code</a></li>
