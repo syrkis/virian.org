@@ -11,10 +11,6 @@ export async function GET() {
             lastmod: '2023-06-15', // Add the last modified date of the code post
         },
         {
-            slug: 'neural-explorations-of-architecture',
-            lastmod: '2023-06-15', // Add the last modified date of the code post
-        },
-        {
             slug: 'recurrent-authorship-change-detection',
             lastmod: '2023-06-15', // Add the last modified date of the code post
         },
