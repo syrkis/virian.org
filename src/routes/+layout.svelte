@@ -27,6 +27,13 @@
         line-height: 2em;
     }
 
+    @media (prefers-color-scheme: light) {
+        :global(body) {
+            filter: invert(1);
+            background-color: white;
+        }
+    }
+
     :global(.text) {
         margin: auto;
         width: 95%;
