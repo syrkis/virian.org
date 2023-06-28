@@ -11,7 +11,7 @@ illustration: /images/8.jpg
 category: code
 ---
 
-Perhaps our most complex project, Neuroscope is an ongoing exploration of the human brain. In exploring biological neural networks, the project serves as a vehicle for both developing and using thir most cutting edge artificial counter parts—graph neural networks, neuroevolution, multiomodality, and more. Based on the Natural Scenes Dataset (NSD) by @allen2022, which consits of 70,000 image-fmri response pairs, the project is developing encoding and decoding mappings between visual corteces and visual inputs.
+Perhaps our most complex project, Neuroscope is an ongoing exploration of the human brain. In exploring biological neural networks, the project serves as a vehicle for both developing and using thir most cutting edge artificial counter parts—graph neural networks, neuroevolution, multiomodality, and more. Based on the Natural Scenes Dataset (NSD) by @allen2022, which consits of 70,000 image-fmri response pairs, the project is developing encoding and decoding mappings between visual corteces and visual inputs.^[this is an example of a footnote thor could use for citation.]
 
 Ultimately, the Neuroscopy project consists of 2 varibles: `x`: a 100 dimensional vector encoding a specific image, and `y`: a vector of varying dimensions encoding the brain's response to a given image, and four function:
 
