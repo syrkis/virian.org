@@ -1,6 +1,6 @@
 ---
 author: Noah Syrkis
-title: Multimodal Brain Encoding
+title: Neuroscope
 description: Utilising convolutional graph neural networks to reconstruct images
   from brain activity, this project spans neuroscience, geometric deep learning,
   and network analysis.
@@ -10,11 +10,16 @@ date: 2023-06-29T13:50:44.015Z
 illustration: /images/8.jpg
 category: code
 ---
-Welcome to a deep dive into one of our most stimulating ongoing projects: attempting to predict the brain's response to visual input using machine learning. We've embarked on this challenging journey with the remarkable richness of the Natural Scenes Dataset (NSD) by @allen2022 as our playground. As an ongoing endeavor, this project is continuously evolving and at times, things might not work perfectly as we actively test new techniques and technologies.
 
-We're tapping into the vast potential of the NSD—it's a treasure trove that will be explored for years to come. At the core of this project is a goal that is as fascinating as it is complex: building a machine learning model that can predict the brain's visual response to images.
+Perhaps our most complex project, Neuroscope is an ongoing exploration of the human brain. In exploring biological neural networks, the project serves as a vehicle for both developing and using thir most cutting edge artificial counter parts—graph neural networks, neuroevolution, multiomodality, and more. Based on the Natural Scenes Dataset (NSD) by @allen2022, which consits of 70,000 image-fmri response pairs, the project is developing encoding and decoding mappings between visual corteces and visual inputs.
 
-Our current model is a combination of a unimodal and multimodal approach, and it's showing promising results. But, remember, this is a dynamic, ever-evolving process. Now, let's delve into the details of how we're trying to turn this ambitious idea into reality.
+Ultimately, the Neuroscopy project consists of 2 varibles: `x`: a 100 dimensional vector encoding a specific image, and `y`: a vector of varying dimensions encoding the brain's response to a given image, and four function:
+
+$$
+f(x) \rightarrow z \qquad\qquad\qquad\qquad
+g(z) \rightarrow y' \qquad\qquad\qquad\qquad
+h(y) \rightarrow x'
+$$
 
 ## Dataset and Methodology
 
