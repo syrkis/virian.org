@@ -16,8 +16,8 @@ Perhaps our most complex project, Neuroscope is an ongoing exploration of the hu
 Ultimately, the Neuroscopy project consists of 2 varibles: `x`: a 100 dimensional vector encoding a specific image, and `y`: a vector of varying dimensions encoding the brain's response to a given image, and four function:
 
 $$
-f(x) \rightarrow z \qquad\qquad\qquad\qquad
-g(z) \rightarrow y' \qquad\qquad\qquad\qquad
+f(x) \rightarrow z \qquad
+g(z) \rightarrow y' \qquad
 h(y) \rightarrow x'
 $$
 
