@@ -175,7 +175,7 @@
 
 <style>
 
-    .pentaglyph {
+    #pentaglyph {
         overflow: hidden;
     }
 
