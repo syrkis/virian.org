@@ -1,21 +1,6 @@
 <script lang="ts">
     import Header from '$lib/comps/Header.svelte'
     import Footer from '$lib/comps/Footer.svelte'
-  import { onMount, onDestroy } from 'svelte';
-
-  onMount(() => {
-    const script = document.createElement('script');
-    script.src = 'https://virian.dotmethod.me/js/script.js';
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-
-    // Unload script when component is destroyed
-    onDestroy(() => {
-      document.body.removeChild(script);
-    });
-  });
-
 </script>
 
 <Header />
