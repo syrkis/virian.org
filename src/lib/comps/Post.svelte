@@ -10,6 +10,7 @@
     export let body: string;
     export let date: string;
     let result: string;
+    let hasCitations: boolean;
     $: result = md.render(body);
 
     onMount(async () => {
@@ -20,6 +21,8 @@
 
             const keys = body.match(/@\w+/g).map(key => key.slice(1));
             const entries = cite.get({ type: 'json' }).filter(entry => keys.includes(entry.id));
+
+            hasCitations = entries.length > 0;
 
             const citeSubset = new Cite(entries);
             bibliography = citeSubset.format('bibliography', {
@@ -76,10 +79,12 @@
     </div>
     <div class='writing'>
         <div>{@html result}</div>
-        <br>
-        <hr>
-        <h2>References</h2>
-        <div>{@html bibliography}</div>
+        {#if hasCitations}
+            <br>
+            <hr>
+            <h2>References</h2>
+            <div>{@html bibliography}</div>
+        {/if}
     </div>
 </div>
 
@@ -99,7 +104,4 @@
 
 	.writing { text-align: justify; padding-top: 100px; }
 
-    :global(.screenshot) {
-        filter: grayscale(100%) contrast(200%) invert(1);
-    }
 </style>
