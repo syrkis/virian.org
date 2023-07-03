@@ -175,6 +175,10 @@
 
 <style>
 
+    .pentaglyph {
+        overflow: hidden;
+    }
+
     .dim {
         letter-spacing: 0.1em;
     }
