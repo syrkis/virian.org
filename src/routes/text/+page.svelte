@@ -14,10 +14,6 @@
 </script>
 
 <main>
-    <Tile item={exLibris} />
-    <div class='divider'>
-        <hr/>
-    </div>
     <div class="text">
         <span>
             Our writing focuses on technology and its cultural impact.
@@ -33,6 +29,10 @@
             </div>  
       {/each}
     </div>
+    <div class='divider'>
+        <hr/>
+    </div>
+    <Tile item={exLibris} />
 </main>
 
 <svelte:head>

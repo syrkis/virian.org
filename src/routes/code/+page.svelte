@@ -16,10 +16,6 @@
 
 
  <main>
-    <Tile item={services} />
-    <div class='divider'>
-        <hr/>
-    </div>
     <div class="text">
         <span>
             Our portfolio shows how we've leveraged AI to generate insights in neuroscience, epidemiology, NLP, and more.
@@ -35,6 +31,10 @@
             </div>
         {/each}
     </div>  
+    <div class='divider'>
+        <hr/>
+    </div>
+    <Tile item={services} />
 
 </main>
 
