@@ -16,7 +16,7 @@
 <main>
     <div class="text">
         <span>
-            Our writing focuses on technology and its cultural impact.
+            We write about technology and its cultural implications.
             Though skeptically inclined, we attempt a positive vision.
         </span>
     </div>
