@@ -26,6 +26,7 @@
         font-family: 'Crimson Pro', serif;
         line-height: 2em;
     }
+    
 
     @media (prefers-color-scheme: light) {
         :global(body) {

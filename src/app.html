@@ -2,7 +2,6 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -10,9 +9,32 @@
 		%sveltekit.head%
 		<script async="" defer="" src="https://virian.dotmethod.me/js/script.js"></script>
 		<!--<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>-->
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet"> 
 		<script async='' defer='' id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <!-- Preloading font using CSS Font Loading API -->
+		<script>
+			if ('fonts' in document) {
+				document.fonts.load('1em Crimson Pro').then(function () {
+					document.documentElement.classList.add('crimson-pro-loaded');
+				});
+			} else {
+				document.documentElement.classList.add('crimson-pro-loaded');
+			}
+		</script>
+
+        <!-- Adding the font from Google -->
+		<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Loading CSS for the font -->
+        <style>
+            body {
+                font-family: serif;
+            }
+            .crimson-pro-loaded body {
+                font-family: 'Crimson Pro', serif;
+            }
+        </style>
+
 	</head>
 	<body>
 		<div>%sveltekit.body%</div>
