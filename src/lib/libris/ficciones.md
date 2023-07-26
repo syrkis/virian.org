@@ -2,7 +2,7 @@
 author: Jorge Luis Borges
 title: Ficciones
 date: 2023-05-29T13:23:03.334Z
-illustration: /images/12.jpg
+image: /images/12.jpg
 category: libris
 link: https://bookshop.org/a/94641/9780802130303
 price: 16.00

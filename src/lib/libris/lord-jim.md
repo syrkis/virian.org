@@ -2,7 +2,7 @@
 author: Joseph Conrad
 title: Lord Jim
 date: 2023-06-29T13:50:44.015Z
-illustration: /images/8.jpg
+image: /images/8.jpg
 category: libris
 link: https://bookshop.org/a/94641/9780141441610
 price: 34.49

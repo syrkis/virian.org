@@ -2,7 +2,7 @@
 title: Blood Meridian or the Evening Redness in the West
 author: Cormac McCarthy 
 date: 2023-07-28T13:50:44.015Z
-illustration: /images/8.jpg
+image: /images/8.jpg
 category: libris
 link: https://bookshop.org/a/94641/9780679728757
 price: 17.00

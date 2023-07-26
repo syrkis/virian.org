@@ -2,7 +2,7 @@
 author: Douglas Hofstadter
 title: "Gödel, Escher, Bach: An Eternal Golden Braid"
 date: 2023-05-29T13:50:44.015Z
-illustration: /images/0.jpg
+image: /images/0.jpg
 category: libris
 link: https://bookshop.org/a/94641/9780465026562
 price: 24.99

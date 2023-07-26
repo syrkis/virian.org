@@ -2,7 +2,7 @@
 author: Joseph Conrad
 title: Heart of Darkness
 date: 2023-05-29T13:50:44.015Z
-illustration: /images/17.jpg
+image: /images/17.jpg
 category: libris
 link: https://bookshop.org/a/94641/9780141441672
 price: 11.00

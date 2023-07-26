@@ -18,6 +18,6 @@ export const load: PageServerLoad = async ({ params }) => {
     author: post.attributes.author,
     description: post.attributes.description,
     keywords: post.attributes.keywords,
-    illustration: post.attributes.illustration,
+    illustration: post.attributes.image,
   };
 };

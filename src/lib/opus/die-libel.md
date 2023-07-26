@@ -8,7 +8,7 @@ description:
   Creating a high quality mapping between content and culture is a prerequisite
   for the regulation and improvement of social media platforms.
 date: 2023-05-29T13:23:03.334Z
-illustration: /images/12.jpg
+image: /images/12.jpg
 link: https://dielibel.com
 published: true
 keywords:

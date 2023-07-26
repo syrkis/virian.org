@@ -2,7 +2,7 @@
 author: Michelle Houellebecq
 title: The Possibility of an Island
 date: 2023-05-29T13:50:44.015Z
-illustration: /images/1.jpg
+image: /images/1.jpg
 category: libris
 link: https://bookshop.org/a/94641/9780307275219
 price: 17.00

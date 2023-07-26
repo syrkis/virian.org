@@ -21,7 +21,7 @@ collections:
       - { name: "description", label: "Description", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "body", label: "Body", widget: "markdown" }
-      - { name: "illustration", label: "Illustration", widget: "image" }
+      - { name: "image", label: "Image", widget: "image" }
       - { name: "keywords", label: "Keywords", widget: "list", default: [] }
       - { name: "pubished", label: "Published", widget: "boolean", default: false }
       - { name: "category", label: "Category", widget: "string" }
@@ -36,7 +36,7 @@ collections:
       - { name: "author", label: "Author", widget: "string" }
       - { name: "description", label: "Description", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "illustration", label: "Illustration", widget: "image" }
+      - { name: "Image", label: "Image", widget: "image" }
       - { name: "link", label: "Link", widget: "string" }
       - { name: "keywords", label: "Keywords", widget: "list" }
       - { name: "category", label: "Category", widget: "string" }

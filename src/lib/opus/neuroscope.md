@@ -8,7 +8,7 @@ description: Utilising convolutional graph neural networks to reconstruct images
   Brain decoding holds immense promise for alleviation of neurological
   disorders.
 date: 2023-06-29T13:50:44.015Z
-illustration: /images/8.jpg
+image: /images/8.jpg
 published: true
 keywords:
   - neuroscience

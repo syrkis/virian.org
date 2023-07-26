@@ -5,7 +5,7 @@ export interface Opus {
     body: string;
     slug: string;
     description: string;
-    illustration: string;
+    image: string;
     type: string;
     category: string;
     keywords: string[];
@@ -17,7 +17,7 @@ export interface Librum {
     author: string;
     date: string;
     body: string;
-    illustration: string;
+    image: string;
     category: string;
     link: string;
     price: string;

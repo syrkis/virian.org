@@ -20,7 +20,7 @@ export const load: PageServerLoad = async () => {
         body: post.body,
         description: post.attributes.description,
         date: post.attributes.date,
-        illustration: post.attributes.illustration,
+        illustration: post.attributes.image,
         type: post.attributes.category,
         published: post.attributes.published,
         keywords: post.attributes.keywords

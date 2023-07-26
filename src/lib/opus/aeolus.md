@@ -6,7 +6,7 @@ description:
   Empowering Brazil's green future with an innovative, user-guided web tool for real-time mapping and assessment of suitable wind farm locations,
   leveraging geospatial data and advanced analytics.
 date: 2023-06-29T13:50:44.015Z
-illustration: /images/powerlines.jpeg
+image: /images/powerlines.jpeg
 published: true
 keywords:
   - geospatial

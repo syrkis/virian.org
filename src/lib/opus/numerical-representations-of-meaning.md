@@ -5,7 +5,7 @@ title: Numerical Representations of Meaning
 description: Computers are, as almost every school student knows in this scientific age, binary.
   They represent data as ones and zeros, trues and false, and they represent everything as data.
 date: 2022-05-29T13:50:44.015Z
-illustration: /images/14.jpg
+image: /images/14.jpg
 published: false
 keywords:
   - language
