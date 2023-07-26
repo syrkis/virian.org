@@ -23,7 +23,7 @@
         background-color: #000000;
         color: white;
         text-align: center;
-        font-family: 'Crimson Text', serif;
+        font-family: 'Crimson Pro', serif;
         line-height: 2em;
     }
 
@@ -50,7 +50,6 @@
 
     :global(h1) {
         font-weight: normal;
-		font-family: 'Crimson Text', serif;
         letter-spacing: 0.1em;
     }
 
