@@ -1,5 +1,6 @@
 ---
 author: Noah Syrkis
+slug: cultural-inference
 title: Deep Cultural Inference
 description:
   Infering the change in culture over time from a corpus of text
@@ -8,5 +9,11 @@ description:
   for the regulation and improvement of social media platforms.
 date: 2023-05-29T13:23:03.334Z
 illustration: /images/12.jpg
+published: false
+keywords:
+  - culture
+  - deep learning
+  - natural language processing
+  - social media
 category: code
 ---

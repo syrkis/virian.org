@@ -1,9 +1,15 @@
 ---
 author: Noah Syrkis
+slug: proseprint
 title: Recurrent Authorship Change Detection
 description: Siamese and recurrent neural networks are used here, to detect changes in authorship in consecutives paragraphs of text, akin to finding fingerprints in prose. Authorship change detection is used in forensics, cybersecurity, literary research, and more.
 date: 2023-05-29T13:50:44.015Z
 illustration: /images/1.jpg
+published: false
+keywords:
+    - authorship
+    - neural networks
+    - natural language processing
 category: code
 ---
 

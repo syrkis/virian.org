@@ -8,6 +8,8 @@ export interface Opus {
     illustration: string;
     type: string;
     category: string;
+    keywords: string[];
+    published: boolean;
 }
 
 export interface Librum {

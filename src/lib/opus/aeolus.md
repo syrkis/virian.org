@@ -1,6 +1,7 @@
 ---
 author: Noah Syrkis
-title: Aeolus
+slug: aeolus
+title: Geospatial Wind Energy
 description: Utilising convolutional graph neural networks to reconstruct images
   from brain activity, this project spans neuroscience, geometric deep learning,
   and network analysis.
@@ -8,6 +9,11 @@ description: Utilising convolutional graph neural networks to reconstruct images
   disorders.
 date: 2023-06-29T13:50:44.015Z
 illustration: /images/8.jpg
+published: true
+keywords:
+  - geospatial
+  - wind energy
+  - artificial intelligence
 category: code
 ---
 

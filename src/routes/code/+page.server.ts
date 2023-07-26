@@ -14,17 +14,19 @@ export const load: PageServerLoad = async () => {
         fs.readFileSync(path.join(postsDir, file), "utf-8")
       );
       return {
-        slug: post.attributes.title.replace(/\s+/g, '-').toLowerCase(),
+        slug: post.attributes.slug,
         title: post.attributes.title,
         author: post.attributes.author,
         body: post.body,
         description: post.attributes.description,
         date: post.attributes.date,
         illustration: post.attributes.illustration,
-        type: post.attributes.category
+        type: post.attributes.category,
+        published: post.attributes.published,
+        keywords: post.attributes.keywords
       };
     }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-      .filter((post) => post.type === "code");
+      .filter((post) => post.type === "code").filter((post) => post.published);
 
   return {
     body: posts,

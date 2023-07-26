@@ -1,5 +1,6 @@
 ---
 author: Die Libel
+slug: die-libel
 title: Die Libel
 description:
   Infering the change in culture over time from a corpus of text
@@ -9,6 +10,9 @@ description:
 date: 2023-05-29T13:23:03.334Z
 illustration: /images/12.jpg
 link: https://dielibel.com
+published: true
+keywords:
+  - Die Libel
 category: creative
 ---
 

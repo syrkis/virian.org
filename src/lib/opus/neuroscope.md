@@ -1,6 +1,7 @@
 ---
 author: Noah Syrkis
-title: Neuroscope
+slug: neuroscope
+title: Deep Image Reconstruction From Brain Activity
 description: Utilising convolutional graph neural networks to reconstruct images
   from brain activity, this project spans neuroscience, geometric deep learning,
   and network analysis.
@@ -8,6 +9,13 @@ description: Utilising convolutional graph neural networks to reconstruct images
   disorders.
 date: 2023-06-29T13:50:44.015Z
 illustration: /images/8.jpg
+published: true
+keywords:
+  - neuroscience
+  - fmri
+  - graph neural networks
+  - brain decoding
+  - brain encoding
 category: code
 ---
 
