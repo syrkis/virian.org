@@ -20,6 +20,16 @@
         });
     });
 
+    function authorEtAl(author: string) {
+        /* if coma or & in author split author on coma or &*/
+        if (author.includes(',') || author.includes('&')) {
+            let authorArr = author.split(/,|&/)[0];
+            return authorArr + ' et al';
+        } else {
+            return author;
+        }
+    }
+
 
     /* set href to item.link if it exists else to /code/item.slug */
     let href = '/' + item.type + '/' + item.slug;
@@ -39,7 +49,7 @@
         <div class='title'>
             <span class='subtitle'><h3>{item.title}</h3></span>
             {#if href != '/ex-libris' && href != '/ai-services'}
-            <span class='date'><h3>{item.author}, <i>{item.date}</i></h3></span>
+            <span class='date'><h3>{authorEtAl(item.author)}, <i>{item.date}</i></h3></span>
             {/if}
         </div>
         <div class='description'>

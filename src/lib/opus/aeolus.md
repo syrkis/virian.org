@@ -1,5 +1,5 @@
 ---
-author: Noah Syrkis
+author: Noah Syrkis & Christina Gaitanou
 slug: aeolus
 title: Geospatial Wind Energy
 description: Utilising convolutional graph neural networks to reconstruct images
@@ -17,36 +17,28 @@ keywords:
 category: code
 ---
 
-Perhaps our most complex project, Neuroscope is an ongoing exploration of the human brain. In exploring biological neural networks, the project serves as a vehicle for both developing and using thir most cutting edge artificial counter parts—graph neural networks, neuroevolution, multiomodality, and more. Based on the Natural Scenes Dataset (NSD) by @allen2022, which consits of 70,000 image-fmri response pairs, the project is developing encoding and decoding mappings between visual corteces and visual inputs.^[this is an example of a footnote thor could use for citation.]
+Wind energy is gaining momentum as a vital solution in the fight against climate change. This clean, renewable source of power has the potential to provide a significant percentage of our energy needs, if properly harnessed. But identifying optimal locations for wind farms is no simple task – it requires a careful balance of numerous geographical, environmental, and infrastructural factors.
 
-Ultimately, the Neuroscopy project consists of 2 varibles: `x`: a 100 dimensional vector encoding a specific image, and `y`: a vector of varying dimensions encoding the brain's response to a given image, and four function:
+Today, I am delighted to introduce you to an innovative project we've been working on: a user-friendly web application designed to identify and analyze suitable areas for wind energy production in Brazil.
 
-$$
-f(x) \rightarrow z \qquad
-g(z) \rightarrow y' \qquad
-h(y) \rightarrow x'
-$$
+![Aeolus](/images/mask.png)
 
-## Dataset and Methodology
+## A New Approach to an Age-Old Problem
+Traditional methods for determining wind farm locations, such as Multi-Criteria Decision Analysis (MCDA) and Analytical Hierarchy Process (AHP), while effective, tend to be static and rigid. They don't provide much room for flexibility and dynamic exploration of potential locations based on a variety of parameters.
 
-Our work primarily relied on the Algonauts Project 2023 dataset by @gifford2023. This dataset contains fMRI scans from the NSD that capture the brain's responses to various images from the COCO dataset by @lin2015. We used these responses to train our model, integrating advanced deep learning methods, and the categorical information contained within each image.
+In contrast, our online tool leverages cutting-edge Geographic Information System (GIS) and data analysis techniques to enable users to explore suitable areas for wind farms based on their custom-defined criteria. It's an interactive, user-guided tool that produces visualizations and suitability maps for wind farm construction in real-time.
 
-## Model Architecture
+## The Power of Customization
+Our web application provides a dynamic map, allowing users to explore different areas within Brazil. What makes this tool especially appealing is its customization feature. Users can adjust threshold values for factors such as wind speed, distance to high voltage power lines, terrain roughness, and the power density measure by the Global Winds Atlas.
 
-Our primary model is constructed of four interconnected sub-modules, each tasked with handling a slice of the image and predicting a different output. Alongside this, we tested a secondary model to check the potential usefulness of multimodality.
+As users adjust these parameters, the map updates in real-time, reflecting the changes and offering a dynamic exploration of potential wind farm locations. The application also provides quantitative results, displaying the proportion of each selected region's area that is suitable for wind energy production, presented in both percentage and square kilometers.
 
-## Techniques and Tools
 
-To tune our hyperparameters, we used Bayesian optimization. We also implemented a cross-validation strategy, which provided us with robust estimates of our model's performance and its optimal hyperparameters. Furthermore, we incorporated an auxiliary task within our primary model: the prediction of categories during training.
+## A Prototype with Potential
+Our analysis indicates a substantial variation in the suitability of areas within Brazil for wind energy generation. We have found that only certain regions - Rio Grande do Norte, Bahia, Rio Grande do Sul, Piaui, and Nordeste - are highly suitable for wind energy production in Brazil.
 
-## Early Findings
+But this tool is more than just an academic exercise. It is a prototype that could have real-world implications, providing a flexible and interactive tool that could prove beneficial for decision-makers and stakeholders involved in wind energy investments in Brazil.
 
-So far, our results indicate that integrating additional modalities might boost the performance of a brain encoding model during inference. This could potentially lead to significant advancements in neural decoding.
+We believe that as the search for renewable energy sources becomes increasingly crucial, tools like this will play a significant role in shaping the energy landscape. In future work, we plan to enhance our tool’s capabilities by integrating more detailed marine data, offering a broader range of infrastructural aspects, and increasing the resolution of our input data.
 
-## Further Information
-
-The GitHub repository for this project is available here for those interested in exploring further, and our training logs can be found on Weights & Biases.
-
-## Conclusion
-
-Thank you for your interest in our project. We've attempted to simplify our approach for this overview, but for those seeking a more detailed, technical explanation, we recommend going through the original report.
+In conclusion, the quest for sustainable, renewable energy is not just an ecological necessity but also an opportunity for innovation, creativity, and technological advancement. As we move towards a greener future, the power of the wind is ours to harness – and with tools like ours, we can do it in a way that's smarter, more efficient, and more sustainable.
