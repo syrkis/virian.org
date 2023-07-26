@@ -2,13 +2,11 @@
 author: Noah Syrkis & Christina Gaitanou
 slug: aeolus
 title: Geospatial Wind Energy
-description: Utilising convolutional graph neural networks to reconstruct images
-  from brain activity, this project spans neuroscience, geometric deep learning,
-  and network analysis.
-  Brain decoding holds immense promise for alleviation of neurological
-  disorders.
+description:
+  Empowering Brazil's green future with an innovative, user-guided web tool for real-time mapping and assessment of suitable wind farm locations,
+  leveraging geospatial data and advanced analytics.
 date: 2023-06-29T13:50:44.015Z
-illustration: /images/8.jpg
+illustration: /images/powerlines.jpeg
 published: true
 keywords:
   - geospatial
