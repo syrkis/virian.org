@@ -1,12 +1,8 @@
 ---
 author: Noah Syrkis
 slug: neuroscope
-title: Deep Image Reconstruction From Brain Activity
-description: Utilising convolutional graph neural networks to reconstruct images
-  from brain activity, this project spans neuroscience, geometric deep learning,
-  and network analysis.
-  Brain decoding holds immense promise for alleviation of neurological
-  disorders.
+title: Decoding the human visual cortex
+description: Spanning neuroscience, deep learning, and network analysis, this project successfully reconstructs human thought from brain fMRI brain scans. 
 date: 2023-06-29T13:50:44.015Z
 image: /images/8.jpg
 published: true
