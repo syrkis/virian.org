@@ -5,7 +5,7 @@ title: Potemkin Institute
 description:
   In partnership with Potemkin Institute, we support their vision of an experimental art platform dedicated to fostering transformative creativity. Through this collaboration, we share in their commitment to values that align with our own.
 date: 2023-05-29T13:23:03.334Z
-image: /images/1.jpg
+image: /images/ptmkin.jpeg
 link: https://ptmkin.org
 published: true
 keywords:

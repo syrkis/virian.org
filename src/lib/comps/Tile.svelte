@@ -37,13 +37,25 @@
         href = '/ex-libris'
     } else if (item.slug == 'https://virian.com/ai-services') {
         href = 'https://virian.com/ai-services';
+    } else if (item.slug == 'liederley') {
+        href = 'https://liederley.com';
+    } else if (item.slug == 'potemkin') {
+        href = 'https://ptmkin.org';
     }
+
+    let target: string;
+    if (href.startsWith('https://')) {
+        target = '_blank';
+    } else {
+        target = '_self';
+    }
+    console.log(target);
 
 </script>
 
 
 
-<a href={href}>
+<a href={href} target={target}>
     <div class="post">
         <div class='image' style='background-image: url({item.illustration});'></div>
         <div class='title'>
@@ -61,6 +73,7 @@
 <style>
 
     .image {
+        filter: grayscale(100%);
         background-position: center;
         background-size: 110%;
         background-repeat: no-repeat;
