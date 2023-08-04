@@ -1,9 +1,9 @@
 ---
 author: Noah Syrkis
 slug: potemkin
-title: Potemkin Institute
+title: Potemkin Contemporary
 description:
-  In partnership with Potemkin Institute, we support their vision of an experimental art platform dedicated to fostering transformative creativity. Through this collaboration, we share in their commitment to values that align with our own.
+  In our collaboration with Potemkin, we provided technological assistance that seamlessly integrated into their exhibitions, creating an effective platform to showcase their captivating narratives and experiences.
 date: 2023-05-29T13:23:03.334Z
 image: /images/ptmkin.jpeg
 link: https://ptmkin.org
