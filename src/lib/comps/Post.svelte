@@ -14,7 +14,7 @@
     $: result = md.render(body);
 
     onMount(async () => {
-        const response = await fetch('/references.bib');
+        const response = await fetch('https://raw.githubusercontent.com/syrkis/biblio/main/library.bib');
         if (response.ok) {
             const bibtex = await response.text();
             const cite = new Cite(bibtex);
