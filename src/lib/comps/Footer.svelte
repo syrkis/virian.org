@@ -10,15 +10,6 @@
 
 <div class="footer">
     <footer>
-        for all enquiries, write
-        <br/>
-        <a href="mailto:desk@virian.org">desk@virian.org</a><br/>
-        {#each links as link}
-                <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="{link[0]}"> </a>
-        {/each}<br/>
-        <div class="divider">
-            <hr/>
-        </div>
         <ul>
             <li>
                 <a href="/donate">/donate</a>
@@ -27,14 +18,14 @@
                 <a href="/vision">/vision</a>
             </li>
         </ul>
+        for all enquiries, write
+        <br/>
+        <a href="mailto:desk@virian.org">desk@virian.org</a><br/>
     </footer>
 </div>
 
 <style>
     /* footer in bottom of screen or page */
-    .divider {
-        padding: 15px 0;
-    }
     footer {
         padding-top: 150px;
         position: relative;
@@ -43,17 +34,11 @@
         width: 100%;
         text-align: center;
     }
-    .fab, .far, .fas {
-        padding: 0 10px;
-        padding-top: -10px;
-        font-size: 0.9em;
-    }
     
     ul {
         padding: 0;
         margin: 0;
         width: 100%;
-        padding-bottom: 40px;
     }
 
     li {
