@@ -1,8 +1,9 @@
 ---
 author: Noah Syrkis
 slug: neuroscope
-title: Decoding the human visual cortex
-description: Spanning neuroscience, deep learning, and network analysis, this project successfully reconstructs human thought from brain fMRI brain scans. 
+title: Neuroscope; Deep Brain Decoding
+description:
+  Neuroscope focuses on the delivery of high fidelity brain readings, examining the human visual cortex, by reconstructing images from fMRI scans.
 date: 2023-06-29T13:50:44.015Z
 image: /images/8.jpg
 published: true
