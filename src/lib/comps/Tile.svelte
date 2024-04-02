@@ -35,8 +35,8 @@
     let href = '/' + item.type + '/' + item.slug;
     if (item.slug == '/ex-libris') {
         href = '/ex-libris'
-    } else if (item.slug == 'https://virian.com/ai-services') {
-        href = 'https://virian.com/ai-services';
+    } else if (item.slug == 'ai-services') {
+        href = '/ai-services';
     } else if (item.slug == 'liederley') {
         href = 'https://liederley.com';
     } else if (item.slug == 'potemkin') {
