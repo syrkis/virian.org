@@ -21,8 +21,9 @@
             Our portfolio shows how we've leveraged AI to generate insights in neuroscience, epidemiology, NLP, and more.
         </span>
     </div>
+    <Tile item={services} />
     <div style='padding-top: 40px;'>
-        <h2>projects</h2>
+        <h2>— projects —</h2>
     </div>
     <div class="posts">
         {#each data.body as item}
@@ -31,10 +32,6 @@
             </div>
         {/each}
     </div>  
-    <div class='divider'>
-        <hr/>
-    </div>
-    <Tile item={services} />
 
 </main>
 
