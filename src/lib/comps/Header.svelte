@@ -1,8 +1,8 @@
 <script lang="ts">
   import { page } from "$app/stores";
   $: isRoot = $page.route.id === '/';
-  $: isCodeRoute = $page.route.id === '/code';
-  $: isTextRoute = $page.route.id === '/text';
+  $: isCodeRoute = $page.route.id.startsWith('/code');
+  $: isTextRoute = $page.route.id.startsWith('/text');
 </script>
 
 <header class:root={isRoot}>
