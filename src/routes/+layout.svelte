@@ -25,6 +25,8 @@
         text-align: center;
         font-family: 'Crimson Pro', serif;
         line-height: 2em;
+        padding: 0;
+        margin: 0;
     }
     
 
@@ -64,7 +66,7 @@
         font-size: 1.3rem;
         font-weight: 300;
         margin-bottom: 0;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.3em;
         padding-top: 3rem;
     }
 

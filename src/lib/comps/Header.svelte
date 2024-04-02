@@ -1,46 +1,89 @@
 <script lang="ts">
-    import Particles from './Particles.svelte'
+  import { page } from "$app/stores";
+  $: isRoot = $page.route.id === '/';
+  $: isCodeRoute = $page.route.id === '/code';
+  $: isTextRoute = $page.route.id === '/text';
 </script>
 
-<header>
-    <div class="header">
-        <nav>
-            <ul>
-                <li><a class="menu-item" href="/text">text</a></li>
-                <li><a class="menu-item" href="/" id="logo">VIRIAN</a></li>
-                <li><a class="menu-item" href="/code">code</a></li>
-            </ul>
-        </nav>
-    </div>
+<header class:root={isRoot}>
+  <nav>
+    <ul>
+      <li class="brackets-always {isCodeRoute ? 'brackets-visible' : 'brackets-hidden'}">
+        <a id='code' href="/code">code</a>
+      </li>
+      <li><a href='/'>|</a></li>
+      <li class="brackets-always {isTextRoute ? 'brackets-visible' : 'brackets-hidden'}">
+        <a id='text' href="/text">text</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <style>
+header {
+  padding: 25px 0 3rem 0;
+  transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  height: auto;
+  /* monospace font */
+}
 
-    ul {
-        padding: 0;
-        margin-top: 0;
-        width: 100%;
-    }
+  header.root {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  /* should be vertically centered in transition compatible way; */
+  padding-top: 50vh;
+}
 
-    li {
-        display: inline-block;
-        width: auto;
-        list-style: outside none none;
-    }
 
-    .menu-item {
-        font-size: 1.2em;
-        letter-spacing: 0.1em;
-        vertical-align: middle;
-    }
+  ul {
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  li {
+    position: relative;
+    letter-spacing: 0.4em;
+    padding: 0 10px;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+    vertical-align: middle;
+  }
+  
+  header.root li{
+    font-size: 2em;
+  }
+  
+  .brackets-always:before,
+  .brackets-always:after {
+    margin: 0;
+    padding: 0;
+    content: '[';
+    margin-right: 5px;
+  }
+  
+  .brackets-always:after{
+    content: ']';
+    margin-left: 5px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .brackets-visible:before,
+  .brackets-visible:after {
+    color: #fff;
+    transition: opacity 0.3s ease-in-out;
+  }
 
-    .header { padding: 25px  0 3rem 0; }
-
-    #logo { font-size: 2em; padding: 0 6vw}
-
-    @media (max-width: 600px) {
-        .header { padding: 25px  0 70px 0; }
-        #logo { font-size: 1.5em; padding: 0 55px; }
-    }
+  .brackets-hidden:before,
+  .brackets-hidden:after {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
 
 </style>

@@ -1,28 +1,26 @@
-<script>
-    let links = [
-        ["fab fa-linkedin", "linkedin.com/company/virian"],
-        ["fab fa-github", "github.com/syrkis/virian.org"],
-        ["fab fa-youtube", "www.youtube.com/@virianproject"],
-        ["fab fa-twitter", "twitter.com/virianproject"],
-        ["fab fa-discord", "discord.gg/4JmKDazE84"],
-    ];
+<script lang="ts">
+    import { page } from '$app/stores';
+    let isRoot: boolean;
+    $: isRoot = $page.route.id === '/';
 </script>
 
-<div class="footer">
-    <footer>
-        <ul>
-            <li>
-                <a href="/donate">/donate</a>
-            </li>
-            <li>
-                <a href="/vision">/vision</a>
-            </li>
-        </ul>
-        for all enquiries, write
-        <br/>
-        <a href="mailto:desk@virian.org">desk@virian.org</a><br/>
-    </footer>
-</div>
+{#if !isRoot}
+    <div class="footer">
+        <footer>
+            <!-- <ul>
+                <li>
+                    <a href="/donate">/donate</a>
+                </li>
+                <li>
+                    <a href="/vision">/about</a>
+                </li>
+            </ul> -->
+            for all enquiries, write
+            <br/>
+            <a href="mailto:desk@virian.org">desk@virian.org</a><br/>
+        </footer>
+    </div>
+{/if}
 
 <style>
     /* footer in bottom of screen or page */
