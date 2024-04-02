@@ -21,7 +21,7 @@
         </span>
     </div>
     <div style='padding-top: 40px;'>
-        <h2>WRITINGS</h2>
+        <h2>writings</h2>
     <div class='posts'>
         {#each data.body as item}
             <div class='post'>

@@ -19,7 +19,7 @@
     }
     :global(body) {
         letter-spacing: 0.02em;
-        font-size: 1.2em;
+        font-size: calc(1em + 0.3vw);
         background-color: #000000;
         color: white;
         text-align: center;
@@ -40,9 +40,8 @@
     :global(.text) {
         margin: auto;
         width: 95%;
-        max-width: 530px;
-        padding-bottom: 0rem;
-        padding-top: 3rem;
+        max-width: calc(530px + 5vw);
+        padding: 10vh 0 5vh 0;
     }
 
     :global(a) {
@@ -59,14 +58,13 @@
     :global(.post) {
         margin: auto;
         width: 95%;
-        max-width: 900px;
     }
 
     :global(h2) {
         font-size: 1.3rem;
         font-weight: 300;
         margin-bottom: 0;
-        letter-spacing: 0.3em;
+        letter-spacing: 0.1em;
         padding-top: 3rem;
     }
 

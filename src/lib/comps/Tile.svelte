@@ -77,7 +77,7 @@
         background-position: center;
         background-size: 110%;
         background-repeat: no-repeat;
-        height: 100px;
+        height: 20vh;
         border-radius: 10px;
     }
 
@@ -116,7 +116,7 @@
     .post {
         text-align: justify;
         width: 100%;
-        max-width: 700px;
+        max-width: 90%;
         padding: 40px 0px 40px 0px;
     }
 

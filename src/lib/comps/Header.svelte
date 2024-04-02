@@ -8,11 +8,11 @@
 <header class:root={isRoot}>
   <nav>
     <ul>
-      <li class="brackets-always {isCodeRoute ? 'brackets-visible' : 'brackets-hidden'}">
+      <li id='code' class="brackets-always {isCodeRoute ? 'brackets-visible' : 'brackets-hidden'}">
         <a id='code' href="/code">code</a>
       </li>
       <li><a href='/'>|</a></li>
-      <li class="brackets-always {isTextRoute ? 'brackets-visible' : 'brackets-hidden'}">
+      <li id='text' class="brackets-always {isTextRoute ? 'brackets-visible' : 'brackets-hidden'}">
         <a id='text' href="/text">text</a>
       </li>
     </ul>
@@ -24,7 +24,6 @@ header {
   padding: 25px 0 3rem 0;
   transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
   height: auto;
-  /* monospace font */
 }
 
   header.root {
@@ -50,7 +49,7 @@ header {
     position: relative;
     letter-spacing: 0.4em;
     padding: 0 10px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     transition: all 0.3s ease-in-out;
     vertical-align: middle;
   }
@@ -73,7 +72,13 @@ header {
     padding: 0;
     margin: 0;
   }
-  
+
+  .brackets-always:after #code,
+  .brackets-always:before #text {
+    opacity: 1 !important;
+    transition: opacity 0.3s ease-in-out;
+  }
+
   .brackets-visible:before,
   .brackets-visible:after {
     color: #fff;
@@ -85,5 +90,11 @@ header {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
+
+  header.root .brackets-always:before .code,
+  header.root .brackets-always:after .code {
+    opacity: 1 !important;
+  }
+
 
 </style>
