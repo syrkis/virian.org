@@ -120,4 +120,10 @@
         padding: 40px 0px 40px 0px;
     }
 
+    @media (max-width: 600px) {
+        .post {
+            max-width: 95%;
+        }
+    }
+
 </style>
