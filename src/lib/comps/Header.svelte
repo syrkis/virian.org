@@ -57,6 +57,12 @@ header {
   header.root li{
     font-size: 2em;
   }
+
+  @media (max-width: 600px) {
+    header.root li {
+      font-size: 1.5em;
+    }
+  }
   
   .brackets-always:before,
   .brackets-always:after {
@@ -89,11 +95,6 @@ header {
   .brackets-hidden:after {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-  }
-
-  header.root .brackets-always:before .code,
-  header.root .brackets-always:after .code {
-    opacity: 1 !important;
   }
 
 

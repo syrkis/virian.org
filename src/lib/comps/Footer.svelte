@@ -31,6 +31,7 @@
         line-height: 3rem;
         width: 100%;
         text-align: center;
+        padding-bottom: 3rem;
     }
     
     ul {
