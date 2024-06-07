@@ -23,6 +23,9 @@
 header {
   padding: 25px 0 3rem 0;
   transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
   height: auto;
 }
 
@@ -51,6 +54,9 @@ header {
     padding: 0 10px;
     font-size: 1.5em;
     transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     vertical-align: middle;
   }
   
@@ -83,18 +89,27 @@ header {
   .brackets-always:before #text {
     opacity: 1 !important;
     transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
   }
 
   .brackets-visible:before,
   .brackets-visible:after {
     color: #fff;
     transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
   }
 
   .brackets-hidden:before,
   .brackets-hidden:after {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
   }
 
 

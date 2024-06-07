@@ -27,7 +27,7 @@
             const citeSubset = new Cite(entries);
             bibliography = citeSubset.format('bibliography', {
                 format: 'html',
-                template: 'apa',
+                template: 'ieee',
                 lang: 'en-US'
             });
 
