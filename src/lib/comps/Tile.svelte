@@ -32,7 +32,7 @@
 
 
     /* set href to item.link if it exists else to /code/item.slug */
-    let href = '/' + item.type + '/' + item.slug;
+    let href = '/' + item.slug;
     if (item.slug == '/ex-libris') {
         href = '/ex-libris'
     } else if (item.slug == 'ai-services') {
