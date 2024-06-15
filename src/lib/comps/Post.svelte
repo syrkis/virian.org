@@ -3,6 +3,7 @@
     import MarkdownIt from 'markdown-it';
     import footnote from 'markdown-it-footnote';
     import Cite from 'citation-js';
+    import math from 'markdown-it-math';
     import { onMount } from 'svelte';
     import { zoom } from 'd3';
 
@@ -15,7 +16,16 @@
     let hasCitations: boolean;
     let bibliography = '';
 
-    const md = new MarkdownIt().use(footnote);
+    const md = new MarkdownIt()
+        .use(footnote)
+        .use(math, {
+            inlineOpen: '$',
+            inlineClose: '$',
+            blockOpen: '$$',
+            blockClose: '$$',
+            inlineRenderer: (str: string) => `\\(${str}\\)`,
+            blockRenderer: (str: string) => `\\[${str}\\]`
+        });
 
     const formatDate = (dateString: string) => {
         const dateObj = new Date(dateString);
@@ -63,7 +73,7 @@
                 template: 'ieee',
                 lang: 'en-US',
                 // prepend number of the entries inside square brackets
-                prepend(entry) {
+                prepend(entry: any) {
                     return `[${entries.findIndex(e => e.id === entry.id) + 1}] `;
                 }
             });
@@ -112,7 +122,7 @@
 <style>
     .container {
         width: 95%;
-        max-width: 700px;
+        max-width: 800px;
         margin: auto;
         padding: 200px 0;
     }
