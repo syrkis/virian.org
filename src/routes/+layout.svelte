@@ -16,6 +16,8 @@
 <style>
     :global(img) {
         max-width: 100%;
+        display: block;
+        margin: auto;
     }
     :global(body) {
         letter-spacing: 0.02em;

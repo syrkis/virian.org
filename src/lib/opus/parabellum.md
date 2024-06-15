@@ -21,8 +21,8 @@ keywords:
 category: code
 ---
 
-Parabellum is a multi-agent reinforcement learning environment for Command & Control simulation. It is a heavly modified version of JaxMARL's [@rutherford2023] SMAX, a StarCraft II like JAX based environment. Parabellum includes notions of fog of war, civilians, friendly fire, obstacles, and other elements that are common in military operations.
+Parabellum is a multi-agent reinforcement learning environment for Command & Control simulation. It is a heavily modified version of JaxMARL's [@rutherford2023] SMAX, a StarCraft II like JAX based environment. Parabellum includes notions of fog of war, civilians, friendly fire, obstacles, and other elements that are common in military operations.
 
 ![The Parabellum environment](/images/parabellum.gif)
 
- The environment is designed for extreme scalability, with the ability to simulate millions of agents through thousands of parallel environments. The code is located in the [github.com/syrkis/parabellum](github.com/syrkis/parabellum), and is under active development.
+ The environment is designed for extreme scalability, with the ability to simulate millions of agents through thousands of parallel environments. The code is located in the [github.com/syrkis/parabellum](https://github.com/syrkis/parabellum), and is under active development.
