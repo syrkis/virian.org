@@ -24,7 +24,7 @@
             blockOpen: '$$',
             blockClose: '$$',
             inlineRenderer: (str: string) => `\\(${str}\\)`,
-            blockRenderer: (str: string) => `\\[${str}\\]`
+            blockRenderer: (str: string) => `<br>\\[${str}\\]<br>`
         });
 
     const formatDate = (dateString: string) => {
@@ -112,6 +112,7 @@
         <div>{@html result}</div>
         {#if hasCitations}
             <br>
+            <br>
             <hr>
             <h2>References</h2>
             <div>{@html bibliography}</div>
@@ -122,12 +123,14 @@
 <style>
      
      hr{
-        border: 1px solid black;
+        border: 0;
+        background-color: white;
+        height: 1px;
         margin: 1em auto;
         width: 95%;
      }
     .container {
-        width: 95%;
+        width: 90%;
         max-width: 800px;
         margin: auto;
         padding: 200px 0;
@@ -138,5 +141,8 @@
     .writing {
         text-align: justify;
         padding-top: 100px;
+        font-size: 1.1em;
+        line-height: 2.5;
+        letter-spacing: 0.05em;
     }
 </style>
