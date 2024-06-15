@@ -11,8 +11,8 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-netlify": "^2.0.8",
 		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-netlify": "^2.0.8",
 		"@sveltejs/kit": "^1.20.0",
 		"@types/katex": "^0.16.0",
 		"@types/node": "^20.2.5",
@@ -33,7 +33,9 @@
 		"markdown-it": "^13.0.1",
 		"markdown-it-bibliography": "^0.1.0",
 		"markdown-it-footnote": "^3.0.3",
+		"markdown-it-math": "^4.1.1",
 		"markdown-it-mathjax": "^2.0.0",
+		"markdown-it-references": "^2.1.0-alpha.3",
 		"svelte-exmarkdown": "^2.0.0",
 		"svelte-particles": "^2.5.3",
 		"tsparticles": "^2.5.3",
