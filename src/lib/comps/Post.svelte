@@ -120,6 +120,12 @@
 </div>
 
 <style>
+     
+     hr{
+        border: 1px solid black;
+        margin: 1em auto;
+        width: 95%;
+     }
     .container {
         width: 95%;
         max-width: 800px;
