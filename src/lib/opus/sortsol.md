@@ -16,7 +16,7 @@ keywords:
 category: code
 ---
 
-SORTSOL is a Uiua based swarm intelligence project, exploring the potential for drone swarms to map and navigate complex environments. The code is located in the [github.com/syrkis/parabellum](https://github.com/syrkis/sortsol), and is under active development.
+SORTSOL is a Uiua^[[uiua.org](https://uiua.org)] based swarm intelligence project, exploring the potential for drone swarms to map and navigate complex environments. The code is located in the [github.com/syrkis/parabellum](https://github.com/syrkis/sortsol), and is under active development.
 
 ![The Parabellum environment](/images/sortsol.gif)
 
