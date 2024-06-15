@@ -20,8 +20,7 @@
             Though skeptically inclined, we attempt a positive vision.
         </span>
     </div>
-    <Tile item={exLibris} />
-    <div style='padding-top: 40px;'>
+    <div>
         <h2>— writings —</h2>
     <div class='posts'>
         {#each data.body as item}
@@ -30,6 +29,10 @@
             </div>  
       {/each}
     </div>
+    —————
+    <br>
+    <br>
+    <Tile item={exLibris} />
 </main>
 
 <svelte:head>

@@ -43,7 +43,7 @@
         margin: auto;
         width: 95%;
         max-width: calc(530px + 5vw);
-        padding: 15vh 0 15vh 0;
+        padding: 15vh 0 10vh 0;
     }
 
     :global(a) {
