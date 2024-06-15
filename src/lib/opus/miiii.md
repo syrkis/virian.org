@@ -34,7 +34,10 @@ $$
 $$
 
 meaning "Every even number greater than 2 can be expressed as the sum of two prime numbers".
-It is this range of complexity in the underlying structure of the primes that make them an ideal candidate for the study of mechanistic interpretability in deep learning models.
+It is this range of complexity in the underlying structure of the primes that make them an ideal candidate for the study of mechanistic interpretability in deep learning models. Their distribution is chaotic and seemingly random, as seen in the figure below where the primes $p < 2^{16}$ are plotted in polar coordinates at $(p, p)$,
+Yet, they are governed by a simple rule. This makes them a perfect candidate for the study of how deep learning models learn and interpret complex patterns.
+
+![Primes](/images/primes.png)
 
 Mechanistic interpretability, a term coined by @nanda2023 is the reverse engineering of black box—really opaque—deep learning models to understand how they work (think artificial neuroscience). Here it is performed on prime number classifying attention models.
 
