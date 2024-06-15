@@ -1,7 +1,7 @@
 ---
 author: Noah Syrkis
-slug: neuroscope
-title: Neuroscope
+slug: sortsol
+title: Sortsol
 description:
     An ongoing data scientific exploration of activity in human vusual cortex.
 date: 2023-06-29T13:50:44.015Z

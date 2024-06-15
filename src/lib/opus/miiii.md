@@ -41,5 +41,4 @@ Yet, they are governed by a simple rule. This makes them a perfect candidate for
 
 Mechanistic interpretability, a term coined by @nanda2023 is the reverse engineering of black box—really opaque—deep learning models to understand how they work (think artificial neuroscience). Here it is performed on prime number classifying attention models.
 
-## Attention
-
+\[END\]
