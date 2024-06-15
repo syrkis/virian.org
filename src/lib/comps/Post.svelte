@@ -1,83 +1,104 @@
+
 <script lang="ts">
     import MarkdownIt from 'markdown-it';
     import footnote from 'markdown-it-footnote';
     import Cite from 'citation-js';
-    import { onMount, afterUpdate } from 'svelte';
+    import { onMount } from 'svelte';
+    import { zoom } from 'd3';
 
-    let bibliography = '';
     export let title: string;
     export let author: string;
     export let body: string;
     export let date: string;
+
     let result: string;
     let hasCitations: boolean;
-    $: result = md.render(body);
+    let bibliography = '';
 
-    onMount(async () => {
-        const response = await fetch('https://raw.githubusercontent.com/syrkis/biblio/main/library.bib');
+    const md = new MarkdownIt().use(footnote);
+
+    const formatDate = (dateString: string) => {
+        const dateObj = new Date(dateString);
+        return dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    };
+
+    const fetchBibliography = async () => {
+    try {
+        // Fetch the BibTeX file from the GitHub repository
+        const response = await fetch('https://raw.githubusercontent.com/syrkis/esch/main/library.bib');
+        
         if (response.ok) {
             const bibtex = await response.text();
             const cite = new Cite(bibtex);
-
-            const keys = body.match(/@\w+/g).map(key => key.slice(1));
+            
+            // Extract citation keys from the body using regular expressions
+            const squareKeys = body.match(/\[@(\w+)\]/g)?.map(key => key.slice(2, -1)) || [];
+            const inTextKeys = body.match(/@(\w+)/g)?.map(key => key.slice(1)) || [];
+            const keys = [...new Set([...squareKeys, ...inTextKeys])];
+            
+            // Filter bibliographic entries based on the extracted citation keys
             const entries = cite.get({ type: 'json' }).filter(entry => keys.includes(entry.id));
-
+            
             hasCitations = entries.length > 0;
-
+            
+            // Create a new Cite instance with the filtered entries
             const citeSubset = new Cite(entries);
+            
+            // Create a map of citation keys to their formatted in-text and square bracket citations
+            const citationMap = entries.reduce((map, entry, index) => {
+                map[entry.id] = {
+                    inText: `${entry.author[0].family} et al. (${entry.issued['date-parts'][0][0]}) [${index + 1}]`,
+                    square: `[${index + 1}]`
+                };
+                return map;
+            }, {});
+            
+            // Replace citation patterns in the body with their formatted citations
+            body = body.replace(/\[@(\w+)\]/g, (match, key) => citationMap[key]?.square || match);
+            body = body.replace(/@(\w+)/g, (match, key) => citationMap[key]?.inText || match);
+            
+            // Format the bibliography using the custom template
             bibliography = citeSubset.format('bibliography', {
                 format: 'html',
                 template: 'ieee',
-                lang: 'en-US'
+                lang: 'en-US',
+                // prepend number of the entries inside square brackets
+                prepend(entry) {
+                    return `[${entries.findIndex(e => e.id === entry.id) + 1}] `;
+                }
             });
-
-            const citationMap = {};
-            entries.forEach(entry => {
-                citationMap[entry.id] = `${entry.author[0].family} et al. (${entry.issued['date-parts'][0][0]})`;
-            });
-
-            for (const key in citationMap) {
-                body = body.replace(`@${key}`, `${citationMap[key]}`);
-            }
+            
+            // Render the modified body using the Markdown library
             result = md.render(body);
-
-
-        } else {
-            console.error('Error fetching .bib file');
         }
-    });
+    } catch (error) {
+        console.error('Error fetching .bib file:', error);
+    }
+};
 
-    onMount(() => {
+    onMount(async () => {
+        await fetchBibliography();
         if (window.MathJax) {
             window.MathJax.typesetPromise();
         }
     });
 
-    afterUpdate(() => {
-        if (window.MathJax) {
-            window.MathJax.typesetPromise();
-        }
-    });
-
-    let md = new MarkdownIt();
-    md.use(footnote);
-
-    let dateStr = new Date(date);
-    let dateStr2 = dateStr.toDateString();
-    dateStr2 = dateStr2.slice(4, 10) + ', ' + dateStr2.slice(11, 15);
+    $: result = md.render(body);zoom
+    $: formattedDate = formatDate(date);
+    // update bibliography when body changes
+    // $: fetchBibliography();
 </script>
 
-
 <div class="container">
-    <div class='title'>
+    <div class="title">
         <h1>{title}</h1>
         {#if author === 'Noah Syrkis'}
-            <a href='https://syrkis.com'>{author}, <i>{dateStr2}</i></a>
+            <a href="https://syrkis.com">{author}, <i>{formattedDate}</i></a>
         {:else}
-            {author}, <i>{dateStr2}</i>
+            {author}, <i>{formattedDate}</i>
         {/if}
     </div>
-    <div class='writing'>
+    <div class="writing">
         <div>{@html result}</div>
         {#if hasCitations}
             <br>
@@ -89,21 +110,17 @@
 </div>
 
 <style>
-
-.container {
-    width: 95%;
-    max-width: 700px;
-    margin: auto;
-    padding: 200px 0;
-}
-
-h1 {
-    line-height: 4.5rem;
-}
-
-.writing { 
-    text-align: justify; 
-    padding-top: 100px; 
-}
-
+    .container {
+        width: 95%;
+        max-width: 700px;
+        margin: auto;
+        padding: 200px 0;
+    }
+    h1 {
+        line-height: 4.5rem;
+    }
+    .writing {
+        text-align: justify;
+        padding-top: 100px;
+    }
 </style>
