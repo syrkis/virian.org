@@ -123,7 +123,6 @@
     .post {
         text-align: justify;
         width: 100%;
-        max-width: 700px;
     }
 
 </style>
