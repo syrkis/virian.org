@@ -121,7 +121,7 @@
 </div>
 
 <style>
-     
+
      hr{
         border: 0;
         background-color: white;

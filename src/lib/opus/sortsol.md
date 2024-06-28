@@ -1,9 +1,9 @@
 ---
 author: Noah Syrkis
 slug: sortsol
-title: SORTSOL
+title: Sortsol
 description:
-  Swarm intelligence project
+  Uiua based swarm intelligence project
 date: 2024-02-15T13:50:44.015Z
 image: /images/sortsol.gif
 published: true

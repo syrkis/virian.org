@@ -100,4 +100,16 @@
         padding-bottom: 80px;
     }
 
+
+    :global(code) {
+        background-color: #000000;
+        color: white;
+        /** border: 1px solid white;  */
+        padding: 0.2em 0.4em;
+        margin: 0 0.2em;
+        border-radius: 0.2em;
+        font-size: 0.8em;
+        cursor: pointer;
+    }
+
 </style>
