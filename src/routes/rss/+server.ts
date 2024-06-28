@@ -19,6 +19,7 @@ export async function GET() {
                 type: post.attributes.category,
                 published: post.attributes.published,
                 content: post.body,
+                image: post.attributes.image // Assuming you have an image attribute in your front matter
             };
         })
         .filter((post) => post.published)
@@ -26,6 +27,11 @@ export async function GET() {
 
     const rssItems = posts.map((post) => {
         const postUrl = `${baseUrl}/${post.type}/${post.slug}`;
+        let enclosure = '';
+        if (post.image) {
+            const imageUrl = `${baseUrl}${post.image}`;
+            enclosure = `<enclosure url="${imageUrl}" length="0" type="image/jpeg"/>`;
+        }
         return `
         <item>
             <title><![CDATA[${post.title}]]></title>
@@ -34,7 +40,9 @@ export async function GET() {
             <guid isPermaLink="true">${postUrl}</guid>
             <dc:creator><![CDATA[${post.author}]]></dc:creator>
             <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-            <content:encoded><![CDATA[${post.content}]]></content:encoded>
+            <category>${post.type}</category>
+            ${enclosure}
+            <content:encoded type="text/markdown"><![CDATA[${post.content}]]></content:encoded>
         </item>
         `;
     }).join('\n');
