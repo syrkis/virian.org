@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import fm from 'front-matter';
+import marked from 'marked'; // You'll need to install this package
 import type { Opus } from '$lib/types';
 
 export async function GET() {
@@ -18,8 +19,8 @@ export async function GET() {
                 date: post.attributes.date,
                 type: post.attributes.category,
                 published: post.attributes.published,
-                content: post.body,
-                image: post.attributes.image // Assuming you have an image attribute in your front matter
+                content: marked(post.body), // Parse Markdown to HTML
+                image: post.attributes.image
             };
         })
         .filter((post) => post.published)
@@ -42,7 +43,7 @@ export async function GET() {
             <pubDate>${new Date(post.date).toUTCString()}</pubDate>
             <category>${post.type}</category>
             ${enclosure}
-            <content:encoded type="text/markdown"><![CDATA[${post.content}]]></content:encoded>
+            <content:encoded><![CDATA[${post.content}]]></content:encoded>
         </item>
         `;
     }).join('\n');
