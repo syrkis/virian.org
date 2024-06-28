@@ -6,7 +6,6 @@ import type { Opus } from '$lib/types';
 export async function GET() {
     const baseUrl = 'https://virian.org';
     const postsDir = path.join(process.cwd(), 'src', 'lib', 'opus');
-
     const posts = fs.readdirSync(postsDir)
         .map((file) => {
             const post = fm<Opus>(fs.readFileSync(path.join(postsDir, file), 'utf-8'));
@@ -19,7 +18,7 @@ export async function GET() {
                 type: post.attributes.category,
                 published: post.attributes.published,
                 content: post.body,
-                image: post.attributes.image // Assuming you have an image attribute in your front matter
+                image: post.attributes.image
             };
         })
         .filter((post) => post.published)
@@ -30,8 +29,14 @@ export async function GET() {
         let enclosure = '';
         if (post.image) {
             const imageUrl = `${baseUrl}${post.image}`;
+            // Note: You should replace '0' with actual file size if possible
             enclosure = `<enclosure url="${imageUrl}" length="0" type="image/jpeg"/>`;
         }
+        // Truncate content to 300 symbols
+        const truncatedContent = post.content.length > 300 
+            ? post.content.slice(0, 297) + '...'
+            : post.content;
+        
         return `
         <item>
             <title><![CDATA[${post.title}]]></title>
@@ -42,7 +47,7 @@ export async function GET() {
             <pubDate>${new Date(post.date).toUTCString()}</pubDate>
             <category>${post.type}</category>
             ${enclosure}
-            <content:encoded type="text/markdown"><![CDATA[${post.content}]]></content:encoded>
+            <content:encoded><![CDATA[${truncatedContent}]]></content:encoded>
         </item>
         `;
     }).join('\n');
@@ -55,13 +60,14 @@ export async function GET() {
         <link>${baseUrl}</link>
         <image>
             <url>${baseUrl}/logo.png</url>
-            <title>Virian.org</title>
+            <title>The Virian Project</title>
             <link>${baseUrl}</link>
         </image>
         <generator>Custom RSS Generator</generator>
         <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
         <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en]]></language>
+        <ttl>60</ttl>
         ${rssItems}
     </channel>
 </rss>`.trim();
