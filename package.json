@@ -36,7 +36,6 @@
 		"markdown-it-math": "^4.1.1",
 		"markdown-it-mathjax": "^2.0.0",
 		"markdown-it-references": "^2.1.0-alpha.3",
-		"marked": "^13.0.1",
 		"svelte-exmarkdown": "^2.0.0",
 		"svelte-particles": "^2.5.3",
 		"tsparticles": "^2.5.3",
