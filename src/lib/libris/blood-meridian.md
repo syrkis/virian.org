@@ -7,5 +7,5 @@ category: libris
 link: https://bookshop.org/a/94641/9780679728757
 price: 17.00
 ---
-Set in the American West, Blood Meridian is tale of violence, told with perhaps the most beautiful prose ever put to page. It has the texture of scripture, and the tone of a nightmare:
-"*[...] and not again in all the world’s turning will there be terrains so wild and barbarous to try whether the stuff of creation may be shaped to man’s will or whether his own heart is not another kind of clay.*"
+Blood Meridian has the tone of scripture, but the feel of a nightmare:
+"*[...] jagged mountains were pure blue in the dawn and everywhere birds twittered and the sun when it rose caught the moon in the west so that they lay opposed to each other across the earth, the sun whitehot and the moon a pale replica, as if they were the ends of a common bore beyond whose terminals burned worlds past all reckoning.*"
