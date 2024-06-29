@@ -10,21 +10,19 @@
 		%sveltekit.head%
 		<script async="" defer="" src="https://virian.dotmethod.me/js/script.js"></script>
 		<!--<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>-->
-		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.min.js" async></script>
         <!-- Preloading font using CSS Font Loading API -->
 		<script>
 			if ('fonts' in document) {
-				document.fonts.load('1em Crimson Pro').then(function () {
-					document.documentElement.classList.add('crimson-pro-loaded');
+				document.fonts.load('1em "Latin Modern Roman"').then(function() {
+					document.documentElement.classList.add('lmweb-font-loaded');
 				});
 			} else {
-				document.documentElement.classList.add('crimson-pro-loaded');
+				document.documentElement.classList.add('lmweb-font-loaded');
 			}
 		</script>
 
         <!-- Adding the font from Google -->
-		<!--<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">-->
 		<link rel="stylesheet" href="https://lalten.github.io/lmweb/style/latinmodern-roman.css" type="text/css" charset="utf-8" />
 
         <!-- Loading CSS for the font -->
@@ -32,9 +30,8 @@
             body {
                 font-family: serif;
             }
-            .crimson-pro-loaded body {
+            .lmweb-font-loaded body {
 				font-family: 'Latin Modern Roman', serif;
-                /* <!--font-family: 'Crimson Pro', serif; --> */
             }
         </style>
 

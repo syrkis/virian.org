@@ -66,8 +66,9 @@
         font-size: 1.3rem;
         font-weight: 300;
         margin-bottom: 0;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.4em;
         padding-top: 3rem;
+        text-transform: uppercase;
     }
 
     :global(h3) {
