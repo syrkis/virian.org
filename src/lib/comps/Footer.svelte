@@ -18,7 +18,7 @@
             —————<br>
             for all enquiries, write
             <br/>
-            <a href="mailto:desk@virian.org">desk@virian.org</a><br/>
+            <a href="mailto:desk@virian.org">desk[at]virian.org</a><br/>
         </footer>
     </div>
 {/if}
