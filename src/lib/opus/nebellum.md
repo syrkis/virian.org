@@ -4,7 +4,7 @@ slug: nebellum
 title: Nebellum
 description: Combat engagement outcome simulator
 date: 2024-06-15T13:50:44.015Z
-image: /images/parabellum.gif
+image: /images/nebellum.gif
 published: true
 keywords:
   - reinforcement learning
