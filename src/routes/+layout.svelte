@@ -40,6 +40,7 @@
     }
 
     :global(.text) {
+        hyphens: auto;
         margin: auto;
         width: 95%;
         max-width: calc(530px + 5vw);
