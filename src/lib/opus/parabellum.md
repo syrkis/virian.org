@@ -39,6 +39,7 @@ Unlike most warfare simulation tools, Parabellum is fully open-source. It can be
 Parabellum's core strength lies in its ability to run numerous simulations concurrently, using `vmap` and `pmap` from JAX [@frostig2018]:
 
 ```python
+
 import parabellum as pb
 from jax import vmap, pmap
 
@@ -47,6 +48,7 @@ obs, state = vmap(env.reset)(keys)
 
 # For millions of environments
 obs, state = pmap(env.reset)(keys)
+
 ```
 
 This implementation facilitates robust statistical analysis and efficient exploration of varied scenarios at a scale unmatched by traditional simulation systems.
