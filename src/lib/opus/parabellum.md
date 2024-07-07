@@ -20,6 +20,28 @@ keywords:
 category: code
 ---
 
+---
+author: Noah Syrkis, Timothée Anne, Sebastian Risi
+slug: parabellum
+title: Parabellum
+description: An ultra parallelizable multi-agent reinforcement learning environment.
+date: 2024-07-07T13:50:44.015Z
+image: /images/parabellum.gif
+published: false
+keywords:
+  - reinforcement learning
+  - multi-agent
+  - simulation
+  - command and control
+  - environment
+  - artificial intelligence
+  - machine learning
+  - wargaming
+  - military
+  - defense
+category: code
+---
+
 As global security continues to deteriorate [@smith2024], the scrutiny of military strategy becomes increasingly important. In addition to improving strategic quality, the scrutinizability of military strategy can also be expected to increase public trust in military decision-makers. To that effect, Parabellum is an open-source warfare simulation framework. Based on JaxMARL's SMAX [@rutherford2023] and supported by Armasuisse, the framework advances military scenario modeling through parallelization and environmental realism.
 
 ![Parabellum](/images/parabellum.gif)
@@ -36,7 +58,7 @@ Parabellum can be installed as a `Python 3.11` package with `pip install parabel
 
 ## 2. Parallelization Capabilities
 
-Parabellum's core strength lies in its ability to run numerous simulations concurrently, using `vmap` and `pmap` from JAX [@frostig2018], for thousands or milions of parallel environments respectively. This implementation facilitates robust statistical analysis and efficient exploration of varied scenarios.
+Parabellum's core strength lies in its ability to run numerous simulations concurrently, using `vmap` and `pmap` from JAX [@frostig2018], for thousands or millions of parallel environments respectively. This implementation facilitates robust statistical analysis and efficient exploration of varied scenarios.
 
 ## 3. Environmental Modeling
 
