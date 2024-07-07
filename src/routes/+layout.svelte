@@ -109,7 +109,7 @@
         padding: 0.2em 0.4em;
         margin: 0 0.2em;
         border-radius: 0.2em;
-        font-size: 0.8em;
+        font-size: 0.7em;
         cursor: pointer;
     }
 
