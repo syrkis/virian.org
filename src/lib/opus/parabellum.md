@@ -20,7 +20,7 @@ keywords:
 category: code
 ---
 
-As global security continues to deteriorate [@smith2024] the scrutinization of military strategy becomes increasingly important. In addition to increasing strategic quiality, scrutinizatiability of military strategy, can also be expected to increase public trust in military decision makers. To that effect, Parabellum is an open-source warfare simulation framework. Based on JaxMARL's SMAX [@rutherford2023] and supported by Armasuisse, the framework advances military scenario modeling through parallelization and environmental realism.
+As global security continues to deteriorate [@smith2024], the scrutiny of military strategy becomes increasingly important. In addition to improving strategic quality, the scrutinizability of military strategy can also be expected to increase public trust in military decision-makers. To that effect, Parabellum is an open-source warfare simulation framework. Based on JaxMARL's SMAX [@rutherford2023] and supported by Armasuisse, the framework advances military scenario modeling through parallelization and environmental realism.
 
 ## Key Features
 
@@ -37,12 +37,9 @@ Parabellum can be installed as a `Python 3.11` package with `pip install parabel
 Parabellum's core strength lies in its ability to run numerous simulations concurrently:
 
 ```python
-
 from jax import vmap
-
 obs_v, state_v = vmap(env.reset)(keys)
 obs_v, state_v = vmap(env.step)(keys, act_v, state_v)
-
 ```
 
 This implementation facilitates robust statistical analysis and efficient exploration of varied scenarios. Using `pmap` can achieve a parallel environment count of a million plus.
