@@ -18,7 +18,8 @@
  <main>
     <div class="text">
         <span>
-            Our portfolio shows how we've leveraged AI to generate insights in neuroscience, epidemiology, NLP, and more.
+            We apply machine learning to complex systems like
+            command and control, culture/society, neuroscience, etc.
         </span>
     </div>
     <div>
