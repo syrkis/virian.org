@@ -16,7 +16,7 @@
 <main>
     <div class="text">
         <span>
-            We write about technology and its cultural implications.
+            We write about information technology and its cultural implications.
             Though skeptically inclined, we attempt a positive vision.
         </span>
     </div>
