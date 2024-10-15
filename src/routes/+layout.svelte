@@ -1,10 +1,10 @@
 <script lang="ts">
-    import Header from '$lib/comps/Header.svelte'
-    import Footer from '$lib/comps/Footer.svelte'
+    import Header from "$lib/comps/Header.svelte";
+    import Footer from "$lib/comps/Footer.svelte";
 </script>
 
 <Header />
-	<slot />
+<slot />
 <Footer />
 
 <svelte:head>
@@ -25,12 +25,10 @@
         background-color: #000000;
         color: white;
         text-align: center;
-        font-family: 'Crimson Pro', serif;
         line-height: 2em;
         padding: 0;
         margin: 0;
     }
-    
 
     @media (prefers-color-scheme: light) {
         :global(body) {
@@ -89,11 +87,10 @@
         padding: 2rem 0;
     }
 
-    
-	:global(.author) {
-		font-size: 0.8em;
-		letter-spacing: 0.1em;
-	}
+    :global(.author) {
+        font-size: 0.8em;
+        letter-spacing: 0.1em;
+    }
 
     :global(.divider) {
         width: 200px;
@@ -101,7 +98,6 @@
         text-align: center;
         padding-bottom: 80px;
     }
-
 
     :global(code) {
         background-color: #000000;
@@ -113,5 +109,4 @@
         font-size: 0.7em;
         cursor: pointer;
     }
-
 </style>
