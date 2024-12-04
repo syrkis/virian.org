@@ -2,8 +2,7 @@
 author: Noah Syrkis
 slug: neuroscope
 title: Neuroscope
-description:
-    An ongoing data scientific exploration of activity in human vusual cortex.
+description: An ongoing data scientific exploration of activity in human vusual cortex.
 date: 2023-06-29T13:50:44.015Z
 image: /images/8.jpg
 published: true
@@ -15,6 +14,9 @@ keywords:
   - brain encoding
 category: code
 ---
+
+[@cover2006]
+@nanda2023
 
 Perhaps our most complex project, Neuroscope is an ongoing exploration of the human brain. In exploring biological neural networks, the project serves as a vehicle for both developing and using thir most cutting edge artificial counter parts—graph neural networks, neuroevolution, multiomodality, and more. Based on the Natural Scenes Dataset (NSD) by @allen2022, which consits of 70,000 image-fmri response pairs, the project is developing encoding and decoding mappings between visual corteces and visual inputs.^[this is an example of a footnote thor could use for citation.]
 
