@@ -79,10 +79,6 @@
     $: formattedDate = formatDate(date);
 </script>
 
-<!-- Rest of the template remains the same -->
-
-<!-- Rest of the template remains the same -->
-
 <div class="container">
     <div class="title">
         <h1>{title}</h1>
@@ -109,17 +105,18 @@
         width: 90%;
         max-width: 900px;
         margin: auto;
-        padding: 200px 0;
+        padding: 10vh 0;
     }
     h1 {
         /* font-size: 2.5rem; */
         line-height: 3rem;
         letter-spacing: 0.3em;
         text-transform: uppercase;
+        padding: 5vh 0;
     }
     .writing {
         text-align: justify;
-        padding-top: 100px;
+        padding-top: 15vh;
         font-size: 1.1em;
         line-height: 2.5;
         letter-spacing: 0.05em;
@@ -137,7 +134,7 @@
             text-transform: uppercase;
         }
         .writing {
-            padding-top: 50px;
+            padding: 15vh 0;
             font-size: 1em;
             line-height: 2;
             letter-spacing: 0.05em;
