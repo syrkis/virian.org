@@ -127,7 +127,7 @@
 
     @media (max-width: 600px) {
         .container {
-            width: 100%;
+            width: 90%;
         }
         h1 {
             font-size: 1.8rem;
@@ -138,8 +138,8 @@
         .writing {
             padding-top: 50px;
             font-size: 1em;
-            line-height: 1.5;
-            letter-spacing: 0.1em;
+            line-height: 2;
+            /* letter-spacing: 0.1em; */
         }
     }
 </style>
