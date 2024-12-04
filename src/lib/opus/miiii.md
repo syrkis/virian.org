@@ -6,7 +6,7 @@ description: Mechanistic interpretability is the reverse engineering of black bo
   learning models to understand how they work (think artificial neuroscience).
   Here it is performed on prime number classifying attention models.
 date: 2024-11-29T13:50:44.015Z
-image: /figs/miiii/neurs_113_masks_one.svg
+image: /figs/temp.svg
 published: true
 keywords:
   - Mechanistic Interpretability
@@ -20,13 +20,15 @@ keywords:
 category: code
 ---
 
-![Neuron Activations](figs/miiii/fourier_nanda_m.svg)
+![Neuron Activations](figs/temp.svg)
 
 # Artificial Neuroscience On Arithmetic Transformers
 
 Deep learning models, especially transformers, have achieved remarkable success in complex computational tasks. However, understanding _how_ these models internalize and compute algorithms remains a significant challenge due to their sub-symbolic nature.
 
 In this post, inspired by @nanda2023, we explore how a transformer model learns to perform multiple modular arithmetic tasks simultaneously and how we can interpret its internal mechanisms. Specifically, we train a transformer to predict remainders when dividing two-digit base-113 numbers by all primes less than 113, resulting in 29 parallel tasks ranging from simple (modulo 2) to complex (modulo 109) operations.
+
+![Neuron Activations](figs/miiii/fourier_nanda_m.svg)
 
 ## Background
 
