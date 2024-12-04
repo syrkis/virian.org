@@ -57,6 +57,12 @@
         letter-spacing: 0.1em;
     }
 
+    @media (max-width: 768px) {
+        :global(h1) {
+            font-size: 1.8rem;
+        }
+    }
+
     :global(.post) {
         margin: auto;
         width: 95%;
