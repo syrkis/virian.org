@@ -88,8 +88,6 @@
     <div class="writing">
         <div>{@html renderedContent}</div>
         {#if bibliography}
-            <br />
-            <br />
             <h2>References</h2>
             <div>{@html bibliography}</div>
         {/if}
@@ -104,19 +102,12 @@
         padding: 7vh 0;
     }
     .main-title {
-        padding-bottom: 7vh;
-    }
-    :global(h1, h2) {
-        line-height: 3em;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        padding: 5vh 0;
-        text-align: center; /* Center the header */
+        /* padding-bottom: vh; */
     }
 
     .writing {
         text-align: justify;
-        padding-top: 7vh;
+        padding-top: 14vh;
         font-size: 1.1em;
         line-height: 2.5;
         letter-spacing: 0.05em;

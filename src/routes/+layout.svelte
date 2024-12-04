@@ -51,10 +51,15 @@
         padding: 5px;
     }
 
-    :global(h1) {
+    :global(h1, h2) {
         font-weight: normal;
         font-size: 2.5rem;
         letter-spacing: 0.1em;
+        line-height: 3em;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        padding: 7vh 0;
+        text-align: center; /* Center the header */
     }
 
     @media (max-width: 768px) {

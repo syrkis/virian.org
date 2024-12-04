@@ -22,7 +22,7 @@ category: code
 
 ![Neuron Activations](figs/temp.svg)
 
-# Artificial Neuroscience On Arithmetic Transformers
+# Mechanistic Interpretability on Irriducible Integer Identifiers
 
 Deep learning models, especially transformers, have achieved remarkable success in complex computational tasks. However, understanding _how_ these models internalize and compute algorithms remains a significant challenge due to their sub-symbolic nature.
 
