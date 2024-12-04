@@ -17,7 +17,10 @@
 <main>
     <div class="text">
         <span>
-            We apply machine learning to complex systems like command and control, culture/society, neuroscience, etc.
+            We apply machine learning to complex systems like the human brain, social networks, deep learning models,
+            and more
+            <!-- learning models We apply machine learning to complex systems like command and control, culture/society, -->
+            <!-- neuroscience, etc. -->
         </span>
     </div>
     <div>
