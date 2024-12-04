@@ -123,6 +123,7 @@
         font-size: 1.1em;
         line-height: 2.5;
         letter-spacing: 0.05em;
+        hyphens: auto;
     }
 
     @media (max-width: 600px) {
@@ -139,7 +140,8 @@
             padding-top: 50px;
             font-size: 1em;
             line-height: 2;
-            /* letter-spacing: 0.1em; */
+            letter-spacing: 0.05em;
+            hyphens: auto !important;
         }
     }
 </style>
