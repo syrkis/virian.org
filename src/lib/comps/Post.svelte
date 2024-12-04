@@ -1,7 +1,7 @@
 <script lang="ts">
     import MarkdownIt from "markdown-it";
     import Cite from "citation-js";
-    import math from "markdown-it-texmath";
+    import math from "markdown-it-mathjax3";
     import { onMount } from "svelte";
 
     export let title: string;
@@ -70,10 +70,6 @@
     onMount(async () => {
         const processedContent = await processCitations(body);
         renderedContent = md.render(processedContent);
-
-        if (window.MathJax) {
-            window.MathJax.typesetPromise();
-        }
     });
 
     $: formattedDate = formatDate(date);
@@ -81,7 +77,7 @@
 
 <div class="container">
     <div class="title">
-        <h1>{title}</h1>
+        <h1 class="main-title">{title}</h1>
         {#if author === "Noah Syrkis"}
             <a href="https://syrkis.com">{author}, <i>{formattedDate}</i></a>
         {:else}
@@ -105,33 +101,43 @@
         width: 90%;
         max-width: 900px;
         margin: auto;
-        padding: 10vh 0;
+        padding: 7vh 0;
     }
-    h1 {
-        /* font-size: 2.5rem; */
-        line-height: 3rem;
+    .main-title {
+        padding-bottom: 7vh;
+    }
+    :global(h1, h2) {
+        line-height: 3em;
         letter-spacing: 0.3em;
         text-transform: uppercase;
         padding: 5vh 0;
+        text-align: center; /* Center the header */
     }
+
     .writing {
         text-align: justify;
-        padding-top: 15vh;
+        padding-top: 7vh;
         font-size: 1.1em;
         line-height: 2.5;
         letter-spacing: 0.05em;
         hyphens: auto;
     }
+    :global(figure) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2em 0;
+    }
+    :global(figcaption) {
+        margin-top: 0.5em;
+        font-size: 0.9em;
+        color: #555;
+        text-align: center; /* Center the caption */
+    }
 
     @media (max-width: 600px) {
         .container {
             width: 90%;
-        }
-        h1 {
-            font-size: 1.8rem;
-            line-height: 2rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
         }
         .writing {
             padding: 15vh 0;

@@ -1,25 +1,23 @@
 <script lang="ts">
-    import Tile from '$lib/comps/Tile.svelte';
-    import type { PageData } from './$types';
+    import Tile from "$lib/comps/Tile.svelte";
+    import type { PageData } from "./$types";
     export let data: PageData;
     let services = {
-        author: 'Virian',
-        title: 'AI Services – Virian Analytics (E.U. only)',
-        description: 'Virian provides AI consulting and development services. We help organizations understand and effectively use their data. Get in touch to explore how we can assist you.',
-        illustration: '/images/14.jpg',
-        date: '2021-10-01',
-        slug: 'ai-services',
-        type: 'code'
+        author: "Virian",
+        title: "AI Services – Virian Analytics (E.U. only)",
+        description:
+            "Virian provides AI consulting and development services. We help organizations understand and effectively use their data. Get in touch to explore how we can assist you.",
+        illustration: "/images/14.jpg",
+        date: "2021-10-01",
+        slug: "ai-services",
+        type: "code",
     };
-
 </script>
 
-
- <main>
+<main>
     <div class="text">
         <span>
-            We apply machine learning to complex systems like
-            command and control, culture/society, neuroscience, etc.
+            We apply machine learning to complex systems like command and control, culture/society, neuroscience, etc.
         </span>
     </div>
     <div>
@@ -27,16 +25,15 @@
     </div>
     <div class="posts">
         {#each data.body as item}
-            <div class='post'>
+            <div class="post">
                 <Tile {item} />
             </div>
         {/each}
-    </div>  
+    </div>
     —————
-    <br>
-    <br>
+    <br />
+    <br />
     <Tile item={services} />
-
 </main>
 
 <svelte:head>

@@ -22,18 +22,18 @@
     :global(body) {
         letter-spacing: 0.02em;
         font-size: calc(1em + 0.3vw);
-        background-color: #000000;
-        color: white;
+        background-color: white;
+        color: balck;
         text-align: center;
         line-height: 2em;
         padding: 0;
         margin: 0;
     }
 
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: dark) {
         :global(body) {
             filter: invert(1);
-            background-color: white;
+            background-color: black;
         }
     }
 
@@ -46,13 +46,14 @@
     }
 
     :global(a) {
-        color: white;
+        color: black;
         text-decoration: none;
         padding: 5px;
     }
 
     :global(h1) {
         font-weight: normal;
+        font-size: 2.5rem;
         letter-spacing: 0.1em;
     }
 
@@ -70,8 +71,22 @@
         text-transform: uppercase;
     }
 
+    :global(em) {
+        text-align: center !important;
+        width: 100%;
+        margin: auto;
+    }
+    :global(h4) {
+        text-align: center;
+        font-weight: normal;
+        /* // make italic */
+        font-style: italic;
+    }
+
     :global(h3) {
-        font-size: 1.3rem;
+        font-weight: normal;
+        font-size: 1.5rem;
+        /* font-size: 1.3rem; */
         font-weight: 300;
         margin-bottom: 0;
         letter-spacing: 0.05em;
@@ -100,8 +115,8 @@
     }
 
     :global(code) {
-        background-color: #000000;
-        color: white;
+        /* background-color: #000000; */
+        /* color: white; */
         /** border: 1px solid white;  */
         padding: 0.2em 0.4em;
         margin: 0 0.2em;

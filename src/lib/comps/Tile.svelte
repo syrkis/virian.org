@@ -51,7 +51,7 @@
         <div class="title">
             <span class="subtitle"><h3>{item.title}</h3></span>
             {#if href != "/ex-libris" && href != "/ai-services"}
-                <span class="date"><h3>{formatAuthors(item.author)}, <i>{item.date}</i></h3></span>
+                <span class="date"><h3 class="right">{formatAuthors(item.author)}, <i>{item.date}</i></h3></span>
             {/if}
         </div>
         <div class="description">
@@ -77,12 +77,14 @@
         display: grid;
         grid-template-columns: 10fr 7fr;
     }
-    .date {
-        text-align: right;
-    }
     h3 {
+        text-align: left;
         font-size: 1em;
         letter-spacing: 0.02em;
+    }
+
+    .right {
+        text-align: right;
     }
     @media (max-width: 600px) {
         .title {
