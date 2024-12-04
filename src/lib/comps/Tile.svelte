@@ -66,7 +66,7 @@
         background-position: center;
         background-size: 110%;
         background-repeat: no-repeat;
-        height: 20vh;
+        height: 33vh;
         border-radius: 10px;
     }
     .description {
