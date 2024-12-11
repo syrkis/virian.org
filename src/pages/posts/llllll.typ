@@ -3,7 +3,7 @@
 #let title = "LIFE-LIKE LARGE LANGUAGE Ludens—German for game—link"
 #let author = "Noah Syrkis"
 #let date = datetime(year: 2023, month: 8, day: 7)
-#let cover = "../../../temp.svg"
+#let cover = "/public/temp.svg"
 
 #metadata((
   title: title,
