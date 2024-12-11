@@ -1,0 +1,38 @@
+---
+import { Typst } from "astro-typst/src/components";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Cover from "../components/Cover.astro";
+
+export async function getStaticPaths() {
+    const posts = import.meta.glob("../pages/posts/*.typ", { eager: true });
+
+    return Object.entries(posts).map(([path, post]: [string, any]) => {
+        const slug = path.split("/").pop()?.replace(".typ", "");
+        return {
+            params: { slug },
+            props: { post }, // Pass the post data as props
+        };
+    });
+}
+
+const { slug } = Astro.params;
+const { post } = Astro.props; // Access the post data from props
+const { frontmatter } = post; // Get the frontmatter
+---
+
+<Layout>
+    <Header />
+    <!-- <div class="cover"> -->
+    <!-- <Cover src={frontmatter.cover} slug={frontmatter.slug} /> -->
+    <!-- </div> -->
+    <div class="typst">
+        <Typst src={`./src/pages/posts/${slug}.typ`} />
+    </div>
+</Layout>
+
+<style>
+    .cover {
+        padding-top: 100px;
+    }
+</style>

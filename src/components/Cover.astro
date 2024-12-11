@@ -1,0 +1,28 @@
+---
+interface Props {
+    src: string;
+    slug: string;
+}
+
+const { src, slug = "" } = Astro.props;
+---
+
+<div class="image-container" transition:name={slug} transition:animate="initial">
+    <img src={src} alt={slug} />
+</div>
+
+<style>
+    .image-container {
+        width: 90vw;
+        height: 30vh;
+        margin: 0 auto;
+        overflow: hidden; /* This ensures the image doesn't spill out */
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; /* Centers the image within the container */
+    }
+</style>

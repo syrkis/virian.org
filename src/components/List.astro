@@ -1,0 +1,43 @@
+---
+import Header from "./Header.astro";
+interface Props {
+    type: "code" | "text";
+    text: string;
+}
+
+import Post from "./Post.astro";
+
+const { type } = Astro.props;
+const text = Astro.props.text;
+
+const allPosts = Object.values(import.meta.glob("../pages/posts/*.typ", { eager: true })).filter(
+    (post: any) => post.frontmatter.type === type,
+);
+---
+
+<!-- src/components/List.astro -->
+<Header />
+<div class="posts-list">
+    <span class="text">{text}</span>
+    <h3>
+        — {type === "code" ? "PROJECTS" : "WRITINGS"} —
+    </h3>
+    {allPosts.map((post: any) => <Post frontmatter={post.frontmatter} />)}
+</div>
+
+<style>
+    .text {
+        font-size: 1.1em;
+        text-align: center;
+        width: 700px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .posts-list {
+        display: grid;
+        gap: 150px;
+        padding: 100px 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+</style>

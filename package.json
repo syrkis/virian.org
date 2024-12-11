@@ -1,50 +1,17 @@
 {
-  "engine": "node>=18.0.0",
   "name": "virian.org",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
-  },
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.1",
-    "@sveltejs/adapter-auto": "^3.0.0",
-    "@sveltejs/adapter-netlify": "^4.4.0",
-    "@sveltejs/kit": "^2.0.0",
-    "@sveltejs/vite-plugin-svelte": "^4.0.0",
-    "@types/markdown-it": "^14.1.2",
-    "@types/markdown-it-footnote": "^3.0.4",
-    "@types/node": "^22.10.1",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "svelte": "^5.0.0",
-    "svelte-check": "^4.0.0",
-    "typescript": "^5.0.0",
-    "vite": "^5.0.3"
-  },
   "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
   "dependencies": {
-    "@arothuis/markdown-it-biblatex": "^2.1.0",
-    "@citation-js/core": "^0.7.14",
-    "@citation-js/plugin-bibtex": "^0.7.16",
-    "@citation-js/plugin-csl": "^0.7.14",
-    "@citation-js/plugin-doi": "^0.7.16",
     "@myriaddreamin/typst-ts-node-compiler": "^0.5.1",
-    "@myriaddreamin/typst-ts-renderer": "^0.5.1",
-    "@myriaddreamin/typst-ts-web-compiler": "^0.5.1",
-    "@myriaddreamin/typst.ts": "^0.5.1",
-    "citation-js": "^0.7.16",
-    "front-matter": "^4.0.2",
-    "hexo-renderer-typst": "^0.5.0",
-    "markdown-it": "^14.1.0",
-    "markdown-it-citations": "^1.1.0",
-    "markdown-it-footnote": "^4.0.0",
-    "markdown-it-katex": "^2.0.3",
-    "markdown-it-math": "^4.1.1",
-    "markdown-it-mathjax3": "^4.3.2",
-    "markdown-it-texmath": "^1.0.0"
+    "astro": "^5.0.4",
+    "astro-typst": "^0.7.0-beta.1",
+    "date-fns": "^4.1.0"
   }
 }
