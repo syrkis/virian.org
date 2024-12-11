@@ -3,17 +3,24 @@
   title: none,
   author: none,
   date: none,
-  abstract: none,
-  // bibliography-file: none,
   doc,
 ) = {
   // Base styling
   set text(font: "New Computer Modern", lang: "en")
   set page(
-    width: 8.5in,
+    // width: 8.5in,
+    // #set page(width: auto)
     height: auto,
     margin: (x: 1in, y: 1in),
   )
+
+  show heading: it => [
+    #set align(center)
+    #set text(13pt, weight: "regular")
+    #v(3em)
+    #block(smallcaps(it.body))
+    #v(3em)
+  ]
 
   // Your blog post content goes here
   set par(
@@ -31,7 +38,7 @@
   // Title block
   align(center)[
     #block(spacing: 2em)[
-      #text(size: 2em, weight: "regular")[#title]
+      #text(size: 2em, weight: "regular", stretch: 100%)[#upper(title)]
 
       #if author != none [
         #text(size: 1.2em)[#author]
@@ -46,30 +53,9 @@
     ]
   ]
 
-  // Abstract if provided
-  if abstract != none {
-    block(inset: 2em)[
-      #text(style: "italic")[#abstract]
-    ]
-    v(2em)
-  }
-
   // Main content
   doc
 
-  // Bibliography if provided
-  // if bibliography-file != none {
   pagebreak()
-  bibliography("../../public/zotero.bib")
-  // }
+  bibliography("/public/zotero.bib")
 }
-
-// Usage example:
-// #show: doc => post(
-//   title: "My Blog Post",
-//   author: "Noah Syrkis",
-//   date: "January 1, 2024",
-//   abstract: [This is an abstract...],
-//   bibliography-file: "/bibliography/zotero.bib",
-//   doc,
-// )

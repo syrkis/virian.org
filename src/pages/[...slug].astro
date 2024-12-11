@@ -23,11 +23,11 @@ const { frontmatter } = post; // Get the frontmatter
 
 <Layout>
     <Header />
-    <!-- <div class="cover"> -->
-    <!-- <Cover src={frontmatter.cover} slug={frontmatter.slug} /> -->
-    <!-- </div> -->
+    <div class="cover">
+        <Cover src={frontmatter.cover} slug={frontmatter.slug} />
+    </div>
     <div class="typst">
-        <Typst src={`./src/pages/posts/${slug}.typ`} />
+        <Typst src={`./src/pages/posts/${slug}.typ`} remPx={16} />
     </div>
 </Layout>
 
@@ -36,3 +36,16 @@ const { frontmatter } = post; // Get the frontmatter
         padding-top: 100px;
     }
 </style>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const path = window.location.pathname;
+        if (path !== "/" && path !== "/code" && path !== "/text") {
+            window.scrollTo({
+                top: 200,
+                left: 0,
+                behavior: "instant",
+            });
+        }
+    });
+</script>
