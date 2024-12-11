@@ -6,6 +6,7 @@ import { typst } from "astro-typst";
 // https://astro.build/config
 // astro.config.mjs
 export default defineConfig({
+  base: "/", // Add this line
   integrations: [
     typst({
       options: {

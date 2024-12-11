@@ -3,7 +3,7 @@
 #let title = "||||||"
 #let author = "Noah Syrkis"
 #let date = datetime(year: 2023, month: 8, day: 7)
-#let cover = "/src/assets/temp.svg"
+#let cover = "/temp.svg"
 
 #metadata((
   title: title,
