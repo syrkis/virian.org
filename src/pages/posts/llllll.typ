@@ -1,9 +1,9 @@
 #import "../../templates/lib.typ": post
 
-#let title = "LIFE-LIKE LARGE LANGUAGE Ludens Link"
+#let title = "||||||"
 #let author = "Noah Syrkis"
 #let date = datetime(year: 2023, month: 8, day: 7)
-#let cover = "/public/temp.svg"
+#let cover = "/src/assets/temp.svg"
 
 #metadata((
   title: title,
