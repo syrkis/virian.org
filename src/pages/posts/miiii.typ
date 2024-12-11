@@ -3,7 +3,7 @@
 #let title = "Mechanistic Interpretability on Irreducible Integer Identifiers"
 #let author = "Noah Syrkis"
 #let date = datetime(year: 2024, month: 8, day: 7)
-#let cover = "/public/temp.svg"
+#let cover = "../../../public/temp.svg"
 
 #metadata((
   title: title,

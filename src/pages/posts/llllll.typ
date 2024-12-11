@@ -1,6 +1,6 @@
 #import "../../templates/lib.typ": post
 
-#let title = "LIFE-LIKE LARGE LANGUAGE Ludens—German for game—link"
+#let title = "LIFE-LIKE LARGE LANGUAGE Ludens Link"
 #let author = "Noah Syrkis"
 #let date = datetime(year: 2023, month: 8, day: 7)
 #let cover = "/public/temp.svg"
@@ -14,13 +14,7 @@
   date: date,
 ))<frontmatter>
 
-#show: doc => post(
-  title: title,
-  author: author,
-  date: date,
-  // abstract: [Optional abstract here...],
-  doc,
-)
+#show: doc => post(title: title, author: author, date: date, doc)
 
 = Introduction
 
