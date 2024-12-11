@@ -1,5 +1,4 @@
 // src/templates/lib.typ
-
 #let post(
   title: none,
   author: none,
@@ -39,7 +38,10 @@
       ]
 
       #if date != none [
-        #text(size: 1em, style: "italic")[#date]
+        #text(
+          size: 1em,
+          style: "italic",
+        )[#date.display("[month repr:long] [day padding:none], [year]")]
       ]
     ]
   ]
