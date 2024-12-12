@@ -1,4 +1,4 @@
-#import "../../templates/lib.typ": post
+#import "/public/lib.typ": post
 
 #let title = "Mechanistic Interpretability on Irreducible Integer Identifiers"
 #let author = "Noah Syrkis"

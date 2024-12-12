@@ -26,8 +26,10 @@ const { frontmatter } = post; // Get the frontmatter
     <div class="cover">
         <Cover src={frontmatter.cover} slug={frontmatter.slug} />
     </div>
-    <div class="typst">
-        <Typst src={`./src/pages/posts/${slug}.typ`} remPx={16} />
+    <div class="typst-container">
+        <div class="typst">
+            <Typst src={`./src/pages/posts/${slug}.typ`} remPx={16} />
+        </div>
     </div>
 </Layout>
 
@@ -35,17 +37,26 @@ const { frontmatter } = post; // Get the frontmatter
     .cover {
         padding-top: 100px;
     }
-</style>
 
-<script>
-    document.addEventListener("astro:page-load", () => {
-        const path = window.location.pathname;
-        if (path !== "/" && path !== "/code" && path !== "/text") {
-            window.scrollTo({
-                top: 200,
-                left: 0,
-                behavior: "instant",
-            });
+    .typst-container {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 0 1rem;
+    }
+
+    .typst {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+        .typst {
+            font-size: 0.9em;
+            padding: 0;
         }
-    });
-</script>
+    }
+</style>

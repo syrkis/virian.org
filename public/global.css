@@ -46,6 +46,25 @@ a {
     padding: 0 1rem;
 }
 
-:root {
-    --astro-transition-duration: 500ms; /* Set your desired duration here */
+/* global.css */
+.typst-content {
+    max-width: 100vw;
+    overflow-x: auto;
+}
+
+.typst-content img,
+.typst-content svg {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .typst-content {
+        font-size: 14px;
+    }
+
+    .typst-content table {
+        display: block;
+        overflow-x: auto;
+    }
 }

@@ -16,28 +16,43 @@ const allPosts = Object.values(import.meta.glob("../pages/posts/*.typ", { eager:
 ---
 
 <!-- src/components/List.astro -->
-<Header />
-<div class="posts-list">
-    <span class="text">{text}</span>
-    <h3>
-        — {type === "code" ? "PROJECTS" : "WRITINGS"} —
-    </h3>
-    {allPosts.map((post: any) => <Post frontmatter={post.frontmatter} />)}
+<div class="container">
+    <Header />
+    <div class="posts-list">
+        <span class="text">{text}</span>
+        <h3>
+            — {type === "code" ? "PROJECTS" : "WRITINGS"} —
+        </h3>
+        {allPosts.map((post: any) => <Post frontmatter={post.frontmatter} />)}
+    </div>
 </div>
 
 <style>
     .text {
-        font-size: 1.1em;
+        font-size: clamp(0.9rem, 3vw, 1.1em);
         text-align: center;
-        width: 700px;
+        width: 90%;
+        max-width: 700px;
         margin: 0 auto;
-        max-width: 100%;
+        padding: 0 1rem;
     }
     .posts-list {
         display: grid;
-        gap: 150px;
-        padding: 100px 0;
+        gap: clamp(50px, 10vh, 150px);
+        padding: 50px 0;
         width: 90%;
         margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+        .posts-list {
+            width: 95%;
+        }
+        .text {
+            font-size: clamp(0.8rem, 3vw, 1em);
+        }
+        h3 {
+            font-size: clamp(0.8rem, 3vw, 1em);
+        }
     }
 </style>
