@@ -53,18 +53,10 @@ const code = fs.readFileSync(filePath, "utf-8");
         const path = window.location.pathname;
         if (path !== "/" && path !== "/code" && path !== "/text") {
             window.scrollTo({
-                top: 150,
+                top: 200,
                 left: 0,
                 behavior: "instant",
             });
         }
-    });
-
-    let width = window.innerWidth;
-    console.log(`Initial width: ${width}`);
-
-    window.addEventListener("resize", () => {
-        width = window.innerWidth;
-        console.log(`New width: ${width}`);
     });
 </script>
