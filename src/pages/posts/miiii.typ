@@ -14,10 +14,24 @@
   date: date,
 ))<frontmatter>
 
+
 #show: doc => post(title: title, author: author, date: date, doc)
+
+#[
+  All arguments passed from Astro:
+
+  Positional arguments:
+  #repr(sys.version)
+
+  noah
+  #repr(metadata.where())
+
+  noah
+  #repr(metadata.where())
+]
 
 = Introduction
 
-#lorem(1000)
+#lorem(10)
 
 @cover2006

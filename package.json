@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@myriaddreamin/typst-ts-node-compiler": "^0.5.1",
-    "astro": "^5.0.4",
+    "astro": "^5.0.5",
     "astro-typst": "^0.7.0-beta.1",
     "date-fns": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2"
   }
 }

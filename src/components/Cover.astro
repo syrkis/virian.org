@@ -7,7 +7,7 @@ interface Props {
 const { src, slug = "" } = Astro.props;
 ---
 
-<div class="image-container" transition:name={slug} transition:animate="initial">
+<div class="image-container" transition:name={slug}>
     <img src={src} alt={slug} />
 </div>
 

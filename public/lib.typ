@@ -6,13 +6,9 @@
   doc,
 ) = {
   // Base styling
-  set text(font: "New Computer Modern", lang: "en")
-  set page(
-    // width: 8.5in,
-    // #set page(width: auto)
-    height: auto,
-    margin: (x: 1in, y: 1in),
-  )
+  set text(font: "New Computer Modern", lang: "en", size: 15pt)
+  set page(height: auto, margin: (x: 0.1in, y: 0.1in))
+
 
   show heading: it => [
     #set align(center)
