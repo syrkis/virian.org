@@ -22,9 +22,7 @@ const { slug } = Astro.params;
 const { post } = Astro.props;
 const { frontmatter } = post;
 
-// Load the .typ file contents
 const filePath = path.join(process.cwd(), "src", "pages", "posts", `${slug}.typ`);
-const code = fs.readFileSync(filePath, "utf-8");
 ---
 
 <Layout>
@@ -33,7 +31,7 @@ const code = fs.readFileSync(filePath, "utf-8");
         <Cover src={frontmatter.cover} slug={frontmatter.slug} />
     </div>
     <div class="typst">
-        <Typst {code} remPx={10} props={{ width: "100%", height: "auto" }} />
+        <Typst src={filePath} remPx={10} props={{ width: "100%", height: "auto" }} />
     </div>
 </Layout>
 
