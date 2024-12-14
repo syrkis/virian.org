@@ -34,6 +34,7 @@
   // Title block
   align(center)[
     #block(spacing: 2em)[
+      #set par(leading: 1.5em)
       #text(size: 1.75em, weight: "regular", stretch: 100%)[#upper(title)]
 
       #if author != none [
