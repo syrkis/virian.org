@@ -12,7 +12,7 @@
 
   show heading: it => [
     #set align(center)
-    #set text(13pt, weight: "regular")
+    #set text(weight: "regular")
     #v(3em)
     #block(smallcaps(it.body))
     #v(3em)
