@@ -12,7 +12,7 @@
 
   show heading: it => [
     #set align(center)
-    #set text(weight: "regular")
+    #set text(1em, weight: "regular")
     #v(3em)
     #block(smallcaps(it.body))
     #v(3em)
@@ -34,7 +34,7 @@
   // Title block
   align(center)[
     #block(spacing: 2em)[
-      #text(size: 2em, weight: "regular", stretch: 100%)[#upper(title)]
+      #text(size: 1.75em, weight: "regular", stretch: 100%)[#upper(title)]
 
       #if author != none [
         #text(size: 1.2em)[#author]
