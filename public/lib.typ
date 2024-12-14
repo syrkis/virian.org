@@ -1,5 +1,4 @@
 // src/templates/lib.typ
-#import "@preview/unify:0.6.1": num // <- for making numbers look nice
 #let post(
   title: none,
   author: none,
@@ -55,5 +54,5 @@
   doc
 
   pagebreak()
-  bibliography("/public/zotero.bib")
+  bibliography("/public/zotero.bib", title: "References")
 }
