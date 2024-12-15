@@ -29,8 +29,7 @@ export default defineConfig({
     },
   },
 
-  output: "hybrid",
-  adapter: netlify(), // needed for lazy loading
+  adapter: netlify(),
 });
 
 // const typCollection = defineCollection({
