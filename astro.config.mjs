@@ -5,18 +5,18 @@ import { typst } from "astro-typst";
 
 import netlify from "@astrojs/netlify";
 
+import vue from "@astrojs/vue";
+
 // https://astro.build/config
 // astro.config.mjs
 export default defineConfig({
   // Add this line
   base: "/",
-  integrations: [
-    typst({
-      options: {
-        remPx: 14,
-      },
-    }),
-  ],
+  integrations: [typst({
+    options: {
+      remPx: 14,
+    },
+  }), vue()],
 
   markdown: {
     syntaxHighlight: false,
