@@ -54,5 +54,5 @@
   doc
 
   pagebreak()
-  bibliography("/public/zotero.bib", title: "References")
+  bibliography("./zotero.bib", title: "References")
 }

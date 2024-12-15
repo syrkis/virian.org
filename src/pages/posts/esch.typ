@@ -1,5 +1,5 @@
 // head
-#import "/src/lib.typ": post
+#import "/src/assets/lib.typ": post
 #let title = "Mechanistic Interpretability on Irreducible Integer Identifiers"
 #let author = "Noah Syrkis"
 #let date = datetime(year: 2024, month: 8, day: 7)

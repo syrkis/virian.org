@@ -1,12 +1,14 @@
 ---
 import Footer from "../components/Footer.astro";
-// const { title } = Astro.props;
+const { title } = Astro.props;
+import "../styles/global.css";
 ---
 
 <!-- <!doctype html> -->
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="/global.css" />
+        <!-- <link rel="stylesheet" href="/global.css"> -->
+
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- <meta name="viewport" content="width=device-width" /> -->
@@ -25,3 +27,9 @@ import Footer from "../components/Footer.astro";
         <Footer />
     </body>
 </html>
+
+<!-- <style is:global>
+    :root {
+        --astro-transition-duration: 1000ms; /* Or any duration you want */
+    }
+</style> -->
