@@ -38,10 +38,7 @@ export const prerender = true;
         <div class="cover">
             <Cover src={frontmatter.cover} slug={frontmatter.slug} />
         </div>
-
-        <Post server:defer code={code}>
-            <div slot="fallback">rendered on client</div>
-        </Post>
+        <Post code={code} />
     </div>
 </Layout>
 
