@@ -29,7 +29,7 @@ export default defineConfig({
     },
   },
 
-  output: "server",
+  output: "static",
   adapter: netlify(), // needed for lazy loading
 });
 
