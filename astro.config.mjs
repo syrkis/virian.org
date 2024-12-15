@@ -29,7 +29,7 @@ export default defineConfig({
     },
   },
 
-  // adapter: netlify(),
+  adapter: netlify(), // needed for lazy loading
 });
 
 // const typCollection = defineCollection({
