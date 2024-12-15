@@ -19,6 +19,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 const { frontmatter } = post;
+export const prerender = true;
 ---
 
 <Layout>
