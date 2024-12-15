@@ -3,21 +3,31 @@ import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import Cover from "../components/Cover.astro";
 import Post from "../components/Post.astro";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 export async function getStaticPaths() {
     const posts = import.meta.glob("../pages/posts/*.typ", { eager: true });
 
-    return Object.entries(posts).map(([path, post]: [string, any]) => {
-        const slug = path.split("/").pop()?.replace(".typ", "");
-        return {
-            params: { slug },
-            props: { post },
-        };
-    });
+    return await Promise.all(
+        Object.entries(posts).map(async ([filepath, post]: [string, any]) => {
+            const slug = filepath.split("/").pop()?.replace(".typ", "");
+            const fullPath = path.join(process.cwd(), "src/pages/posts", `${slug}.typ`);
+            const code = await fs.readFile(fullPath, "utf-8");
+
+            return {
+                params: { slug },
+                props: {
+                    post,
+                    code,
+                },
+            };
+        }),
+    );
 }
 
 const { slug } = Astro.params;
-const { post } = Astro.props;
+const { post, code } = Astro.props;
 const { frontmatter } = post;
 export const prerender = true;
 ---
@@ -29,7 +39,7 @@ export const prerender = true;
             <Cover src={frontmatter.cover} slug={frontmatter.slug} />
         </div>
 
-        <Post server:defer {slug} data-astro-prefetch>
+        <Post server:defer code={code}>
             <div slot="fallback">rendered on client</div>
         </Post>
     </div>

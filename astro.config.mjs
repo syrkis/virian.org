@@ -9,14 +9,6 @@ import netlify from "@astrojs/netlify";
 // astro.config.mjs
 export default defineConfig({
   // Add this line
-  prefetch: {
-    prefetchAll: true,
-    defaultStrategy: "viewport",
-  },
-  experimental: {
-    clientPrerender: true,
-  },
-
   base: "/",
 
   integrations: [
