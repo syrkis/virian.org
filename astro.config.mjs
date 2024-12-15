@@ -10,7 +10,6 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   // Add this line
   base: "/",
-
   integrations: [
     typst({
       options: {

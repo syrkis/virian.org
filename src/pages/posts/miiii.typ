@@ -1,4 +1,4 @@
-#import "/public/lib.typ": post
+#import "/src/lib.typ": post
 #import "@preview/unify:0.6.1": num // <- for making numbers look nice
 #import "@preview/equate:0.2.1": equate // <- for numbering equations
 
@@ -86,7 +86,7 @@ $<miiii_task>
 $cal(T)_("miiii")$ differentiates itself from $cal(T)_("nanda")$ in two significant ways: _1)_ it is non-commutative, and _2)_ it is, as mentioned, multi-task. These differences present unique challenges for mechanistic interpretation, as the model must learn to handle both the order-dependent nature of the inputs and develop shared representations across multiple modular arithmetic tasks. Further, as $cal(T)_("miiii")$ is harder than $cal(T)_("nanda")$ the model can be expected to generalize slower when trained on the former. Therefore, #cite(<lee2024a>, form:"prose", style:"american-psychological-association")'s recent work on speeding up generalization by positing the model parameters gradients through time can be viewed as a sum of _1)_ a slow varying generalizing component (which is boosted), and _2)_, a quick varying overfitting component (which is suppressed), is (successfully) replicated to make training tractable.
 
 #figure(
-  image("/public/assets/miiii/polar.svg", width: 120%),
+  image("/src/assets/miiii/polar.svg", width: 120%),
   caption: [
     Visualizing natural numbers less than #num(12769) in polar coordinates $(n, n mod 2 pi)$. Left: union of numbers with remainder 0 mod 17 and 23 (see the two spirals). Middle: numbers with remainder 0 mod 11. Right: prime numbers.
     It is shown here to encourage the reader to think in periodic terms.
@@ -248,7 +248,7 @@ Additionally, a baseline task $cal(T)_"basis"$ was constructed by shuffling the 
 Each input $x in X$ represents a number in base $p$ using two digits, $(x_0,x_1)$, where the represented number is $x_0 p^0 + x_1 p^1$. For example, with $p=11$, the input space consists of all pairs $(x_0,x_1)$ where $x_0,x_1 < 11$, representing numbers up to $11^2-1 = 120$. This yields a dataset of 121 samples. @miiii_x_11 visualizes this input space, with each cell representing the value $x_0 p^0 + x_1 p^1$.
 
 #figure(
-  image("/public/assets/miiii/x_11_plot.svg", width: 110%),
+  image("/src/assets/miiii/x_11_plot.svg", width: 110%),
   caption: [Visualizing X (for a small dataset where $p=11$). Each cell represents the tuple $(x_0, x_1)$. The top left shows 0 $(0,0)$, and the bottom right shows 120 $(10,10)$—both in base-11],
 )<miiii_x_11>
 
@@ -256,7 +256,7 @@ Each input $x in X$ represents a number in base $p$ using two digits, $(x_0,x_1)
 For each input $x$, a vector $y in Y$ contains the remainder when dividing by each prime less than $p$. For $p=11$, this means predicting the remainder when dividing by 2, 3, 5, and 7. Each element $y_i$ ranges from $0$ to $q_i-1$ where $q_i$ is the $i$-th prime. @miiii_y_11 visualizes these remainders, with each subplot showing the remainder pattern for a specific prime divisor. For comparison, the rightmost plot shows the output space of @nanda2023's modular addition task.
 
 #figure(
-  image("/public/assets/miiii/y_11_plot.svg", width: 120%),
+  image("/src/assets/miiii/y_11_plot.svg", width: 120%),
   caption: [Visualizing tasks in Y (for $p=11$). $x_0$ and $x_1$ vary on the two axis, with the remainder modulo $q in {2,3,5,7}$ indicated by the square size. Note the innate periodicity of the modulo operator.],
 )<miiii_y_11>
 
@@ -334,8 +334,8 @@ Much of the data worked with here is inherently high dimensional. For training, 
     stack(
     dir: ltr,
     spacing: 0pt, // Adjust this value to control the spacing
-    image("/public/assets/miiii/neurs_113_miiii_one.svg", width: 40%),
-    image("/public/assets/miiii/neurs_113_miiii_fft_one.svg", width: 46%),
+    image("/src/assets/miiii/neurs_113_miiii_one.svg", width: 40%),
+    image("/src/assets/miiii/neurs_113_miiii_fft_one.svg", width: 46%),
   ),
   ),
   caption: [Plotting a neuron: (left) The activation of a particular neuron as $x_0$ and $x_1$ varies from $0$ to $p$. (right) The same processed with a fast Fourier transform to active frequencies ($omega$).],
@@ -399,11 +399,11 @@ Interestingly, tasks corresponding to modulo 2, 3, 5, and 7 generalized in succe
   stack(
     dir: ttb,
     image(
-      "/public/assets/miiii/" + f_hash + "/acc_train_training.svg",
+      "/src/assets/miiii/" + f_hash + "/acc_train_training.svg",
       width: 85%,
     ),
     image(
-      "/public/assets/miiii/" + f_hash + "/acc_valid_training.svg",
+      "/src/assets/miiii/" + f_hash + "/acc_valid_training.svg",
       width: 85%,
     ),
   ),
@@ -414,11 +414,11 @@ Interestingly, tasks corresponding to modulo 2, 3, 5, and 7 generalized in succe
   stack(
     dir: ttb,
     image(
-      "/public/assets/miiii/" + f_hash + "/loss_train_training.svg",
+      "/src/assets/miiii/" + f_hash + "/loss_train_training.svg",
       width: 85%,
     ),
     image(
-      "/public/assets/miiii/" + f_hash + "/loss_valid_training.svg",
+      "/src/assets/miiii/" + f_hash + "/loss_valid_training.svg",
       width: 85%,
     ),
   ),
@@ -433,7 +433,7 @@ Positional embeddings play a crucial role in transformers by encoding the positi
 For $cal(T)_"nanda"$, which involves a commutative task, the positional embeddings are virtually identical, with a Pearson correlation of 0.95, reflecting that the position of input tokens does not significantly alter their contribution to the task. In contrast, for $cal(T)_"miiii"$, the positional embeddings have a Pearson correlation of -0.64, indicating that the embeddings for the two positions are different. This difference is expected due to the non-commutative nature of the task, where the order of $x_0$ and $x_1$ matters ($x_0 dot p^0 != x_0 dot p^1$). This confirms that the model appropriately encodes position information for solving the tasks.
 
 #figure(
-  image("/public/assets/miiii/pos_emb.svg"),
+  image("/src/assets/miiii/pos_emb.svg"),
   caption: [Positional embeddings for $(x_0, x_1)$ for models trained on $cal(T)_"nanda"$ (top) and $cal(T)_"miiii"$ (bottom). Pearson's correlation is 0.95 and -0.64 respectively. This reflects the commutativity of $cal(T)_"nanda"$ and the lack thereof for $cal(T)_"miiii"$. Hollow cells indicate negative numbers.],
 )<pos_emb>
 
@@ -445,19 +445,19 @@ Recall that a matrix $upright(bold(M))$ of size $m times n$ can be decomposed to
 
 #figure(
   stack(
-    image("/public/assets/miiii/nanda_S.svg"),
-    image("/public/assets/miiii/miiii_S.svg"),
+    image("/src/assets/miiii/nanda_S.svg"),
+    image("/src/assets/miiii/miiii_S.svg"),
   ),
   caption: [First 83 of 113 singular values (truncated for clarity) of $upright(text(U))$ for $cal(T)_"nanda"$ (top) and $cal(T)_"miiii"$ (bottom). The ticks indicate the points where 50% and 90% of the variance is accounted for. We thus see that for $cal(T)_"miiii"$, the embedding space is much more crammed.],
 )<s>
 
 #figure(
-  image("/public/assets/miiii/nanda_U.svg"),
+  image("/src/assets/miiii/nanda_U.svg"),
   caption: [$cal(T)_"nanda"$'s most significant (cutoff at 0.5 as per @s) singular vectors of $upright(text(U))$ from the singular value decomposition. Note this looks periodic!],
 )<p_U>
 
 #figure(
-  image("/public/assets/miiii/miiii_U.svg"),
+  image("/src/assets/miiii/miiii_U.svg"),
   caption: [$cal(T)_"miiii"$'s most significant vectors of $upright(text(U))$. Note that, like in @p_U, we still observe periodicity, but there are more frequencies in play, as further explored in @miiii_fft.],
 )<f_U>
 
@@ -475,8 +475,8 @@ Comparing with $cal(T)_"basis"$ in figure @baseline_fft, the periodicity is unde
 #figure(
   stack(
     dir: ttb,
-    image("/public/assets/miiii/fourier_nanda_m.svg"),
-    image("/public/assets/miiii/fourier_nanda_f.svg"),
+    image("/src/assets/miiii/fourier_nanda_m.svg"),
+    image("/src/assets/miiii/fourier_nanda_f.svg"),
   ),
   caption: [$cal(T)_"nanda"$ tokens in Fourier basis: Note how all tokens are essentially linear combinations of the five most dominant Fourier basis vectors. The sparsity echoes the findings in @s that very few directions in the embedding space are used.],
 )<nanda_fft>
@@ -485,8 +485,8 @@ Comparing with $cal(T)_"basis"$ in figure @baseline_fft, the periodicity is unde
 #figure(
   stack(
     dir: ttb,
-    image("/public/assets/miiii/fourier_miiii_m.svg"),
-    image("/public/assets/miiii/fourier_miiii_f.svg"),
+    image("/src/assets/miiii/fourier_miiii_m.svg"),
+    image("/src/assets/miiii/fourier_miiii_f.svg"),
   ),
   caption: [The periodicity in the $cal(T)_"miiii"$ embeddings involves a much larger fraction of the Fourier basis, echoing the multiple tasks and their innate difference in frequency (recall that all tasks are performed on unique primes $q$).],
 )<miiii_fft>
@@ -494,8 +494,8 @@ Comparing with $cal(T)_"basis"$ in figure @baseline_fft, the periodicity is unde
 
 #figure(
   stack(
-    image("/public/assets/miiii/fourier_basis_m.svg"),
-    image("/public/assets/miiii/fourier_basis_f.svg"),
+    image("/src/assets/miiii/fourier_basis_m.svg"),
+    image("/src/assets/miiii/fourier_basis_f.svg"),
   ),
   caption: [Embeddings for $cal(T)_"basis"$ in Fourier basis have no periodicity. The periodicity is indeed an artifact of the modulo operator.],
 )<baseline_fft>
@@ -510,8 +510,8 @@ To understand the internal mechanisms developed by the model, we analyzed the ne
 #figure(
   stack(
     dir: ttb,
-    image("/public/assets/miiii/neurs_113_miiii_three.svg"),
-    image("/public/assets/miiii/neurs_113_miiii_fft_three.svg"),
+    image("/src/assets/miiii/neurs_113_miiii_three.svg"),
+    image("/src/assets/miiii/neurs_113_miiii_fft_three.svg"),
   ),
   caption: [We plot the activation of the first three neurons of the activations immediately following ReLU in @ffwd as $x_0$ and $x_1$ vary (top). Note we only show the top $37 times 37$ corner of the full $133 times 113$ sample matrix. Here too we see periodicity, confirmed by a Fourier transform (bottom). Neurons are reactive to highly particular frequencies in their input domains.],
 )<miiii_neurons>
@@ -521,8 +521,8 @@ For comparison, @basis_neurons shows the neuron activations for a model trained 
 #figure(
   stack(
     dir: ttb,
-    image("/public/assets/miiii/neurs_113_basis.svg"),
-    image("/public/assets/miiii/neurs_113_basis_fft.svg"),
+    image("/src/assets/miiii/neurs_113_basis.svg"),
+    image("/src/assets/miiii/neurs_113_basis_fft.svg"),
   ),
   caption: [Neuron activations for model trained on $cal(T)_"basis"$. As in @baseline_fft, no periodicity is observed for the baseline.],
 )<basis_neurons>
@@ -532,8 +532,8 @@ The analysis of active frequencies _through training_ using the Fast Fourier Tra
 #figure(
   stack(
     dir: ttb,
-    image("/public/assets/miiii/miiii_large_finding.svg"),
-    image("/public/assets/miiii/miiii_small_finding.svg"),
+    image("/src/assets/miiii/miiii_large_finding.svg"),
+    image("/src/assets/miiii/miiii_small_finding.svg"),
   ),
   caption: [Top: Frequency dominance is averaged over neurons through training (average activation of frequencies as shown in @miiii_neurons). We see four distinct phases: _1)_ no significant frequencies, _2)_ frequencies gradually emerging, _3)_ a wall of frequencies, and _4)_ frequency count similar to phase 2. Bottom: total number of active frequencies at the corresponding time step. A frequency $omega$ is active when $omega > mu + 2 sigma$ (a frequently used signal processing default).],
 )<finding>
@@ -562,7 +562,7 @@ The analysis of active frequencies _through training_ using the Fast Fourier Tra
 @l2_norms shows the L2 norms of gradients through time for the different weight matrices of the model trained on $cal(T)_"miiii"$. The gradient norms provide insights into how different parts of the model are being updated during training. Like with #cite(<nanda2023>, form:"prose", style:"american-psychological-association"), the attention layer converges quickly, echoing their finding that it does not contribute much to solving their modular arithmetic task.
 
 #figure(
-  image("/public/assets/miiii/grads_norms_miiii.svg"),
+  image("/src/assets/miiii/grads_norms_miiii.svg"),
   caption: [L2 norms of gradients over time for the different weight matrices of the model trained on $cal(T)_"miiii"$.
     Row order corresponds to how deep in the model the weight is used.
     This shows when during training what parts of the model are updated. `e.*` are embeddings @embed, `a.*` attention layer weights @attn, and `w.*` weights of the feed-forward module @ffwd (`e.u` being the final un-embedding layer.)],
@@ -582,8 +582,8 @@ Combining the analysis of embeddings and the transformer block neurons, we see t
 
 #figure(
   stack(
-  image("/public/assets/miiii/miiii_wei.svg", width: 110%),  // TODO insert nanda attention, and comment that this might be due to comutativty.
-  image("/public/assets/miiii/nanda_wei.svg", width: 110%),  // TODO insert nanda attention, and comment that this might be due to comutativty.
+  image("/src/assets/miiii/miiii_wei.svg", width: 110%),  // TODO insert nanda attention, and comment that this might be due to comutativty.
+  image("/src/assets/miiii/nanda_wei.svg", width: 110%),  // TODO insert nanda attention, and comment that this might be due to comutativty.
 ),
   caption: [Attention from $hat(y)$ to $x_0$ for the four attention heads in the $cal(T)_"miiii"$ model. The attention heads tend to focus on one digit, reflecting the non-commutative nature of the task.],
 )<attention_heads>
