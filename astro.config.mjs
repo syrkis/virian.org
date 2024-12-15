@@ -3,10 +3,14 @@ import { defineConfig } from "astro/config";
 // import { defineCollection, z } from "astro:content";
 import { typst } from "astro-typst";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 // astro.config.mjs
 export default defineConfig({
-  base: "/", // Add this line
+  // Add this line
+  base: "/",
+
   integrations: [
     typst({
       options: {
@@ -14,14 +18,18 @@ export default defineConfig({
       },
     }),
   ],
+
   markdown: {
     syntaxHighlight: false,
   },
+
   vite: {
     ssr: {
       external: ["@myriaddreamin/typst-ts-node-compiler"],
     },
   },
+
+  // adapter: netlify(),
 });
 
 // const typCollection = defineCollection({

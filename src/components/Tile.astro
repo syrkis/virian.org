@@ -1,0 +1,91 @@
+---
+import { formatDate } from "../utils/date";
+import Cover from "./Cover.astro";
+
+interface Props {
+    frontmatter: {
+        slug: string;
+        title: string;
+        cover: string;
+        author?: string;
+        date?: string;
+    };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<div class="post">
+    <a href={`/${frontmatter.slug}`}>
+        <Cover src={frontmatter.cover} slug={frontmatter.slug} />
+        <!-- {frontmatter.cover && <img src={frontmatter.cover} alt={`Cover image for ${frontmatter.title}`} />} -->
+        <h2>{frontmatter.title}</h2>
+        <div class="meta">
+            {frontmatter.author && <span class="author">{frontmatter.author}</span>}
+            {frontmatter.date && <span class="date">{formatDate(frontmatter.date)}</span>}
+        </div>
+    </a>
+</div>
+
+<style>
+    h2 {
+        text-transform: uppercase;
+        font-size: clamp(1.2rem, 4vw, 2rem);
+    }
+    .post {
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .post:hover {
+        transform: scale(1.05);
+    }
+
+    .post a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .post img {
+        max-width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        /* margin-bottom: 1rem; */
+        border-radius: 8px;
+    }
+
+    .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        font-size: 0.9em;
+    }
+
+    @media (min-width: 768px) {
+        .meta {
+            padding: 0 5rem;
+        }
+    }
+
+    .author {
+        text-align: left;
+    }
+
+    .date {
+        text-align: right;
+        font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+        .meta {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .author,
+        .date {
+            text-align: center;
+        }
+    }
+</style>

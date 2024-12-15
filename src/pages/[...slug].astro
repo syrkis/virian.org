@@ -1,9 +1,8 @@
 ---
-import { Typst } from "astro-typst/src/components";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import Cover from "../components/Cover.astro";
-import path from "node:path";
+import Post from "../components/Post.astro";
 
 export async function getStaticPaths() {
     const posts = import.meta.glob("../pages/posts/*.typ", { eager: true });
@@ -12,7 +11,7 @@ export async function getStaticPaths() {
         const slug = path.split("/").pop()?.replace(".typ", "");
         return {
             params: { slug },
-            props: { post }, // Pass the post data as props
+            props: { post },
         };
     });
 }
@@ -20,8 +19,6 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 const { frontmatter } = post;
-
-const filePath = path.join(process.cwd(), "src", "pages", "posts", `${slug}.typ`);
 ---
 
 <Layout>
@@ -29,19 +26,48 @@ const filePath = path.join(process.cwd(), "src", "pages", "posts", `${slug}.typ`
     <div class="cover">
         <Cover src={frontmatter.cover} slug={frontmatter.slug} />
     </div>
-    <div class="typst">
-        <Typst client:visible src={filePath} remPx={10} props={{ width: "100%", height: "auto" }} />
-    </div>
+
+    <Post server:defer {slug}>
+        <div slot="fallback" class="skeleton-content">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+        </div>
+    </Post>
 </Layout>
 
 <style>
     .cover {
         padding: 10vh 0;
     }
-    .typst {
-        width: 95vw;
+    .skeleton-content {
+        padding: 1rem;
         max-width: 1200px;
         margin: 0 auto;
+    }
+    .skeleton-line {
+        height: 1rem;
+        background: #eee;
+        margin: 0.5rem 0;
+        border-radius: 4px;
+        animation: pulse 1.5s infinite;
+    }
+    .skeleton-line:nth-child(2) {
+        width: 90%;
+    }
+    .skeleton-line:nth-child(3) {
+        width: 75%;
+    }
+    @keyframes pulse {
+        0% {
+            opacity: 0.6;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.6;
+        }
     }
 </style>
 

@@ -5,7 +5,7 @@ interface Props {
     text: string;
 }
 
-import Post from "./Post.astro";
+import Tile from "./Tile.astro";
 
 const { type } = Astro.props;
 const text = Astro.props.text;
@@ -23,7 +23,7 @@ const allPosts = Object.values(import.meta.glob("../pages/posts/*.typ", { eager:
         <h3>
             — {type === "code" ? "PROJECTS" : "WRITINGS"} —
         </h3>
-        {allPosts.map((post: any) => <Post frontmatter={post.frontmatter} />)}
+        {allPosts.map((post: any) => <Tile frontmatter={post.frontmatter} />)}
     </div>
 </div>
 
