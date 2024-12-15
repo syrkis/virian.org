@@ -22,52 +22,21 @@ const { frontmatter } = post;
 ---
 
 <Layout>
-    <Header />
-    <div class="cover">
-        <Cover src={frontmatter.cover} slug={frontmatter.slug} />
-    </div>
-
-    <Post server:defer {slug}>
-        <div slot="fallback" class="skeleton-content">
-            <div class="skeleton-line"></div>
-            <div class="skeleton-line"></div>
-            <div class="skeleton-line"></div>
+    <div class="container">
+        <Header />
+        <div class="cover">
+            <Cover src={frontmatter.cover} slug={frontmatter.slug} />
         </div>
-    </Post>
-</Layout>
 
+        <Post server:defer {slug} />
+    </div>
+</Layout>
 <style>
+    .container {
+        min-height: 150vh;
+    }
     .cover {
         padding: 10vh 0;
-    }
-    .skeleton-content {
-        padding: 1rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .skeleton-line {
-        height: 1rem;
-        background: #eee;
-        margin: 0.5rem 0;
-        border-radius: 4px;
-        animation: pulse 1.5s infinite;
-    }
-    .skeleton-line:nth-child(2) {
-        width: 90%;
-    }
-    .skeleton-line:nth-child(3) {
-        width: 75%;
-    }
-    @keyframes pulse {
-        0% {
-            opacity: 0.6;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0.6;
-        }
     }
 </style>
 
@@ -76,7 +45,7 @@ const { frontmatter } = post;
         const path = window.location.pathname;
         if (path !== "/" && path !== "/code" && path !== "/text") {
             window.scrollTo({
-                top: 200,
+                top: 150,
                 left: 0,
                 behavior: "instant",
             });
