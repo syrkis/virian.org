@@ -29,7 +29,7 @@ export const prerender = true;
             <Cover src={frontmatter.cover} slug={frontmatter.slug} />
         </div>
 
-        <Post server:defer {slug}>
+        <Post server:defer {slug} data-astro-prefetch>
             <div slot="fallback">rendered on client</div>
         </Post>
     </div>
