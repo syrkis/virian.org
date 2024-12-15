@@ -28,9 +28,12 @@ const { frontmatter } = post;
             <Cover src={frontmatter.cover} slug={frontmatter.slug} />
         </div>
 
-        <Post server:defer {slug} />
+        <Post server:defer {slug}>
+            <div slot="fallback">loading post content...</div>
+        </Post>
     </div>
 </Layout>
+
 <style>
     .container {
         min-height: 150vh;
