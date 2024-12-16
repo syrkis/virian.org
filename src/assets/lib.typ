@@ -24,6 +24,8 @@
     leading: 0.65em,
   )
 
+  set raw(align: left)
+
   // Headings styling
   show heading: it => {
     set text(weight: "regular")

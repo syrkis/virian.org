@@ -52,14 +52,17 @@ export const prerender = true;
 </style>
 
 <script>
-    document.addEventListener("astro:page-load", () => {
-        const path = window.location.pathname;
-        if (path !== "/" && path !== "/code" && path !== "/text") {
+    let previousPath = window.location.pathname;
+
+    document.addEventListener("astro:after-swap", () => {
+        const currentPath = window.location.pathname;
+        if (currentPath !== previousPath && currentPath !== "/" && currentPath !== "/code" && currentPath !== "/text") {
             window.scrollTo({
                 top: 150,
                 left: 0,
                 behavior: "instant",
             });
         }
+        previousPath = currentPath;
     });
 </script>
