@@ -1,5 +1,5 @@
 ---
-layout: ../../Layouts/Layout.astro
+layout: ../../layouts/Layout.astro
 title: "Gödel, Escher, Bach"
 pubDate: 2022-07-01
 description: "This is the first post of my new Astro blog."
