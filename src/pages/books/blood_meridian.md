@@ -1,28 +1,9 @@
 ---
 title: "Blood Meridian or the Evening Redness in the West"
+author: Cormac McCarthy
 pubDate: 2022-07-01
-description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
-image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
-tags: ["astro", "blogging", "learning in public"]
+link: https://bookshop.org/a/94641/9780679728757
+image: "https://images-us.bookshop.org/ingram/9780679728757.jpg?height=1200&v=v2"
 ---
 
-# My First Blog Post
-
-Published on: 2022-07-01
-
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
-
-## What I've accomplished
-
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+Blood Meridian, McCarthy's seminal (anti-)western, has the tone of scripture, but the feel of a nightmare. It is a paradoxical read. The book tells of a world so utterly disturbed that even its atoms seem cruel: "_[...] jagged mountains were pure blue in the dawn and everywhere birds twittered and the sun when it rose caught the moon in the west so that they lay opposed to each other across the earth, the sun whitehot and the moon a pale replica, as if they were the ends of a common bore beyond whose terminals burned worlds past all reckoning._" The text is pregnant with symbolism; burning trees, dormant volcanoes, and dying horses. Landscapes are so evocatively described that one might wonder whether some information theoretical limit has been broken; how does one's mind see so much, having read so little?

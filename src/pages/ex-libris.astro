@@ -10,9 +10,22 @@ const allBooks = Object.values(import.meta.glob("./books/*.md", { eager: true })
     <h1>EX LIBRIS</h1>
     {
         allBooks.map((post: any) => (
-            <li>
-                <a href={post.url}>{post.frontmatter.title}</a>
-            </li>
+            <a href={post.url}>
+                <div class="book">
+                    <h2>{post.frontmatter.title}</h2>
+                    <p>{post.frontmatter.author}</p>
+                    <Fragment set:html={post.compiledContent()} />
+                </div>
+            </a>
         ))
     }
 </Layout>
+
+<style>
+    .book {
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
