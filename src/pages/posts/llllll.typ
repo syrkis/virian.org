@@ -9,7 +9,7 @@
 
 #let title = "||||||"
 #let author = "Noah Syrkis"
-#let date = datetime(year: 2024, month: 11, day: 29)
+#let date = datetime(year: 2024, month: 12, day: 17)
 #let cover = "/temp.svg"
 
 #metadata((
@@ -29,3 +29,6 @@
 
 
 #show: doc => post(title: title, author: author, date: date, doc)
+
+
+@anne2024
