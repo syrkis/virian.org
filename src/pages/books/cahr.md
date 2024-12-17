@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Layout.astro
 title: "The Conspiracy Against the Human Race"
+author: Thomas Ligotti
 ---
 
 # The Conspiracy Against the Human Race
