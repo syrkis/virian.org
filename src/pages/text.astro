@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+// import Header from "../components/Header.astro";
 import List from "../components/List.astro";
 import Tile from "../components/Tile.astro";
 const text =
     "Though skeptically inclined we try a positive vision as we write about information technology and its cultural effect";
 const exLibris = {
-    slug: "ex-libris",
+    slug: "exlibris",
     // author: "Noah Syrkis",
     title: "Ex Libris — A Collection of Recommended Readings",
     cover: "/test.svg",
@@ -14,21 +15,11 @@ const exLibris = {
 ---
 
 <Layout>
-    <List type="text" {text} />
-
     <div class="exLibirs">
+        <Tile frontmatter={exLibris} />
         <div class="line">
             <center>———————</center>
         </div>
-        <Tile frontmatter={exLibris} />
     </div>
+    <List type="text" {text} />
 </Layout>
-
-<style>
-    .line {
-        padding-bottom: 10vh;
-    }
-    .exLibirs {
-        padding: 10vh 0;
-    }
-</style>

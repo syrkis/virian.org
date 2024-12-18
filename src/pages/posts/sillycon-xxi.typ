@@ -1,3 +1,4 @@
+
 // head
 #import "/src/assets/lib.typ": post
 #let title = "SillyCon 21"
@@ -11,6 +12,7 @@
   cover: cover,
   slug: "sillycon-xxi",
   type: "text",
+  published: false,
   date: date,
 ))<frontmatter>
 

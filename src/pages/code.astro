@@ -1,10 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import List from "../components/List.astro";
+import Tile from "../components/Tile.astro";
 const text = // cultural geometry
     "We apply machine learning to domains like neuroscience, cultural geometry, command and control, deep learning and more";
+const services = {
+    slug: "services",
+    title: "Services",
+    cover: "/test.svg",
+};
 ---
 
 <Layout>
+    <div class="exLibirs">
+        <Tile frontmatter={services} />
+        <div class="line">
+            <center>———————</center>
+        </div>
+    </div>
     <List type="code" {text} />
 </Layout>

@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Header.astro";
+// import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import Cover from "../components/Cover.astro";
 import Post from "../components/Post.astro";
@@ -34,7 +34,7 @@ export const prerender = true;
 
 <Layout>
     <div class="container">
-        <Header />
+        <!-- <Header /> -->
         <div class="cover">
             <Cover src={frontmatter.cover} slug={frontmatter.slug} />
         </div>

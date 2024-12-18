@@ -7,6 +7,8 @@ import netlify from "@astrojs/netlify";
 
 import vue from "@astrojs/vue";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 // astro.config.mjs
 export default defineConfig({
@@ -16,7 +18,7 @@ export default defineConfig({
     options: {
       remPx: 14,
     },
-  }), vue()],
+  }), vue(), mdx()],
 
   markdown: {
     syntaxHighlight: false,

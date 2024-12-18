@@ -14,6 +14,7 @@
 
 #metadata((
   title: title,
+  published: true,
   author: author,
   cover: cover,
   slug: "stereotype",

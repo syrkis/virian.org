@@ -6,8 +6,16 @@ body {
     height: 100%;
     line-height: 2.5;
     letter-spacing: 0.05rem;
-    font-size: 1.1em;
+    hyphens: auto;
+    font-size: 1.2em;
     font-family: "Latin Modern Roman", serif;
+}
+
+@media (max-width: 600px) {
+    html,
+    body {
+        font-size: 1em;
+    }
 }
 
 h1,
@@ -38,4 +46,30 @@ a {
     img {
         filter: invert(1);
     }
+}
+
+.text {
+    font-size: clamp(0.9rem, 3vw, 1.1em);
+    text-align: center;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.line {
+    padding-top: 10vh;
+}
+.exLibirs {
+    overflow: hidden;
+    padding: 10vh 0;
+    position: relative;
+}
+
+p {
+    margin: 0 auto;
+    max-width: 700px;
+    /* width: 800px; */
+    /* text-align: justify; */
+    text-justify: inter-word;
 }

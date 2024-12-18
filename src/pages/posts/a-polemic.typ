@@ -11,7 +11,7 @@
   author: author,
   cover: cover,
   published: false,
-  slug: "esch",
+  slug: "a-polemic",
   type: "code",
   date: date,
 ))<frontmatter>

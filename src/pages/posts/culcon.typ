@@ -15,6 +15,7 @@
 #metadata((
   title: title,
   author: author,
+  published: false,
   cover: cover,
   slug: "culcon",
   type: "code",
