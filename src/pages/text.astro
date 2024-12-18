@@ -6,14 +6,29 @@ const text =
     "Though skeptically inclined we try a positive vision as we write about information technology and its cultural effect";
 const exLibris = {
     slug: "ex-libris",
-    author: "Noah Syrkis",
-    title: "Ex Libris",
+    // author: "Noah Syrkis",
+    title: "Ex Libris — A Collection of Recommended Readings",
     cover: "/test.svg",
-    date: "2021-09-01",
+    // date: "2021-09-01",
 };
 ---
 
 <Layout>
     <List type="text" {text} />
-    <Tile frontmatter={exLibris} />
+
+    <div class="exLibirs">
+        <div class="line">
+            <center>———————</center>
+        </div>
+        <Tile frontmatter={exLibris} />
+    </div>
 </Layout>
+
+<style>
+    .line {
+        padding-bottom: 10vh;
+    }
+    .exLibirs {
+        padding: 10vh 0;
+    }
+</style>
