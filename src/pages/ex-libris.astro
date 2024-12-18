@@ -16,6 +16,7 @@ const allBooks = Object.values(import.meta.glob("./books/*.md", { eager: true })
                         <div class="book-left">
                             <h2>{post.frontmatter.title}</h2>
                             <p>{post.frontmatter.author}</p>
+                            <p>{post.frontmatter.year}</p>
                         </div>
                         <div class="book-right">
                             <Fragment set:html={post.compiledContent()} />

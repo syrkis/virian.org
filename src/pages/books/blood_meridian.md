@@ -1,7 +1,7 @@
 ---
-title: "Blood Meridian or the Evening Redness in the West"
+title: "Blood Meridian; or, The Evening Redness in the West"
 author: Cormac McCarthy
-pubDate: 2022-07-01
+year: 1985
 link: https://bookshop.org/a/94641/9780679728757
 image: "https://images-us.bookshop.org/ingram/9780679728757.jpg?height=1200&v=v2"
 ---
