@@ -3,6 +3,8 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 const { title } = Astro.props;
 import "../styles/global.css";
+
+const isRoot = Astro.url.pathname === "/";
 ---
 
 <!-- <!doctype html> -->
@@ -24,7 +26,9 @@ import "../styles/global.css";
         />
     </head>
     <body>
-        <Header />
+        <div style={isRoot ? "padding-top: 42vh;" : ""}>
+            <Header />
+        </div>
         <slot />
         <Footer />
     </body>
