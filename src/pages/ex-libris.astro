@@ -36,6 +36,7 @@ const allBooks = Object.values(import.meta.glob("./books/*.md", { eager: true })
     .book {
         display: grid;
         grid-template-columns: 1fr 2fr;
+        text-align: justify;
         gap: 1rem;
         margin: 1rem 0;
         padding: 10vh 0;
