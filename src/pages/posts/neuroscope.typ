@@ -1,4 +1,5 @@
 #import "/src/assets/lib.typ": post
+#import "@preview/cetz:0.3.1"
 #import "@preview/unify:0.6.1": num // <- for making numbers look nice
 #import "@preview/equate:0.2.1": equate // <- for numbering equations
 
@@ -7,16 +8,16 @@
 #set raw(align: center)
 
 
-#let title = "Lock Picking The Brain"
+#let title = "Deep Decoding the Cerebral Cortex"
 #let author = "Noah Syrkis"
 #let date = datetime(year: 2024, month: 12, day: 16)
-#let cover = "/temp.svg"
+#let cover = "/neuroscope.svg"
 
 #metadata((
   title: title,
   author: author,
   cover: cover,
-  published: false,
+  published: true,
   slug: "neuroscope",
   type: "code",
   date: date,
@@ -30,6 +31,34 @@
   body
 }
 
+"On latitudes this low the sun sets orthogonally to the horizon"—such is the opening line of Methyl Orange.
+"With all its vertical velocity it moved quickly beneath the edge of the world down towards another,"
+the book continues. That the sun sets more quickly the closer one gets to the equatorial line,
+is rarely appraciated by the peoples there,
+since it is a quality only made aparent by comparison to a pooint much further towars the poles—an expression rarely afforded to most.
+
+
+
+#figure(
+  cetz.canvas({
+    import cetz.draw: *
+    line((0, 0), (5, 0))
+    set-style(mark: (end: ">"))
+    line((2.9, 0.97), (5, 0.5))
+    line((2.5, 0.6), (2.5, 0.1))
+    circle((2.5, 1), radius: 0.3)
+    // arrow((0, 0), (10, 0))
+    // line((5, 5), (5, -5))
+  }),
+  caption: [Two possible trajectories of the sun],
+)
+
+
+That cartography has a place in geography is a truism. Ineed, perhaps the first thing we ever had to navigate was the world, with all its hills, valeys, treasureous paths, rivers, and land marks, etc. Much of this is done by the amygduly, a near the brain stem, part of the primitivae brain, indicating the primodial need for navigation of landscapes.
+The history of war is largely one of landscapes, read any memoir of a battle. Futher, the expresison geography is destiny aludes to the importance of the geographic world. Farely self explanatory.
+Making the rules that govern the shape of the world excplit has been a prerequisite for our modern world. Much has been writting about the relationships between maps and terretories @fischl1999. The most similar geographical counterpart to the cerebral cortex is perhaps Vale da Lua in Goiás, Brazil.
+
+The 1999 atlas of the brain `fsaverage`
 #quote(
   [Neurons that fire together, wire together],
   attribution: "Carla J. Shatz",
