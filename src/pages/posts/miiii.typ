@@ -85,7 +85,7 @@ $<miiii_task>
 $cal(T)_("miiii")$ differentiates itself from $cal(T)_("nanda")$ in two significant ways: _1)_ it is non-commutative, and _2)_ it is, as mentioned, multi-task. These differences present unique challenges for mechanistic interpretation, as the model must learn to handle both the order-dependent nature of the inputs and develop shared representations across multiple modular arithmetic tasks. Further, as $cal(T)_("miiii")$ is harder than $cal(T)_("nanda")$ the model can be expected to generalize slower when trained on the former. Therefore, #cite(<lee2024a>, form:"prose", style:"american-psychological-association")'s recent work on speeding up generalization by positing the model parameters gradients through time can be viewed as a sum of _1)_ a slow varying generalizing component (which is boosted), and _2)_, a quick varying overfitting component (which is suppressed), is (successfully) replicated to make training tractable.
 
 #figure(
-  image("/src/assets/figs/miiii/polar.svg", width: 120%),
+  image("/src/assets/figs/miiii/polar.svg", width: 100%),
   caption: [
     Visualizing natural numbers less than #num(12769) in polar coordinates $(n, n mod 2 pi)$. Left: union of numbers with remainder 0 mod 17 and 23 (see the two spirals). Middle: numbers with remainder 0 mod 11. Right: prime numbers.
     It is shown here to encourage the reader to think in periodic terms.
