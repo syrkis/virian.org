@@ -73,3 +73,16 @@ p {
     /* text-align: justify; */
     text-justify: inter-word;
 }
+
+/* .typst-page {
+    display: none;
+}
+.typst-page.active {
+    display: block;
+} */
+
+.typst {
+    width: 95vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}

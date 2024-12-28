@@ -12,7 +12,11 @@ export async function getStaticPaths() {
     return await Promise.all(
         Object.entries(posts).map(async ([filepath, post]: [string, any]) => {
             const slug = filepath.split("/").pop()?.replace(".typ", "");
-            const fullPath = path.join(process.cwd(), "src/pages/posts", `${slug}.typ`);
+            const fullPath = path.join(
+                process.cwd(),
+                "src/pages/posts",
+                `${slug}.typ`,
+            );
             const code = await fs.readFile(fullPath, "utf-8");
 
             return {
@@ -56,7 +60,12 @@ export const prerender = true;
 
     document.addEventListener("astro:after-swap", () => {
         const currentPath = window.location.pathname;
-        if (currentPath !== previousPath && currentPath !== "/" && currentPath !== "/code" && currentPath !== "/text") {
+        if (
+            currentPath !== previousPath &&
+            currentPath !== "/" &&
+            currentPath !== "/code" &&
+            currentPath !== "/text"
+        ) {
             window.scrollTo({
                 top: 150,
                 left: 0,

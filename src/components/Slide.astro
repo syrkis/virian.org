@@ -1,0 +1,46 @@
+---
+// Import the Typst component from astro-typst
+import { Typst } from "astro-typst/src/components";
+import Layout from "../layouts/Layout.astro";
+
+// Define the Typst content with the new content
+const typstContent = `
+#import "@preview/touying:0.5.5": *
+#import themes.simple: *
+
+#show: simple-theme.with(aspect-ratio: "16-9")
+
+= Title
+
+== First Slide
+
+Hello, Touying!
+
+#pause
+
+Hello, Typst!
+`;
+
+export const prerender = true;
+---
+
+<Layout>
+    <div class="container">
+        <h1>Slide Presentation</h1>
+        <div class="typst">
+            <Typst
+                code={typstContent}
+                remPx={10}
+                props={{ width: "100%", height: "auto" }}
+            />
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .container {
+        min-height: 100vh;
+        padding: 2rem;
+        text-align: center;
+    }
+</style>
