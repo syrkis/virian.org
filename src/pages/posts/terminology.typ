@@ -55,9 +55,9 @@ We see clearly that the fifth postulate stands out. It is longer (comparable to 
   caption: [Euclid's Fifth Postulate],
 )<fifth>
 
-Only in 1872 was the problem finally resolved by the Erlangen program @klein2004. The fifth postulate, rather than being a true property of geometry that we were so far unable to prove, was but a postulate of a particular _kind_ of geometry, now known as Euclidean geometry. Geometry, however, is much broader than that. The Erlangen program paved the way for non-Euclidean geometry, famous examples of which are hyperbolic geometry and elliptic geometry, both of which follow from varying the fifth postulate, and are in broad use today, a prerequisite for much of physics, engineering, math, etc. Non-Euclidean geometries surround us: we live on a sphere, many conceptual spaces seem to bend in all kinds of strange ways, etc. So why the multi-millennia-long confusion? It has been argued @hofstadter2000 that the use of the terms "line" and "point" in Euclid's postulates were so pregnant with association from our real-world experience, that we implicitly, without knowing so, attributed qualities to these mathematical constructs. If using the terms "line" and "point" will lead humanity on a two-millennia-long treasure hunt, what might terms like "artificial intelligence", "neural network", and "evolutionary computation" do to our clarity of thought?
+Only in 1872 was the problem finally resolved by the Erlangen program @klein2004. The fifth postulate, rather than being a true property of geometry that we were so far unable to prove, was but a postulate of a particular _kind_ of geometry, now known as Euclidean geometry. Geometry, however, is much broader than that. The Erlangen program paved the way for non-Euclidean geometry, famous examples of which are hyperbolic geometry and elliptic geometry, both of which follow from varying the fifth postulate, and are in broad use today, a prerequisite for much of physics, engineering, math, etc. Non-Euclidean geometries surround us: we live on a sphere, many conceptual spaces seem to bend in all kinds of strange ways. Indeed, #cite(<bronstein2021>, form:"prose") introduces geometry deep learning. So why the multi-millennia-long confusion? It has been argued @hofstadter2000 that the use of the terms "line" and "point" in Euclid's postulates were so pregnant with association from our real-world experience, that we implicitly, without knowing so, attributed qualities to these mathematical constructs. If using the terms "line" and "point" will lead humanity on a two-millennia-long treasure hunt, what might terms like "artificial intelligence", "neural network", and "evolutionary computation" do to our clarity of thought?
 
-These terms are obviously sexy to say. The terms are sure to have played essential roles in fundraising, product pitching, PhD applications, and even the occasional one-night stand. But alas if the price of unnoted confusion is a halt to progress, something must be done. It is in this spirit that we produce the dictionary for clarity of thought seen in @dict. You, dear reader, are encouraged to use these terms in academic writing, but fear not, for one-night stands and fundraising, it is easy to go the other way.
+These terms are obviously sexy to say. The terms are sure to have played essential roles in fundraising, product pitching, PhD applications, and even the occasional one-night stand. But alas if the price of unnoted confusion is a halt to progress, something must be done. Clarity of thought is a core value of the Virian Project, and thus, it is in this spirit that we produce the dictionary for clarity of thought seen in @dict. If nukes, as some have said, are viagra for politicians @sirkis2020a, so too the use of these overly smart sounding terms is for the scientist. You, dear reader to the extent that the profession applies, are encouraged to use these terms in academic writing, but fear not, for one-night stands and fundraising, pop a pill, and go from the 2nd to 1st column.
 
 #figure(
   table(
@@ -65,8 +65,8 @@ These terms are obviously sexy to say. The terms are sure to have played essenti
     inset: 10pt,
     align: horizon,
     table.header(
-      [*old term*],
-      [*new term*],
+      [_Viagra term_],
+      [_Virian term_],
     ),
 
     "neural network", "layered filter",
@@ -77,5 +77,5 @@ These terms are obviously sexy to say. The terms are sure to have played essenti
     "artificial intelligence", "",
     "machine learning", "",
   ),
-  caption: [The Virian Dictionary],
+  // caption: [The Virian Dictionary],
 )<dict>
