@@ -65,8 +65,8 @@ These terms are obviously sexy to say. The terms are sure to have played essenti
     inset: 10pt,
     align: horizon,
     table.header(
-      [*sexy term*],
-      [*clear term*],
+      [*old term*],
+      [*new term*],
     ),
 
     "neural network", "layered filter",
@@ -77,4 +77,5 @@ These terms are obviously sexy to say. The terms are sure to have played essenti
     "artificial intelligence", "",
     "machine learning", "",
   ),
+  caption: [The Virian Dictionary],
 )<dict>
