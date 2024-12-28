@@ -74,7 +74,7 @@ These terms are obviously sexy to say. The terms are sure to have played essenti
     "deep learning", "layered filter fitting",
     "evolutionary computation", "",
     "genetic programming", "",
-    "artificial intelligence", "fitting",
-    "machine learning", "machine fitting",
+    "artificial intelligence", "",
+    "machine learning", "",
   ),
 )<dict>
