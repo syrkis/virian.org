@@ -575,23 +575,23 @@ Combining the analysis of embeddings and the transformer block neurons, we see t
 3. The periodicity is an artifact of the modulo group by analysis of $cal(T)_"basis"$
 
 
-== Attention Patterns
-
-@attention_heads shows that, in contrast to the model trained on $cal(T)_"nanda"$, where attention heads may focus jointly on both input tokens in a periodic fashion, the attention heads for the $cal(T)_"miiii"$ model focus exclusively on one digit or the other. This behavior could be due to the non-commutative nature of the task, where the position of each digit significantly affects the outcome. #cite(<nanda2023>, form: "prose", style:"american-psychological-association") concludes that the attention mechanism does not contribute significantly#footnote[Neel Nanda has also stated (in a YouTube video) that a multi layer perceptron rather than a transformer-block would probably have been more appropriate for his setup. The transformer is used here due to the non-commutativity of $cal(T)_"miiii"$, and to stay close to Nanda's work.] to the solving of $cal(T)_"nanda"$, and will thus also not be explored further here.
-
-#figure(
-  stack(
-    image(
-      "/src/assets/figs/miiii/miiii_wei.svg",
-      width: 110%,
-    ), // TODO insert nanda attention, and comment that this might be due to comutativty.
-    image(
-      "/src/assets/figs/miiii/nanda_wei.svg",
-      width: 110%,
-    ), // TODO insert nanda attention, and comment that this might be due to comutativty.
-  ),
-  caption: [Attention from $hat(y)$ to $x_0$ for the four attention heads in the $cal(T)_"miiii"$ model. The attention heads tend to focus on one digit, reflecting the non-commutative nature of the task.],
-)<attention_heads>
+// == Attention Patterns
+//
+// @attention_heads shows that, in contrast to the model trained on $cal(T)_"nanda"$, where attention heads may focus jointly on both input tokens in a periodic fashion, the attention heads for the $cal(T)_"miiii"$ model focus exclusively on one digit or the other. This behavior could be due to the non-commutative nature of the task, where the position of each digit significantly affects the outcome. #cite(<nanda2023>, form: "prose", style:"american-psychological-association") concludes that the attention mechanism does not contribute significantly#footnote[Neel Nanda has also stated (in a YouTube video) that a multi layer perceptron rather than a transformer-block would probably have been more appropriate for his setup. The transformer is used here due to the non-commutativity of $cal(T)_"miiii"$, and to stay close to Nanda's work.] to the solving of $cal(T)_"nanda"$, and will thus also not be explored further here.
+//
+// #figure(
+// stack(
+// image(
+// "/src/assets/figs/miiii/miiii_wei.svg",
+// width: 110%,
+// ), // TODO insert nanda attention, and comment that this might be due to comutativty.
+// image(
+// "/src/assets/figs/miiii/nanda_wei.svg",
+// width: 110%,
+// ), // TODO insert nanda attention, and comment that this might be due to comutativty.
+// ),
+// caption: [Attention from $hat(y)$ to $x_0$ for the four attention heads in the $cal(T)_"miiii"$ model. The attention heads tend to focus on one digit, reflecting the non-commutative nature of the task.],
+// )<attention_heads>
 
 Overall, our results demonstrate that the model effectively learns to solve multiple modular arithmetic tasks by developing internal representations that capture the periodic nature of these tasks. The analysis of embeddings and neuron activations provides insights into how the model generalizes from simpler to more complex tasks, possibly through the reuse and integration of learned circuits. Interestingly, as will be discussed in , there are four significant shifts in the number of frequencies active in the neurons.
 

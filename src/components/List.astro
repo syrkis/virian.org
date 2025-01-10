@@ -10,10 +10,14 @@ import Tile from "./Tile.astro";
 const { type } = Astro.props;
 const text = Astro.props.text;
 
-const allPosts = Object.values(import.meta.glob("../pages/posts/*.typ", { eager: true }))
+const allPosts = Object.values(
+    import.meta.glob("../assets/posts/*.typ", { eager: true }),
+)
     .filter((post: any) => post.frontmatter.type === type)
     .filter((post: any) => post.frontmatter.published)
-    .sort((a: any, b: any) => (a.frontmatter.date > b.frontmatter.date ? -1 : 1));
+    .sort((a: any, b: any) =>
+        a.frontmatter.date > b.frontmatter.date ? -1 : 1,
+    );
 ---
 
 <!-- src/components/List.astro -->

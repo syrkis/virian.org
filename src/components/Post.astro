@@ -1,13 +1,14 @@
 ---
 // await new Promise((resolve) => setTimeout(resolve, 2000));
 import { Typst } from "astro-typst/src/components";
-import path from "node:path";
 
 const { code } = Astro.props;
-export const prerender = true;
+export const prerender = false;
 ---
 
 <div class="typst">
+    <!-- client:visible -->
+    <!-- server:defer -->
     <Typst {code} remPx={10} props={{ width: "100%", height: "auto" }} />
 </div>
 

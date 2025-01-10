@@ -7,14 +7,14 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 export async function getStaticPaths() {
-    const posts = import.meta.glob("../pages/posts/*.typ", { eager: true });
+    const posts = import.meta.glob("../assets/posts/*.typ", { eager: true });
 
     return await Promise.all(
         Object.entries(posts).map(async ([filepath, post]: [string, any]) => {
             const slug = filepath.split("/").pop()?.replace(".typ", "");
             const fullPath = path.join(
                 process.cwd(),
-                "src/pages/posts",
+                "src/assets/posts",
                 `${slug}.typ`,
             );
             const code = await fs.readFile(fullPath, "utf-8");

@@ -2,7 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 
-const allBooks = Object.values(import.meta.glob("./books/*.md", { eager: true }));
+const allBooks = Object.values(
+    import.meta.glob("../assets/books/*.md", { eager: true }),
+);
 ---
 
 <Layout>
@@ -11,7 +13,11 @@ const allBooks = Object.values(import.meta.glob("./books/*.md", { eager: true })
     <div class="books">
         {
             allBooks.map((post: any) => (
-                <a href={post.frontmatter.link} class="book-link" target="_blank">
+                <a
+                    href={post.frontmatter.link}
+                    class="book-link"
+                    target="_blank"
+                >
                     <div class="book">
                         <div class="book-left">
                             <h2>{post.frontmatter.title}</h2>
