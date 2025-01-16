@@ -70,8 +70,9 @@ These terms are obviously sexy to say. The terms are sure to have played essenti
     ),
 
     "neural network", "layered filter",
+    "deep learning", "layered filtering",
     "language model", "text model",
-    "deep learning", "layered filter fitting",
+    "foundation model", "modality model",
     "evolutionary computation", "",
     "genetic programming", "",
     "artificial intelligence", "",
