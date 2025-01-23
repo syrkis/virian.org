@@ -46,7 +46,7 @@ const emailDomain = "virian.com";
 </style>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    function attachEmailHandler() {
         const emailLink = document.querySelector(".email-link");
         if (emailLink) {
             const user = emailLink.getAttribute("data-user");
@@ -57,5 +57,11 @@ const emailDomain = "virian.com";
                 window.location.href = `mailto:${user}@${domain}`;
             });
         }
-    });
+    }
+
+    // Initial load
+    attachEmailHandler();
+
+    // Handle view transitions
+    document.addEventListener("astro:page-load", attachEmailHandler);
 </script>
