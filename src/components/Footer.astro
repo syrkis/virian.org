@@ -1,5 +1,7 @@
 ---
 const isRoot = Astro.url.pathname === "/";
+const emailUser = "desk";
+const emailDomain = "virian.com";
 ---
 
 {
@@ -10,7 +12,14 @@ const isRoot = Astro.url.pathname === "/";
                 <br />
                 for any inquiries, write
                 <br />
-                <a href="mailto:desk@virian.org">desk[at]virian.org</a>
+                <a
+                    href="#"
+                    class="email-link"
+                    data-user={emailUser}
+                    data-domain={emailDomain}
+                >
+                    {emailUser}[at]{emailDomain}
+                </a>
             </div>
         </footer>
     )
@@ -35,3 +44,18 @@ const isRoot = Astro.url.pathname === "/";
         text-decoration: underline;
     }
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const emailLink = document.querySelector(".email-link");
+        if (emailLink) {
+            const user = emailLink.getAttribute("data-user");
+            const domain = emailLink.getAttribute("data-domain");
+
+            emailLink.addEventListener("click", (e) => {
+                e.preventDefault();
+                window.location.href = `mailto:${user}@${domain}`;
+            });
+        }
+    });
+</script>
