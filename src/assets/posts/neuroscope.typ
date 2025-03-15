@@ -1,5 +1,5 @@
 #import "/src/assets/lib.typ": post
-#import "@preview/cetz:0.3.1"
+// #import "@preview/cetz:0.3.1"
 #import "@preview/unify:0.6.1": num // <- for making numbers look nice
 #import "@preview/equate:0.2.1": equate // <- for numbering equations
 
@@ -39,19 +39,19 @@ since it is a quality only made aparent by comparison to a pooint much further t
 
 
 
-#figure(
-  cetz.canvas({
-    import cetz.draw: *
-    line((0, 0), (5, 0))
-    set-style(mark: (end: ">"))
-    line((2.9, 0.97), (5, 0.5))
-    line((2.5, 0.6), (2.5, 0.1))
-    circle((2.5, 1), radius: 0.3)
-    // arrow((0, 0), (10, 0))
-    // line((5, 5), (5, -5))
-  }),
-  caption: [Two possible trajectories of the sun],
-)
+// #figure(
+// cetz.canvas({
+// import cetz.draw: *
+// line((0, 0), (5, 0))
+// set-style(mark: (end: ">"))
+// line((2.9, 0.97), (5, 0.5))
+// line((2.5, 0.6), (2.5, 0.1))
+// circle((2.5, 1), radius: 0.3)
+// arrow((0, 0), (10, 0))
+// line((5, 5), (5, -5))
+// ),
+// caption: [Two possible trajectories of the sun],
+// )
 
 
 That cartography has a place in geography is a truism. Ineed, perhaps the first thing we ever had to navigate was the world, with all its hills, valeys, treasureous paths, rivers, and land marks, etc. Much of this is done by the amygduly, a near the brain stem, part of the primitivae brain, indicating the primodial need for navigation of landscapes.

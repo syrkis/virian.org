@@ -42,7 +42,7 @@ export const prerender = true;
         <div class="cover">
             <Cover src={frontmatter.cover} slug={frontmatter.slug} />
         </div>
-        <Post code={code} />
+        <Post server:defer code={code} />
     </div>
 </Layout>
 

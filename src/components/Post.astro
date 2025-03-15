@@ -9,14 +9,17 @@ export const prerender = false;
 <div class="typst">
     <!-- client:visible -->
     <!-- server:defer -->
-    <Typst {code} remPx={10} props={{ width: "100%", height: "auto" }} />
+    <Typst {code} props={{ width: "100%", height: "auto" }} />
 </div>
 
 <style>
+    .typst :global(svg.typst-doc) {
+        height: auto !important; /* Override the inline height */
+    }
     .typst {
         width: 95vw;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: auto;
     }
     .loading {
         text-align: center;

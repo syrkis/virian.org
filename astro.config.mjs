@@ -14,11 +14,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   // Add this line
   base: "/",
-  integrations: [typst({
-    options: {
-      remPx: 14,
-    },
-  }), vue(), mdx()],
+  integrations: [typst(), vue(), mdx()],
 
   markdown: {
     syntaxHighlight: false,

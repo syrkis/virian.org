@@ -1,6 +1,6 @@
 #import "/src/assets/lib.typ": post
 #import "@preview/unify:0.6.1": num
-#import "@preview/cetz:0.3.1"
+// #import "@preview/cetz:0.3.1"
 
 #set raw(align: center)
 
@@ -42,18 +42,19 @@ We see clearly that the fifth postulate stands out. It is longer (comparable to 
 2. Mathematicians broadly thought the postulate could be derived from the first four.
 3. Mathematicians were unable to derive it from the first four.
 
-@fifth shows the fifth postulate visually: if two lines are not parallel, they will eventually cross exactly once; in our case a few centimeters to the right of where the figure ends.
+fifth shows the fifth postulate visually: if two lines are not parallel, they will eventually cross exactly once; in our case a few centimeters to the right of where the figure ends.
 
-#figure(
-  cetz.canvas({
-    import cetz.draw: *
-    // set align(center)
-    line((0, 0), (0, 5))
-    line((-2.5, 1), (2.5, 2))
-    line((-2.5, 4), (2.5, 3))
-  }),
-  caption: [Euclid's Fifth Postulate],
-)<fifth>
+// #figure(
+// cetz.canvas({
+// import cetz.draw: *
+// set align(center),
+// line((0, 0), (0, 5))
+// line((-2.5, 1), (2.5, 2))
+// line((-2.5, 4), (2.5, 3))
+// }),
+// caption: [Euclid's Fifth Postulate],
+
+<fifth>
 
 Only in 1872 was the problem finally resolved by the Erlangen program @klein2004. The fifth postulate, rather than being a true property of geometry that we were so far unable to prove, was but a postulate of a particular _kind_ of geometry, now known as Euclidean geometry. Geometry, however, is much broader than that. The Erlangen program paved the way for non-Euclidean geometry, famous examples of which are hyperbolic geometry and elliptic geometry, both of which follow from varying the fifth postulate, and are in broad use today, a prerequisite for much of physics, engineering, math, etc. Non-Euclidean geometries surround us: we live on a sphere, many conceptual spaces seem to bend in all kinds of strange ways. Indeed, #cite(<bronstein2021>, form:"prose") introduces geometry deep learning. So why the multi-millennia-long confusion? It has been argued @hofstadter2000 that the use of the terms "line" and "point" in Euclid's postulates were so pregnant with association from our real-world experience, that we implicitly, without knowing so, attributed qualities to these mathematical constructs. If using the terms "line" and "point" will lead humanity on a two-millennia-long treasure hunt, what might terms like "artificial intelligence", "neural network", and "evolutionary computation" do to our clarity of thought?
 
