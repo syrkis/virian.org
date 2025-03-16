@@ -1,7 +1,9 @@
-import { format, parse } from "date-fns";
+import { format } from "date-fns";
 
 export function formatDate(dateString: string) {
-  const match = dateString.match(/year:\s*(\d+),\s*month:\s*(\d+),\s*day:\s*(\d+)/);
+  const match = dateString.match(
+    /year:\s*(\d+),\s*month:\s*(\d+),\s*day:\s*(\d+)/,
+  );
   if (!match) return dateString;
 
   const [_, year, month, day] = match;

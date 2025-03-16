@@ -1,23 +1,18 @@
 ---
-// import Header from "./Header.astro";
+import { getCollection, getEntry } from "astro:content";
+import Tile from "./Tile.astro";
+
 interface Props {
     type: "code" | "text";
     text: string;
 }
 
-import Tile from "./Tile.astro";
-
 const { type } = Astro.props;
 const text = Astro.props.text;
 
-const allPosts = Object.values(
-    import.meta.glob("../assets/posts/*.typ", { eager: true }),
-)
-    .filter((post: any) => post.frontmatter.type === type)
-    .filter((post: any) => post.frontmatter.published)
-    .sort((a: any, b: any) =>
-        a.frontmatter.date > b.frontmatter.date ? -1 : 1,
-    );
+const posts = await getCollection("posts", ({ data }) => {
+    return data.type === type;
+});
 ---
 
 <!-- src/components/List.astro -->
@@ -27,7 +22,7 @@ const allPosts = Object.values(
         <h3>
             — {type === "code" ? "PROJECTS" : "WRITINGS"} —
         </h3>
-        {allPosts.map((post: any) => <Tile frontmatter={post.frontmatter} />)}
+        {posts.map((post: any) => <Tile frontmatter={post.data} />)}
     </div>
 </div>
 

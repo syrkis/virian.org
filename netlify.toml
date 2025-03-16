@@ -1,11 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+command = "npm run build"
+publish = "dist"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[functions]
-  directory = "netlify/functions"
+[build.environment]
+ASTRO_KEY = "xl0Zq5Wv7ICkwyRPQn6r2IBNJ7Otq/RySVQSds9q2oc="

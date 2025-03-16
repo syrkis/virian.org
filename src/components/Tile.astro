@@ -18,11 +18,18 @@ const { frontmatter } = Astro.props;
 <div class="post">
     <a href={`/${frontmatter.slug}`}>
         <Cover src={frontmatter.cover} slug={frontmatter.slug} />
-        <!-- {frontmatter.cover && <img src={frontmatter.cover} alt={`Cover image for ${frontmatter.title}`} />} -->
         <h2>{frontmatter.title}</h2>
         <div class="meta">
-            {frontmatter.author && <span class="author">{frontmatter.author}</span>}
-            {frontmatter.date && <span class="date">{formatDate(frontmatter.date)}</span>}
+            {
+                frontmatter.author && (
+                    <span class="author">{frontmatter.author}</span>
+                )
+            }
+            {
+                frontmatter.date && (
+                    <span class="date">{formatDate(frontmatter.date)}</span>
+                )
+            }
         </div>
     </a>
 </div>

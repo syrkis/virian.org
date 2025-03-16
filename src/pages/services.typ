@@ -1,42 +1,17 @@
----
-layout: ../layouts/Layout.astro
----
-
-<style>
-  {`
-  p {
-    text-align: justify;
-    text-align-last: center;
-    width: 750px;
-    max-width: 90%;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    padding: 10vh 0 5vh 0;
-    text-transform: uppercase;
-    width: 777px;
-    max-width: 90%;
-    margin: 0 auto;
-  }
-`}
-</style>
-
->
-
-# Our Services
+= SERVICES
 
 Much machine learning
 We use advanced computer science and math to tackle tough problems.
 We choose projects that interest us and can make a big impact.
 Current
 
-## Advisory Roles
+= Advisory Roles
 
 We offer expert advice for your data science and machine learning projects.
 Get strategic insights and recommendations to overcome challenges and reach your goals.
 Need quick advice? We offer free phone consultations.
 
-## Machine Learning Development
+= Machine Learning Development
 
 We help you take your machine learning ideas from concept to reality.
 Our expertise includes reinforcement learning, natural language processing,

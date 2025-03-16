@@ -1,30 +1,26 @@
 ---
-// await new Promise((resolve) => setTimeout(resolve, 2000));
-import { Typst } from "astro-typst/src/components";
+import type { CollectionEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
+interface Props {
+    post: CollectionEntry<"posts">;
+}
 
-const { code } = Astro.props;
-export const prerender = false;
+const { post } = Astro.props;
+const { Content } = await render(post);
 ---
 
-<div class="typst">
-    <!-- client:visible -->
-    <!-- server:defer -->
-    <Typst {code} props={{ width: "100%", height: "auto" }} />
+<div class="post">
+    <Content />
 </div>
 
 <style>
-    .typst :global(svg.typst-doc) {
-        height: auto !important; /* Override the inline height */
-    }
-    .typst {
-        width: 95vw;
+    .post {
+        width: 90%;
         max-width: 1200px;
-        margin: auto;
+        margin: 0 auto;
     }
-    .loading {
-        text-align: center;
-        padding: 2rem;
-        color: #666;
-        font-style: italic;
+    :global(svg.typst-doc) {
+        height: auto !important; /* Override the inline height */
+        width: 100% !important;
     }
 </style>

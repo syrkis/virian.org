@@ -1,0 +1,56 @@
+---
+// import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Cover from "../components/Cover.astro";
+import Post from "../components/Post.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("posts");
+    return posts.map((post) => ({
+        params: { id: post.id },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout>
+    <div class="container">
+        <div class="cover">
+            <!-- <Cover src={frontmatter.cover} slug={frontmatter.slug} /> -->
+        </div>
+        <Post server:defer {post} />
+    </div>
+</Layout>
+
+<style>
+    .container {
+        min-height: 150vh;
+    }
+    .cover {
+        padding: 10vh 0;
+    }
+</style>
+
+<!-- <script>
+    let previousPath = window.location.pathname;
+
+    document.addEventListener("astro:after-swap", () => {
+        const currentPath = window.location.pathname;
+        if (
+            currentPath !== previousPath &&
+            currentPath !== "/" &&
+            currentPath !== "/code" &&
+            currentPath !== "/text"
+        ) {
+            window.scrollTo({
+                top: 150,
+                left: 0,
+                behavior: "instant",
+            });
+        }
+        previousPath = currentPath;
+    });
+</script> -->
