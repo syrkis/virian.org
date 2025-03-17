@@ -8,7 +8,7 @@ body {
     letter-spacing: 0.05rem;
     hyphens: auto;
     font-size: 1.2em;
-    font-family: "Latin Modern Roman", serif;
+    font-family: "Libertinus Serif", serif;
 }
 
 @media (max-width: 600px) {

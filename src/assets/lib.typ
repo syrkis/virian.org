@@ -7,7 +7,7 @@
   doc,
 ) = {
   // Base styling
-  set text(font: "New Computer Modern", lang: "en", size: 18pt)
+  set text(lang: "en", size: 18pt)
   set page(height: auto, margin: (x: 0.1in, y: 0.1in))
 
 
