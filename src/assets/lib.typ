@@ -7,7 +7,7 @@
   doc,
 ) = {
   // Base styling
-  set text(font: "New Computer Modern", lang: "en", size: 15pt)
+  set text(font: "New Computer Modern", lang: "en", size: 18pt)
   set page(height: auto, margin: (x: 0.1in, y: 0.1in))
 
 
@@ -22,7 +22,7 @@
   // Your blog post content goes here
   set par(
     justify: true,
-    leading: 0.65em,
+    leading: 0.8em,
   )
 
   set raw(align: left)

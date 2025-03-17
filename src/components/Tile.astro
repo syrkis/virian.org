@@ -34,7 +34,7 @@ const { frontmatter, disableHoverEffect = false } = Astro.props;
 </div>
 
 <style define:vars={{ coverImage: frontmatter.cover }}>
-h2{
+h2 {
     text-transform: uppercase;
 }
 .meta {
@@ -47,10 +47,17 @@ h2{
     height: 22vh;
     width: 100%;
   }
+  .post {
+         text-align: center;
+         transition: transform 0.5s ease-in-out;
+     }
+  .post.hover-enabled:hover {
+          transform: scale(1.05);
+      }
+
 @media (prefers-color-scheme: dark) {
     .cover {
       filter: invert(1);
     }
   }
 </style>
-
