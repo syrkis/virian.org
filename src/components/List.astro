@@ -11,18 +11,24 @@ const { type } = Astro.props;
 const text = Astro.props.text;
 
 const posts = await getCollection("posts", ({ data }) => {
-    return data.type === type;
+    return data.type === type && data.published;
 });
 ---
 
 <!-- src/components/List.astro -->
 <div class="container">
     <div class="posts-list">
-        <span class="text">{text}</span>
+        <!-- <span class="text">{text}</span> -->
         <h3>
             — {type === "code" ? "PROJECTS" : "WRITINGS"} —
         </h3>
-        {posts.map((post: any) => <Tile frontmatter={post.data} />)}
+        {
+            posts.map((post: any) => (
+                <a href={"/" + post.data.slug}>
+                    <Tile frontmatter={post.data} />
+                </a>
+            ))
+        }
     </div>
 </div>
 

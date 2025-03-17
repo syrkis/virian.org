@@ -54,11 +54,11 @@ a {
     width: 90%;
     max-width: 777px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 10vh 1rem;
 }
 
 .line {
-    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 .exLibirs {
     overflow: hidden;

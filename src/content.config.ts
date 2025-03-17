@@ -10,10 +10,10 @@ const typCollection = defineCollection({
     title: z.string(),
     author: z.string().optional().default("Noah Syrkis"),
     desc: z.any().optional(),
-    cover: z.string().optional(),
+    cover: z.string(),
+    published: z.boolean().optional().default(false),
     date: z.any(),
     type: z.string().optional(),
-    show: z.boolean().optional().default(true),
   }),
   loader: glob({ pattern: "**/*.typ", base: "./src/posts" }),
 });

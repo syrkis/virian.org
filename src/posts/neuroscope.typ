@@ -1,5 +1,4 @@
 #import "/src/assets/lib.typ": post
-// #import "@preview/cetz:0.3.1"
 #import "@preview/unify:0.6.1": num // <- for making numbers look nice
 #import "@preview/equate:0.2.1": equate // <- for numbering equations
 
@@ -23,7 +22,7 @@
   date: date,
 ))<frontmatter>
 
-#show: doc => post(title: title, author: author, date: date, doc)
+#show: doc => post(doc)
 
 #let appendix(body) = {
   set heading(numbering: "A", supplement: [Appendix])

@@ -3,20 +3,23 @@ import Layout from "../layouts/Layout.astro";
 import List from "../components/List.astro";
 import Tile from "../components/Tile.astro";
 const text = // cultural geometry
-    "We apply machine learning to domains like neuroscience, cultural geometry, command and control, deep learning and more";
-const services = {
-    slug: "services",
-    title: "Services",
+    "Having pioneered geometric deep learning in neuroscience, geography, and defence, our advisory now delivers strategic edge";
+const advisory = {
+    slug: "advisory",
+    title: "Advisory",
     cover: "/test.svg",
 };
 ---
 
 <Layout>
-    <div class="exLibirs">
-        <Tile frontmatter={services} />
-        <div class="line">
-            <center>———————</center>
-        </div>
-    </div>
+    <div class="text">{text}</div>
     <List type="code" {text} />
+    <div class="exLibirs">
+        <a href="/advisory">
+            <div class="line">
+                <center>———————</center>
+            </div>
+            <Tile frontmatter={advisory} />
+        </a>
+    </div>
 </Layout>

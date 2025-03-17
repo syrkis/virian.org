@@ -29,7 +29,7 @@
 #let nodro_hash = "c7f717cb50ac4762bd866831"
 
 
-#show: doc => post(title: title, author: author, date: date, doc)
+#show: doc => post(doc)
 
 
 @anne2024

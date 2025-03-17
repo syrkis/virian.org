@@ -1,20 +1,16 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-const { title } = Astro.props;
 import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
 
 const isRoot = Astro.url.pathname === "/";
 ---
 
-<!-- <!doctype html> -->
 <html lang="en">
     <head>
-        <!-- <link rel="stylesheet" href="/global.css"> -->
-
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <meta name="viewport" content="width=device-width" /> -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <title>The Virian Project</title>
@@ -29,7 +25,10 @@ const isRoot = Astro.url.pathname === "/";
         <div style={isRoot ? "padding-top: 42vh;" : ""}>
             <Header />
         </div>
-        <slot />
+        <main>
+            <slot />
+        </main>
+        <ClientRouter />
         <Footer />
     </body>
 </html>

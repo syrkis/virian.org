@@ -1,11 +1,8 @@
 ---
 const isRoot = Astro.url.pathname === "/";
-import { ClientRouter } from "astro:transitions";
 
 const paddingAnim = {};
 ---
-
-<head> <ClientRouter /></head>
 
 <header transition:name="header">
     <nav>

@@ -29,7 +29,7 @@
 #let nodro_hash = "c7f717cb50ac4762bd866831"
 
 
-#show: doc => post(title: title, author: author, date: date, doc)
+#show: doc => post(doc)
 
 
 Stereotype (n): a widely held but fixed and oversimplified image or idea of a particular type of person or thing. So the common tounge would have you believe, but its true #footnote[To the extent that previous means true] is much a more mechanical, than the Guten

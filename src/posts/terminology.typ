@@ -19,7 +19,7 @@
   date: date,
 ))<frontmatter>
 
-#show: doc => post(title: title, author: author, date: date, doc)
+#show: doc => post(doc)
 
 In geometry, as laid out by Euclid @euclides2007 in around 300 BC, it is postulated that we can:
 

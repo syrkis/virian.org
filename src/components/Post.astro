@@ -5,22 +5,28 @@ interface Props {
     post: CollectionEntry<"posts">;
 }
 
+// `post` will match your 'blog' collection schema type
 const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
 <div class="post">
-    <Content />
+    <div class="post-content">
+        <Content />
+    </div>
 </div>
 
 <style>
-    .post {
+    :global(.post) {
         width: 90%;
-        max-width: 1200px;
         margin: 0 auto;
     }
     :global(svg.typst-doc) {
         height: auto !important; /* Override the inline height */
         width: 100% !important;
+    }
+    .post-content {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 </style>

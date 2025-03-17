@@ -8,16 +8,16 @@
 
 
 #let title = "Mechanistic Interpretability on Irreducible Integer Identifiers"
-#let author = "Noah Syrkis & Anders Søgaard"
+#let author = "Noah Syrkis and Anders Søgaard"
 #let date = datetime(year: 2024, month: 11, day: 29)
 #let cover = "/temp.svg"
 
 #metadata((
+  slug: "miiii",
   title: title,
   author: author,
   published: true,
   cover: cover,
-  slug: "miiii",
   type: "code",
   date: date,
 ))<frontmatter>
@@ -29,7 +29,7 @@
 #let nodro_hash = "c7f717cb50ac4762bd866831"
 
 
-#show: doc => post(title: title, author: author, date: date, doc)
+#show: doc => post(doc)
 
 #let appendix(body) = {
   set heading(numbering: "A", supplement: [Appendix])
@@ -37,12 +37,6 @@
   body
 }
 
-// body ///////////////////////////////////////////////////////////////////////
-//
-// TODO: LABEL PLOTS OR DIE
-// - In intro explain it to a 4 year old baby.
-// - Concepts.
-// - add tables.
 
 = Introduction
 

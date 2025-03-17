@@ -1,9 +1,9 @@
 
 // src/templates/lib.typ
 #let post(
-  title: none,
-  author: none,
-  date: none,
+  // title: none,
+  // author: none,
+  // date: none,
   doc,
 ) = {
   // Base styling
@@ -34,26 +34,6 @@
     it
   }
 
-  // Title block
-  align(center)[
-    #block(spacing: 2em)[
-      #set par(leading: 1.5em)
-      #text(size: 1.75em, weight: "regular", stretch: 100%)[#upper(title)]
-
-      #if author != none [
-        #text(size: 1.2em)[#author]
-      ]
-
-      #if date != none [
-        #text(
-          size: 1em,
-          style: "italic",
-        )[#date.display("[month repr:long] [day padding:none], [year]")]
-      ]
-    ]
-  ]
-
-  // Main content
   doc
 
   pagebreak()

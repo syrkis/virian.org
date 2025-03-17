@@ -22,7 +22,7 @@
   date: date,
 ))<frontmatter>
 
-#show: doc => post(title: title, author: author, date: date, doc)
+#show: doc => post(doc)
 
 #let appendix(body) = {
   set heading(numbering: "A", supplement: [Appendix])
