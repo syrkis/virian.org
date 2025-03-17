@@ -21,7 +21,7 @@ const { post } = Astro.props;
         <div class="cover">
             <Tile frontmatter={post.data} disableHoverEffect={true} />
         </div>
-        <Post {post} server:defer />
+        <Post {post} />
     </div>
 </Layout>
 

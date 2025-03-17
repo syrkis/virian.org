@@ -12,7 +12,7 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "http://virian.com",
   trailingSlash: "never",
-  adapter: vercel(),
-  output: "server",
+  adapter: netlify(),
+  // output: "server",
   integrations: [sitemap(), typst()],
 });

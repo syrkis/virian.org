@@ -7,7 +7,9 @@ interface Props {
 
 // `post` will match your 'blog' collection schema type
 const { post } = Astro.props;
+// console.log(post);
 const { Content } = await render(post);
+// console.log(Content);
 ---
 
 <div class="post">
