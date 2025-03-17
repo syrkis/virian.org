@@ -27,13 +27,16 @@ const { frontmatter, disableHoverEffect = false } = Astro.props;
         {
             frontmatter.date && (
             <br/>
-                <span class="date">{formatDate(frontmatter.date)}</span>
+                <span class="date"><i>{formatDate(frontmatter.date)}</i></span>
             )
         }
     </div>
 </div>
 
 <style define:vars={{ coverImage: frontmatter.cover }}>
+h2{
+    text-transform: uppercase;
+}
 .meta {
     width: 100%;
     text-align: center;
@@ -50,3 +53,4 @@ const { frontmatter, disableHoverEffect = false } = Astro.props;
     }
   }
 </style>
+

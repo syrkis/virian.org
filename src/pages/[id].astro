@@ -21,6 +21,7 @@ const { post } = Astro.props;
         <div class="cover">
             <Tile frontmatter={post.data} disableHoverEffect={true} />
         </div>
+        <!-- server:defer could be here but it clashes with clientrouter -->
         <Post {post} />
     </div>
 </Layout>
@@ -34,3 +35,24 @@ const { post } = Astro.props;
         padding: 10vh 0;
     }
 </style>
+
+<script>
+    let previousPath = window.location.pathname;
+
+    document.addEventListener("astro:after-swap", () => {
+        const currentPath = window.location.pathname;
+        if (
+            currentPath !== previousPath &&
+            currentPath !== "/" &&
+            currentPath !== "/code" &&
+            currentPath !== "/text"
+        ) {
+            window.scrollTo({
+                top: 200,
+                left: 0,
+                behavior: "instant",
+            });
+        }
+        previousPath = currentPath;
+    });
+</script>
