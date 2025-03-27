@@ -7,7 +7,7 @@
 #set raw(align: center)
 
 
-#let title = "Deep Decoding the Cerebral Cortex"
+#let title = "Neuroscope"
 #let author = "Noah Syrkis"
 #let date = datetime(year: 2024, month: 12, day: 16)
 #let cover = "/neuroscope.svg"

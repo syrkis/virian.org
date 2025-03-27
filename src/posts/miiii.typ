@@ -1,5 +1,5 @@
 #import "/src/assets/lib.typ": post
-#import "@preview/unify:0.6.1": num // <- for making numbers look nice
+#import "@preview/unify:0.6.1": num // <- for making numbers look
 #import "@preview/equate:0.2.1": equate // <- for numbering equations
 
 #show: equate.with(breakable: true, sub-numbering: true)
@@ -37,6 +37,7 @@
   body
 }
 
+// introduction
 
 = Introduction
 

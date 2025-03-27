@@ -1,6 +1,6 @@
 ---
 import { formatDate } from "../utils/date";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface Props {
     frontmatter: {
@@ -16,48 +16,67 @@ interface Props {
 const { frontmatter, disableHoverEffect = false } = Astro.props;
 ---
 
-<div class={`post ${disableHoverEffect ? '' : 'hover-enabled'}`} transition:name={frontmatter.slug}>
 <div
-  class="cover"
-  style={`background-image: url(${frontmatter.cover}); background-size: cover; background-position: center;`}
-></div>
+    class={`post ${disableHoverEffect ? "" : "hover-enabled"}`}
+    transition:name={frontmatter.slug}
+>
+    <div
+        class="cover"
+        style={`background-image: url(${frontmatter.cover}); background-size: cover; background-position: center;`}
+    >
+    </div>
     <div class="meta">
         <h2>{frontmatter.title}</h2>
-        {frontmatter.author && <span class="author">{frontmatter.author}</span>}
+        {
+            frontmatter.author && (
+                <div class="author">
+                    <span>{frontmatter.author}</span>
+                </div>
+            )
+        }
         {
             frontmatter.date && (
-            <br/>
-                <span class="date"><i>{formatDate(frontmatter.date)}</i></span>
+                <div class="date">
+                    <span>
+                        <i>{formatDate(frontmatter.date)}</i>
+                    </span>
+                </div>
             )
         }
     </div>
 </div>
 
 <style define:vars={{ coverImage: frontmatter.cover }}>
-h2 {
-    text-transform: uppercase;
-}
-.meta {
-    width: 100%;
-    text-align: center;
-}
-  .cover {
-    background-size: cover;
-    background-position: center;
-    height: 22vh;
-    width: 100%;
-  }
-  .post {
-         text-align: center;
-         transition: transform 0.5s ease-in-out;
-     }
-  .post.hover-enabled:hover {
-          transform: scale(1.05);
-      }
-
-@media (prefers-color-scheme: dark) {
-    .cover {
-      filter: invert(1);
+    h2 {
+        text-transform: uppercase;
+        padding: 4vh 0 0vh 0;
     }
-  }
+
+    .author,
+    .date {
+        padding: 0vh;
+    }
+    .meta {
+        width: 100%;
+        text-align: center;
+    }
+    .cover {
+        background-size: cover;
+        background-position: center;
+        height: 22vh;
+        width: 100%;
+    }
+    .post {
+        text-align: center;
+        transition: transform 0.5s ease-in-out;
+    }
+    .post.hover-enabled:hover {
+        transform: scale(1.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .cover {
+            filter: invert(1);
+        }
+    }
 </style>
