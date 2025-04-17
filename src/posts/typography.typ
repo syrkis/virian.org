@@ -1,8 +1,6 @@
-#import "/src/assets/lib.typ": post
+#import "@local/lilka:0.0.0": *
 #import "@preview/unify:0.6.1": num // <- for making numbers look nice
 #import "@preview/equate:0.2.1": equate // <- for numbering equations
-
-// #show: equate.with(breakable: true, sub-numbering: false)
 #set math.equation(numbering: "(1.1)", supplement: "Eq.")
 
 #set raw(align: center)
@@ -30,32 +28,23 @@
   body
 }
 
-
-// information theory
-// the symbol
-// the number and the letter and the nucleotide
-//
-
 In formal language theory, an alphabet is a non-empty set of symbols,
-often denoted $xi = {v_1, v_2, ...}$ or in the continuous case ${v_x : x in RR}$.
-The set of alphabets include the Latin letters ${A, B, ..., Z}$,
+often denoted $xi = {s_1, s_2, ...}$ or in the continuous case ${s_i : i in RR}$.
+The family of alphabets include the Latin letters ${A, B, ..., Z}$,
 the binary digits ${0, 1}$, and the genetic nucleotides ${A, C, T, G}$.
-Sequences of symbols from an alphabet are known as _strings_—be they words,
-genomes, or something else. Seen in @cuneiform, Cuneiform,
+Sequences of symbols from an alphabet are known as _strings_—be they books,
+genomes, or binary data. Seen in @cuneiform, Cuneiform,
 the oldest surviving writing system, was developed by the Summarians around $#num(5500)$ years ago.
 In pre-Sargonian Lagash, the alphabet is thought to have consisted of 468 symbols.
 Upon inspection, perhaps the first quality of the alphabet that springs to mind is its beauty.
-That particular quality has been consistent throughout history. Indeed,
-the historic is separated from prehistoric precisely by the presence of writing.
-// For those of you interested in the boundaries within the academy, that is the difference between archelogy and history
+That particular quality of alphabets has been consistent throughout history.
+The subset of the Hebrew alphabet included in the Typst #footnote[#link("https://typst.app", "typst.app")] math symbol set is ${alef, bet, dalet, gimel, shin}$.
+@greek shows the Greek letters, and @fraktur a 16th century incarnation of the Latin.
 
 #figure(
   stack(image("../assets/figs/typography/cuneiform-2.svg", width: 80%)),
   caption: [The Sumerian word _ama-ar-gi_ written in classical Sumerian cuneiform. Meaning "refer to release from obligations, debt, slavery, taxation, or punishment", the word is the earliest known reference to the concept of freedom.],
 )<cuneiform>
-
-The subset of the Hebrew alphabet included in Typst #footnote[#link("https://typst.app","typst.app")] is ${alef, bet, dalet, gimel, shin}$,
-while the Greek, seen in @greek, is more fully represented.
 
 #figure(
   stack(
@@ -66,8 +55,6 @@ while the Greek, seen in @greek, is more fully represented.
   caption: [The Greek Alphabet],
 )<greek>
 
-Looking to more recent incarnations of symbols, @fraktur show the Latin alphabet in Fraktur.
-
 #figure(
   stack(
     spacing: 0.75em,
@@ -76,8 +63,6 @@ Looking to more recent incarnations of symbols, @fraktur show the Latin alphabet
   ),
   caption: "The Latin Alphabet in Fraktur",
 )<fraktur>
-
-Linear algebra teaches us that the most fundamental unit (or symbol) of mathematics is not the number, but rather the matrix. Thought of as such, the number becomes more akin to the typographical, triangle like atomics of Cuneiform.
 
 Though recent events might have changed the connotations we have of the Russian Cyrillic alphabet, @cyril shows its undeniable beauty.
 
@@ -90,17 +75,46 @@ Though recent events might have changed the connotations we have of the Russian 
   caption: "The Russian Cyrillic Alphabet",
 )<cyril>
 
+= Archetypes // The atomicity of the symbol
+
+Linear algebra teaches us that the most fundamental unit (or symbol) of mathematics is not the number, but rather the matrix. Thought of as such, the number becomes more akin to the typographical, triangle like atomics of Cuneiform. Psychoanalytically, is has been argued that a given personality is a mere mix of archetypes, a linear combination, if you will.
+
+= Stereotypes // Fraktur and what not
+
+The mechnical embrology of the Latin letters are still with us today.
+Letters were steretypes, by pressing metal implements into the right shape,
+and using it to replicate the represented symbol at will.
+Given ordered nature of quantity, one could argue a typographical mapping between number and size is apt.
+
+= Prototypes // Introducing the esch idea
+
+Indeed, what representation of the vector $v = [1.0, 0.8, 0.6, 0.5, 0.1, 0.0, 0.1]$ communicates its nature best? The affore written numerical representation of @vector?
+
 #figure(
   stack(
     spacing: 0.75em,
     "a ą b c ć d e ę f g h i j k l ł m n ń o ó p r s ś t u w y z ź ż",
     "A Ą B C Ć D E Ę F G H I J K L Ł M N Ń O Ó P R S Ś T U W Y Z Ź Ż",
   ),
-  caption: "The Polish Alphabet",
-)<polish>
+  caption: [Esch of $v$],
+)<vector>
 
+// #figure(
+// stack(
+// spacing: 0.75em,
+// "a ą b c ć d e ę f g h i j k l ł m n ń o ó p r s ś t u w y z ź ż",
+// "A Ą B C Ć D E Ę F G H I J K L Ł M N Ń O Ó P R S Ś T U W Y Z Ź Ż",
+// ),
+// caption: "The Polish Alphabet",
+// )<polish>
+
+= Endotypes // What is wrong with modern data plots?
+
+= Fenotypes // Maybe Hitler's genetic fetich
 
 Perhaps the most modern masterpiece is the Taliban's much improved version of the Afghan flag.
+
+= Genotypes
 
 // The fundamental unit in information theory is the symbol.
 // Three famous sets of symbols are the Latin alphabet,
@@ -191,7 +205,6 @@ Perhaps the most modern masterpiece is the Taliban's much improved version of th
 
 
 // // Why this ubiquity?
-
 
 
 // // One cannot but imagine aestheticians of the third rich be in anything but in awe of the aeshtics of the Wahabi Jihadistst

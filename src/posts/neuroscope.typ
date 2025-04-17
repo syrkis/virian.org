@@ -1,4 +1,4 @@
-#import "/src/assets/lib.typ": post
+#import "@local/lilka:0.0.0": *
 #import "@preview/unify:0.6.1": num // <- for making numbers look nice
 #import "@preview/equate:0.2.1": equate // <- for numbering equations
 

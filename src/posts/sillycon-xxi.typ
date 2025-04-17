@@ -1,6 +1,6 @@
 
 // head
-#import "/src/assets/lib.typ": post
+#import "@local/lilka:0.0.0": *
 #let title = "SillyCon 21"
 #let author = "Noah Syrkis"
 #let date = datetime(year: 2024, month: 8, day: 7)

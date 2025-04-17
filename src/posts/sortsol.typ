@@ -1,4 +1,4 @@
-#import "/src/assets/lib.typ": post
+#import "@local/lilka:0.0.0": *
 
 #let title = "Sortsol"
 #let author = "Noah Syrkis"

@@ -1,5 +1,14 @@
 [build]
-command = "npm run build"
+command = """
+  # Create Typst packages directory structure
+  mkdir -p ~/.local/share/typst/packages/local/lilka/0.0.0/
+
+  # Clone your package repository
+  git clone https://github.com/syrkis/lilka.git ~/.local/share/typst/packages/local/lilka/0.0.0/
+
+  # Run your regular build command
+  npm run build
+"""
 publish = "dist"
 
 [build.environment]
