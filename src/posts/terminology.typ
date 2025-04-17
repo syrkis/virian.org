@@ -1,5 +1,5 @@
-#import "@local/lilka:0.0.0": *
 #import "@preview/unify:0.6.1": num
+#import "@local/lilka:0.0.0": *
 // #import "@preview/cetz:0.3.1"
 
 #set raw(align: center)
@@ -81,3 +81,5 @@ These terms are obviously sexy to say. The terms are sure to have played essenti
   ),
   // caption: [The Virian Dictionary],
 )<dict>
+
+#bibliography("/src/assets/zotero.bib", title: "References")

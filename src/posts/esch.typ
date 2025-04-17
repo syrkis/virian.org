@@ -24,3 +24,5 @@
 Astrid er sød
 
 @cover2006
+
+#bibliography("/src/assets/zotero.bib", title: "References")

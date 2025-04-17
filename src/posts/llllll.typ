@@ -33,3 +33,5 @@
 
 
 @anne2024
+
+#bibliography("/src/assets/zotero.bib", title: "References")

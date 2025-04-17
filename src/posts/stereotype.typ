@@ -33,3 +33,5 @@
 
 
 Stereotype (n): a widely held but fixed and oversimplified image or idea of a particular type of person or thing. So the common tounge would have you believe, but its true #footnote[To the extent that previous means true] is much a more mechanical, than the Guten
+
+#bibliography("/src/assets/zotero.bib", title: "References")

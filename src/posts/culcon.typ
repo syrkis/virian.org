@@ -79,3 +79,5 @@ Just as neurons that fire together wire together in the brain, ideas that captur
 4. Early warning signals for emerging cultural phenomena
 
 This approach offers a quantitative framework for studying cultural dynamics, potentially revealing insights as profound as those that traditional connectome research has provided for neuroscience. Just as brain connectomes have revolutionized our understanding of neural function, cultural connectomes may help us better understand and navigate our increasingly complex global society.
+
+#bibliography("/src/assets/zotero.bib", title: "References")

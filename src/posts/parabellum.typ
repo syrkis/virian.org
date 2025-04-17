@@ -36,3 +36,5 @@ obs, state = env.reset(key, scene)
 rngs = random.split(rng, 100)
 state, state_seq = lax.scan(lambda state, _: env.step(rng.choice(env.action_space)), state, rngs)
 ```
+
+#bibliography("/src/assets/zotero.bib", title: "References")

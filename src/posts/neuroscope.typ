@@ -81,3 +81,5 @@ Does the inaccessibility of the brain neuron-level network mean the network scie
 
 Nodes in the latter two domains might be regions of brain matter in cubic micrometers, cubic millimeters, or even centimeters. What then are connections? One answer is to take the afore mentioned adage as scripture, and compute correlation coefcicients between voxels (pixel like cubes of brain activiations scanned by MRI machines).
 Doing so, successfully allows us to reconstruct, forexample, what people are looking at from fMRI scans alone @gifford2023 @allen2022. Understanding how to best construct connectomes on these high levels is an ongoing project @coletta2020. For more on this see #link("/neuroscope")
+
+#bibliography("/src/assets/zotero.bib", title: "References")

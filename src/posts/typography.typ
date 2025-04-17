@@ -1,6 +1,6 @@
-#import "@local/lilka:0.0.0": *
 #import "@preview/unify:0.6.1": num // <- for making numbers look nice
 #import "@preview/equate:0.2.1": equate // <- for numbering equations
+#import "@local/lilka:0.0.0": *
 #set math.equation(numbering: "(1.1)", supplement: "Eq.")
 
 #set raw(align: center)
@@ -456,3 +456,5 @@ Perhaps the most modern masterpiece is the Taliban's much improved version of th
 // // *Figure 4: An example of Esch-generated visuals*
 
 // // // In the sections that follow, we will delve into the form of **Esch**, exploring its design principles and capabilities. Subsequently, we will provide insights into its underlying code, demonstrating how this tool harmoniously blends art with science to produce visuals that are both informative and visually stunning.
+
+#bibliography("/src/assets/zotero.bib", title: "References")

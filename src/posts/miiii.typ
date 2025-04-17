@@ -1,4 +1,3 @@
-// #import "/src/assets/lib.typ": post
 #import "@local/lilka:0.0.0": *
 #import "@preview/unify:0.6.1": num // <- for making numbers look
 #import "@preview/equate:0.2.1": equate // <- for numbering equations
@@ -626,3 +625,5 @@ The code associated with this paper is available as a PyPI package (`pip install
 This paper explores the impact of multi-task learning on mechanistic interpretability by training a transformer model on a non-commutative, multi-task modular arithmetic problem $cal(T)_"miiii"$. The model successfully generalizes across all tasks, learning complex internal representations that capture the unique periodic nature of modular arithmetic across multiple primes. Analysis reveals that while the model reuses and integrates circuits for simpler tasks, additional circuits may form during training to facilitate generalization to more complex tasks.
 
 These findings highlight that multi-task learning influences the emergence and complexity of internal mechanisms, posing challenges for mechanistic interpretability but also offering insights into how models internalize algorithms. Understanding these dynamics is important for advancing interpretability and reliability in deep learning systems. Future work includes exploring the distinction between circuits that aid in learning versus those that contribute to the final mechanism/solution and investigating how variations in task design impact the development of internal representations. Advancing the understanding of how deep learning models handle multiple tasks contributes to the broader goal of making these models more interpretable and reliable.
+
+#bibliography("/src/assets/zotero.bib", title: "References")

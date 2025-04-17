@@ -25,3 +25,5 @@ The reader is encouraged to take the structure of the last half of the addage:
 Examples include "network", "equation", "negotiation", "algorithm", "cupon", "hammock" —
 as the first nouns might betray, the write of this piece is indeed of a computer scientific inclination.
 That aside, the reader is asked to note that the truth value of the statement varies with the noun.
+
+#bibliography("/src/assets/zotero.bib", title: "References")

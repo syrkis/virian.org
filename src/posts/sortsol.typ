@@ -25,3 +25,5 @@ S ← C K                                             # step
 
 # S I 10
 ```
+
+#bibliography("/src/assets/zotero.bib", title: "References")
