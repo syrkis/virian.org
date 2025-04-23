@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Tile from "../components/Tile.astro";
 import Post from "../components/Post.astro";
 import { getCollection, render } from "astro:content";
-// export const prerender = true;
 
 export async function getStaticPaths() {
     const posts = await getCollection("posts");
