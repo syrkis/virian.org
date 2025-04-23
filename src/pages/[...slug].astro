@@ -20,7 +20,6 @@ const { post } = Astro.props;
         <div class="cover">
             <Tile frontmatter={post.data} disableHoverEffect={true} />
         </div>
-        <!-- server:defer could be here but it clashes with clientrouter -->
         <Post {post} />
     </div>
 </Layout>
