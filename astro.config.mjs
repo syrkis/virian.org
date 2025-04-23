@@ -8,5 +8,10 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "http://virian.com",
   adapter: netlify(),
-  integrations: [sitemap({}), typst()],
+  integrations: [
+    sitemap({
+      xslURL: "/sitemap.xsl",
+    }),
+    typst(),
+  ],
 });
