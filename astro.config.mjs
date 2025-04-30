@@ -6,12 +6,7 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://virian.com",
+  site: "https://virian.com",
   adapter: netlify(),
-  integrations: [
-    sitemap({
-      xslURL: "/sitemap.xsl",
-    }),
-    typst(),
-  ],
+  integrations: [sitemap(), typst()],
 });

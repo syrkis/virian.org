@@ -6,7 +6,7 @@
 #let cover = "/temp.svg"
 
 #metadata((
-  slug: "parabellum",
+  slug: "btc2sim",
   title: title,
   author: author,
   published: true,
