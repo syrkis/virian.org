@@ -11,15 +11,6 @@ command = """
 """
 publish = "dist"
 
-# [build.environment]
-# ASTRO_KEY = "xl0Zq5Wv7ICkwyRPQn6r2IBNJ7Otq/RySVQSds9q2oc="
-
-[[redirects]]
-from = "https://virian.org/*"
-to = "https://virian.com/:splat"
-status = 301
-force = true
-
 [[redirects]]
 from = "https://www.virian.org/*"
 to = "https://virian.com/:splat"
