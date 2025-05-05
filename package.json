@@ -11,8 +11,9 @@
   "dependencies": {
     "@astrojs/netlify": "^6.3.2",
     "@astrojs/sitemap": "^3.3.1",
+    "@myriaddreamin/typst-ts-node-compiler": "^0.6.0",
     "astro": "^5.7.10",
-    "astro-typst": "^0.7.3",
+    "astro-typst": "^0.9.0-rc1",
     "date-fns": "^4.1.0"
   }
 }

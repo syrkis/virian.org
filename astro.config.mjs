@@ -9,4 +9,15 @@ export default defineConfig({
   site: "https://virian.com",
   adapter: netlify(),
   integrations: [sitemap(), typst()],
+  vite: {
+    server: {
+      watch: {
+        // Add .typ files to the watch list
+        ignored: ["!**/*.typ"],
+        // Ensure high poll interval for more reliable watching
+        usePolling: true,
+        interval: 1000,
+      },
+    },
+  },
 });
