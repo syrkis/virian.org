@@ -1,5 +1,5 @@
 {
-  "name": "virian.org",
+  "name": "virian.com",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,9 +11,8 @@
   "dependencies": {
     "@astrojs/netlify": "^6.3.2",
     "@astrojs/sitemap": "^3.3.1",
-    "@myriaddreamin/typst-ts-node-compiler": "^0.6.0",
     "astro": "^5.7.10",
-    "astro-typst": "^0.9.0-rc1",
+    "astro-typst": "^0.8.2",
     "date-fns": "^4.1.0"
   }
 }
