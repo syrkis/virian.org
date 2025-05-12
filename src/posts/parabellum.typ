@@ -39,14 +39,14 @@ a program for simulating and quantifying the outcomes of military strategies.
 
 As mathematical fundamentalists attempt to solve many-body versions of the Schrödinger equation,
 grappling with the curse of dimensionality in Hilbert spaces and the measurement problem's non-Markovian open quantum systems,
-this program already now addresses one of reality's most persistent and pernicious shortcomings: its apparent single-threadedness.
+this program already now addresses two of reality's most persistent and pernicious shortcomings: its apparent single-threadedness and its ambiguity.
 
-It has been said that _facts speak for themselves with overwhelming precision_ @conrad1902.
-This is only exactly one third true: 1) facts do speak for themselves, 2) with precision, but 3) not overwhelmingly so.
-Indeed, the French military disaster (or perhaps rather the Viet Minh military success) of the battle of Điện Biên Phủ was preceded by a world
-soaked in facts, all speaking for themselves, but none with the ferocity that posterity has now brought them.
+Regarding ambiguity; it has been said that _facts speak for themselves with overwhelming precision_ @conrad1902.
+This is only exactly one third true: _1)_ facts do speak for themselves, _2)_ with precision, but _3)_ not overwhelmingly so.
+For example, the French military disaster (or perhaps rather the Viet Minh military success) that was the fifty-six day siege known as the battle of Điện Biên Phủ, was preceded by a world soaked in facts, all speaking for themselves, but none with the ferocity that posterity has now brought them. The French had built their fortress on the red earth of a valley encircled by jungle—jungle pregnant with subtle facts of the Viet Minh's presence. The French named their outposts after women; Beatrice, Gabrielle, Dominique—this one was called Céline. The Viet Minh came in the night and the rain, ghosts in sandals, hauling artillery up slopes where no European gunner would think a gun could go. In the night, the French watched the dark green hills erupt with blood red fire. As the days and weeks progressed, the French reinforcements would continue, their birds of steel containing reports and gliding above a terrain both discretely emitting the same fact: landing here is death. The airstrip would became a graveyard for Dakota transports, the night sky made starless with shrapnel and tracer, parachutes blooming in the night—some men landed alive, some did not.
+The wounded call out in French, in Vietnamese, and in the guttural language of the dying. On May 7, 1954, the last French radio message crackled out: "The enemy is everywhere. The situation is very grave" @shull1999.
 
-Whether one (conservatively) subscribes to the Copenhagen Interpretation of quantum mechanics—where observation collapses countless
+Regarding the single threadedness: Whether one (conservatively) subscribes to the Copenhagen Interpretation of quantum mechanics—where observation collapses countless
 possible threads into a single, actual one—or (more fashionably) the Many-Worlds Interpretation @borges1962garden,
 with its endlessly bifurcating threads of reality, we—whatever we might refer to—inhabit just one such thread.
 Be it the only one or one among uncountably many, our experience remains irrevocably confined to a single, linear trajectory.
