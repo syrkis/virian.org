@@ -11,4 +11,7 @@ export default defineConfig({
   site: "https://virian.com",
   integrations: [typst(), sitemap()],
   adapter: netlify(),
+  // output: "server",
+  experimental: { clientPrerender: true }, // Tried disabling, no effect
+  prefetch: { prefetchAll: false },
 });

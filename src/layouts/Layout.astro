@@ -26,13 +26,13 @@ const isRoot = Astro.url.pathname === "/";
             type="text/css"
             charset="utf-8"
         />
+        <ClientRouter />
     </head>
     <body>
         <div style={isRoot ? "padding-top: 42vh;" : ""}>
             <Header />
         </div>
         <main>
-            <ClientRouter />
             <slot />
         </main>
         <Footer />
