@@ -34,26 +34,33 @@
 
 #show: word-count
 
-In the spirit of Galileo's empiricism—which has been described as _the last resort of a failed mathematician_ @blasjo2018—we present Parabellum, a program for simulating and quantifying the outcomes of military strategies.
+In the spirit of Galileo's empiricism—which has been described as _the last resort of a failed mathematician_ @blasjo2018—we present Parabellum,
+a program for simulating and quantifying the outcomes of military strategies.
 
-The program is an attempt to address one of reality's most persistent and pernicious shortcomings: its apparent single-threadedness. Whether one (conservatively) subscribes to the Copenhagen Interpretation of quantum mechanics—where observation collapses countless possible threads into a single, actual one—or (more fashionably) the Many-Worlds Interpretation @borges1962garden, with its endlessly bifurcating threads of reality, we—whatever _we_ might refer to—inhabit just one such thread.
+As mathematical fundamentalists attempt to solve many-body versions of the Schrödinger equation,
+grappling with the curse of dimensionality in Hilbert spaces and the measurement problem's non-Markovian open quantum systems,
+this program already now addresses one of reality's most persistent and pernicious shortcomings: its apparent single-threadedness.
+
+It has been said that _facts speak for themselves with overwhelming precision_ @conrad1902.
+This is only exactly one third true: 1) facts do speak for themselves, 2) with precision, but 3) not overwhelmingly so.
+Indeed, the French military disaster (or perhaps rather the Viet Minh military success) of the battle of Điện Biên Phủ was preceded by a world
+soaked in facts, all speaking for themselves, but none with the ferocity that posterity has now brought them.
+
+Whether one (conservatively) subscribes to the Copenhagen Interpretation of quantum mechanics—where observation collapses countless
+possible threads into a single, actual one—or (more fashionably) the Many-Worlds Interpretation @borges1962garden,
+with its endlessly bifurcating threads of reality, we—whatever we might refer to—inhabit just one such thread.
 Be it the only one or one among uncountably many, our experience remains irrevocably confined to a single, linear trajectory.
 
-How is one then to reason probelasitically about future—potential or eventual—outcomes under such a circumstance?
-As counting is the bedrock of probability @schilling2017, Parabellum proposes the following procedure:
+How is one then to reason probabilistically about future—potential or eventual—outcomes under such a circumstance?
+Recalling that counting is the bedrock of probability @schilling2017, Parabellum proposes the following procedure:
 
-1. Create $n$ diminished facsimiles of the reality about which one wish to reason
-2. Set these in concurrent motion, recoding thread $t_i = {(s_0, a_0), ..., (s_m, a_m)}$
+1. Create $n$ simplified facsimiles of the reality about which one wishes to reason
+2. Set these in concurrent motion, recording $t_i = {(s_0, a_0), ..., (s_m, a_m)}$
 3. Compute statistics over ${t_1, ..., t_n}$ to divine the value of strategy $pi(s) -> a$
 
-Each process can be thought of as consiting of a world (yielding states $s$)
+Each process can be thought of as consisting of a world (yielding states $s$)
 and that which operates within it (yielding actions $a$). Parabellum, viewed in a vacuum,
-is thus a potentailly paralellizable world awaitng that which acts.
-
-// In anticipation of the fundamentalist mathmatician's anti Galilean rethorical itch:
-It has been said that facts speak for themselves with overwhelming precision @conrad1902.
-Điện Biên Phủ
-
+is thus a potentially parallelizable world awaiting that which acts.
 
 // For at komme the fundamentalist mathmatician's complaints i forkøbet: It was been said that facts speak for themselves.
 
