@@ -61,7 +61,7 @@ Recalling that counting is the bedrock of probability @schilling2017, Parabellum
 
 #figure(
   image("s3/esch/parabellum_new.svg", width: 80%),
-  caption: [Parabellum simulated with #link("/esch")],
+  caption: [Parabellum simulated with #link("/esch", "esch")],
 )
 
 Each process can be thought of as consisting of a world (yielding states $s$)
