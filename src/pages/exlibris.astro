@@ -1,28 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 const allBooks = await getCollection("books");
+
+// Pre-render all book content
+const booksWithContent = await Promise.all(
+    allBooks.map(async (book) => {
+        const { Content } = await render(book);
+        return {
+            ...book,
+            Content,
+        };
+    }),
+);
 ---
 
 <Layout>
     <h1>EX LIBRIS</h1>
     <div class="books">
         {
-            allBooks.map((post: any) => (
-                <a
-                    href={post.frontmatter.link}
-                    class="book-link"
-                    target="_blank"
-                >
+            booksWithContent.map((post) => (
+                <a href={post.data.link} class="book-link" target="_blank">
                     <div class="book">
                         <div class="book-left">
-                            <h2>{post.frontmatter.title}</h2>
-                            <p>{post.frontmatter.author}</p>
-                            <p>{post.frontmatter.year}</p>
+                            <h2>{post.data.title}</h2>
+                            <p>{post.data.author}</p>
+                            <p>{post.data.year}</p>
                         </div>
                         <div class="book-right">
-                            <Fragment set:html={post.compiledContent()} />
+                            <post.Content />
                         </div>
                     </div>
                 </a>

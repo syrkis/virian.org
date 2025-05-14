@@ -22,7 +22,6 @@ const books = defineCollection({
         author: z.string(),
         year: z.number(),
         link: z.string(),
-        // image: z.string(),
     }),
 });
 
