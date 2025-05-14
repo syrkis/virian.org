@@ -1,8 +1,8 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders"; // Not available with legacy API
 
-const typCollection = defineCollection({
-    loader: glob({ pattern: "*.typ", base: "./src/posts" }),
+const posts = defineCollection({
+    loader: glob({ pattern: "*.typ", base: "./posts" }),
     schema: z.object({
         slug: z.string(),
         title: z.string(),
@@ -15,6 +15,18 @@ const typCollection = defineCollection({
     }),
 });
 
+const books = defineCollection({
+    loader: glob({ pattern: "*.md", base: "./books" }),
+    schema: z.object({
+        title: z.string(),
+        author: z.string(),
+        year: z.number(),
+        link: z.string(),
+        // image: z.string(),
+    }),
+});
+
 export const collections = {
-    posts: typCollection,
+    posts: posts,
+    books: books,
 };

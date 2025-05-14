@@ -6,6 +6,9 @@ command = """
   # Clone your package repository
   git clone https://github.com/syrkis/lilka.git ~/.local/share/typst/packages/local/lilka/0.0.0/
 
+  # Clone the s3 repository into posts/s3
+  git clone https://github.com/syrkis/s3.git posts/s3
+
   # Run your regular build command
   npm run build
 """

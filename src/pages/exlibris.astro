@@ -1,9 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-const allBooks = Object.values(
-    import.meta.glob("../assets/books/*.md", { eager: true }),
-);
+const allBooks = await getCollection("books");
 ---
 
 <Layout>

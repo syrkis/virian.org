@@ -21,7 +21,7 @@ body {
 h1,
 h2,
 h3 {
-    /* letter-spacing: 0.01em; */
+    letter-spacing: 0.3rem;
     text-align: center;
     font-weight: normal;
     margin: 0;

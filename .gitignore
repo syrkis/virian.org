@@ -1,5 +1,6 @@
 # pdf
 **/*.pdf
+posts/s3
 
 # build output
 dist/
