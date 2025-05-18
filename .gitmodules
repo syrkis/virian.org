@@ -1,3 +1,0 @@
-[submodule "posts/s3"]
-	path = posts/s3
-	url = https://github.com/syrkis/s3.git

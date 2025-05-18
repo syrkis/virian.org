@@ -53,6 +53,8 @@ Be it the only one or one among uncountably many, our experience remains irrevoc
 
 How is one then to reason probabilistically about future—potential or eventual—outcomes under such ambiguous circumstances?
 From an information theoretical point of view, where does one locate the French error?
+
+Parabellum, viewed in a vacuum, is thus a potentially parallelizable world awaiting that which acts. Appendix A shows an example of single and paralel trajectories.
 Recalling that counting is the bedrock of probability @schilling2017, Parabellum proposes the following procedure:
 
 1. Create $n$ simplified facsimiles of the reality about which one wishes to reason
@@ -65,7 +67,7 @@ Recalling that counting is the bedrock of probability @schilling2017, Parabellum
 )
 
 Each process can be thought of as consisting of a world (yielding states $s$)
-and that which operates within it (yielding actions $a$). Parabellum—which can be inspected at github.com/syrkis/parabellum, and instealled with `pip install parabellum`—viewed in a vacuum, is thus a potentially parallelizable world awaiting that which acts. Appendix A shows an example of single and paralel trajectories.
+and that which operates within it (yielding actions $a$).
 
 // For at komme the fundamentalist mathmatician's complaints i forkøbet: It was been said that facts speak for themselves.
 

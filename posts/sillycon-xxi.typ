@@ -17,9 +17,9 @@
 
 #show: doc => post(doc)
 
-What follows is a list of noteworthyly silly behavior by public persons loosely affiliated with SillyCon Valley.
-As per the nameske @sirkis1985silicone of this article, a particular focus will be given to pupulist versions of sillieness.
-Further, note that many of the individuals here mentioned are publicly known to be thin-skinned
+What follows is a list of noteworthyly silly behavior by public persons loosely affiliated with Sillycon Valley.
+As per the nameske @sirkis1985silicone of this article, a particular focus will be given to populist versions of sillieness.
+Furthermore, note that many of the individuals here mentioned are publicly known to be thin-skinned
 (a quality grotesqqely coupled with an apetite for controversy in the indviduals that tend to make on this list),
 making this article a sort of growth hack: In complaining about it,
 or accusing its author of whatever is the trendy way of condemning, it gives attention to the Virian Project.
@@ -35,12 +35,17 @@ The day I'll see it I'll add it here, if it is indeed silly.). I mean Silly Here
 
 A not infrequence defence of Sam Bankman-Fried, is that of his age, his nascent apearence.
 At the time of the discovery of his multi bilion dolar theft of user funds, he was 30 years old.
+At that age my grandfather was the commander of a warship. Not a child no more.
 
-In November 2024, Elon Musk stated that his son Xavier is dead, and the woke mind virus killed him.
-Musk lost his first born son Nevada in 2006 (he himself has alleged that his son died in his arms,
-which is disputed by his then wife).
+// In November 2024, Elon Musk stated in an inteview with Jordan Peterson, that his son Xavier is dead, and the woke mind virus killed him.
+// Musk lost his first born son Nevada in 2006 (he himself has alleged that his son died in his arms,
+// which is disputed by his then wife). Xavier (now Vivan) looks pretty good for a dead bitch.
 
-In 2014, attempting to get in as many arguments in caera as possbile, Jair Bolsonaro accuses @jairbolsonaro2014 Alfredo Sirkis of being anti democratic for having kidnaped an American diplomat to Brazil and holding him hosatge for 32 days. Sirkis' corrects the record with "It was the Swiss ambasador".
+In 2014, attempting to get in as many arguments on camera as possbile, Jair Messias Bolsonaro accuses @jairbolsonaro2014 Alfredo Sirkis of being anti democratic for having kidnaped an American diplomat to Brazil and holding him hosatge for 32 days. Sirkis' corrects the record with "It was the Swiss ambasador".
+
+The Crown Prince of Norway, went to a climate conference. While he as inside he kept his car running. During his presence he gave a speech on giving money to Brazil—which we, highly support.
+
+Otto Lotz, says
 
 Douglas Murray, the allegedly staunchly Zionist writer consistenly misreprents and misstates evidence of Hamas' and Gazans' utterences. The reason his Zionism is merely aleged, as far as this writer is concern, is that he lies in defence of Israel (an alternative examplanation could be ignorance, though it seems to unrealstic given the frequency of his misrepresentations). In lying he hurts Israel, because the non-phanatical supports thereof reading his staments will be forced to defence it's crituqtes against Douglas' claims, similar to how Trump benefits from obviously false accusations.
 
