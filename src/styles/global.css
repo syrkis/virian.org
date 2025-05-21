@@ -86,3 +86,7 @@ p {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+code {
+    font-family: "FiraCode Nerd Font Mono", monospace;
+}

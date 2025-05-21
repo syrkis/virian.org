@@ -18,6 +18,8 @@
 
 #show: doc => post(doc)
 
+"Neurons that wire together, fire together"
+
 As the old addage goes, when all you have is a hammer, everything looks like a nail.
 People tend to inflate the centrality of whatever field they are in.
 The reader is encouraged to take the structure of the last half of the addage:

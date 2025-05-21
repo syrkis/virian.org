@@ -41,6 +41,11 @@ At that age my grandfather was the commander of a warship. Not a child no more.
 // Musk lost his first born son Nevada in 2006 (he himself has alleged that his son died in his arms,
 // which is disputed by his then wife). Xavier (now Vivan) looks pretty good for a dead bitch.
 
+
+Steven Wolfram was classified as an eggplant.
+
+
+
 In 2014, attempting to get in as many arguments on camera as possbile, Jair Messias Bolsonaro accuses @jairbolsonaro2014 Alfredo Sirkis of being anti democratic for having kidnaped an American diplomat to Brazil and holding him hosatge for 32 days. Sirkis' corrects the record with "It was the Swiss ambasador".
 
 The Crown Prince of Norway, went to a climate conference. While he as inside he kept his car running. During his presence he gave a speech on giving money to Brazil—which we, highly support.
@@ -58,7 +63,7 @@ In summary, eventual malignant sillieness seems widespread, with many examples o
 
 = Conflicts of Interest
 
-The author has financial ties to Palantir @goodwork2025, whose CEO is Alex Karp, and whose Chair is Peter Thiel. Obviosuly, there is nothing malignantly silly about either of these great men. They where, however, excluded from consideration thereof apriori, before the author arrived at the aformentioned conclusion.
+The author has financial ties to Palantir @goodwork2025, whose CEO is Alex Karp, and whose Chair is Peter Thiel. Obviosuly, there is nothing malignantly silly about either of these great men. They where, however, excluded from consideration thereof apriori.
 
 
 // todo include this in lilka instead (move zotero.bib file to lilka)
