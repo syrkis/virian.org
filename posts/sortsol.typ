@@ -9,7 +9,7 @@
   slug: "sortsol",
   title: title,
   author: author,
-  published: true,
+  published: false,
   cover: cover,
   type: "code",
   date: date,
@@ -17,13 +17,19 @@
 
 #show: doc => post(doc)
 
-```uiua
-I ← ↯ ⊂ . √ ⧻ . > 0.5 [⍥⚂ ⁿ 2]                      # init
-K ← ◌ : + + + ≡⇌ ↻ 1 . : ↻ 1 ⍉ . : ↻ 1 ≡⇌ . : ↻ 1 . # conv
-C ← ◿ 2 + < 2 : > 3 .                               # cond
-S ← C K                                             # step
+In the spirit of high dimensional thinking,
+sortsol explores the feasability of using uiua for simulating drone swarms.
 
-# S I 10
-```
+#figure(
+  ```uiua
+  I ← ↯ ⊂ . √ ⧻ . > 0.5 [⍥⚂ ⁿ 2]                      # init
+  K ← ◌ : + + + ≡⇌ ↻ 1 . : ↻ 1 ⍉ . : ↻ 1 ≡⇌ . : ↻ 1 . # conv
+  C ← ◿ 2 + < 2 : > 3 .                               # cond
+  ```,
+  caption: [Swarm simulation step in `Uiua`],
+)
+
+
+#figure(image("s3/esch/parabellum_new.svg", width: 80%))
 
 #bibliography("/src/assets/zotero.bib", title: "References")

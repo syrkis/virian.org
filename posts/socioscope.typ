@@ -9,7 +9,7 @@
   slug: "socioscope",
   title: title,
   author: author,
-  published: true,
+  published: false,
   cover: cover,
   type: "code",
   date: date,

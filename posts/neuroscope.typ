@@ -16,7 +16,7 @@
   title: title,
   author: author,
   cover: cover,
-  published: true,
+  published: false,
   slug: "neuroscope",
   type: "code",
   date: date,

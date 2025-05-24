@@ -12,7 +12,7 @@
 #metadata((
   title: title,
   author: author,
-  published: true,
+  published: false,
   cover: cover,
   slug: "terminology",
   type: "text",
@@ -65,11 +65,7 @@ These terms are obviously sexy to say. The terms are sure to have played essenti
     columns: (200pt, 200pt),
     inset: 10pt,
     align: horizon,
-    table.header(
-      [_Viagra term_],
-      [_Virian term_],
-    ),
-
+    table.header([_Viagra term_], [_Virian term_]),
     "neural network", "layered filter",
     "deep learning", "layered filtering",
     "language model", "text model",

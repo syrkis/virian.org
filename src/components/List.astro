@@ -1,5 +1,6 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { formatDate } from "../utils/date";
 import Tile from "./Tile.astro";
 
 interface Props {
@@ -12,6 +13,13 @@ const text = Astro.props.text;
 
 const posts = await getCollection("posts", ({ data }) => {
     return data.type === type && data.published;
+}).then((posts) => {
+    return posts.sort((a, b) => {
+        return (
+            new Date(formatDate(b.data.date)).getTime() -
+            new Date(formatDate(a.data.date)).getTime()
+        );
+    });
 });
 ---
 
